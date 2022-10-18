@@ -1,0 +1,151 @@
+*{
+  padding: 0px;
+  margin: 0px;
+ box-sizing: border-box;
+ list-style: none;
+}
+
+.contenedor{
+  width: 100%;
+
+
+  display: flex;
+  flex-wrap: wrap;
+}
+.logo-content{
+  width: 100%;
+  
+}
+.logo{
+  width: 100%;
+  height: 80px;
+ 
+}
+
+.nav-left{
+  width: 20%;
+  border-right: 1px solid black;
+ 
+}
+ 
+.contenedor-contenido{
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+ 
+}
+
+.titulo{
+  width: 100%;
+  background: black;
+  color: white;
+  padding: 10px;
+  font-size: 40pt;
+  letter-spacing: 4px;
+ 
+  text-align: center;
+  height: 80px;
+}
+.botonera:first-child{
+  border-top: 1px solid black;
+}
+@media(max-width: 768px){
+  .titulo{
+  width: 100%;
+  background: black;
+  color: white;
+
+  font-size: 20pt;
+
+  text-align: center;
+}
+
+}
+.botonera button{
+  width:100%;
+  font-size: 18px;
+  letter-spacing: 3px;
+  margin-bottom: 3px;
+}
+.botonera button:hover{
+  background: black;
+  color: green;
+}
+.botonera .dropdown-menu{
+  width: 100%;
+  background: black;
+}
+
+.botonera .dropdown-menu li a{
+  color: white;
+  font-size: 16px;
+
+}
+.botonera .dropdown-menu li a:hover{
+  background: green;
+  cursor: pointer;
+}
+.bodyContent{
+  width: 100%;
+  padding: 10px;
+  background: white;
+}
+.subtitulos{
+  width: 100%;
+  font-size: 20pt;
+
+}
+.parrafo{
+  text-align: justify;
+  padding: 0px 10px;
+}
+.img-content{
+  width: 100%;
+  padding: 20px;
+}
+.img-content2{
+  width: 100%;
+  padding: 20px;
+  align-content: center;
+  justify-content: center;
+}
+.img-content img{
+  width: 100%;
+  height: 400px;
+   max-width: 1400px;
+  object-fit:contain;
+}
+.img-content2 img{
+  width: 100%;
+  max-width: 1400px;
+  height: 700px;
+  object-fit:contain;
+  object-position: 0px 0px;
+}
+.contentList{
+  width: 100%;
+}
+.contentList ul li{
+  list-style: square;
+}
+.tabla1{
+  background: black;
+  width: 100%;
+  border: 1p solid black;
+  color:  white;
+  border-collapse: separate;
+}
+.tabla1 th {
+  border: 1px solid white;
+  padding: 2px 5px;
+
+  letter-spacing: 2px;
+}
+
+.tabla1 td {
+  border: 1px solid white;
+    padding: 2px 5px;
+}
+
+
+
