@@ -21,10 +21,10 @@
    </div>
    <div class="dropdown botonera">
     <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-      Introducción
+      Introducción AL
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" onclick="introduccion()" >Introducción</a></li>
+      <li><a class="dropdown-item" onclick="introduccion()" >Introducción AL</a></li>
     </ul>
   </div>
   <div class="dropdown botonera">
@@ -35,17 +35,26 @@
       <li><a class="dropdown-item" onclick="instalacionBussines()">Business Central</a></li>
       <li><a class="dropdown-item" onclick= "instalacionVisual()">Visual Studio Code</a></li>
       <li><a class="dropdown-item" onclick="instalacionDoker()">Docker</a></li>
+      <li><a class="dropdown-item" onclick="levantarDoker()">Levantar Docker</a></li>
+      <li><a class="dropdown-item" onclick="crearNuevoProyecto()">Crear Nuevo Proyecto</a></li>
     </ul>
   </div>
   <div class="dropdown botonera">
     <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-     Tables & Pages
+     Tables 
    </button>
-   <ul class="dropdown-menu" >
-    <li><a class="dropdown-item" onclick="crearNuevoProyecto()">Crear Nuevo Proyecto</a></li>
+   <ul class="dropdown-menu" >   
     <li><a class="dropdown-item" onclick= "crearTabla()">Crear Tabla</a></li>
+  </ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Pages
+  </button>
+  <ul class="dropdown-menu" >
     <li><a class="dropdown-item" onclick="crearPageCard()">Crear Page Card</a></li>
     <li><a class="dropdown-item" onclick="crearPageList()">Crear Page List</a></li>
+    <li><a class="dropdown-item" onclick="crearAction()">Actions</a></li> 
   </ul>
 </div>
 <div class="dropdown botonera">
@@ -54,7 +63,7 @@
   </button>
   <ul class="dropdown-menu" >
     <li><a class="dropdown-item" onclick="crearCodeunnits()"> Codeunits</a></li>
-    <li><a class="dropdown-item" onclick="crearAction()">Actions</a></li> 
+
   </ul>
 </div>
 <div class="dropdown botonera">
@@ -116,8 +125,35 @@
   <li><a class="dropdown-item" onclick="reportes()"> Reports</a></li>
 </ul>
 </div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+   Eventos
+ </button>
+ <ul class="dropdown-menu" >
+  <li><a class="dropdown-item" onclick="eventos()"> Eventos en AL</a></li>
+</ul>
+</div>
+<!--Business Central Funcional-->
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Introducció BC
+  </button>
+  <ul class="dropdown-menu" >
+    <li><a class="dropdown-item" onclick="introBc()"> Introducción</a></li>
+    <li><a class="dropdown-item" onclick="suscripciones()"> Suscripciones</a></li>
+  </ul>
+</div><div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Configuración
+  </button>
+  <ul class="dropdown-menu" >
+    <li><a class="dropdown-item" onclick="suscripciones()"> Suscripciones</a></li>
+    <li><a class="dropdown-item" onclick="configuracion()"> Configuración</a></li>
+    <li><a class="dropdown-item" onclick="crearEmpresa()"> Crear Empresa</a></li>
+  </ul>
+</div>
 
-</div><!--Nav lef-->
+</div><!--Nav lef end-->
 <div class="contenedor-contenido">
   <h1 class="titulo">Guía Business Central</h1>
   <div class="bodyContent">
@@ -145,19 +181,10 @@
     </div>
     <hr>
 
-
     <!--Inicio de la Function-->
 
-    
-
-  
-
-
-
-
-
-
-
+  <p class="parrafo"></p>
+  <p class="parrafo"></p>
 
   <!--Fin  la Function-->
 </div>
@@ -168,11 +195,12 @@
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
     © 2022 Copyright:
-    <a class="text-dark" href="https://mdbootstrap.com/">Bosonit</a>
+    <a class="text-dark" href="">Bosonit</a>
   </div>
   <!-- Copyright -->
 </footer>
 <script type="text/javascript" src="js/funciones.js"></script>
+<script type="text/javascript" src="js/bcFuncional.js"></script>
 </body>
 </html>
 

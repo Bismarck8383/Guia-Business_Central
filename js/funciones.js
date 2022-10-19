@@ -27,7 +27,8 @@ let instalacionBussines = () =>{
 	let contenido = `
 	<h2 class="Subtitulos">Innstalacion de Bussines Central</h2>
 	<p class="parrafo">Lo primero que debes de realizar es descargar la última versión de Business Central</p>
-	<p class="parrafo"><a href="https://www.microsoft.com/en-us/download/details.aspx?id=103938">Descargar</a></p><br>
+	<p class="parrafo"><a href="https://www.microsoft.com/en-us/download/details.aspx?id=104062">Descargar</a></p><br>
+	<p class="parrafo"><a href="https://yzhums.com/26288/">Ultimas Versiones aquí</a></p>
 	<div class="img-content">
 	<img src="img/install.PNG" alt="">
 	</div>
@@ -80,6 +81,7 @@ let instalacionDoker = () =>{
 	<img src="img/docker.PNG" alt="">
 	</div><br>
 	<p class="parrafo">Guia de intslación de Docker</p>
+	<p class="parrafo"><b>Nota : </b><br>Para realizar todos los pasos de instalación debemos tener permisos de administrador del sistema operativo, sin ellos no podremos obtener una instalación correcta.</p>
 	<p class="parrafo"><a href="https://docs.docker.com/desktop/install/windows-install">Guia Docker</a></p>
 	<div class="img-content">
 	<img src="img/dockerReq.PNG" alt="">
@@ -99,6 +101,152 @@ let instalacionDoker = () =>{
 	cuerpo.innerHTML= contenido;
 
 }
+/*====================
+	Levantar Docker
+	=====================*/
+	let levantarDoker = () =>{
+		let cuerpo = document.querySelector(".bodyContent");
+		let contenido = `
+
+		
+		<h2 class="Subtitulos">Trabajar con imágenes y contenedores de Docker</h2>
+		<p class="parrafo">Docker es el entorno de contenedor de software líder para todas las plataformas. Permite a los usuarios empaquetar aplicaciones con todas sus dependencias y distribuir ese paquete a otras máquinas. Estas maquinas se llaman hosts y pueden ejecutar un paquete como un entorno completamente aislado que está virtualizado. Un paquete se llama imagen.</p>
+		<p class="parrafo">Una imagen de Docker es una plantilla con el número mínimo de archivos del sistema operativo y de aplicación que necesita para ejecutarse. Todo lo que necesita para ejecutar una aplicación está en la imagen. Las imágenes de Docker se almacenan en un registro de Docker donde los usuarios pueden cargar y descargar imágenes. El registro más conocido es Docker Hub, pero para Business Central (y otros productos de Microsoft), Microsoft hospeda su propio registro.</p>
+		<p class="parrafo">Cada imagen está construida sobre una imagen base que contiene los archivos del sistema operativo. Los contenedores de Windows tienen cuatro imágenes base:</p>
+		<div class="contentList">
+		<ul>
+		<li><b>Windows Server Core: </b>admite aplicaciones .NET Framework</li>
+		<li><b>Nano Server: </b>creado para aplicaciones .NET Core</li>
+		<li><b>Windows: </b> proporciona el conjunto completo de API de Windows</li>
+		<li><b>Windows IoT Core: </b>creado para aplicaciones de IoT</li>
+		</ul>
+		</div>
+		<p class="parrafo">El tamaño de la imagen depende en gran medida del tamaño de la imagen base. Las imágenes de Business Central se basan en la imagen de Windows Server Core.</p>
+		<p class="parrafo">Una imagen de Docker a menudo se confunde con una máquina virtual, pero es diferente. No necesita un sistema operativo completo para ejecutarse porque usa el kernel del sistema operativo host. Para obtener el mejor rendimiento y menos problemas, los archivos base de la imagen se ajustan a la versión de su sistema operativo. Además, una imagen no tiene GUI y no puede conectarse mediante el protocolo de escritorio remoto (RDP) a lo que esté en la imagen.</p>
+		<p class="parrafo">Cuando ejecuta la imagen, en realidad crea una instancia de esa imagen. Como resultado, todos los cambios que se crean se almacenan sobre la imagen, por lo que esta no se modifica. Una instancia de una imagen se conoce como contenedor. Puede crear instancias de varios contenedores a partir de la misma imagen, y todos almacenarán sus cambios en diferentes archivos y no interferirán entre sí.</p>
+		<p class="parrafo">Los componentes principales de Docker son el <b>motor de Docker</b> y el <b>cliente de Docker</b>. El motor es el proceso o aplicación que implementa el trabajo real, mientras que el cliente se utiliza para comunicarse con el motor. </p>
+		<p class="parrafo">Un contenedor de Docker se puede utilizar para configurar un entorno de desarrollo o prueba únicamente; Microsoft no admite contenedores de Docker para Business Central en un entorno de producción. Puede eliminar y volver a crear rápidamente un contenedor de Docker, razón por la cual todos los contenedores de Business Central se crean con la base de datos de Cronus. Puede iniciar un contenedor, desarrollar y probar su característica en la base de datos de Cronus y detener su contenedor. El mejor enfoque es crear un script en PowerShell que pueda usar para crear rápidamente un contenedor y guardar ese script, en lugar de intentar guardar el contenedor.</p>
+		<h3>Instalar Docker en Windows</h3>
+		<p class="parrafo">Para comenzar con Docker, primero debe instalarlo en la máquina de desarrollo. El tipo de instalación depende del sistema operativo. La instalación es diferente en una máquina con Windows 10 que en una con Windows Server. Debe contar al menos con Windows 10 Professional o Enterprise con la Actualización de aniversario (versión 1607), Windows Server 2016 o Windows Server 2019.</p>
+		<p class="parrafo">Los contenedores de Windows en Docker pueden ejecutarse en dos modos distintos de aislamiento de tiempo de ejecución:</p>
+		<div class="contentList">
+		<ul>
+		<li>Aislamiento de procesos</li>
+		<li>Aislamiento de Hyper-V</li>
+		</ul>
+		</div>
+		<p class="parrafo">Las diferencias entre estos modos se tratarán más adelante en este módulo. Dado que los contenedores de Windows pueden ejecutarse en dos modos distintos, tendrá que instalar o activar Hyper-V en la máquina de desarrollo. En Windows 10, Hyper-V debe ejecutar Docker, aunque no utilice el aislamiento de Hyper-V. Para instalar Hyper-V, también debe utilizar otros comandos de PowerShell en máquinas con Windows 10 y Windows Server.</p>
+		<p class="parrafo">En Windows, busque Windows PowerShell y luego ejecútelo como <b>administrador</b>.</p>
+		<div class="img-content2">
+		<img src="img/docker01.png" alt="">
+		</div>
+		<p class="parrafo">En Windows 10, ejecute el siguiente comando para instalar Hyper-V:</p>
+		<p class="parrafo"><b>Enable-WindowsOptionalFeature -Online -FeatureName Hyper-V</b></p>
+		<p class="parrafo">En Windows Server, puede utilizar el siguiente comando:</p>
+		<p class="parrafo"><b>Install-WindowsFeature Hyper-V</b></p>
+		<p class="parrafo">Es posible que desee ejecutar Docker en una máquina virtual en lugar de hacerlo en su máquina local. Es posible que se produzca esta situación, pero debe configurar la opción Virtualización anidada, que no se trata en este módulo. Para obtener más información, consulte <a href="https://learn.microsoft.com/es-es/virtualization/hyper-v-on-windows/user-guide/nested-virtualization">Ejecutar Hyper-V en una máquina virtual con la virtualización anidada</a> .</p>
+		<p class="parrafo">Después de realizar la instalación de Hyper-V, puede instalar Docker.</p>
+		<p class="parrafo">Esta sección comienza con Windows Server, donde puede utilizar el módulo PowerShell publicado por Microsoft denominado DockerMicrosoftProvider. Este módulo habilita la característica de contenedor de Windows e instala el cliente y el motor de Docker.</p>
+		<p class="parrafo"><b>1.</b>Abra <b>Windows PowerShell</b> como administrador (sesión de PowerShell con privilegios elevados) y ejecute el siguiente comando:</p>
+		<p class="parrafo"><b>Install-Module -Name DockerMsftProvider -Repository PSGallery -Force</b></p>
+		<p class="parrafo">Escriba Y (Sí) para aceptar.</p>
+		<p class="parrafo"><b>2.</b>Instale el paquete con el comando Install-Package y escriba A (Sí a todo).</p>
+		<p class="parrafo"><b>Install-Package -Name Docker -ProviderName DockerMsftProvider</b></p>
+		<p class="parrafo"><b>3.</b>Reinicie la máquina.</p>
+		<p class="parrafo"><b>Restart-Computer -Force</b></p>
+		<p class="parrafo">En máquinas con Windows 10, no puede utilizar el módulo DockerMicrosoftProvider. Debe descargar e instalar Docker Desktop (<a href="https://docs.docker.com/desktop/install/windows-install/">Docker Desktop para Windows</a> ). Para ello, debe crear una cuenta gratuita de Docker. Durante la instalación, puede establecer el tipo de contenedor predeterminado en Contenedores de Windows. También puede cambiar el tipo después de la instalación. Por tanto, puede hacer clic con el botón derecho en el elemento Docker de la bandeja del sistema Windows y luego seleccionar Cambiar a contenedores de Windows.</p>
+		<div class="img-content2">
+		<img src="img/docker02.png" alt="">
+		</div>
+		<p class="parrafo">Después de la instalación, puede probar si Docker se ha instalado correctamente. Docker, y otros contenedores específicos, no son nuevos e incluso se han utilizado de forma considerable en el mundo Linux. Por tanto, trabajar con Docker implica trabajar con comandos. También tiene a su disposición otras herramientas de la interfaz gráfica del usuario que puede utilizar para ejecutar los comandos. En este módulo utilizará los comandos de Docker con la consola PowerShell y una extensión en Visual Studio Code.</p>
+		<p class="parrafo">Para probar la instalación, puede ejecutar el siguiente comando con el fin de recuperar la versión instalada.</p>
+		<p class="parrafo"><b>docker version</b></p>
+		<h3>Usar BcContainerHelper</h3>
+		<p class="parrafo">BcContainerHelper es una colección de scripts y cmdlets de PowerShell creados por Microsoft para ayudarle, como desarrollador, a crear y administrar contenedores para el desarrollo con Business Central. BcContainerHelper también es útil en un entorno DevOps para configurar canalizaciones de compilación que utilizan contenedores. Estos scripts proporcionan una forma sencilla de llevar a cabo muchas de las acciones más utilizadas en un contenedor de Business Central.</p>
+		<p class="parrafo">Antes de poder comenzar, debe instalar este módulo en PowerShell. Abra un comando de PowerShell y use el cmdlet install-module.</p>
+		<p class="parrafo"><b>install-module bccontainerhelper -Force</b></p>
+		<h3>Usar BcContainerHelper</h3>
+		<p class="parrafo">BcContainerHelper es una colección de scripts y cmdlets de PowerShell creados por Microsoft para ayudarle, como desarrollador, a crear y administrar contenedores para el desarrollo con Business Central. <b>BcContainerHelper</b>  también es útil en un entorno DevOps para configurar canalizaciones de compilación que utilizan contenedores. Estos scripts proporcionan una forma sencilla de llevar a cabo muchas de las acciones más utilizadas en un contenedor de Business Central.</p>
+		<p class="parrafo">Para crear un nuevo contenedor, puede utilizar el cmdlet <b>New-BcContainer</b> en lugar del comando <b>docker run</b> . En el script, el cmdlet usa el comando <b>docker run</b>, pero solo proporciona un acceso y uso más fáciles.</p>
+		<p class="parrafo">Antes de poder comenzar, debe instalar este módulo en PowerShell. Abra un comando de PowerShell y use el cmdlet install-module.</p>
+		<p class="parrafo"><b>install-module bccontainerhelper -Force</b></p>
+		<h3>Crear un nuevo contenedor de Business Central</h3>
+		<p class="parrafo">Para crear un nuevo contenedor de Business Central, puede utilizar el cmdlet <b>New-BcContainer</b> . También puede hacer algo aún más sencillo: usar el cmdlet <b>New-BcContainerWizard</b> . Con este asistente, crear un nuevo contenedor de Business Central es más fácil. Este cmdlet es parte de <b>BcContainerHelper</b>. Sin embargo, es posible que haya una versión más reciente del script disponible en línea. Le recomendamos que utilice este script para iniciar el asistente.</p>
+		<p class="parrafo"><b>Invoke-Expression (New-Object System.Net.WebClient)DownloadString("http://aka.ms/bcdockerscript")</b></p>
+		<div class="img-content2">
+		<img src="img/docker03.png" alt="">
+		</div>
+		<p class="parrafo">El asistente le ayudará a lo largo de los distintos pasos:</p>
+		<p class="parrafo"><b>1.</b>Aceptar la licencia del usuario final.</p>
+		<p class="parrafo"><b>2.</b>Seleccionar un contenedor local o una VM de Azure.</p>
+		<div class="img-content">
+		<img src="img/docker04.png" alt="">
+		</div>
+		<p class="parrafo"><b>3.</b>Configurar la autenticación deseada.</p>
+		<div class="img-content">
+		<img src="img/docker05.png" alt="">
+		</div>
+		<p class="parrafo"><b>4.</b>Configurar un nombre para el contenedor.</p>
+		<p class="parrafo"><b>5.</b>Seleccionar una versión.</p>
+		<div class="img-content">
+		<img src="img/docker06.png" alt="">
+		</div>
+		<p class="parrafo"><b>6.</b>Seleccionar un país(es = España).</p>
+		<div class="img-content">
+		<img src="img/docker07.png" alt="">
+		</div>
+		<p class="parrafo"><b>7.</b>nstalar el Test Toolkit.</p>
+		<div class="img-content">
+		<img src="img/docker08.png" alt="">
+		</div>
+		<p class="parrafo"><b>8.</b>Asignar usuarios del Plan Premium si lo tuvieramos .</p>
+		<p class="parrafo"><b>9.</b>Crear usuarios de prueba.</p>
+		<p class="parrafo"><b>10.</b>Cargar una licencia(sí disponemos de una, sino la opción sin licencia).</p>
+		<div class="img-content">
+		<img src="img/docker09.png" alt="">
+		</div>
+		<p class="parrafo"><b>11.</b>Utilizar la base de datos de demostración de Cronus o conectarse a una base de datos existente.</p>
+		<div class="img-content">
+		<img src="img/docker10.png" alt="">
+		</div>
+		<p class="parrafo"><b>12.</b>Configurar DNS.</p>
+		<p class="parrafo"><b>13.</b>Seleccionar proceso o aislamiento de Hyper-V.</p>
+		<div class="img-content">
+		<img src="img/docker11.png" alt="">
+		</div>
+		<p class="parrafo"><b>14.</b>Seleccionar el límite de memoria.</p>
+		<p class="parrafo"><b>15.</b>Guardar la imagen.</p>
+		<div class="img-content">
+		<img src="img/docker12.png" alt="">
+		</div>
+		<p class="parrafo"><b>16.</b>Crear un script de PowerShell.</p>
+		<p class="parrafo">El resultado y el paso final del proceso del asistente implican la creación de un script de PowerShell. Este script de PowerShell usará el cmdlet <b>New-BcContainer</b>  para ejecutar el contenedor. Puede guardar este script para usarlo más adelante.</p>
+		<div class="img-content">
+		<img src="img/docker13.png" alt="">
+		</div>
+		<p class="parrafo">El script generado se puede utilizar siempre que quiera crear un nuevo contenedor. El script generado usa el cmdlet <b>Get-BcArtifactUrl</b> para recuperar un vínculo al artefacto de Business Central. Este artefacto contiene la versión especificada de Business Central.</p>
+		<div class="img-content">
+		<img src="img/docker14.png" alt="">
+		</div>
+		<p class="parrafo">El cmdlet tiene algunos parámetros obligatorios, como <b>containerName</b> y <b>accept_eula</b>. El cmdlet <b>New-BcContainer</b> ofrece la práctica opción de <b>-updateHosts</b>, que crea automáticamente una entrada en su archivo de host local para registrar el nombre del contenedor con la dirección IP del contenedor.</p>
+		<p class="parrafo">De forma predeterminada, la opción creará un contenedor con autenticación de Windows y le solicitará sus credenciales. Si usa sus credenciales locales de Windows, habilitará el inicio de sesión único (SSO). Para utilizar un nombre de usuario y una contraseña, puede utilizar la opción <b>-auth NavUserPassword</b>.</p>
+		<div class="img-content">
+		<img src="img/docker15.png" alt="">
+		</div>
+		<p class="parrafo">Esta opción mostrará información útil en la ventana de salida que puede proporcionar a Microsoft cuando haga preguntas o informe de errores. Asegúrese de incluir siempre la salida completa.</p>
+		<h3>Eliminar un contenedor de Business Central</h3>
+		<p class="parrafo">Eliminar un contenedor es sencillo con el comando Remove-BcContainer.</p>
+		<p class="parrafo"><b>Remove-BCContainer -containerName MyDevContainer</b></p>
+
+		`;
+
+		cuerpo.innerHTML= contenido;
+
+	}
+
+/*================
+Crear Nuevo Proyecto
+=====================*/
 
 let crearNuevoProyecto = () =>{
 	let cuerpo = document.querySelector(".bodyContent");
@@ -910,56 +1058,184 @@ let diccionary = () =>{
 
 	/*=============================
 		Reportes
-	====================================*/
+		====================================*/
 
-let reportes = () =>{
-	let cuerpo = document.querySelector(".bodyContent");
-	let contenido = `
-	
-	  <h2 class="Subtitulos">Creación de reportes</h2>
-    <p class="parrafo"><b>Introducción</b></p>
-    <p class="parrafo">Puede crear un objeto de informe en el entorno de desarrollo del lenguaje AL para definir el modelo de datos o el conjunto de datos de un informe. Puede estructurar y resumir información en un informe e imprimir documentos como ofertas de venta y facturas. En el proceso de diseño de informes se explican los pasos habituales de la creación de un nuevo informe. Puede crear el conjunto de datos de un informe agregando elementos de datos y columnas.</p>
-    <p class="parrafo">Los informes se utilizan para imprimir o mostrar información de una base de datos. Puede usar un informe para estructurar y resumir información y para imprimir documentos como ofertas de venta y facturas.</p>
-    <p class="parrafo">La creación de un informe consta de dos tareas principales:</p>
-    <div class="contentList">
-     <ul>
-       <li>Crear el modelo de datos subyacente</li>
-       <li>Definir el diseño visual que muestra los datos.</li>
-     </ul>
-   </div>
-   <p class="parrafo">El objeto de informe define el modelo de datos subyacente y especifica de qué tablas y campos de la base de datos se extraerán los datos. Cuando se ejecuta el informe, esos datos se muestran en un diseño específico: el diseño visual, que determina el contenido y el formato de un informe cuando se visualiza e imprime.</p>
-   <p class="parrafo">Puede crear el diseño de un informe organizando los elementos de datos y las columnas y especificando el formato general, como la fuente y el tamaño del texto. Dos tipos de diseños de informes son diseños de definición del informe del cliente (RDL) y diseños de Word. Los diseños RDL se definen en el Generador de informes de Microsoft SQL Server Reporting Services. Los diseños de Word se crean utilizando Microsoft Word. Los diseños de Word se basan en un documento de Word que incluye una parte XML personalizada que representa el conjunto de datos del informe.</p>
-   <p class="parrafo">Al introducir el acceso directo<b> treport, </b>   se creará el diseño básico de un objeto de informe cuando esté utilizando la característica Extensión de AL en Visual Studio Code.</p>
-   <p class="parrafo">En el siguiente ejemplo se muestra la lógica de muestra del uso del acceso directo treport.</p>
-   <div class="img-content2">
-    <img src="img/reporte1.PNG" alt="">
-  </div> 
-  <p class="parrafo">En el siguiente ejemplo crearemos un reporte sobre la tabla que estuvimos trabajando, la tabla <b>Persona</b> obtendremos mediante una reporte todos los datos que necesitemos.</p>
-  <div class="img-content2">
-    <img src="img/reporte2.PNG" alt="">
-  </div> 
-  <p class="parrafo">En el <b>dataitem(Persona; Persona)</b> le especificamos la tabla que usaremos para crear nuestro reporte.</p>
-  <p class="parrafo">Al ejecutar nuestro programa se creara un archivo xml con los datos de nuestro reporte.</p>
-  <div class="img-content2">
-    <img src="img/reporte3.PNG" alt="">
-  </div> 
-  <p class="parrafo">Daremos click derecho sobre nuestro archivo creado Persona_report.rdl y lo editaremos con Power BI Report Builder.</p>
-  <div class="img-content2">
-    <img src="img/reporte4.PNG" alt="">
-  </div> 
-  <p class="parrafo">Para poder Visualizar nuestro reporte entraremos a la interfaz de Business Central y en la barra de busqueda introducimos PersonaReporte y le damos a la opcion imprimir, en el veremos los datos optenidos.</p>
-  <div class="img-content2">
-    <img src="img/reporte5.PNG" alt="">
-  </div> 
+		let reportes = () =>{
+			let cuerpo = document.querySelector(".bodyContent");
+			let contenido = `
+			
+			<h2 class="Subtitulos">Creación de reportes</h2>
+			<p class="parrafo"><b>Introducción</b></p>
+			<p class="parrafo">Puede crear un objeto de informe en el entorno de desarrollo del lenguaje AL para definir el modelo de datos o el conjunto de datos de un informe. Puede estructurar y resumir información en un informe e imprimir documentos como ofertas de venta y facturas. En el proceso de diseño de informes se explican los pasos habituales de la creación de un nuevo informe. Puede crear el conjunto de datos de un informe agregando elementos de datos y columnas.</p>
+			<p class="parrafo">Los informes se utilizan para imprimir o mostrar información de una base de datos. Puede usar un informe para estructurar y resumir información y para imprimir documentos como ofertas de venta y facturas.</p>
+			<p class="parrafo">La creación de un informe consta de dos tareas principales:</p>
+			<div class="contentList">
+			<ul>
+			<li>Crear el modelo de datos subyacente</li>
+			<li>Definir el diseño visual que muestra los datos.</li>
+			</ul>
+			</div>
+			<p class="parrafo">El objeto de informe define el modelo de datos subyacente y especifica de qué tablas y campos de la base de datos se extraerán los datos. Cuando se ejecuta el informe, esos datos se muestran en un diseño específico: el diseño visual, que determina el contenido y el formato de un informe cuando se visualiza e imprime.</p>
+			<p class="parrafo">Puede crear el diseño de un informe organizando los elementos de datos y las columnas y especificando el formato general, como la fuente y el tamaño del texto. Dos tipos de diseños de informes son diseños de definición del informe del cliente (RDL) y diseños de Word. Los diseños RDL se definen en el Generador de informes de Microsoft SQL Server Reporting Services. Los diseños de Word se crean utilizando Microsoft Word. Los diseños de Word se basan en un documento de Word que incluye una parte XML personalizada que representa el conjunto de datos del informe.</p>
+			<p class="parrafo">Al introducir el acceso directo<b> treport, </b>   se creará el diseño básico de un objeto de informe cuando esté utilizando la característica Extensión de AL en Visual Studio Code.</p>
+			<p class="parrafo">En el siguiente ejemplo se muestra la lógica de muestra del uso del acceso directo treport.</p>
+			<div class="img-content2">
+			<img src="img/reporte1.PNG" alt="">
+			</div> 
+			<p class="parrafo">En el siguiente ejemplo crearemos un reporte sobre la tabla que estuvimos trabajando, la tabla <b>Persona</b> obtendremos mediante una reporte todos los datos que necesitemos.</p>
+			<div class="img-content2">
+			<img src="img/reporte2.PNG" alt="">
+			</div> 
+			<p class="parrafo">En el <b>dataitem(Persona; Persona)</b> le especificamos la tabla que usaremos para crear nuestro reporte.</p>
+			<p class="parrafo">Al ejecutar nuestro programa se creara un archivo xml con los datos de nuestro reporte.</p>
+			<div class="img-content2">
+			<img src="img/reporte3.PNG" alt="">
+			</div> 
+			<p class="parrafo">Daremos click derecho sobre nuestro archivo creado Persona_report.rdl y lo editaremos con Power BI Report Builder.</p>
+			<div class="img-content2">
+			<img src="img/reporte4.PNG" alt="">
+			</div> 
+			<p class="parrafo">Para poder Visualizar nuestro reporte entraremos a la interfaz de Business Central y en la barra de busqueda introducimos PersonaReporte y le damos a la opcion imprimir, en el veremos los datos optenidos.</p>
+			<div class="img-content2">
+			<img src="img/reporte5.PNG" alt="">
+			</div> 
 
 
-  <p class="parrafo">Para crear un informe, puede usar el fragmento treport. Este fragmento genera el esqueleto del objeto de informe y, al usarlo, puede continuar diseñando un informe.
-  El conjunto de datos de un informe contiene los elementos de datos del informe. Puede agregar uno o más elementos de datos a un informe. Puede utilizar el fragmento tdataitem para agregar un elemento de datos a un informe y el fragmento tcolumn para agregar una columna a un elemento de datos.</p>
-  <p class="parrafo"> <a href="https://www.youtube.com/watch?v=0wh1TCYGryA">Video como crear un Reporte</a></p>
+			<p class="parrafo">Para crear un informe, puede usar el fragmento treport. Este fragmento genera el esqueleto del objeto de informe y, al usarlo, puede continuar diseñando un informe.
+			El conjunto de datos de un informe contiene los elementos de datos del informe. Puede agregar uno o más elementos de datos a un informe. Puede utilizar el fragmento tdataitem para agregar un elemento de datos a un informe y el fragmento tcolumn para agregar una columna a un elemento de datos.</p>
+			<p class="parrafo"> <a href="https://www.youtube.com/watch?v=0wh1TCYGryA">Video como crear un Reporte</a></p>
 
-	`;
+			`;
 
-	cuerpo.innerHTML= contenido;
+			cuerpo.innerHTML= contenido;
+
+		}
+/*===============================
+	EVENTOS
+	================================*/
+	let eventos = () =>{
+		let cuerpo = document.querySelector(".bodyContent");
+		let contenido = `
+		<h2 class="Subtitulos">Eventos en AL (Business Central)</h2>
+		<p class="parrafo">En Microsoft Business Central también encontraremos algo básico a la hora de programar y/o usar un sistema que consiste en los eventos, de hecho, los eventos están presentes durante la ejecución de cualquier programa informático sea Web, escritorio y/o móvil. Un evento básicamente se produce cuando realizamos una acción en particular dentro de dicho programa. Por ejemplo, hacer clic en un botón.</p>
+		<p class="parrafo">El uso de eventos es un concepto de programación probado y establecido que puede facilitar la actualización de la aplicación y limitar o incluso eliminar la necesidad de modificaciones de código en aplicaciones personalizadas debido a los cambios en la plataforma.</p>
+		<p class="parrafo">Puede usar eventos para diseñar la aplicación para reaccionar a acciones o comportamientos específicos que se producen. Los eventos permiten separar la funcionalidad personalizada de la lógica de la aplicación.</p>
+		<p class="parrafo"> Mediante el uso de eventos en la aplicación donde normalmente se realizan personalizaciones, puede reducir el costo de las modificaciones de código y las actualizaciones a la aplicación original.</p>
+		<div class="contentList">
+		<ul>
+		<li>Las modificaciones de código a la funcionalidad personalizada se pueden realizar sin tener que modificar la aplicación original.</li>
+		<li>Los cambios en el código de aplicación original se pueden realizar con un impacto mínimo en las personalizaciones.</li>
+		</ul>
+		</div>
+		<p class="parrafo">En la tabla siguiente se describen todos los tipos de eventos diferentes:</p>
+		<table class="tabla1">
+		<tr>
+		<th>Tipos de eventos</th>
+		<th>Descripción</th>
+		</tr>
+		<tr>
+		<td><b>BusinessEvent</b></td>
+		<td>Especifica el método que se va a tratar como publicador de eventos de tipo de negocio.</td>
+		</tr>
+		<tr>
+		<td><b>IntegrationEvent</b></td>
+		<td>Especifica el método que se va a usar el publicador de eventos de tipo de integración.</td>
+		</tr>
+		<tr>
+		<td><b>InternalEvent</b></td>
+		<td>Especifica el método para ser un publicador de eventos interno.</td>
+		</tr>
+		<tr>
+		<td><b>Global</b></td>
+		<td>Especifica el método para que sea un publicador de eventos interno.</td>
+		</tr>
+		<tr>
+		<td><b>Trigger</b></td>
+		<td>El tiempo de ejecución publica los eventos de desencadenador.</td>
+		</tr>
+		</table>
+		<p class="parrafo">El proceso para implementar estos eventos es ligeramente diferente. Para obtener más información sobre los diferentes tipos, consulte Tipos de eventos.</p>
+		<p class="parrafo">Más información en la guía de Business Central<a href="https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-events-in-al"> Aquí</a></p>
+		<h3>Cómo funcionan los eventos</h3>
+		<p class="parrafo">El principio básico es que se programan eventos en la aplicación para ejecutar un comportamiento personalizado cuando se producen. Los eventos de AL se modelan después de Microsoft .NET Framework. Hay tres participantes importantes involucrados en eventos: el evento, un editor y un suscriptor.</p>
+		<div class="contentList">
+		<ul>
+		<li>Un <b>evento</b> es la declaración de la ocurrencia o cambio en la aplicación. Un evento se declara mediante un método AL, que se conoce como una función de publicador de eventos. Un método de publicador de eventos se compone únicamente de una firma y no ejecuta ningún código.</li>
+		<li>Un <b>publicador</b> es el objeto que contiene el método de publicador de eventos que declara el evento. El editor expone un evento en la aplicación a los suscriptores, esencialmente proporcionándoles un punto de conexión en la aplicación.</li>
+		<li>Un <b>suscriptor</b>  escucha y controla un evento publicado. Un suscriptor es un método AL que se suscribe a un método de publicador de eventos específico e incluye la lógica para controlar el evento. Cuando se genera un evento, se llama al método de suscriptor y se ejecuta su código. Un suscriptor permite a los socios conectarse a la funcionalidad principal de la aplicación sin tener que realizar modificaciones de código tradicionales. Cualquier proveedor de soluciones de Dynamics 365, que también incluye Microsoft, puede usar suscriptores de eventos.</li>
+		</ul>
+		</div>
+
+
+		<p class="parrafo"><b>Nota : </b> Debemos tener en cuenta que en Business Central no se puede tocar (modificar) el código nativo, tal como se hacía en Microsoft Dynamics NAV. En Business Central, únicamente se pueden suscribirse a eventos y manejarlos desde algún CodeUnit personalizado.</p>
+		<p class="parrafo">En el Siguiente ejemplo vemos como implementar un evento suscriptor.</p>
+		<div class="img-content2">
+		<img src="img/event1.PNG" alt="">
+		</div>
+		<p class="parrafo">En la imagen vemos que mediante una codeunit "Event Suscribers" no suscribimos a un evento de la tabla Customer, lo llamamos <b>"OnBeforeValidateEventPhoneNo"</b>, el mismo llamara una Procedure Local que tendrá las diferentes validación para el campo teléfono de la tabla clientes.</p>
+		<p class="parrafo">
+		En las validaciones le decimos que el campo teléfono no podrá tener caracteres especiales o letras, sino nos dará error..
+		</p>
+		<p class="parrafo">Al establecer los argumentos de acuerdo con la siguiente tabla. Para argumentos opcionales, si no desea establecer un valor, use un valor vacío ( ''). En este caso, se utiliza el valor predeterminado, si lo hay.     </p>
+		<table class="tabla1">
+		<tr>
+		<th>Argumento</th>
+		<th>  Descripción</th>
+		<th>Opcional</th>
+		</tr>
+		<tr>
+		<td><b>&lt;Event Publisher Object Type&gt;</b></td>
+		<td>Especifique el tipo de objeto que publica el evento. Este argumento puede ser Codeunit, Page, Report, Tableo XMLPort.</td>
+		<td>no</td>
+		</tr>
+		<tr>
+		<td><b>&lt;Event Publisher Object&gt;</b></td>
+		<td>  Especifique el objeto que publica el evento. Puede establecer este argumento en el ID, como 50100, o la forma recomendada es utilizar el nombre del objeto mediante la sintaxis &lt;Object Type&gt;::"&lt;Object Name&gt;", como Codeunit::"MyPublishers", o para activadores de bases de datos Database::"Customer".</td>
+		<td>no</td>
+		</tr>
+		<tr>
+		<td><b>&lt;Published Event Name&gt;</b></td>
+		<td>Especifique el nombre del método que publica el evento en el objeto especificado por el &lt;Event Publisher Object&gt;parámetro.</td>
+		<td>no</td>
+		</tr>
+		<tr>
+		<td><b>&lt;Published Event Element Name&gt;</b></td>
+		<td>Especifica el campo de la tabla al que pertenece el evento desencadenante. Este argumento solo requiere un valor para los eventos desencadenantes de la base de datos, es decir, cuando &lt;Event Publisher Object Type&gt;se establece en Tabley el &lt;Published Event Name&gt;argumento es un evento desencadenante de validación, como OnAfterValidateEvent.</td>
+		<td>no</td>
+		</tr>
+		<tr>
+		<td><b>&lt;SkipOnMissingLicense&gt;</b></td>
+		<td>Establézcalo en truepara omitir la llamada al método de suscriptor de eventos si la licencia del usuario no cubre la unidad de código del suscriptor de eventos. Si false, se arroja un error y la ejecución del código se detiene. falsees el predeterminado.</td>
+		<td>sí</td>
+		</tr>
+		<tr>
+		<td><b>&lt;SkipOnMissingPermission&gt;</b></td>
+		<td>Establézcalo en truepara omitir la llamada al método de suscriptor de eventos si el usuario no tiene los permisos correctos para la unidad de código del suscriptor de eventos. Si false, se arroja un error y la ejecución del código se detiene. falsees el predeterminado.</td>
+		<td>sí</td>
+		</tr>
+		</table>
+		<br>
+
+		<p class="parrafo"> <b>Nota: <br></b>Hay un par de cosas que pueden facilitar la definición de un método de suscriptor de eventos. Puede usar el <b>teventsub</b> fragmento para comenzar. Luego, al escribir el método abreviado de teclado 
+		<b>Ctrl+Espacio</b> , se muestra IntelliSense para ayudarlo a completar los argumentos de los atributos y descubrir qué eventos están disponibles. O use el atajo de teclado 
+		<b>Shift+Alt+E</b> para buscar el evento al que desea suscribirse e inserte el código.</p>
+		<div class="img-content2">
+		<img src="img/event2.PNG" alt="">
+		</div>
+		<p class="parrafo"> Observamos que al escribir texto en el campo teléfono nos salta un error y no podremos guardar los cambios hasta introducir números enteros dentro del campo teléfono.</p>
+		<p class="parrafo">Documentación de Creación de un método de suscriptor de eventos <a href="https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-subscribing-to-events">Aquí</a>.</p>
+		<p class="parrafo">Videos sobre como funciona los eventos : </p>
+		<div class="contentList">
+		<ul>
+		<li><a href="https://www.youtube.com/watch?v=_MiBa2Fms1g">Single Instance EventSubscribers in AL and Business Central</a></li>
+		<li><a href="https://www.youtube.com/watch?v=vLCdLmrXmZE">Easy implement Event Subscribers in AL</a></li>
+		</ul>
+		</div>
+
+
+		`;
+
+		cuerpo.innerHTML= contenido;
 
 	}
 
