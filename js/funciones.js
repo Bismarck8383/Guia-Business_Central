@@ -108,7 +108,7 @@ let instalacionDoker = () =>{
 		let cuerpo = document.querySelector(".bodyContent");
 		let contenido = `
 
-		
+
 		<h2 class="Subtitulos">Trabajar con imágenes y contenedores de Docker</h2>
 		<p class="parrafo">Docker es el entorno de contenedor de software líder para todas las plataformas. Permite a los usuarios empaquetar aplicaciones con todas sus dependencias y distribuir ese paquete a otras máquinas. Estas maquinas se llaman hosts y pueden ejecutar un paquete como un entorno completamente aislado que está virtualizado. Un paquete se llama imagen.</p>
 		<p class="parrafo">Una imagen de Docker es una plantilla con el número mínimo de archivos del sistema operativo y de aplicación que necesita para ejecutarse. Todo lo que necesita para ejecutar una aplicación está en la imagen. Las imágenes de Docker se almacenan en un registro de Docker donde los usuarios pueden cargar y descargar imágenes. El registro más conocido es Docker Hub, pero para Business Central (y otros productos de Microsoft), Microsoft hospeda su propio registro.</p>
@@ -439,8 +439,127 @@ let crearTabla = () =>{
 	cuerpo.innerHTML= contenido;
 
 }
+/*=============
+	Paginas
+	===============*/
+	let paginas = () =>{
+		let cuerpo = document.querySelector(".bodyContent");
+		let contenido = `
+		<h2 class="Subtitulos">Páginas</h2>
+		<p class="parrafo">En Dynamics 365 Business Central, las páginas son la forma principal de mostrar y organizar datos. Las páginas son el objeto principal con el que un usuario interactuará y tendrán un comportamiento diferente según el tipo de página que elija. Las páginas se diseñan independientemente del dispositivo en el que se van a representar y, de esta manera, la misma página se puede reutilizar en teléfonos, tabletas y clientes web.</p>
+		<p class="parrafo">Una página se define en el código como un objeto compuesto de controles, propiedades, acciones y disparadores. También puede usar Designer en Dynamics 365 Business Central para crear una página.</p>
+		<p class="parrafo">Ya sea que esté creando una nueva página o ampliando una página existente, agregará un nuevo archivo .al a su proyecto y describirá el <a href="https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-page-object">objeto de la página</a> en el código. La diferencia es básicamente que para una página nueva, debe definir la página completa, mientras que al modificar una página existente, solo agrega la funcionalidad adicional o modifica la existente.</p>
+		<p class="parrafo">La estructura de una página es jerárquica y se divide en tres secciones. El primer bloque contiene metadatos para la página general. Los metadatos describen el tipo de página y la tabla de origen de la que muestra datos. La siguiente sección; el diseño, describe las partes visuales de la página. La sección final detalla las acciones que se publican en la página.</p>
+		<p class="parrafo">Además, la página tiene propiedades. Las propiedades funcionan de la misma manera para las páginas que para otros objetos de Dynamics 365 Business Central. Para obtener más información, consulte <a href="https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/properties/devenv-page-property-overview">Propiedades de la página</a> .</p>
+		<h3>Metadatos de la página</h3>
+		<p class="parrafo">Para un nuevo objeto de página, debe especificar al menos el tipo de página; <b>PageTypey</b> la fuente de datos;<b>SourceTable</b> de la pagina Y también puede establecer otros metadatos al comienzo de la declaración del objeto de la página.</p>
+		<div class="img-content">
+		<img src="img/page01.PNG" alt="">
+		</div>
+		<h3>tipos de paginas</h3>
+		<p class="parrafo">El tipo de página que elija depende de la tarea de la aplicación que desea admitir, el contenido que desea mostrar y cómo desea mostrarlo. La página Área de trabajo es la página principal o de inicio y ayuda al usuario a concentrarse en las tareas y actividades diarias más importantes. Otros tipos de páginas, como las páginas de listas o las páginas de tarjetas, suelen estar vinculadas desde la página de inicio para facilitar el acceso. Están disponibles los siguientes tipos de página:</p>
+		<table class="tabla1">
+		<tr><th>Tipo de página</th><th>Descripción</th></tr>
+		<tr>
+		<td><b>RoleCenters</b></td>
+		<td>La página Centro de funciones es la página principal.</td>
+		</tr>
+		<tr>
+		<td><b>Card</b></td>
+		<td>Una página de Tarjeta se usa para ver y editar un registro o entidad de una tabla.</td>
+		</tr>
+		<tr>
+		<td><b>CardPart</b></td>
+		<td>Una página de parte de la tarjeta se usa en un cuadro informativo en otra página para ver o editar campos adicionales asociados con una entidad seleccionada en la página.</td>
+		</tr>
+		<tr>
+		<td><b>Lista</b></td>
+		<td>Una página de lista muestra el contenido de una tabla en formato de lista.</td>
+		</tr>
+		<tr>
+		<td><b>ListPart</b></td>
+		<td>Similar a una página de Lista, una página de Elemento de Lista muestra el contenido de una tabla en un formato de lista. La diferencia es que utiliza la página de artículo Lista como otra página en un Cuadro informativo o como parte de la página Área de trabajo.</td>
+		</tr>
+		<tr>
+		<td><b>List Plus</b></td>
+		<td>Una página de ListPlus muestra el contenido de una tabla en formato de lista. La diferencia con una página de Lista es que el contenido principal es un ListPart, no un grupo repetidor como lo tiene la Lista.</td>
+		</tr>
+		<tr>
+		<td><b>Document</b></td>
+		<td>Una página de documento generalmente consta de dos páginas separadas combinadas en una, con una página anidada en la otra. Una página de documento es adecuada para usar cuando desea mostrar datos de dos tablas que están vinculadas entre sí.</td>
+		</tr>
+		<tr>
+		<td><b>WorkSheet</b></td>
+		<td>El tipo de página Hoja de trabajo se utiliza para crear hojas de trabajo o páginas de tareas de diario.</td>
+		</tr>
+		<tr>
+		<td><b>ConfirmationDialog</b></td>
+		<td>La página ConfirmationDialog se utiliza para mostrar mensajes o solicitar a los usuarios una confirmación antes de que continúen con la tarea en la que están trabajando.</td>
+		</tr>
+		<tr>
+		<td><b>NavigatePage</b></td>
+		<td>Utilice un tipo de página Navegar para crear un asistente que lleve al usuario a través de una secuencia de pasos para completar una tarea.</td>
+		</tr>
+		<tr>
+		<td><b>StandardDialog</b></td>
+		<td>StandardDialog es un tipo de página simple que usa cuando los usuarios solo necesitan ingresar datos y no necesitan realizar otras acciones desde la página</td>
+		</tr>
+		<tr>
+		<td><b>HeadlinePart</b></td>
+		<td>Utilice un tipo de página HeadlinePart para mostrar un conjunto de títulos cambiantes en un área de trabajo.</td>
+		</tr>
+		<tr>
+		<td><b>API</b></td>
+		<td>  Las páginas de este tipo se utilizan para generar puntos finales de servicios web y no se pueden mostrar en la interfaz de usuario. Este tipo de página no debe ampliarse mediante la creación de un objeto de extensión de página. En su lugar, cree una nueva API agregando un objeto de página.</td>
+		</tr>
+		</table>
+		<br>
+		<h3>Diseño de página</h3>
+		<p class="parrafo">El diseño de página del objeto de página determina cómo se verá la página y se especifica en la layoutsección. layoutcontiene una o más areasecciones que definen una determinada ubicación en la página .</p>
+		<p class="parrafo">Puedes elegir entre las siguientes areacategorías:</p>
+		<table class="tabla1">
+		<tr>
+		<th>tipo de área</th>
+		<th>Colocación en la página</th>
+		</tr>
+		<tr>
+		<td><b>Content</b></td>
+		<td>El área de contenido muestra el contenido de, por ejemplo, un RoleCenter o una página de lista.</td>
+		</tr>
+		<tr>
+		<td><b>FactBoxes</b></td>
+		<td>  El área FactBox se coloca en el extremo derecho de una página.
+		Muestra contenido relacionado con un elemento en la página de contenido principal.</td>
+		</tr>
+		<tr>
+		<td><b>RoleCenter</b></td>
+		<td>El RoleCenter es la página principal de la aplicación y se utiliza para acceder rápidamente a la información y las tareas más utilizadas.</td>
+		</tr>
+		</table>
+		<br>
+		<h3>Acciones de páginas</h3>
+		<p class="parrafo">Todas las páginas contienen elementos de menú y controles de navegación llamados acciones. En Dynamics 365 Business Central, las acciones se muestran en la parte superior de cada página en la cinta o en el panel de navegación. La <b>actions</b> sección de la página describe lo que el usuario puede hacer en una página y debe diseñarse teniendo en cuenta la necesidad de soporte del proceso del usuario.</p>
+		<p class="parrafo">Las acciones se pueden mostrar en la cinta de todas las páginas y agruparse en las siguientes pestañas de acciones:</p>
+		<div class="contentList">
+		<ul>
+		<li>Homes</li>
+		<li>Ations</li>
+		<li>Navigate</li>
+		<li>Report</li>
+		</ul>
+		</div>
 
-/*Crear page card*/
+		<p class="parrafo">La creación de acciones puede incluir agregar botones/señales de actividad a una página, configurar elementos de navegación en un centro de funciones de usuario o agregar informes a una página. Para saber cómo puede permitir que los usuarios localicen rápidamente las acciones que desean usar.</p>
+
+		`;
+
+		cuerpo.innerHTML= contenido;
+
+	}
+
+/*================
+Crear page card
+==================*/
 let crearPageCard = () =>{
 	let cuerpo = document.querySelector(".bodyContent");
 	let contenido = `
@@ -489,9 +608,9 @@ let crearPageList = () =>{
 	cuerpo.innerHTML= contenido;
 
 }
-/*
+/*========================
 Crear una codeunist
-*/
+==============================*/
 
 let crearCodeunnits = () =>{
 	let cuerpo = document.querySelector(".bodyContent");
@@ -1111,9 +1230,9 @@ let diccionary = () =>{
 
 		}
 /*===============================
-	EVENTOS
+	EVENTO SUSCRIPTOR
 	================================*/
-	let eventos = () =>{
+	let eventosSuscriptor = () =>{
 		let cuerpo = document.querySelector(".bodyContent");
 		let contenido = `
 		<h2 class="Subtitulos">Eventos en AL (Business Central)</h2>
@@ -1239,6 +1358,444 @@ let diccionary = () =>{
 
 	}
 
+/*===================
+Tipos de Eventos
+======================*/
+let tiposEventos = () =>{
+	let cuerpo = document.querySelector(".bodyContent");
+	let contenido = `
+
+	<h2 class="Subtitulos">Tipos de eventos</h2>
+
+	<p class="parrafo">Dynamics 365 Business Central admite diferentes tipos de eventos para diferentes propósitos.</p>
+	<h3>Business events</h3>
+	<p class="parrafo">Un evento empresarial es un evento personalizado generado por el código AL. Define un contrato formal que conlleva una promesa implícita de no cambiar en versiones futuras. Se espera que los eventos comerciales sean publicados por los ISV de soluciones, incluido Microsoft.</p>
+	<p class="parrafo">Los eventos comerciales se pueden comparar con las API publicadas públicamente en las que los proveedores de soluciones de terceros desarrollan integraciones y adiciones. Por lo tanto, el costo posterior de realizar cambios en la implementación de un evento comercial puede ser considerable para aquellos que usan el evento en sus aplicaciones. Puede haber algunos casos en los que se requieran cambios; sin embargo, debe mantener estos al mínimo absoluto.</p>
+
+	<p class="parrafo">Un Business events típico refleja cambios en el "estado" con respecto a un proceso. Esto los hace muy adecuados para el flujo de trabajo. Un ejemplo de un evento comercial podría ser cuando se registra una orden de venta. Es importante tener en cuenta que los eventos comerciales no deben vincularse a los detalles de implementación, como las tablas o los campos en los que se almacenan los datos. Preferiblemente, el desarrollador del editor de eventos debe tener la libertad de cambiar la implementación, manteniendo intacto el evento comercial. Para obtener información sobre la sintaxis y el ejemplo sobre cómo usar el tipo BusinessEvent, consulte <a href="https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/attributes/devenv-businessevent-attribute">Atributo BusinessEvent</a> .</p>
+	<h3>Integration events</h3>
+	<p class="parrafo">Un evento de integración también es un evento personalizado que genera el código AL, como un evento comercial, excepto que no tiene la misma promesa de no cambiar, ni tiene la restricción de no exponer los detalles de implementación.</p>
+	<p class="parrafo">El objetivo principal de los eventos de integración es permitir la integración de otras soluciones con Dynamics 365 Business Central sin tener que realizar modificaciones de código tradicionales.</p>
+	<p class="parrafo">Un evento de integración se puede cambiar a un evento de negocios más adelante. Momento en el cual, debe adherirse al mismo contrato y compromiso implícito que cualquier evento empresarial. También puede diseñarse simplemente como puntos de enganche para complementos externos. Para obtener información sobre la sintaxis y el ejemplo sobre cómo usar el tipo IntegrationEvent, consulte el <a href="https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/attributes/devenv-integrationevent-attribute">atributo IntegrationEvent</a> .</p>
+	<p class="parrafo">To learn about the syntax and example on how to use the InternalEvent type, see <a href="https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/attributes/devenv-internalevent-attribute">InternalEvent Attribute</a>.</p>
+	<h3>Global events</h3>
+	<p class="parrafo">Los eventos globales son eventos del sistema predefinidos que son generados automáticamente por varias unidades de código de aplicación base. Por ejemplo, Codeunit 40 <b>LoginManagement</b> incluye varios activadores de métodos globales, como CompanyOpen, CompanyClose y GetSystemIndicator. Para la mayoría de estos disparadores de métodos globales, hay uno o dos eventos globales: un evento anterior y posterior. Por ejemplo, hay un evento OnBeforeCompanyOpen y un evento OnAfterCompanyOpen. Los eventos globales se definen como publicadores de eventos de integración mediante métodos locales en las siguientes unidades de código.</p>
+	<table class="tabla1">
+	<tr>
+	<th>Codeunit ID</th>
+	<th>Codeunit Name</th>
+	<th>Event</th>
+	</tr>
+	<tr>
+	<td>40</td>
+	<td>LoginManagement</td>
+	<td>OnRoleCenterOpen</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td>OnAfterLogInEnd</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td>OnBeforeLogInStart</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td>OnBeforeCompanyOpen</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td>OnAfterCompanyOpen</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td>  OnBeforeCompanyClose</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td>  OnAfterCompanyClose</td>
+	</tr>
+	<tr>
+	<td>42</td>
+	<td>TextManagement</td>
+	<td>OnBeforeMakeTextFilter</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td>OnAfterMakeDateTimeFilter</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td>OnAfterMakeDateFilter</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td>OnAfterMakeTextFilter</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td>OnAfterMakeTimeFilter</td>
+	</tr>
+	<tr>
+	<td>42*</td>
+	<td>Caption Class</td>
+	<td>OnAfterCaptionClassResolve</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td>  OnResolveCaptionClass</td>
+	</tr>
+	<tr>
+	<td>44</td>
+	<td>ReportManagement</td>
+	<td>OnAfterGetPrinterName</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td><a href="https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-onafterdocumentprintready-event">OnAfterDocumentPrintReady</a></td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td>OnAfterGetPaperTrayForReport</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td>OnAfterGetPrinterName</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td>OnAfterHasCustomLayout</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td><a href="https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-onafterdocumentready-event"> OnAfterDocumentReady</a></td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td><a href="https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-onafterdocumentready-event">OnAfterDocumentDownload</a></td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td><a href="https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-onaftersetupprinters-event">OnAfterSetupPrinters</a></td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td><a href="https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-oncustomdocumentmergerex-event">OnCustomDocumentMergerex</a></td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td>OnAfterSubstituteReport</td>
+	</tr>
+	<tr>
+	<td>45</td>
+	<td>  AutoFormatManagement</td>
+	<td>OnAfterAutoFormatTranslate</td>
+	</tr>
+	<tr>
+	<td>49</td>
+	<td>GlobalTriggerManagement</td>
+	<td>OnAfterGetGlobalTableTriggerMask</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td>OnAfterOnGlobalInsert</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td>OnAfterOnGlobalModify</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td>  OnAfterOnGlobalDelete</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td>  OnAfterOnGlobalRename</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td>OnAfterGetDatabaseTableTriggerSetup</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td>OnAfterOnDatabaseInsert</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td>OnAfterOnDatabaseModify</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td>  OnAfterOnDatabaseDelete</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td>  OnAfterOnDatabaseRename</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td>OnBeforeOnDatabaseInsert</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td>  OnBeforeOnDatabaseModify</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td>  OnBeforeOnDatabaseDelete</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td></td>
+	<td>OnBeforeOnDatabaseRename</td>
+	</tr>
+	</table><br>
+	<p class="parrafo"><b>* Codunit 42 Caption Class</b> se introdujo como reemplazo de codeunit 42 CaptionManagement . En versiones anteriores, la unidad de código 42 CaptionManagement incluía el OnAfterCaptionClassTranslateevento.</p>
+	<h3>Trigger events</h3>
+	<p class="parrafo">A diferencia de los Business events y de Integration events que deben programarse, los eventos desencadenantes son eventos predefinidos. El tiempo de ejecución publica los eventos desencadenantes y no se pueden generar mediante programación. Hay dos tipos de eventos desencadenantes: eventos desencadenantes de base de datos y eventos desencadenantes de página.</p>
+	<h3>Database trigger events</h3>
+	<p class="parrafo">El sistema genera automáticamente eventos desencadenantes cuando realiza operaciones de base de datos en un objeto de tabla, como eliminar, insertar, modificar y cambiar el nombre de un registro, tal como se define en una tabla. Los eventos desencadenantes están estrechamente asociados con los desencadenantes de tablas para las operaciones de la base de datos: OnDelete, OnInsert, OnModify, OnRename y OnValidate (para campos). Para cada operación de la base de datos, hay un evento desencadenante "antes" y "después" con una firma fija.</p>
+	<h4>Eventos desencadenantes de base de datos disponibles</h4>
+	<p class="parrafo">La siguiente tabla describe los eventos desencadenantes de base de datos disponibles:</p>
+	<table class="tabla1">
+	<tr>
+	<th>Database trigger event</th>
+	<th>Signature</th>
+	<th>Descripción</th>
+	</tr>
+	<tr>
+	<td>OnAfterDeleteEvent Trigger Event</td>
+	<td> Trigger Event  [EventSubscriber(ObjectType::Table, Database::&lt;Table Name&gt;, 'OnAfterDeleteEvent', '', &lt;SkipOnMissingLicense&gt;, &lt;SkipOnMissingPermission&gt;)]
+	local procedure MyProcedure(var Rec: Record; RunTrigger: Boolean)</td>
+	<td>Se ejecuta después de eliminar un registro de una tabla.</td>
+	</tr>
+	<tr>
+	<td>OnAfterInsertEvent Trigger Event</td>
+	<td>[EventSubscriber(ObjectType::Table, Database::&lt;Table Name&gt;, 'OnAfterInsertEvent', '', &lt;SkipOnMissingLicense&gt;, &lt;SkipOnMissingPermission&gt;)]
+	local procedure MyProcedure(var Rec: Record; RunTrigger: Boolean)</td>
+	<td>Se ejecuta después de insertar un registro en una tabla.</td>
+	</tr>
+	<tr>
+	<td>OnAfterModifyEvent Trigger Event</td>
+	<td>[EventSubscriber(ObjectType::Table, Database::&lt;Table Name&gt;, 'OnAfterModifyEvent', '', &lt;SkipOnMissingLicense&gt;, &lt;SkipOnMissingPermission&gt;)]
+	procedure MyProcedure(var Rec: Record; var xRec: Record; RunTrigger: Boolean)</td>
+	<td>Se ejecuta después de modificar un registro en una tabla.</td>
+	</tr>
+	<tr>
+	<td>OnAfterRenameEvent Trigger Event</td>
+	<td>[EventSubscriber(ObjectType::Table, Database::&lt;Table Name&gt;, 'OnAfterRenameEvent', '', &lt;SkipOnMissingLicense&gt;, &lt;SkipOnMissingPermission&lg;)]
+	procedure MyProcedure(var Rec: Record; var xRec: Record; RunTrigger: Boolean)</td>
+	<td>Se ejecuta después de cambiar el nombre de un registro en una tabla.</td>
+	</tr>
+	<tr>
+	<td>OnAfterValidateEvent Trigger Event</td>
+	<td>[EventSubscriber(ObjectType::Table, Database::&lt;Table Name&gt;, 'OnAfterValidateEvent', '&lt;Field Name&gt;', &lt;SkipOnMissingLicense&gt;, &lt;SkipOnMissingPermission&gt;)]
+	procedure MyProcedure(var Rec: Record; var xRec: Record; CurrFieldNo: Integer)</td>
+	<td>Se ejecuta después de validar un campo cuando se ha cambiado su valor.</td>
+	</tr>
+	<tr>
+	<td>OnBeforeDeleteEvent Trigger Event</td>
+	<td>  [EventSubscriber(ObjectType::Table, Database::&lt;Table Name&gt;, 'OnBeforeDeleteEvent', '', &lt;SkipOnMissingLicense&gt;, &lt;SkipOnMissingPermission&gt;)]
+	procedure MyProcedure(var Rec: Record; RunTrigger: Boolean)</td>
+	<td>Se ejecuta antes de que se elimine un registro de una tabla.</td>
+	</tr>
+	<tr>
+	<td>OnBeforeInsertEvent Trigger Event</td>
+	<td>  [EventSubscriber(ObjectType::Table, Database::&lt;Table Name&gt;, 'OnBeforeInsertEvent', '', &lt;SkipOnMissingLicense&gt;, &lt;SkipOnMissingPermission&gt;)]
+	procedure MyProcedure(var Rec: Record; RunTrigger: Boolean)</td>
+	<td>Se ejecuta antes de que se inserte un registro en una tabla.</td>
+	</tr>
+	<tr>
+	<td>OnBeforeModifyEvent Trigger Event</td>
+	<td>[EventSubscriber(ObjectType::Table, Database::&lt;Table Name&lt;, 'OnBeforeModifyEvent', '', &lt;SkipOnMissingLicense&lt;, &lt;SkipOnMissingPermission&lt;)]
+	procedure MyProcedure(var Rec: Record; var xRec: Record; RunTrigger: Boolean)</td>
+	<td>Se ejecuta antes de que se modifique un registro en una tabla.</td>
+	</tr>
+	<tr>
+	<td>OnBeforeRenameEvent Trigger Event</td>
+	<td>  [EventSubscriber(ObjectType::Table, Database::&lt;Table Name&gt;, 'OnBeforeRenameEvent', '', &lt;SkipOnMissingLicense&gt;, &lt;SkipOnMissingPermission&gt;)]
+	procedure MyProcedure(var Rec: Record; var xRec: Record; RunTrigger: Boolean)</td>
+	<td>Se ejecuta antes de que se cambie el nombre de un registro en una tabla.</td>
+	</tr>
+	<tr>
+	<td>OnBeforeValidateEvent Trigger Event</td>
+	<td>[EventSubscriber(ObjectType::Table, Database::&lt;Table Name&gt;, 'OnBeforeValidateEvent', '&lt;Field Name&gt;', &lt;SkipOnMissingLicense&gt;, &lt;SkipOnMissingPermission&gt;)]
+	procedure MyProcedure(var Rec: Record; var xRec: Record; CurrFieldNo: Integer)</td>
+	<td>Se ejecuta antes de que se valide un campo cuando se ha cambiado su valor.</td>
+	</tr>
+	</table><br>
+	<p class="parrafo">La siguiente tabla describe los parámetros de los eventos de disparo:</p>
+	<table class="tabla1">
+	<tr>
+	<th>Parameter</th>
+	<th>Type</th>
+	<th>Descripción</th>
+	</tr>
+	<tr>
+	<td>Rec</td>
+	<td>Record</td>
+	<td>  La tabla que utilizó la página que genera el evento.</td>
+	</tr>
+	<tr>
+	<td>xRec</td>
+	<td>Record</td>
+	<td>La tabla que utilizó la página que genera el evento.</td>
+	</tr>
+	<tr>
+	<td>AllowDelete</td>
+	<td>Boolean</td>
+	<td>Especifica si la llamada del activador OnDeleteRecord se realizó correctamente y si se puede eliminar el registro. Si este parámetro es verdadero, el código se ejecutará. Si este parámetro es falso, entonces el código no se ejecuta.</td>
+	</tr>
+	<tr>
+	<td>AllowModify</td>
+	<td>Boolean</td>
+	<td>  Especifica si la llamada del activador OnModifyRecord se realizó correctamente y si se puede modificar el registro. Si este parámetro es verdadero, el código se ejecutará. Si este parámetro es falso, entonces el código no se ejecuta.</td>
+	</tr>
+	<tr>
+	<td>BelowxRec</td>
+	<td>Boolean</td>
+	<td>Especifica si el nuevo registro se insertó después del último registro de la tabla (xRec).</td>
+	</tr>
+	<tr>
+	<td>AllowClose</td>
+	<td>Boolean</td>
+	<td>Especifica si la página se puede cerrar. Si este parámetro es verdadero, el código se ejecutará. Si este parámetro es falso, entonces el código no se ejecuta.</td>
+	</tr>
+	</table>
+	`;
+
+	cuerpo.innerHTML= contenido;
+
+}
+/*==================
+TRIGGERS EVENT
+=====================*/
+let eventosTrigger = () =>{
+	let cuerpo = document.querySelector(".bodyContent");
+	let contenido = `
+
+	<h2 class="Subtitulos">Uso de Triggers</h2>
+
+	<p class="parrafo">Los triggers son funciones predefinidas que el sistema genera automáticamente. Como desarrollador, puede escribir código que se ejecutará cuando se activen estas funciones. El trigger OnOpenPage (que es un activador del objeto Página ) se ejecutará cuando un usuario abra una página.</p>
+	<p class="parrafo">El  trigger OnInsert en la tabla se ejecutará cuando se inserte un nuevo registro en la base de datos. Si desea realizar validaciones adicionales en los datos antes de que se inserten en la base de datos, puede hacerlo en el trigger OnInsert</p>
+	<p class="parrafo">Además, aprenderá sobre la arquitectura basada en eventos. Con eventos, puede conectarse a la aplicación principal sin tener que modificar el código existente. Cuando ocurre un evento, puede reaccionar con su propio código a estos eventos.</p>
+	<p class="parrafo">Los triggers de tabla se ejecutarán cuando se produzcan ciertos eventos en la base de datos. Cuando crea una tabla con el fragmento ttable , se generan automáticamente cuatro triggers de tabla:</p>
+	<div class="contentList">
+	<ul>
+	<li>OnInsert</li>
+	<li>OnModify</li>
+	<li>OnDelete</li>
+	<li>OnRename</li>
+	</ul> 
+	</div>
+	<div class="img-content">
+	<img src="img/trigger1.PNG" alt="">
+	</div>
+	<p class="parrafo">Cada uno de los trigger se ejecuta antes de que se lleve a cabo la acción. Por ejemplo, el trigger OnInsert se ejecuta antes de que los datos se almacenen en la base de datos. El trigger <b>OnDelete</b> se ejecuta antes de que se eliminen los datos en la base de datos.</p>
+	<p class="parrafo">Esta característica le brinda la oportunidad como programador de agregar validaciones adicionales y lógica para verificar antes de que se complete la transacción real de la base de datos.</p>
+	<p class="parrafo"><b>OnModify</b> se activa cuando se modifica un registro en la base de datos. Sin embargo, si modifica la clave principal de un registro, se activa <b>OnRename</b> .</p>
+	<p class="parrafo">La siguiente captura de pantalla muestra un ejemplo del trigger OnInsert que se usa en la tabla Customer.</p>
+	<div class="img-content">
+	<img src="img/trigger2.PNG" alt="">
+	</div>
+	<p class="parrafo">Por lo general, para las tablas maestras, encontrará alguna lógica para obtener un nuevo número para su registro a través de la administración de series de números en el trigger OnInsert .</p>
+	<p class="parrafo">Además de los triggers de tabla, hay triggers a nivel de campo:</p>
+	<div class="contentList">
+	<ul>
+	<li>OnValidate</li>
+	<li>OnLookup</li>
+	</ul> 
+	</div>
+	<div class="img-content">
+	<img src="img/trigger3.PNG" alt="">
+	</div>
+
+	<p class="parrafo">El trigger <b>OnValidate</b>  se usa para ejecutar una validación adicional cuando un usuario ingresa datos en un campo determinado. Se llamará al trigger <b>OnValidate</b>  antes de que los datos se almacenen en la base de datos. Es mejor usar el trigger <b>OnValidate</b> en lugar del trigger <b>OnModify</b>  porque puede apuntar a un campo específico. Si recibe un error en el trigger  <b>OnValidate</b> , no se llamará al trigger <b>OnModify</b>  .</p>
+	<p class="parrafo">El trigger <b>OnValidate</b> en la clave principal de las tablas maestras se usa normalmente para verificar si el usuario puede ingresar manualmente un valor para la clave principal. Las tablas maestras utilizan la gestión de series de números para generar un nuevo número para un registro. En una serie de números, también puede definir que se permita la numeración manual, como se muestra en el siguiente ejemplo con el activador <b>OnValidate</b>  .</p>
+	<div class="img-content">
+	<img src="img/trigger4.PNG" alt="">
+	</div>
+	<p class="parrafo"><b>OnLookup</b> se activa cuando realiza una búsqueda en otra tabla. De forma predeterminada, se crea una búsqueda estableciendo la propiedad <b>TableRelation</b> en el campo. Esta configuración creará un control desplegable en la página. Al seleccionar este control, se mostrarán los datos de los datos vinculados, más específicamente, los campos que están definidos en el grupo de campos <b>DropDown</b> . Si desea realizar otras acciones o desea realizar un filtrado adicional antes de mostrar los datos, utilice el trigger <b>OnLookup</b>  .</p>
+	<p class="parrafo">El siguiente ejemplo muestra el trigger<b>OnLookup</b>  que se usa en la tabla Customer. Cuando selecciona un contacto que está vinculado por la propiedad <b>TableRelation</b> el código primero filtrará el contacto según su relación con este cliente específico. Este código no le permitirá seleccionar una persona de contacto que no esté vinculada a este cliente.</p>
+	<div class="img-content2">
+	<img src="img/trigger5.PNG" alt="">
+	</div>
+	<h3>Triggers de página, control y acción</h3>
+	<p class="parrafo">Los triggers de página se ejecutan cuando algo sucede en la página o con ella. Puede ejecutar código cuando un usuario abre o cierra una página o cuando se recupera un nuevo registro de la base de datos.</p>
+	<p class="parrafo">En AL, puede definir los triggers en la sección de diseño y acciones. La siguiente captura de pantalla muestra una lista de los activadores de página disponibles.</p>
+	<div class="img-content">
+	<img src="img/trigger6.PNG" alt="">
+	</div> 
+	<p class="parrafo">Los siguientes son triggers de página de uso común:</p>
+	<div class="contentList">
+	<ul>
+	<li><b>OnInit :</b> se usa cuando la página está cargada pero antes de que los controles estén disponibles.</li>
+	<li><b>OnOpenPage :</b> se usa cuando la página se inicializa y los controles están disponibles.</li>
+	<li><b>OnAfterGetRecord :</b> se utiliza cuando se ha recuperado un registro pero aún no se ha mostrado.</li>
+	<li><b>OnAfterGetCurrRecord :</b>se usa después de recuperar el registro actual de la tabla.</li>
+	</ul>
+	</div>
+	<p class="parrafo">El trigger OnInit generalmente muestra u oculta partes y controles con la propiedad Visible del control.</p>
+	<p class="parrafo">Junto a los triggers de página hay triggers de control. Los  de control se utilizan en los campos de página. Para definir un trigger de control, debe especificarlo en la sección de control después de las propiedades del control.</p>
+	<div class="img-content">
+	<img src="img/trigger7.PNG" alt="">
+	</div>
+	<p class="parrafo">Los siguientes triggers están disponibles para un campo en una página:</p>
+	<div class="contentList">
+	<ul>
+	<li><b>OnAssistEdit :</b> se activa cuando alguien usa el botón <b> Assist Edit</b>. Por lo general, este trigger se usa con <b>No. Series</b> para seleccionar otra serie de números. </li>
+	<li><b>OnDrillDown :</b>  se activa cuando un usuario selecciona un control que actúa como un control detallado. Este trigger se usa normalmente con FlowFields. Cuando selecciona un FlowField, se mostrarán los registros que componen el cálculo del FlowField. <b>OnDrillDown</b>  también se puede usar con HeadlineParts en una página de área de trabajo para realizar una acción cuando se selecciona el título.</li>
+	<li><b>OnLookup :</b> se activa cuando un usuario selecciona un control desplegable que realiza una búsqueda. Este trigger tiene el mismo comportamiento que el activador OnLookup de la tabla. Recomendamos que coloque el código en el nivel de la tabla tanto como sea posible.</li>
+	<li><b>OnValidate :</b> se activa cuando un usuario ingresa un valor en un campo y luego lo abandona. Este trigger tiene el mismo comportamiento que el trigger <b>OnValidate</b>  en el nivel de la tabla.</li>
+	</ul>
+	</div>
+	<p class="parrafo">El trigger <b>OnAssistEdit</b>  se usa en tablas maestras para establecer la serie de números que se usa para un registro. La siguiente captura de pantalla muestra la implementación del trigger <b>OnAssistEdit</b> para el campo No. en la página Tarjeta de cliente .</p>
+	<div class="img-content">
+	<img src="img/trigger8.PNG" alt="">
+	</div>
+	<p class="parrafo">El trigger <b>OnAssistEdit</b> llama a una función en la tabla Customer. Esta función utiliza otra unidad de código para mostrar a los usuarios la serie de números disponibles y maneja la lógica de <b>número de serie</b> .</p>
+	<div class="img-content">
+	<img src="img/trigger9.PNG" alt="">
+	</div>
+
+
+	`;
+
+	cuerpo.innerHTML= contenido;
+
+}
 /*
 let tableRelation = () =>{
 	let cuerpo = document.querySelector(".bodyContent");

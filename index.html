@@ -19,6 +19,9 @@
     <div class="logo-content">
      <img src="img/bonit.png" alt="logo" class="logo"> 
    </div>
+   <div class="temario">
+     <p>Programación AL</p>
+   </div>
    <div class="dropdown botonera">
     <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
       Introducción AL
@@ -52,6 +55,7 @@
     Pages
   </button>
   <ul class="dropdown-menu" >
+    <li><a class="dropdown-item" onclick="paginas()">Páginas</a></li>
     <li><a class="dropdown-item" onclick="crearPageCard()">Crear Page Card</a></li>
     <li><a class="dropdown-item" onclick="crearPageList()">Crear Page List</a></li>
     <li><a class="dropdown-item" onclick="crearAction()">Actions</a></li> 
@@ -127,13 +131,18 @@
 </div>
 <div class="dropdown botonera">
   <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-   Eventos
+   Eventos AL
  </button>
  <ul class="dropdown-menu" >
-  <li><a class="dropdown-item" onclick="eventos()"> Eventos en AL</a></li>
+  <li><a class="dropdown-item" onclick="tiposEventos()"> Tipos Eventos </a></li>
+  <li><a class="dropdown-item" onclick="eventosSuscriptor()"> Evento Suscriptor</a></li>
+  <li><a class="dropdown-item" onclick="eventosTrigger()"> Triggers Eventos</a></li>
 </ul>
 </div>
 <!--Business Central Funcional-->
+<div class="temario">
+ <p>Business Central</p>
+</div>
 <div class="dropdown botonera">
   <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Introducció BC
@@ -142,14 +151,63 @@
     <li><a class="dropdown-item" onclick="introBc()"> Introducción</a></li>
     <li><a class="dropdown-item" onclick="suscripciones()"> Suscripciones</a></li>
   </ul>
-</div><div class="dropdown botonera">
+</div>
+<div class="dropdown botonera">
   <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Configuración
   </button>
   <ul class="dropdown-menu" >
-    <li><a class="dropdown-item" onclick="suscripciones()"> Suscripciones</a></li>
-    <li><a class="dropdown-item" onclick="configuracion()"> Configuración</a></li>
+   
+    <li><a class="dropdown-item" onclick="configuracion()"> Configuración Básica</a></li>
     <li><a class="dropdown-item" onclick="crearEmpresa()"> Crear Empresa</a></li>
+    <li><a class="dropdown-item" onclick="rapidStart()">Paquetes Configuración</a></li>
+  </ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Periodo Contable
+  </button>
+  <ul class="dropdown-menu" >
+    <li><a class="dropdown-item" onclick="periodoContable()"> Crear Año Fiscal</a></li>
+  </ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Clientes
+  </button>
+  <ul class="dropdown-menu" >
+    <li><a class="dropdown-item" onclick="crearPlantillaCliente()"> Crear Plantilla Cliente</a></li>
+    <li><a class="dropdown-item" onclick="crearCliente()"> Crear Cliente</a></li>
+  </ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Ventas
+  </button>
+  <ul class="dropdown-menu" >
+    <li><a class="dropdown-item" onclick="resumenVentas()"> Resumen Ventas</a></li>
+    <li><a class="dropdown-item" onclick="confiVentas()"> Configuración Ventas</a></li>
+    <li><a class="dropdown-item" onclick="pedidoVentas()"> Crear pedido Ventas</a></li>
+  </ul>
+</div>
+
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Pagos
+  </button>
+  <ul class="dropdown-menu" >
+    <li><a class="dropdown-item" onclick="configTerminosPagos()"> Config Terminos Pagos</a></li>
+    <li><a class="dropdown-item" onclick="pagoProveedores()"> Pago Proveedores</a></li>
+  </ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Almacenes
+  </button>
+  <ul class="dropdown-menu" >
+    <li><a class="dropdown-item" onclick="planificacionAlmacen()"> Planificación Almacen</a></li>
+    <li><a class="dropdown-item" onclick="administrarInventario()"> Administrar Inventario</a></li>
+    <li><a class="dropdown-item" onclick="gestionAlmacenes()"> Gestion Almacenes</a></li>
   </ul>
 </div>
 
@@ -180,14 +238,13 @@
       </ul>
     </div>
     <hr>
-
     <!--Inicio de la Function-->
+   
+    <p class="parrafo"></p>
+    
 
-  <p class="parrafo"></p>
-  <p class="parrafo"></p>
-
-  <!--Fin  la Function-->
-</div>
+    <!--Fin  la Function-->
+  </div>
 </div>
 
 </div>

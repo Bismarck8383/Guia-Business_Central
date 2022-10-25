@@ -27,7 +27,21 @@
   border-right: 1px solid black;
  
 }
- 
+ .temario {
+  width: 100%;
+  border: 1px solid black;
+ }
+ .temario p{
+  
+  width: 100%;
+  padding: 3px 0px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 17pt;
+  background: black;
+  color: white;
+margin-bottom: 0px;
+ }
 .contenedor-contenido{
   width: 80%;
   display: flex;
@@ -101,11 +115,12 @@
 }
 .img-content{
   width: 100%;
-  padding: 20px;
+  padding: 5px;
+  
 }
 .img-content2{
   width: 100%;
-  padding: 20px;
+   height: 600px;display: flex;
   align-content: center;
   justify-content: center;
 }
@@ -118,9 +133,10 @@
 .img-content2 img{
   width: 100%;
   max-width: 1400px;
-  height: 700px;
+ height: 100%;
   object-fit:contain;
   object-position: 0px 0px;
+  margin-bottom: 0px;
 }
 .contentList{
   width: 100%;
