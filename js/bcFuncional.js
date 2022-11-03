@@ -270,6 +270,67 @@ let rapidStart = () =>{
 	cuerpo.innerHTML= contenido;
 
 }
+/*=================
+	Serie Numerica
+	====================*/
+	let serieNumerica = () =>{
+		let cuerpo = document.querySelector(".bodyContent");
+		let contenido = `
+		<h2 class="Subtitulos">Crear serie de números</h2>
+		<p class="parrafo">Para cada empresa que configure, debe asignar códigos de identificación únicos a elementos como cuentas del libro mayor, cuentas de clientes y proveedores, 
+		facturas y otros documentos. La numeración es importante no solo para la identificación. Un sistema de numeración bien diseñado también hace que la empresa sea más manejable y 
+		fácil de analizar, y puede reducir la cantidad de errores que ocurren en la entrada de datos.</p>
+		<p class="parrafo"><b>Nota</b> <br>
+		De forma predeterminada, no se permiten espacios en la serie de números porque el historial exacto de las transacciones financieras debe estar disponible para auditoría, por ley,
+		y por lo tanto debe seguir una secuencia ininterrumpida sin números eliminados.
+		</p>
+		<p>Si desea permitir brechas en ciertas series de números, consulte primero con su auditor o gerente de contabilidad para asegurarse de cumplir con los requisitos legales
+		en su país/región.</p>
+		<p class="parrafo"><b>Recomendación</b><br>
+		Recomendamos que utilice los mismos códigos de series de números que aparecen en la página Lista de series de números en la empresa de demostración CRONUS. Es posible que los
+		códigos como P-INV+ no tengan sentido inmediato para usted, pero Business Central tiene una serie de configuraciones predeterminadas que dependen de estos códigos de series de
+		números.
+		</p>
+		<p class="parrafo">Un sistema de numeración se crea configurando uno o más códigos para cada tipo de datos maestros o documentos. Por ejemplo, puede configurar un código para 
+		numerar clientes, otro código para numerar facturas de venta y otro código para numerar documentos en diarios generales. Después de configurar un código, debe configurar al 
+		menos una línea de serie numérica. La línea de la serie numérica contiene información como el primer y último número de la serie y la fecha de inicio. Puede configurar más de una 
+		línea de serie numérica por código de serie numérica, con una fecha de inicio diferente para cada línea. Las series se utilizarán consecutivamente, comenzando cada serie en la 
+		fecha de inicio respectiva.</p>
+		<p class="parrafo"><b>Importante</b><br>
+		La longitud máxima de un número en una serie de números es de 20 caracteres. Hay algunas situaciones en las que Business Central agregará un número con una identificación generada
+		por el sistema. Por ejemplo, cuando se utilizan documentos como facturas para aplicar transacciones, como pagos, Business Central genera identificadores para las transacciones 
+		aplicadas. El identificador se compone de un número de una serie de números y una identificación asignada por el sistema de seis caracteres, como -12345. Si espera procesar más de 
+		9999 documentos en diarios bancarios o GIRO, o diarios de recibos de efectivo, configure series numéricas para esos tipos de documentos para que incluyan menos de 14 caracteres.
+		</p>
+		<p class="parrafo">Por lo general, configura su serie de números para insertar automáticamente el siguiente número consecutivo en nuevas tarjetas o documentos que cree. Sin embargo,
+		también puede configurar una serie de números para permitir que ingrese manualmente el nuevo número. Especifique esto con la casilla de verificación Números de manual .</p>
+		<p class="parrafo">Si desea utilizar más de un código de serie numérica para un tipo de datos maestros, por ejemplo, si desea utilizar diferentes series numéricas para diferentes 
+		categorías de elementos, puede utilizar relaciones de series numéricas.</p>
+		<h3>Para crear una nueva serie numérica</h3>
+		<ul>
+		<li><b>1.</b> Elija el icono de busqueda, ingrese <b>No. Serie</b> y luego elija el enlace relacionado.</li>
+		<li><b>2.</b> Elija la acción <b>Nuevo</b>.</li>
+		<li><b>3.</b> En la Nueva Linea, complete los campos según sea necesario. pase el cursor sobre un campo para leer una breve descripción. <br><br>
+		<div class="img-content2"><img src="img/devol1.PNG" alt=""></div>
+		</li>
+		<li><b>4.</b> Elija la acción Líneas.</li>
+		<li><b>5.</b> En la página Nº Líneas de serie , rellene los campos para definir el uso real y el contenido de la serie de números que creó en el paso 2.</li>
+		<li><b>6.</b>  Repita el paso 5 para tantos usos diferentes de la serie numérica que necesite. El campo Fecha de inicio define qué línea de serie numérica está activa.</li>
+		</ul><br>
+		<div class="img-content"><img src="img/devol2.PNG" alt=""></div>
+		<p class="parrafo"><b>Nota</b> <br>Para permitir que los usuarios especifiquen números manualmente cuando registran un nuevo cliente o proveedor, por ejemplo, seleccione el campo
+		Números manuales en la propia serie de números. Para no permitir la <b>numeración manual</b>, borre el campo.</p>
+		<p class="parrafo">Puede asignar series de números a las plantillas que configura para los diferentes tipos de clientes y proveedores que su personal de ventas y compradores agregan 
+		con mayor frecuencia a su Business Central. En ese caso, configure la serie de números relevante, vincúlelos a través de relaciones y luego agregue la primera serie de números en la 
+		relación relevante a la página de configuración correspondiente. Luego, cuando un usuario crea un cliente, elige la plantilla correspondiente y el nuevo cliente obtiene un número 
+		asignado de la serie de números definida para esa plantilla.</p>
+
+		`;
+
+		cuerpo.innerHTML= contenido;
+
+	}
+
 /*===================
 Periodo Contable
 ======================*/
@@ -581,6 +642,69 @@ let pedidoVentas = () =>{
 	cuerpo.innerHTML= contenido;
 
 }
+/*=================
+Crear factura de ventas 
+======================*/
+let facturaVenta = () =>{
+	let cuerpo = document.querySelector(".bodyContent");
+	let contenido = `
+	<h2 class="Subtitulos"> Factura de Venta</h2>
+	<p class="parrafo">Por lo general, puede crear una orden de venta o una factura de venta para registrar su acuerdo con un cliente para vender ciertos productos en ciertas condiciones de entrega y pago.</p>
+	<p class="parrafo">Sin embargo, debe usar una orden de venta en lugar de una factura de venta si:</p>
+	<div class="contentList">
+	<ul>
+	<li>Necesita enviar solo una parte de la cantidad de un pedido, por ejemplo, porque la cantidad total no está disponible.</li>
+	<li>Envíe productos después de contabilizar las facturas de venta correspondientes.</li>
+	<li>Venda artículos que su proveedor entrega directamente a su cliente, lo que se conoce como envío directo.Obtenga más información en <a href="https://learn.microsoft.com/en-us/dynamics365/business-central/sales-how-drop-shipment">Hacer envíos directos</a>  .</li>
+	</ul>
+	</div>
+	<p class="parrafo">En todas las demás situaciones, las órdenes de venta y las facturas de venta funcionan de la misma manera. Obtenga más información sobre cómo utilizar los pedidos de venta en <a href="https://learn.microsoft.com/en-us/dynamics365/business-central/sales-how-sell-products">Vender productos</a> .</p>
+	<p class="parrafo">Puede negociar con el cliente creando primero una cotización de venta, que puede convertir en una factura de venta cuando acuerde la venta. Obtenga más información en <a href="https://learn.microsoft.com/en-us/dynamics365/business-central/sales-how-make-offers">Hacer cotizaciones de venta </a> .</p>
+	<h3>Para crear una factura de venta</h3>
+	<ul>
+	<li><b>1.</b> Elija el icono de busqueda, ingrese Facturas de ventas , luego elija el enlace relacionado.</li>
+	<li><b>2.</b> En el campo Cliente , ingrese el nombre de un cliente existente.</li>
+	<li><b>3.</b> Complete los campos restantes en la página Factura de venta según sea necesario. Pase el cursor sobre un campo para leer una breve descripción.</li>
+	<li><b>4.</b> En la ficha desplegable Líneas , en el campo Tipo , seleccione el <b>tipo</b> de producto, cargo o transacción que registrará para el cliente en la línea de ventas.</li>
+	<li><b>5.</b> En el campo <b>No.</b> , seleccione un registro para publicar de acuerdo con el valor en el campo Tipo . <br>
+	Deje el campo No. en blanco en los siguientes casos:
+	<div class="contentList">
+	<ul>
+	<li>Si la línea es para un comentario. Escriba el comentario en el campo Descripción .</li>
+	<li>Si la línea es para un artículo del catálogo.</li>
+	</ul>
+	</div>
+	</li>
+	<li><b>6.</b> En el campo <b>Cantidad</b> , ingrese cuántas unidades del producto, cargo o transacción debe registrar la línea para el cliente.
+	<br><b>Nota</b><br>
+	Si el artículo es del tipo Servicio , o el campo Tipo contiene Recurso , entonces la cantidad es una unidad de tiempo, como horas, como se indica en el campo Código de unidad de medida en la línea.
+	</li>
+	<li><b>7.</b> Si desea otorgar un descuento, ingrese un porcentaje en el campo % <b>de descuento de línea</b> . El valor del campo Importe de la línea se actualiza en consecuencia. <br>
+	Si se configuran precios de artículos especiales en la ficha desplegable Precios de venta y Descuentos de línea de venta en la ficha del cliente o del artículo, el precio y el importe en la línea de venta se actualizan automáticamente si se cumplen los criterios de precio.</li>
+	<li><b>8.</b> En la opción <b>Registar</b>, <b>Vista previa de registro</b> podremos ver una vista previa de lo movimientos que afectuara nuestro registro. </li>
+	<li><b>9.</b> Le damos <b>Registrar</b>, luego aceptar y nos mostrar un mensaje "La factura se registró con el número 103217 y se movió a la ventana de facturas de venta registradas."</li>
+	</ul><br>
+	<div class="img-content2">
+	<img src="img/factura1.PNG" alt="">
+	</div>
+	<p class="parrafo">Vista previa de lo movimientos que efectuara el registro de la factura.</p>
+	<div class="img-content2">
+	<img src="img/factura2.PNG" alt="">
+	</div>
+	<h3>Facturas registradas</h3>
+	<p class="parrafo">Una vez contabilizada la factura, podrá encontrarla en la lista de facturas contabilizadas. Tanto la lista Facturas de venta registradas como la lista Facturas de compra registradas muestran las facturas registradas con los números de factura finales. En la lista, puede buscar cada factura registrada y puede corregir o cancelar una factura registrada.</p>
+	<p class="parrafo">Para cada factura registrada, puede buscar estadísticas, dimensiones y los asientos contables que son el resultado de la factura registrada. También puede imprimir o enviar la factura contabilizada.</p>
+	<p class="parrafo">Factura archivada en el historico de facturas.</p>
+	<div class="img-content2">
+	<img src="img/factura3.PNG" alt="">
+	</div>
+	<p class="parrafo">Videotutorial como realizar una factura de venta, <a href="https://www.youtube.com/watch?v=HSNtfKoJi2k">aquí</a>.</p>
+
+	`;
+
+	cuerpo.innerHTML= contenido;
+
+}
 /*===================
 Crear Plantilla Cliente
 =====================*/
@@ -749,6 +873,51 @@ let configTerminosPagos = () =>{
 		cuerpo.innerHTML= contenido;
 
 	}
+	/*=====================
+		Pago Clientes
+		==========================*/
+
+		let pagoCliente = () =>{
+			let cuerpo = document.querySelector(".bodyContent");
+			let contenido = `
+			<h2 class="Subtitulos">Registro de pagos de Clientes</h2>
+			<p class="parrafo">Dependiendo de las necesidades de su negocio, puede recibir pagos y registrar un pago de diferentes maneras: manualmente, automáticamente y a través de servicios de pago.</p>
+			<p class="parrafo">Puede procesar los pagos directamente desde la tarjeta del cliente. Utilice la acción <b>Registrar pagos de clientes</b> para obtener una descripción general de las facturas pendientes de pago de ese cliente. Luego, marque la factura como pagada parcialmente o en su totalidad. Esta conciliación de pagos procesa los pagos de sus clientes al hacer coincidir los montos recibidos en su cuenta bancaria con las facturas de ventas no pagadas relacionadas y luego registra los pagos.</p>
+			<p class="parrafo">En entornos comerciales donde el cliente paga algún tiempo después de la entrega, de acuerdo con las condiciones de pago, una factura de venta registrada permanece abierta (sin pagar) hasta que el departamento de Cuentas por cobrar verifica que se recibió el pago y lo aplica a la factura de venta registrada.</p>
+			<p class="parrafo">En entornos comerciales donde el cliente paga de inmediato, por ejemplo, mediante PayPal o en efectivo, el pago se registra inmediatamente cuando registra la factura de venta, es decir, la factura de venta registrada se cierra como totalmente aplicada. Seleccione el método relevante en el campo <b>Código de método de pago</b> en la orden de venta. Para pagos electrónicos, como PayPal, también debe completar el campo <b>Servicio de pago</b>.</p>
+			<p class="parrafo"><b>Nota</b><br>Si desea enviar a sus clientes recordatorios de pagos vencidos, primero debe configurar niveles y términos de recordatorio. Obtenga más información en Configurar términos y niveles de recordatorio .</p>
+			<p class="parrafo">Para registrar un cobro a un cliente se debe seguir los siguientes pasos: </p>
+			<ul>
+			<li><b>1.</b> En el icono de busqueda,  ingrese  <b>Diario Recibo de efectivo</b> y luego elija el enlace relacionado.  <br>
+			<li><b>2.</b> En la página diario de recibo de efectivo rellenamos los campos.</li>
+			<li><b>3.</b>  En <b>Tipo de documento</b> ponemos pago.</li>
+			<li><b>4.</b> En <b>Nº documento</b> Podemos Poner <b> Cobro 1</b>.</li>
+			<li><b>5.</b> En <b>Tipo Mov</b> debe ser <b> Cliente.</b></li>
+			<li><b>6.</b> En el campo <b>Nº cuenta </b> el ID del cliente.</li>
+			<li><b>7.</b>  En el campo <b>tipo contrapartida</b> podemos elegir (cuenta, banco).</li>
+			<li><b>8.</b> Una vez rellenado los campos le damos click en <b> Proceso </b> y luego <b> </b></li>
+			<li><b>9.</b> En la página movimientos del clientes, seleccionamos la factura que deseamo pagar, <b>Proceso</b> y luego <b>marcar id liquidación </b>, seleccionadas las facturas a pagar le damos  <b>Aceptar</b>.</li>
+			<li><b>10.</b> Nuevamente en la página <b>Diarios de recibo de efectivo</b> podemos ver una una vista previa del registro que se realizaran en <b> Registrar e imprimir</b> y <b>Vista previa del registro</b></li>
+			<li><b>11.</b> Para Finalizar le damos <b>Registrar e imprimir</b> <b> Registrar</b> y <b>Aceptar</b>. <br>
+			Para ver el movimiento contable entramos en la ficha del cliente, <b>Acciones , Relacionado, Historial</b>y <b>Movimientos</b>.</li>
+			</ul><br>
+			<p class="parrafo">Campos de la pagina Diario Recibo de efectivo rellenados. </p>
+			<div class="img-content2"><img src="img/pagoCli.PNG" alt=""></div>
+			<p class="parrafo">Seleccionar la factura que se realizara el cobro.</p>
+			<div class="img-content2"><img src="img/pagoCli1.PNG" alt=""></div>
+			<p class="parrafo">Vista previa de los movimientos contables que se ejecutaran.</p>
+			<div class="img-content"><img src="img/pagoCli2.PNG" alt=""></div>
+			<p class="parrafo">Vista del historial de movimientos contables del cliente.</p>
+			<div class="img-content2"><img src="img/pagoCli3.PNG" alt=""></div>
+
+			<p class="parrafo">Videoutorial como registrar un pago de un cliente, <a href="https://www.youtube.com/watch?v=1nKziXuV9GY">Aquí</a></p>
+			<p class="parrafo">Videotutorial Liquidar movimientos de clientes ya registrados en Business Central, <a href="https://www.youtube.com/watch?v=DCAtOLlcAzo">aquí</a></p>
+
+			`;
+
+			cuerpo.innerHTML= contenido;
+
+		}
 	/*===========================
 	Planificación de Almacenes
 	===========================*/
@@ -970,119 +1139,614 @@ let configTerminosPagos = () =>{
 		cuerpo.innerHTML= contenido;
 
 	}
-
-
-	/*Configuracion de finanzas*/
-	let configfinanzas = () =>{
+/*===================
+	Crear Producto
+	========================*/
+	let crearArticulo = () =>{
 		let cuerpo = document.querySelector(".bodyContent");
 		let contenido = `
-		<table class="tabla1">
-		<tr>
-		<th>A</th>
-		<th>Ver</th>
-		</tr>
-		<tr>
-		<td>Ver o editar cuentas del libro mayor en las que se contabilizan todas las entradas del libro mayor</td>
-		<td><a href="">Configurar o cambiar el plan de cuentas</a></td>
-		</tr>
-		<tr>
-		<td>Especifique cómo desea que le paguen los clientes y cómo desea pagar a sus proveedores.</td>
-		<td><a href="">Configurar métodos de pago</a></td>
-		</tr>
-		<tr>
-		<td>Especifique las condiciones de pago para administrar las fechas de vencimiento y calcular posibles descuentos por pago.</td>
-		<td><a href="">Configurar condiciones de pago</a></td>
-		</tr>
-		<tr>
-		<td>Especifique los grupos de contabilización que asignan entidades como clientes, proveedores, artículos, recursos y documentos de compra y venta a las cuentas del libro mayor.</td>
-		<td><a href="">Configurar grupos de contabilización</a></td>
-		</tr>
-		<tr>
-		<td>Cree informes financieros y defina categorías de cuentas que determinen el contenido de los gráficos e informes financieros, como los informes de hoja de balance y estado de resultados.</td>
-		<td><a href="">Preparar informes financieros con datos financieros y categorías de cuentas</a></td>
-		</tr>
-		<tr>
-		<td>Configure una tolerancia por la cual el sistema cierra una factura incluso si el pago, incluido cualquier descuento, no cubre completamente el monto de la factura.</td>
-		<td><a href="">Trabajar con tolerancias de pago y tolerancias de descuento de pago</a></td>
-		</tr>
-		<tr>
-		<td>Configurar periodos fiscales.</td>
-		<td><a href="">Trabajar con períodos contables y años fiscales</a></td>
-		</tr>
-		<tr>
-		<td>Configure los términos de la factura que les recuerden a sus clientes que deben realizar el pago.</td>
-		<td><a href="">Configurar términos y niveles de recordatorio</a></td>
-		</tr>
-		<tr>
-		<td>Defina cómo informa a las autoridades fiscales los importes del impuesto sobre el valor añadido (IVA) recaudados por las ventas.</td>
-		<td><a href="">Configurar el impuesto al valor agregado (IVA)</a></td>
-		</tr>
-		<tr>
-		<td>Prepárese para manejar el IVA no realizado en relación con los métodos de contabilidad basados ​​en efectivo.</td>
-		<td><a href="">Configurar el IVA no realizado para la contabilidad de caja</a></td>
-		</tr>
-		<tr>
-		<td>Defina las monedas extranjeras con las que comercia o reporta transacciones.</td>
-		<td><a href="">Configurar monedas</a></td>
-		</tr>
-		<tr>
-		<td>Configure sus funciones de Ventas y Compras para manejar pagos en moneda extranjera.</td>
-		<td><a href="">Habilitar la aplicación de asientos contables en diferentes monedas</a></td>
-		</tr>
-		<tr>
-		<td>Defina una o más monedas adicionales para que los montos se informen automáticamente tanto en la moneda local (LCY) como en una moneda de informe adicional en cada asiento del libro mayor (G/L) y en otros asientos.</td>
-		<td><a href="">Configurar una moneda de informe adicional</a></td>
-		</tr>
-		<tr>
-		<td>Ajuste periódicamente los equivalentes de divisas adicionales para compensar las fluctuaciones de los tipos de cambio.</td>
-		<td><a href="">Actualizar tipos de cambio de moneda</a></td>
-		</tr>
-		<tr>
-		<td>Defina múltiples tasas de interés para usar en diferentes períodos para pagos atrasados ​​en transacciones comerciales.</td>
-		<td><a href="">Configurar tasas de interés múltiples</a></td>
-		</tr>
-		<tr>
-		<td>Haga arreglos para que los montos se redondeen automáticamente a medida que se crean las facturas.</td>
-		<td><a href="">Configurar el redondeo de facturas</a></td>
-		</tr>
-		<tr>
-		<td>Agregue nuevas cuentas al plan de cuentas existente.</td>
-		<td><a href="">Configuración del plan de cuentas</a></td>
-		</tr>
-		<tr>
-		<td>Configure gráficos de inteligencia empresarial (BI) para analizar el flujo de caja.</td>
-		<td><a href="">Configuración del análisis de flujo de caja</a></td>
-		</tr>
-		<tr>
-		<td>Habilitar la facturación de un cliente no configurado en el sistema.</td>
-		<td><a href="">Configurar clientes en efectivo</a></td>
-		</tr>
-		<tr>
-		<td>Configure los informes de Intrastat y envíe el informe a una autoridad.</td>
-		<td><a href="">Configurar e informar Intrastat</a></td>
-		</tr>
-		<tr>
-		<td>Asegúrese de que un asiento de diario se asigne entre diferentes cuentas, como cantidad, porcentaje o monto, cuando lo publique en el diario.</td>
-		<td><a href="">Usar claves de asignación en diarios generales</a></td>
-		</tr>
-		<tr>
-		<td>Configure códigos fuente y códigos de motivo para ayudar a realizar un seguimiento de los registros de auditoría.</td>
-		<td><a href="">Configuración de códigos fuente y códigos de motivo para registros de auditoría</a></td>
-		</tr>
-		<tr>
-		<td>Especifique los informes predeterminados que se utilizarán para diferentes tipos de documentos.</td>
-		<td><a href="">Selección de informes en Business Central</a></td>
-		</tr>
-		</table>
-		<p class="parrafo"><b>Nota</b><br>Según su ubicación geográfica, algunas páginas de Business Central pueden contener 
-		campos que no se describen en los artículos enumerados anteriormente porque se aplican a personalizaciones o funciones locales. 
-		Pase el cursor sobre un campo para leer una breve descripción.</p>
+		<h2 class="Subtitulos">Registrar nuevos artículos</h2>
+		<p class="parrafo">Los artículos, entre otros productos, son la base de su negocio, los bienes o servicios que comercia. Cada artículo debe registrarse como una ficha de artículo.</p>
+		<p class="parrafo">Las tarjetas de artículos contienen la información necesaria para comprar, almacenar, vender, entregar y contabilizar los artículos.</p>
+		<p class="parrafo">La ficha del artículo puede ser de tipo <b>Inventario</b> , <b>Servicio</b>  o <b>Sin inventario</b> para especificar si el artículo es una unidad de inventario físico, una unidad de tiempo de mano de obra o una unidad física que no se rastrea en el inventario.</p>
+		<p class="parrafo">Si compra el mismo artículo de más de un proveedor, puede conectar esos proveedores a la ficha del artículo. Los proveedores aparecerán en la página Catálogo de proveedores de artículos , de modo que pueda seleccionar fácilmente un proveedor alternativo.</p>
+		<p class="parrafo">Los artículos del catálogo son artículos que usted ofrece a sus clientes pero no desea administrarlos en su sistema hasta que comience a venderlos. Los artículos del catálogo no son artículos regulares del tipo <b>Sin inventario</b> .</p>
+		<p class="parrafo"><b>Nota </b> <br> Si existen plantillas de artículos para diferentes tipos de artículos, aparecerá una página cuando cree una nueva tarjeta de artículo desde donde puede seleccionar una plantilla apropiada. Si solo existe una plantilla de artículo, las nuevas tarjetas de artículo siempre usan esa plantilla.</p>
+		<p class="parrafo">El siguiente procedimiento explica cómo crear una ficha de artículo desde cero.</p>
+		<h3>Para crear una nueva ficha de producto</h3>
+		<ul>
+		<li><b>1.</b> Elija el Icono de la lupa, escriba  Productos y luego elija el enlace relacionado.</li>
+		<li><b>2.</b> En la página de articulos  , elija la acción <b>Nuevo</b>. <br>Si solo existe una plantilla de artículo, se abre una nueva tarjeta de artículo con algunos campos llenos de información de la plantilla.</li>
+		<li><b>3.</b> En la página <b>Seleccionar una plantilla para un nuevo elemento</b> , elija la plantilla que desea usar para la nueva tarjeta de elemento.</li>
+		<li><b>4.</b> Elija el botón <b>Aceptar</b> . Se abre una nueva tarjeta de artículo con algunos campos llenos de información de la plantilla.</li>
+		<li><b>5.</b> Proceda a completar o cambiar los campos en la ficha del artículo según sea necesario. Pase el cursor sobre un campo para leer una breve descripción.</li>
+		</ul>
+		<div class="img-content2">
+		<img src="img/arti1.PNG" alt="">
+		</div>
+		<p class="parrafo">Puede ver o editar precios especiales o descuentos que otorga, o que su proveedor le otorga, para el artículo si se cumplen ciertos criterios, como el cliente, la cantidad mínima de pedido o la fecha de finalización. Para ello, elija las acciones Establecer precios especiales o Establecer descuentos especiales . Cada fila en, por ejemplo, la página Precios de venta representa un precio especial. Cada columna representa un criterio que se debe aplicar para otorgar a un cliente el precio especial que ingresa en el campo Precio unitario en la página Precios de venta .</p>
+		<p class="parrafo">El artículo ahora está registrado y la ficha del artículo está lista para usarse en los documentos de compra y venta.</p>
+		<h3>Eliminación de fichas de artículos</h3>
+		<p class="parrafo">Si registró una transacción para un artículo, no puede eliminar la tarjeta porque las entradas del libro mayor pueden ser necesarias para la valoración o auditoría del inventario. Para eliminar tarjetas de artículos con entradas de libro mayor, comuníquese con el socio de Microsoft para hacerlo a través del código.</p>
+		<h3>Categorías, atributos y variantes</h3>
+		<p class="parrafo">Las categorías y los atributos son dos formas diferentes de agrupar artículos de inventario. La variante del artículo es una forma de indicar que un artículo específico está disponible en diferentes colores o tamaños, por ejemplo. Dependiendo de cómo configure su inventario, puede usar categorías para agrupar sillas versus escritorios y luego usar atributos para agrupar artículos verdes versus artículos azules, por ejemplo. Luego puede complementar esta configuración agregando variantes para cada tipo de silla y escritorio. Al agregar variantes, puede ejecutar informes como Disponibilidad de artículos por variante para identificar las diferencias entre las sillas azules y las sillas verdes, por ejemplo.</p>
+		<p class="parrafo">Para especificar sus atributos realizaremos los sisguientes pasos:</p>
+		<ul>
+		<li><b>1.</b> En la ficha del articulo seleccionamos <b>Producto</b>, <b>Atributos</b>.</li>
+		<li><b>2.</b> Se nos abrira una ventana <b>Editar - Valores de atributo de producto</b></li>
+		<li><b>3.</b> Rellenamos los campos <b>Atributo</b> y <b>Valor</b>.</li>
+		<li><b>4.</b>Le damos <b>Aceptar</b>.</li>
+		</ul>
+		<p class="parrafo">Ventana Editar atributos.</p>
+		<div class="img-content2">
+		<img src="img/arti2.PNG" alt="">
+		</div>
+		<p class="parrafo">Ficha del articulo con sus atributos.</p>
+		<div class="img-content2">
+		<img src="img/arti3.PNG" alt="">
+		</div>
+
+		<p class="parrafo">Videotutorial Como crear un nuevo producto, <a href="https://www.youtube.com/watch?v=pDuSfIWPlO4&list=PLyx3kyr4ant_aHVT5JXbKC4KOeO16N1Wv&index=1">aquí</a>.</p>
 
 		`;
 
 		cuerpo.innerHTML= contenido;
 
-	}	
+	}
+	/*=====================
+		Compras
+		======================*/
+		let compras = () =>{
+			let cuerpo = document.querySelector(".bodyContent");
+			let contenido = `
+
+			<h2 class="Subtitulos">Compras</h2>
+			<p class="parrafo">Crea una factura de compra o una orden de compra para registrar el costo de las compras y realizar un seguimiento de las cuentas por pagar. Si necesita controlar un inventario, las facturas de compra también se utilizan para actualizar dinámicamente los niveles de inventario para que pueda minimizar sus costos de inventario y brindar un mejor servicio al cliente. Los costos de compra, incluidos los gastos de servicio y los valores de inventario que resultan de la publicación de facturas de compra contribuyen a las cifras de ganancias y otros financieros en su área de trabajo.</p>
+			<p class="parrafo">Debe usar órdenes de compra si su proceso de compra requiere que registre recibos parciales de una cantidad de pedido, por ejemplo, porque la cantidad total no estaba disponible con el proveedor. Si vende artículos entregándolos directamente de su proveedor a su cliente, como un envío directo, también debe usar órdenes de compra.</p>
+			<p class="parrafo">Para obtener más información, consulte <a href="https://learn.microsoft.com/en-us/dynamics365/business-central/sales-how-drop-shipment"> Realizar envíos directos</a>. En todos los demás aspectos, las órdenes de compra funcionan de la misma manera que las facturas de compra.</p>
+			<p class="parrafo">Puede hacer que las facturas de compra se creen automáticamente mediante el uso del servicio OCR (reconocimiento óptico de caracteres) para convertir las facturas en PDF de sus proveedores en documentos electrónicos, que luego se convierten en facturas de compra mediante un flujo de trabajo. Para usar esta funcionalidad, primero debe registrarse en el servicio OCR y luego realizar varias configuraciones. Para obtener más información, consulte  <a href="https://learn.microsoft.com/en-us/dynamics365/business-central/across-income-documents">Documentos entrantes</a>.</p>
+			<p class="parrafo">Los productos pueden ser tanto artículos de inventario como servicios. Para obtener más información, consulte <a href="https://learn.microsoft.com/en-us/dynamics365/business-central/inventory-how-register-new-items">Registrar elementos nuevos</a>.</p>
+			<p class="parrafo">Para todos los procesos de compra, puede incorporar un flujo de trabajo de aprobación, por ejemplo, para exigir que el gerente de contabilidad apruebe las compras grandes. Para obtener más información, consulte <a href="https://learn.microsoft.com/en-us/dynamics365/business-central/across-how-use-approval-workflows">Usar flujos de trabajo de aprobación</a>.</p>
+			<p class="parrafo">La siguiente tabla describe una secuencia de tareas, con enlaces a los temas que las describen.</p>
+			<table class="tabla1">
+			<tr>
+			<th>Descripción</th>
+			<th>Ver</th>
+			</tr>
+			<tr>
+			<td>Cree una factura de compra para registrar su acuerdo con un proveedor para comprar productos en ciertos términos de entrega y pago.</td>
+			<td><a href="https://learn.microsoft.com/en-us/dynamics365/business-central/purchasing-how-record-purchases">Registro de compras</a></td>
+			</tr>
+			<tr>
+			<td>Cree una cotización de compra para reflejar una solicitud de cotización de su proveedor, que luego puede convertir en una orden de compra.</td>
+			<td><a href="https://learn.microsoft.com/en-us/dynamics365/business-central/purchasing-how-request-quotes">Solicitar Cotizaciones</a></td>
+			</tr>
+			<tr>
+			<td>Cree una factura de compra para todas las líneas o las seleccionadas en una factura de venta.</td>
+			<td><a href="https://learn.microsoft.com/en-us/dynamics365/business-central/purchasing-how-purchase-products-sale">Comprar artículos para una venta</a></td>
+			</tr>
+			<tr>
+			<td>Comprenda lo que sucede cuando publica documentos de compra.</td>
+			<td><a href="https://learn.microsoft.com/en-us/dynamics365/business-central/ui-post-purchases">Publicación de compras</a></td>
+			</tr>
+			<tr>
+			<td>Realice una acción en una factura de compra registrada sin pagar para crear automáticamente una nota de crédito y cancelar la factura de compra o volver a crearla para que pueda hacer las correcciones.</td>
+			<td><a href="https://learn.microsoft.com/en-us/dynamics365/business-central/purchasing-how-correct-cancel-unpaid-purchase-invoices">Corregir o cancelar facturas de ventas impagas</a></td>
+			</tr>
+			<tr>
+			<td>Cree una nota de crédito de compra para revertir una factura de compra registrada específica para reflejar qué productos está devolviendo al proveedor y qué monto de pago cobrará.</td>
+			<td><a href="https://learn.microsoft.com/en-us/dynamics365/business-central/purchasing-how-register-new-vendors">Procesar devoluciones o cancelaciones de compras</a></td>
+			</tr>
+			<tr>
+			<td>Prepárese para facturar múltiples recibos del mismo proveedor una vez combinando los recibos en una sola factura.</td>
+			<td><a href="https://learn.microsoft.com/en-us/dynamics365/business-central/purchasing-how-to-combine-receipts">Combinar recibos en una sola factura</a></td>
+			</tr>
+			<tr>
+			<td>Convierta, por ejemplo, facturas electrónicas de sus proveedores en facturas de compra dentro de Business Central.</td>
+			<td><a href="https://learn.microsoft.com/en-us/dynamics365/business-central/purchasing-how-to-receive-and-convert-electronic-documents">Recibir y convertir documentos electrónicos</a></td>
+			</tr>
+			<tr>
+			<td>Descubra cómo Business Central calcula cuándo debe pedir un artículo para recibirlo en una fecha determinada.</td>
+			<td><a href="https://learn.microsoft.com/en-us/dynamics365/business-central/purchasing-date-calculation-for-purchases">Cálculo de fecha para compras</a></td>
+			</tr>
+			<tr>
+			<td>Resuelva la confusión cuando existen dos o más registros para el mismo proveedor.</td>
+			<td><a href="https://learn.microsoft.com/en-us/dynamics365/business-central/sales-how-merge-duplicate-records">Combinar registros duplicados</a></td>
+			</tr>
+			<tr>
+			<td>Administre su compromiso con un proveedor para comprar grandes cantidades entregadas en varios envíos a lo largo del tiempo.</td>
+			<td><a href="https://learn.microsoft.com/en-us/dynamics365/business-central/sales-how-to-create-blanket-sales-orders">Trabajo con órdenes de compra abiertas</a></td>
+			</tr>
+			</table><br>
+			<h3>Números de documentos externos</h3>
+			<p class="parrafo">En documentos de compra y diarios, puede especificar un número de documento que se refiera al sistema de numeración del proveedor. 
+			Utilice este campo para registrar el número que el proveedor asignó a la orden, factura o nota de crédito. Luego puede usar el número más tarde si, por alguna razón,
+			necesita buscar la entrada publicada usando este número.</p>
+			<p class="parrafo">La ext. <b>Doc. Núm.</b> El campo Obligatorio en la página <b>Configuración de compras y cuentas por pagar</b> especifica si es obligatorio ingresar un número de
+			documento externo en las siguientes situaciones:</p>
+			<div class="contentList">
+			<ul>
+			<li>En el campo N.° de <b>factura del proveedor</b> , el campo <b>N.° de pedido</b> del proveedor o el campo <b>N.° de factura del proveedor</b>. Campo <b>Memo No.</b> en un encabezado de 
+			compra.</li>
+			<li>En el campo <b>Número de documento externo</b> en una línea de diario general, donde el campo <b>Tipo de documento</b> está configurado en Factura , Nota de crédito o Nota de cargo
+			financiero y el campo <b>Tipo de cuenta</b> está configurado en Proveedor .</li>
+			</ul>
+			</div>
+			<p class="parrafo">Si selecciona este campo, no será posible contabilizar una factura, una nota de crédito o el tipo de línea de diario general descrito anteriormente sin un número de 
+			documento externo.</p>
+			<p class="parrafo">El número de documento externo se incluye en los documentos registrados donde puede buscar por el número correspondiente. También puede buscar utilizando el número de
+			documento externo al navegar en las entradas del libro mayor de proveedores.</p>
+			<p class="parrafo">Una forma diferente de manejar números de documentos externos es usar el campo <b>Su referencia</b>. Si utiliza el campo Su referencia , el número se incluirá en los 
+			documentos publicados y podrá buscarlo de la misma manera que para los valores de los campos <b>Número de documento externo</b>. Pero el campo no está disponible en las líneas de diario.</p>
+
+
+			`;
+
+			cuerpo.innerHTML= contenido;
+
+		}
+	/*==============================
+		Crear Oferta de Compra
+		==============================*/
+		let crearCompra = () =>{
+			let cuerpo = document.querySelector(".bodyContent");
+			let contenido = `
+
+			<h2 class="Subtitulos">Crear una oferta de compra</h2>
+			<p class="parrafo">Las compras que se realizan al mejor precio mejoran la administración del inventario de una empresa, reducen los costes y tienen un efecto directo en la capacidad de la empresa de satisfacer a sus clientes.</p>
+			<p class="parrafo">Business Central proporciona un sistema completo de administración de pedidos de compra que puede registrar, solicitar información completa sobre todos los proveedores, acuerdos de precios, acuerdos de descuento y planes de envío o recepción.</p>
+			<p class="parrafo">El sistema de oferta de compra integrado ayuda a los agentes de compras a buscar las mejores condiciones de compra. Esto incluye una cómoda conversión a pedidos de compra para ofertas con éxito. Los agentes de compras pueden utilizar el sistema integrado de pedidos abiertos de compra para registrar acuerdos de compra por adelantado y también pueden emplear esta información registrada en pedidos de compra posteriores.</p>
+			<p class="parrafo">Se puede usar una oferta de compra como borrador preliminar para un pedido de compra, y el pedido se puede convertir en una factura de compra o en un pedido.</p>
+			<p class="parrafo">Para crear una oferta de compra, seleccione el icono buscar página en la esquina superior derecha de la página, introduzca Ofertas de compra y, a continuación, elija el vínculo relacionado.</p>
+			<ul>
+			<li><b>1.</b> Para crear un documento nuevo, seleccione la acción <b>Nuevo</b>. </li>
+			<li><b>2.</b> En el campo Proveedor, especifique el nombre de un proveedor existente. Otros campos de la página <b>Oferta de compra</b> se rellenan ahora con la información estándar para el proveedor seleccionado. Si el proveedor no está registrado, primero debe registrarlo como proveedor. No necesita dejar la oferta de compra para crear un nuevo proveedor, simplemente seleccione <b>Nuevo</b>.</li>
+			<li><b>3.</b> Si ha especificado un nombre de proveedor para un proveedor que no está registrado, podría recibir el siguiente mensaje, en el que puede seleccionar <b>Cree una nueva ficha de proveedor</b> y después seleccionar el botón Aceptar para continuar. <br>
+			<div class="img-content2"><img src="img/compra1.png" alt=""></div>
+			</li>
+			<li><b>4.</b> En la página Seleccionar una plantilla para un proveedor nuevo, seleccione una plantilla y, a continuación, seleccione el botón <b>Aceptar</b>. Se abre una nueva <b>Ficha proveedor</b>, previamente rellenada con la información de la plantilla de proveedor seleccionada. El campo <b>Nombre</b>  contiene el nombre del nuevo proveedor que introdujo en la oferta de compra. Puede seguir rellenando los campos restantes en la ficha de proveedor. Cuando haya rellenado la ficha del proveedor, seleccione el botón <b>Aceptar</b> para volver a la página <b>Oferta de compra</b>.</li>
+			<li><b>5.</b> Varios campos de la página <b>Oferta de compra</b> se rellenan ahora con la información de la nueva ficha del proveedor. Rellene los campos restantes en la ficha <b>General</b>, según sea necesario. Por ejemplo, puede modificar la fecha de pedido y agregar la fecha de recepción solicitada como una fecha en que desea que el proveedor entregue a la dirección de envío. <br><br>
+			<div class="img-content2"><img src="img/compra2.PNG" alt=""></div>
+
+			</li>
+			<li><b>6.</b> Ahora puede rellenar las líneas Oferta de compra con artículos de inventario o servicios que solicita de un proveedor.</li>
+			<li><b>7.</b> En la ficha desplegable Líneas, en el campo N.º, introduzca el número de un producto o servicio de inventario (si el valor del campo Tipo de esta línea es Producto). En el campo <b>Cantidad</b>, especifique el número de artículos que desea solicitar.</li>
+			<li><b>8.</b> Si está comprando una gran cantidad de productos o servicios diferentes, es posible que tenga muchas líneas en la oferta de compra. En esta situación, puede usar la función <b>Modo de enfoque</b> para contraer el cuadro informativo y la ficha desplegable <b>General</b>. Seleccione el botón <b>Modo de enfoque</b> y se abrirá una nueva página, centrada en las líneas del pedido de compra.</li>
+			<li><b>9.</b> Para imprimir o enviar esta <b>Oferta de compra</b>, use la acción <b>Imprimir/Enviar</b>.</li>
+			<li><b>10.</b> Cuando se haya completado la oferta de compra y se hayan aceptado todas las condiciones de su proveedor, podrá convertir su oferta de compra en un pedido de compra. Seleccione la acción <b>Convertir en pedido</b>. Dynamics 365 Business Central confirma que la oferta de compra se ha convertido en un pedido y, a continuación, le informa sobre el nuevo número de pedido de compra. Cuando se selecciona <b>Aceptar</b>, la oferta de compra se elimina de la base de datos.</li>
+			<li><b>11.</b> El pedido de compra se crea a partir de la información de la oferta de compra. En el campo N.º oferta del pedido de compra puede ver el número de oferta de compra.</li>
+			<li><b>12.</b> Abrimos el nuevo pedido de compra.</li><br>
+			<li>
+			<div class="img-content2"><img src="img/compra3.PNG" alt=""></div>
+			</li>
+			</ul>
+			<p class="parrafo">Videotutorial como realizar un pedido de compra, <a href="https://www.youtube.com/watch?v=sQBYIRneaKk&list=PLOHrSC2gN59oIA7sFMOuhKYoQ_fvZxB4u&index=2">aquí</a>.</p>
+
+			`;
+
+			cuerpo.innerHTML= contenido;
+
+		}
+/*===================
+ Crear factura de compra		
+ ===========================*/
+
+ let facturaCompra = () =>{
+ 	let cuerpo = document.querySelector(".bodyContent");
+ 	let contenido = `
+ 	<h2 class="Subtitulos">Crear factura de compra</h2>
+ 	<p class="parrafo">Crea una factura de compra o una orden de compra para registrar el costo de las compras y realizar un seguimiento de las cuentas por pagar. Las facturas de compra y las órdenes de compra también se utilizan para actualizar dinámicamente los niveles de inventario, lo que significa que puede minimizar los costos de inventario y brindar un mejor servicio al cliente. Los costos de compra, incluidos los gastos de servicio y los valores de inventario que resultan de la publicación de facturas o pedidos de compra, contribuyen a las cifras de ganancias y otros indicadores financieros clave de rendimiento  en su área de trabajo.</p>
+ 	<p class="parrafo">Además de comprar artículos físicos ( tipo de artículo de inventario ), que afecta la valoración del inventario, puede comprar servicios representados por unidades de tiempo. Puede hacerlo con el tipo de elemento de servicio o con el tipo de línea de recursos .</p>
+ 	<p class="parrafo">Cuando reciba los artículos de inventario o el servicio adquirido esté completo, registre la factura de compra o el pedido para actualizar el inventario y los registros financieros y para activar el pago al proveedor de acuerdo con las condiciones de pago.</p>
+ 	<h3>Crear factura de compra desde pedido de compra</h3>
+ 	<ul>
+ 	<li><b>1.</b> Desde la página principal en el icono de la lupa de busqueda, insertamos <b>Pedidos Compra</b>, luego elija el enlace relacionado. <br>
+ 	<div class="img-content"><img src="img/facompra.PNG" alt=""></div>
+ 	</li>
+ 	<li><b>2.</b> Al ingresar a la tarjeta que nos mostrara todos los datos sobre el pedido de compra y verificar que todo esté correcto y si no necesitamos modificar nada, en la opción  <b>Registrar</b>, le damos aceptar en <b>recibir y facturar</b>. <br>
+ 	<div class="img-content2"><img src="img/facompra1.PNG" alt=""></div>
+ 	</li><br>
+ 	<li><b>3.</b> Una vez contabilizada la factura, podrá encontrarla en la lista de facturas contabilizadas <b>Historico de factura de compra</b>. <br>
+ 	<div class="img-content2"><img src="img/facompra2.PNG" alt=""></div>
+ 	</li>
+ 	</ul>
+ 	<h3>Cuándo usar órdenes de compra</h3>
+ 	<p class="parrafo">Debe usar órdenes de compra si su proceso de compra requiere que registre recibos parciales de una cantidad de pedido, por ejemplo, porque la cantidad total 
+ 	no está disponible con el proveedor. Si entrega artículos vendidos directamente de su proveedor a su cliente como un envío directo, también debe usar órdenes de compra.</p>
+ 	<h3>Facturas Registradas</h3>
+ 	<p class="parrafo">Una vez contabilizada la factura, podrá encontrarla en la lista de facturas contabilizadas. Tanto la lista Facturas de venta registradas como la lista Facturas de 
+ 	compra registradas muestran las facturas registradas con los números de factura finales. En la lista, puede buscar cada factura registrada y puede corregir o cancelar una factura 
+ 	registrada.</p>
+ 	<p class="parrafo">Para cada factura registrada, puede buscar estadísticas, dimensiones y los asientos contables que son el resultado de la factura registrada. También puede imprimir 
+ 	o enviar la factura contabilizada.</p>
+ 	<p class="parrafo">Puede corregir o cancelar fácilmente una factura de compra registrada antes de pagar al proveedor. Esto es útil si necesita corregir un error de escritura o cambiar 
+ 	la compra al principio del proceso de pedido. Obtenga más información en
+ 	<a href="https://learn.microsoft.com/en-us/dynamics365/business-central/purchasing-how-correct-cancel-unpaid-purchase-invoices">Corregir o cancelar facturas de compra impagas</a> .
+ 	Si ya pagó artículos o servicios en la factura de compra registrada, debe crear una nota de crédito de compra para revertir la compra. 
+ 	Obtén más información en <a href="https://learn.microsoft.com/en-us/dynamics365/business-central/purchasing-how-process-purchase-returns-cancellations">
+ 	Procesar devoluciones o cancelaciones de compras</a>.</p>
+ 	<p class="parrafo">Videotutorial de factura de compra desde pedido de venta en Business Central, 
+ 	<a href="https://www.youtube.com/watch?v=phGrR_NKIeQ&list=PLOHrSC2gN59oIA7sFMOuhKYoQ_fvZxB4u&index=1"> aquí</a>.</p>
+ 	`;
+
+ 	cuerpo.innerHTML= contenido;
+
+ }
+ /*======================
+	Registro de Compras 
+	========================*/
+	let  registroCompra = () =>{
+		let cuerpo = document.querySelector(".bodyContent");
+		let contenido = `
+		<h2 class="Subtitulos">Registro de Compra</h2>
+		<p class="parrafo">Cuando se contabiliza un documento de compra, se actualizan la cuenta del proveedor, el libro mayor (G/L), los asientos del libro mayor de artículos y los 
+		asientos del libro mayor de recursos.</p>
+		<div class="contentList">
+		<ul>
+		<li>Correo</li>
+		<li>Vista previa de la publicación</li>
+		<li>Registrar e imprimir</li>
+		<li>Informe de prueba</li>
+		<li>Publicar lote</li>
+		</ul>
+		</div>
+		<p class="parrafo">Para cada documento de compra, se crea una entrada de compra en la tabla <b> Entrada del L/M .</b> También se crea una entrada en la cuenta del <b>proveedor 
+		en la tabla Entrada de libro mayor de proveedores</b> y una entrada del L/M en la cuenta de cuentas por pagar correspondiente. Además, la contabilización de la compra puede dar 
+		lugar a un asiento del impuesto sobre el valor añadido (IVA) y un asiento del L/M por el importe del descuento. El hecho de que se registre una entrada para el descuento depende
+		del contenido del campo Registro de descuento en la página <b>Configuración de compras y cuentas por pagar</b>.</p>
+		<p class="parrafo">Para cada línea de compra, según corresponda, se crean entradas en el:</p>
+		<div class="contentList">
+		<ul>
+		<li><b>Tabla Entrada de libro mayor de artículos</b> si la línea de compra es del tipo<b>Artículo .</b></li>
+		<li><b>Tabla Entrada</b> de mayor si la línea de compra es del tipo <b>Cuenta</b> de mayor.</li>
+		<li>La tabla<b> Entrada de libro mayor de recursos</b> si la línea de compra es del tipo <b> Recurso</b>.</li>
+		</ul>
+		</div>
+		<p class="parrafo">Antes de comenzar a contabilizar, puede imprimir un informe de prueba que contenga toda la información en
+		la orden de compra e indique cualquier error allí. Para imprimir el informe, seleccione <b>Contabilización</b> y, a continuación, seleccione <b>Informe de prueba</b>.</p>
+		<p class="parrafo"><b>Importante</b><br>
+		Cuando registra una orden de compra para artículos, puede crear tanto un recibo como una factura. Estos se pueden hacer de forma simultánea o independiente. 
+		También puede crear un recibo parcial y una factura parcial completando el campo <b>Cantidad. a recibir</b> y <b>cant. a los campos de Factura</b> 
+		en las líneas de orden de compra individuales antes de contabilizar. Tenga en cuenta que no puede crear una factura de compra a partir de una orden de 
+		compra de productos o servicios que no se han recibido. Es decir, antes de poder facturar, debe haber registrado un recibo, o debe elegir recibir y facturar al mismo tiempo.</p>
+		<p class="parrafo">Para registrar una factura de compra sin registrar un recibo de compra en Business Central, cree el documento en la página <b>Facturas de compra</b>.</p>
+		<h3>Visualización de asientos contables</h3>
+		<p class="parrafo">Cuando se completa la contabilización, las líneas de compra contabilizadas se eliminan del pedido. Un mensaje le informa cuando se completa la publicación. 
+		Después de esto, podrá ver los asientos contabilizados en varias páginas, incluidas las páginas Asientos contables de <b>proveedores, Asientos contables, Asientos contables</b> 
+		de <b>artículos</b>, <b>Asientos contables</b> de <b>recursos</b>, <b>Recibos</b> de compra y <b>Facturas</b> de compra contabilizadas .</p>
+		<p class="parrafo">En la mayoría de los casos, puede abrir asientos contables desde la tarjeta o documento afectado. Por ejemplo, en la página Tarjeta de <b>proveedor</b> , 
+		elija la acción <b>Entradas</b>.</p>
+
+		`;
+
+		cuerpo.innerHTML= contenido;
+
+	}
+/*========================
+	Crear Proveedor
+	=============================*/
+	let crearProveedor = () =>{
+		let cuerpo = document.querySelector(".bodyContent");
+		let contenido = `
+		<h2 class="Subtitulos">Registrar nuevos proveedores</h2>
+		<p class="parrafo">Los proveedores proporcionan los productos que usted vende. Cada proveedor al que le compre debe estar registrado con una tarjeta de proveedor.</p>
+		<p class="parrafo">Antes de registrar nuevos proveedores, debe configurar varios códigos de compra para seleccionar cuando llene las tarjetas de proveedores. 
+		Después de crear todos los datos maestros necesarios, puede agregar características únicas para un proveedor, como priorizar el proveedor para fines de pago o 
+		enumerar artículos que el proveedor y otros proveedores suministran. Otro grupo de tareas de configuración para proveedores es registrar sus acuerdos sobre descuentos, 
+		precios y métodos de pago.</p>
+		<p class="parrafo">Las tarjetas de proveedor contienen la información necesaria para comprar productos de cada proveedor.</p>
+		<h3>Adición de nuevos proveedores</h3>
+		<p class="parrafo">Puede agregar nuevos proveedores manualmente, completando la página Tarjeta de proveedor , o puede usar plantillas que contienen información predefinida.
+		Por ejemplo, puede crear plantillas para diferentes tipos de perfiles de proveedores. El uso de plantillas ahorra tiempo al agregar nuevos proveedores y ayuda a garantizar 
+		que la información sea correcta cada vez.</p>
+		<p class="parrafo"><b>Nota</b><br>
+		Si existen plantillas de proveedores para diferentes tipos de proveedores, cuando comience a crear una nueva tarjeta de proveedor, verá una página desde la que puede seleccionar 
+		la plantilla adecuada. Si solo existe una plantilla de proveedor, las nuevas tarjetas de proveedor siempre usan esa plantilla.
+		</p>
+		<p class="parrafo">Después de crear una plantilla, puede usar la acción Aplicar plantilla para aplicarla a uno o más proveedores seleccionados. Para crear una plantilla, complete 
+		la información que desea reutilizar en la página Tarjeta de proveedor y luego guárdela como plantilla.</p>
+		<p class="parrafo">Las direcciones de envío se utilizan cuando imprime cheques para pagar a sus proveedores, y los proveedores pueden tener múltiples direcciones de envío para los 
+		pagos. Por ejemplo, un proveedor puede suministrar un artículo de una empresa subsidiaria, pero desea recibir el pago en su sede. Business Central le permite configurar varias 
+		direcciones de correo para cada proveedor y puede elegir la ubicación correcta para enviar los pagos factura por factura.</p>
+		<p class="parrafo">Las direcciones de envío se especifican en las páginas de la Tarjeta de proveedor y en la ficha desplegable Envío y pagos en las órdenes de compra y las facturas.
+		Cuando crea líneas de diario de pago usando las acciones Pagar proveedor o Crear pago en la página de lista de proveedores o la página Tarjeta de proveedor, 
+		o la acción Aplicar entradas en un diario de pago, se asigna el código de remitente en la entrada del libro mayor del proveedor. Puede sobrescribir este valor.</p>
+		<h3>Para crear un nuevo proveedor</h3>
+		<ul>
+		<li><b>1.</b> Elija el Icono de busqueda, ingrese <b>Proveedores</b>  y luego elija el enlace relacionado.</li>
+		<li><b>2.</b> En la página de <b>Proveedores</b>, elija <b>Nuevo</b>.
+		<div class="img-content"><img src="img/proveedores1.PNG" alt=""></div>
+		<p>Si existe más de una plantilla de proveedor, se abre una página desde la que puede seleccionar una plantilla de proveedor. En ese caso, siga los siguientes dos pasos.</p>
+		<ul>
+		<li><b>a.</b> En la página Seleccionar una plantilla para un nuevo proveedor , elija la plantilla que desea usar para la nueva tarjeta de proveedor. </li>
+		<li><b>b.</b> Elija el botón Aceptar . Se abre una nueva tarjeta de proveedor con algunos campos llenos de información de la plantilla.</li>
+		</ul>
+		</li>
+		<li><b>3.</b> Proceda a completar o cambiar campos en la tarjeta de proveedor según sea necesario. Pase el cursor sobre un campo para leer una breve descripción.</li>
+		<li><b>4.</b> Luego de Crear el nuevo proveedor guardamos los cambios. <br><br>
+		<div class="img-content2"><img src="img/proveedores2.PNG" alt=""></div>
+		</li>
+		</ul>
+		<p class="parrafo">El proveedor ahora está registrado y la tarjeta de proveedor está lista para usar en los documentos de compra.</p>
+		<p class="parrafo">Si desea utilizar esta ficha de proveedor como plantilla cuando cree nuevas fichas de proveedor, puede guardarla como plantilla de proveedor. </p>
+		<p class="parrafo"><b>Nota</b><br>
+		Si no conoce la dirección de facturación que se utilizará para cada factura de un proveedor, no complete el campo No. en la ficha desplegable General . 
+		En su lugar, elija el número de proveedor de pago después de haber configurado una cotización de compra, un pedido o un encabezado de factura.
+		</p>
+		<h3>Eliminación y edición de la información del proveedor</h3>
+		<p class="parrafo">Puede editar la información en las tarjetas de proveedor en cualquier momento. Sin embargo, si registró una transacción para un proveedor, 
+		no puede eliminar la tarjeta porque es posible que se necesiten las entradas del libro mayor para la auditoría. Para eliminar tarjetas de proveedor con entradas de libro mayor,
+		comuníquese con su socio de Microsoft para hacerlo a través del código.</p>
+		<p class="parrafo"><b>Nota</b><br>Puede cambiar el Número de cuenta bancaria internacional (IBAN) en una cuenta bancaria de proveedor sin que el cambio afecte sus entradas
+		históricas de registro de transferencias de crédito. Las entradas del registro de transferencias de crédito almacenan el IBAN del destinatario y el número de cuenta bancaria del
+		destinatario especificados en los campos Cuenta bancaria del proveedor y Nombre del destinatario de la página Tarjeta del proveedor cuando se crearon las entradas.</p>
+		<p class="parrafo">Videotutorial como crear nuevo proveedor , <a href="https://www.microsoft.com/en-us/videoplayer/embed/RE3PZtd?rel=0&postJsllMsg=true">aquí</a>.</p>
+
+		`;
+
+		cuerpo.innerHTML= contenido;
+
+	}
+	/*==============================
+	gregar Banco Proveedor
+	==============================*/
+
+	let agregarBancoPro = () =>{
+		let cuerpo = document.querySelector(".bodyContent");
+		let contenido = `
+
+		<h2 class="Subtitulos">Configurar cuentas bancarias de proveedores</h2>
+		<p class="parrafo">Así como puede usar la información de la cuenta bancaria en Business Central para realizar un seguimiento de las transacciones bancarias de su empresa, 
+		también puede configurar los detalles bancarios de los proveedores.</p>
+		<h3>Agregar o editar una cuenta bancaria de proveedor</h3>
+		<ul>
+		<li><b>1.</b> Elija El icono de busqueda, ingrese <b>Proveedores</b> y luego elija el enlace relacionado.</li>
+		<li><b>2.</b> Abra la tarjeta del porveedor seleccionado.</li>
+		<li><b>3.</b> Elija <b>Navegar</b> y luego <b>Bancos</b>.</li>
+		<li><b>4.</b> En la Lista de <b>cuentas bancarias de proveedores</b> , seleccione la cuenta bancaria correspondiente o agregue una nueva cuenta bancaria seleccionando <b>Nueva</b>.</li>
+		<li><b>5.</b> En la página <b>Tarjeta de cuenta bancaria del proveedor</b> , complete los campos según sea necesario. Pase el cursor sobre un campo para leer una breve descripción.</li>
+		</ul><br>
+		<div class="img-content2"><img src="img/Banco1.PNG" alt=""></div>
+		<p class="parrafo"><b>Nota</b><br> Algunos campos están ocultos hasta que elige la acción <b>Mostrar más</b>  , generalmente porque se usan con poca frecuencia. 
+		Otros deben agregarse a través de la personalización. Para obtener más información, consulte <b>Personalizar su espacio de trabajo</b>.</p>
+		<p class="parrafo"><b style="background-color:red; padding: 5px;color: white;">Advertencia</b><br>Algunos campos de la cuenta bancaria del proveedor contienen datos comerciales confidenciales, 
+		como el número de sucursal bancaria, el número de cuenta bancaria , el código <b>SWIFT</b> y el código <b>IBAN</b>. Para obtener más información sobre cómo monitorear y recibir 
+		notificaciones cuando alguien cambia un valor en esos campos, consulte <b>Monitoreo de campos confidenciales</b>.</p>
+		`;
+
+		cuerpo.innerHTML= contenido;
+
+	}
+	/*=========================
+	Recursos Humanos
+	==============================*/
+
+	let recursosHumanos = () =>{
+		let cuerpo = document.querySelector(".bodyContent");
+		let contenido = `
+		<h2 class="Subtitulos">Administrar Recursos Humanos</h2>
+		<p class="parrafo">Básicamente, los Recursos Humanos de una empresa es el conjunto de empleados que la constituyen, es decir, todos nosotros. El área de RRHH será quien se encargue de la gestión y administración del capital humano que es el motor de la organización.</p>
+		<p class="parrafo">Contar con un Departamento de Recursos Humanos es crucial para el éxito de una empresa y puede ser el recurso más importante para mejorar y mantener a los empleados motivados. Será el encargado de la selección, contratación, capacitación y motivación para así cumplir las expectativas de todo personal que conforma la empresa y los objetivos comerciales de la misma.</p>
+
+		<p class="parrafo">En Business Central, puede mantener registros detallados de sus empleados. Puede registrar y mantener la información de los empleados, como contratos de trabajo, información confidencial, calificaciones y contactos de los empleados.</p>
+		<p class="parrafo">También puede registrar las ausencias de los empleados, lo que le permite analizar las ausencias registradas según sea necesario.</p>
+		<p class="parrafo">Para comenzar a usar la funcionalidad de Recursos Humanos, debe configurar empleados y otra información básica. Luego puede asociar varios códigos a un empleado, lo que le permite filtrar información para empleados específicos.</p>
+		<p class="parrafo">La siguiente tabla describe una secuencia de tareas, con enlaces a los temas que las describen.</p>
+		<table class="tabla1">
+		<tr>
+		<th>Descripción</th>
+		<th>Ver</th>
+		</tr>
+		<tr>
+		<td>Registre nuevos empleados o edite registros para empleados existentes y adjunte información relacionada, como contratos y artículos.</td>
+		<td><a href="https://learn.microsoft.com/en-us/dynamics365/business-central/hr-how-register-employees">Registrar Empleados</a></td>
+		</tr>
+		<tr>
+		<td>Registre la ausencia de los empleados y vea las estadísticas de ausencia por varios filtros.</td>
+		<td><a href="https://learn.microsoft.com/en-us/dynamics365/business-central/hr-how-manage-absence">Administrar la ausencia de los empleados</a></td>
+		</tr>
+		</table><br>  
+		<p class="parrafo">Videotutorial de Recursos humanos, <a href="https://www.youtube.com/watch?v=eojFSCQzebk">aquí</a>.</p>
+		`;
+
+		cuerpo.innerHTML= contenido;
+
+	}
+
+	/*==========================
+		Registrar Empleados
+		========================*/
+
+		let registroEmpleado = () =>{
+			let cuerpo = document.querySelector(".bodyContent");
+			let contenido = `
+
+			<h2 class="Subtitulos">Registrar Empleados</h2>
+			<p class="parrafo">Para usar la funcionalidad de Recursos Humanos, primero debe agregar a cada empleado completando los campos en la página de la Tarjeta de Empleado </p>
+			<h3>Adición de nuevos empleados</h3>
+			<p class="parrafo">Puede agregar nuevos empleados manualmente, completando los campos en la página de la Tarjeta de empleado , o puede usar plantillas que contienen 
+			información predefinida. Por ejemplo, puede crear plantillas para diferentes tipos de perfiles de empleados. El uso de plantillas ahorra tiempo al agregar nuevos
+			empleados y ayuda a garantizar que la información sea correcta cada vez. Si crea plantillas para más de un tipo de empleado, puede elegir la plantilla que usará
+			 cuando agregue un empleado. Si crea solo una plantilla, se usará para todos los nuevos empleados. Después de crear una plantilla, puede usar la acción Aplicar
+			  plantilla para aplicarla a uno o más empleados seleccionados. Para crear una plantilla, complete la información que desea reutilizar en la página Tarjeta de empleado
+			   y luego guárdela como plantilla.</p>
+			<p class="parrafo">Puede modificar los datos de un empleado en cualquier momento. Mantener actualizados los registros de los empleados puede simplificar las tareas 
+			relacionadas con el personal. Por ejemplo, si cambia la dirección de un empleado, registre esto en la página Tarjeta de empleado.</p>
+			<h3>Para agregar un empleado</h3>
+			<ul>
+			<li><b>1.</b> Elija el icono de busqueda, ingrese <b>Empleados</b> y luego elija el enlace relacionado</li>
+			<li><b>2.</b> Elija la acción <b>Nuevo</b></li>
+			<li><b>3.</b> En la página <b>Tarjeta de empleado</b>, complete los campos según sea necesario. para el cursor sobre un campo para leer una breve descripción.</li>
+			</ul>
+			<div class="img-content2"><img src="img/emple1.PNG" alt=""></div>
+			<h3>Para insertar una foto de un empleado</h3>
+			<p class="parrafo">Si tiene una foto de un empleado, puede insertarla en la tarjeta de empleado.</p>
+			<ul>
+			<li><b>1.</b> Elija el icono de busqueda, ingrese <b>Empleados</b> y luego elija el enlace relacionado.</li>
+			<li><b>2.</b> Abra la tarjeta de empleado correspondiente.</li>
+			<li><b>3.</b> En el cuadro informativo <b>Imagen del empleado</b>, elija el botón desplegable y luego seleccione importar.</li>
+			<li><b>4.</b> En la página <b>Seleccionar una imagen para cargar</b>, seleccione el botón <b>Elejir</b>.</li>
+			<li><b>5.</b> Seleccione el archivo y luego elija <b>Abrir</b>.</li>
+			</ul>
+
+			<p class="parrafo">La imagen se insertara en el cuadro informativo <b>Imagen del empleado</b>.</p>
+
+			`;
+
+			cuerpo.innerHTML= contenido;
+
+		}
+/*===============
+Ausencia Empleados
+=================*/
+let ausenciaEmpleado = () =>{
+	let cuerpo = document.querySelector(".bodyContent");
+	let contenido = `
+
+	<h2 class="Subtitulos">Administrar la ausencia de los empleados</h2>
+	<p class="parrafo">Para administrar la ausencia de un empleado, debe registrar la ausencia en la página de <b>Registro de Ausencias</b> . Luego se puede ver de diferentes
+	 maneras para el análisis y las necesidades de informes.</p>
+	<p class="parrafo">Puede ver las ausencias de los empleados en dos páginas diferentes: </p>
+	<div class="contentList">
+	<ul>
+	<li>La página de <b>Registro de Ausencias</b>, donde registra todas las ausencias de los empleados con una línea para cada ausencia.</li>
+	<li>La página de <b>Ausencias de Empleados</b>, donde se muestran las ausencias de un solo empleado. Esta es la información que ingresó en la página de <b>Registro de Ausencias</b>, filtrada por el empleado en particular.</li>
+	</ul>
+	</div>
+	<p class="parrafo">Para obtener estadísticas significativas, siempre debe usar la misma unidad de medida (hora o día) al registrar las ausencias de los empleados.</p>
+	<div class="img-content"><img src="img/ausencia1.PNG" alt=""></div>
+	<h3>Para registrar la ausencia del empleado</h3>
+	<p class="parrafo">Puede registrar las ausencias de los empleados diariamente o en algún otro intervalo que satisfaga las necesidades de su organización.</p>
+	<ul>
+	<li><b>1.</b> En la esquina superior derecha en el icono de busqueda, ingrese <b>Registro de ausencias</b> y luego elija el enlace relacionado.</li>
+	<li><b>2.</b> Elija la acción <b>Nuevo</b>.</li>
+	<li><b>3.</b> Complete una línea para cada ausencia de empleado que desee registrar. </li>
+	<li><b>4.</b> Cierra la página.</li>
+	</ul>
+	<p class="parrafo"><b>Nota</b><br>Para obtener estadísticas significativas, utilice siempre la misma unidad de medida, hora o día, al registrar las ausencias de los empleados.</p>
+	<div class="img-content"><img src="img/emple2.PNG" alt=""></div>
+	<p class="parrafo">La visualización de las ausencias nos ayudará mucho a la hora de poder elaborar las nóminas de los trabajadores y determinar con exactitud el salario
+	 correspondiente de cada uno.</p>
+
+	`;
+
+	cuerpo.innerHTML= contenido;
+
+}
+
+
+
+/*Configuracion de finanzas*/
+let configfinanzas = () =>{
+	let cuerpo = document.querySelector(".bodyContent");
+	let contenido = `
+	<table class="tabla1">
+	<tr>
+	<th>A</th>
+	<th>Ver</th>
+	</tr>
+	<tr>
+	<td>Ver o editar cuentas del libro mayor en las que se contabilizan todas las entradas del libro mayor</td>
+	<td><a href="">Configurar o cambiar el plan de cuentas</a></td>
+	</tr>
+	<tr>
+	<td>Especifique cómo desea que le paguen los clientes y cómo desea pagar a sus proveedores.</td>
+	<td><a href="">Configurar métodos de pago</a></td>
+	</tr>
+	<tr>
+	<td>Especifique las condiciones de pago para administrar las fechas de vencimiento y calcular posibles descuentos por pago.</td>
+	<td><a href="">Configurar condiciones de pago</a></td>
+	</tr>
+	<tr>
+	<td>Especifique los grupos de contabilización que asignan entidades como clientes, proveedores, artículos, recursos y documentos de compra y venta a las cuentas del libro mayor.</td>
+	<td><a href="">Configurar grupos de contabilización</a></td>
+	</tr>
+	<tr>
+	<td>Cree informes financieros y defina categorías de cuentas que determinen el contenido de los gráficos e informes financieros, como los informes de hoja de balance y estado de resultados.</td>
+	<td><a href="">Preparar informes financieros con datos financieros y categorías de cuentas</a></td>
+	</tr>
+	<tr>
+	<td>Configure una tolerancia por la cual el sistema cierra una factura incluso si el pago, incluido cualquier descuento, no cubre completamente el monto de la factura.</td>
+	<td><a href="">Trabajar con tolerancias de pago y tolerancias de descuento de pago</a></td>
+	</tr>
+	<tr>
+	<td>Configurar periodos fiscales.</td>
+	<td><a href="">Trabajar con períodos contables y años fiscales</a></td>
+	</tr>
+	<tr>
+	<td>Configure los términos de la factura que les recuerden a sus clientes que deben realizar el pago.</td>
+	<td><a href="">Configurar términos y niveles de recordatorio</a></td>
+	</tr>
+	<tr>
+	<td>Defina cómo informa a las autoridades fiscales los importes del impuesto sobre el valor añadido (IVA) recaudados por las ventas.</td>
+	<td><a href="">Configurar el impuesto al valor agregado (IVA)</a></td>
+	</tr>
+	<tr>
+	<td>Prepárese para manejar el IVA no realizado en relación con los métodos de contabilidad basados ​​en efectivo.</td>
+	<td><a href="">Configurar el IVA no realizado para la contabilidad de caja</a></td>
+	</tr>
+	<tr>
+	<td>Defina las monedas extranjeras con las que comercia o reporta transacciones.</td>
+	<td><a href="">Configurar monedas</a></td>
+	</tr>
+	<tr>
+	<td>Configure sus funciones de Ventas y Compras para manejar pagos en moneda extranjera.</td>
+	<td><a href="">Habilitar la aplicación de asientos contables en diferentes monedas</a></td>
+	</tr>
+	<tr>
+	<td>Defina una o más monedas adicionales para que los montos se informen automáticamente tanto en la moneda local (LCY) como en una moneda de informe adicional en cada asiento del libro mayor (G/L) y en otros asientos.</td>
+	<td><a href="">Configurar una moneda de informe adicional</a></td>
+	</tr>
+	<tr>
+	<td>Ajuste periódicamente los equivalentes de divisas adicionales para compensar las fluctuaciones de los tipos de cambio.</td>
+	<td><a href="">Actualizar tipos de cambio de moneda</a></td>
+	</tr>
+	<tr>
+	<td>Defina múltiples tasas de interés para usar en diferentes períodos para pagos atrasados ​​en transacciones comerciales.</td>
+	<td><a href="">Configurar tasas de interés múltiples</a></td>
+	</tr>
+	<tr>
+	<td>Haga arreglos para que los montos se redondeen automáticamente a medida que se crean las facturas.</td>
+	<td><a href="">Configurar el redondeo de facturas</a></td>
+	</tr>
+	<tr>
+	<td>Agregue nuevas cuentas al plan de cuentas existente.</td>
+	<td><a href="">Configuración del plan de cuentas</a></td>
+	</tr>
+	<tr>
+	<td>Configure gráficos de inteligencia empresarial (BI) para analizar el flujo de caja.</td>
+	<td><a href="">Configuración del análisis de flujo de caja</a></td>
+	</tr>
+	<tr>
+	<td>Habilitar la facturación de un cliente no configurado en el sistema.</td>
+	<td><a href="">Configurar clientes en efectivo</a></td>
+	</tr>
+	<tr>
+	<td>Configure los informes de Intrastat y envíe el informe a una autoridad.</td>
+	<td><a href="">Configurar e informar Intrastat</a></td>
+	</tr>
+	<tr>
+	<td>Asegúrese de que un asiento de diario se asigne entre diferentes cuentas, como cantidad, porcentaje o monto, cuando lo publique en el diario.</td>
+	<td><a href="">Usar claves de asignación en diarios generales</a></td>
+	</tr>
+	<tr>
+	<td>Configure códigos fuente y códigos de motivo para ayudar a realizar un seguimiento de los registros de auditoría.</td>
+	<td><a href="">Configuración de códigos fuente y códigos de motivo para registros de auditoría</a></td>
+	</tr>
+	<tr>
+	<td>Especifique los informes predeterminados que se utilizarán para diferentes tipos de documentos.</td>
+	<td><a href="">Selección de informes en Business Central</a></td>
+	</tr>
+	</table>
+	<p class="parrafo"><b>Nota</b><br>Según su ubicación geográfica, algunas páginas de Business Central pueden contener 
+	campos que no se describen en los artículos enumerados anteriormente porque se aplican a personalizaciones o funciones locales. 
+	Pase el cursor sobre un campo para leer una breve descripción.</p>
+
+	`;
+
+	cuerpo.innerHTML= contenido;
+
+}	
 /*
 let tableRelation = () =>{
 	let cuerpo = document.querySelector(".bodyContent");
