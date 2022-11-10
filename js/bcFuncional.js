@@ -44,8 +44,9 @@
 		<li>Ayudar a proteger la información del acceso no autorizado mediante sistemas y configuración de seguridad avanzada.</li>
 		<li>Integrar otros servicios en la nube de Microsoft, como Microsoft 365.</li>
 		</ul>
-
 		</div>
+		<p class="parrafo">Videotutorial introducción a Business Central</p>
+		<iframe class="ifra" src="https://www.youtube.com/embed/Zgycf_fcQ4s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 		`;
 
@@ -176,7 +177,11 @@
  	<p class="parrafo">Seleccione el vínculo Cambiar cuándo recibo notificaciones para ver o cambiar las notificaciones que recibe sobre determinados eventos o cambios de estado, cuando va a facturar a un cliente que tiene un saldo vencido o cuando el inventario disponible es inferior a la cantidad que va a vender, por ejemplo.</p>
 
  	<h3>Consejos didácticos</h3>
- 	<p class="parrafo">Algunas páginas muestran un consejo didáctico con una breve introducción a la página. Desactive los consejos didácticos si no está interesado en ver estas breves introducciones cuando abra las páginas correspondientes. Si desactiva los consejos didácticos, aún puede abrir el consejo didáctico para una página específica eligiendo el título de la página en la esquina superior izquierda.</p>
+ 	<p class="parrafo">Algunas páginas muestran un consejo didáctico con una breve introducción a la página. Desactive los consejos didácticos si no está interesado en ver
+ 	estas breves introducciones cuando abra las páginas correspondientes. Si desactiva los consejos didácticos, aún puede abrir el consejo didáctico para una página 
+ 	específica eligiendo el título de la página en la esquina superior izquierda.</p>
+ 	<p class="parrafo">Videotutorial de configuración básica </p>
+ 	<iframe  class="ifra" src="https://www.youtube.com/embed/622TcES-LxA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  	<p class="parrafo">Videos tutoriales para familiarizarse con el uso de la aplicación <a href="https://www.youtube.com/channel/UCXgBG6LrPPIRO7yPToFBD8A/videos">Aquí</a></p>
  	`;
 
@@ -263,8 +268,11 @@ let rapidStart = () =>{
 	<img src="img/rapid3.PNG" alt="">
 	</div>
 	<p class="parrafo">Como vemos en la imagen tenemos los datos de las tres tablas con sus campos seleccionadas.</p>
-	<p class="parrafo">Videotutorial como crear paquetes de configuración, <a href="https://www.youtube.com/watch?v=_wMZ6FEnUbE&t=1s">aquí</a></p>
-
+	<p class="parrafo">Videotutorial como crear paquetes de configuración</p>
+	<iframe class="ifra" src="https://www.youtube.com/embed/_wMZ6FEnUbE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<br>
+	<p class="parrafo">Videotutorial <b>RapidStart y Excel</b>, importación y exportacioón de paquetes de configuración.</p>
+	<iframe    class="ifra" src="https://www.youtube.com/embed/Dtq4si2Vrgc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	`;
 
 	cuerpo.innerHTML= contenido;
@@ -377,7 +385,8 @@ let periodoContable = () =>{
 	</ul>
 	<h3>Contabilización de asientos en un ejercicio fiscal cerrado</h3>
 	<p class="parrafo">Aunque un año fiscal esté cerrado, aún puede contabilizar entradas del libro mayor en él. Cuando lo hace, las entradas se marcan como contabilizadas en un año fiscal cerrado y se selecciona la casilla de verificación Entrada del año anterior . De forma predeterminada, la casilla de verificación no se muestra en la página, pero puede agregarla. Los siguientes pasos son cerrar las cuentas de la cuenta de resultados y trasladar los resultados del ejercicio a una cuenta del balance. Repita estos pasos cada vez que registre asientos en un año fiscal cerrado.</p>
-	<p class="parrafo">Video Tutorial como Abrir un Periodo Contable<a href="https://www.youtube.com/watch?v=E1P-EFHtYtc"> Aquí</a>.</p>
+	<p class="parrafo">Video Tutorial como Abrir un Periodo Contable</p>
+	<iframe  class="ifra" src="https://www.youtube.com/embed/E1P-EFHtYtc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 	`;
 
@@ -635,7 +644,8 @@ let pedidoVentas = () =>{
 	<div class="img-content2">
 	<img src="img/pedidoVenta2.PNG" alt="">
 	</div><br>
-	<p class="parrafo">Videotutorial Como configurar términos de pago como crear pedido de venta <a href="https://www.youtube.com/watch?v=u_T2trb2uCg">Aquí</a></p>
+	<p class="parrafo">Videotutorial Como configurar términos de pago como crear pedido de venta.</p>
+	<iframe class="ifra" src="https://www.youtube.com/embed/u_T2trb2uCg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 	`;
 
@@ -698,8 +708,8 @@ let facturaVenta = () =>{
 	<div class="img-content2">
 	<img src="img/factura3.PNG" alt="">
 	</div>
-	<p class="parrafo">Videotutorial como realizar una factura de venta, <a href="https://www.youtube.com/watch?v=HSNtfKoJi2k">aquí</a>.</p>
-
+	<p class="parrafo">Videotutorial como realizar una factura de venta.</p>
+	<iframe  class="ifra" src="https://www.youtube.com/embed/HSNtfKoJi2k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	`;
 
 	cuerpo.innerHTML= contenido;
@@ -730,8 +740,8 @@ let crearPlantillaCliente = () =>{
 	<div class="img-content">
 	<img src="img/plantilla2.PNG" alt="">
 	</div>
-	<p class="parrafo">Videotutorial Como configurar términos de pago como crear plantillas <a href="https://www.youtube.com/watch?v=a0oh5zglX54">aquí</a>.</p>
-
+	<p class="parrafo">Videotutorial Como configurar términos de pago como crear plantillas.</p>
+	<iframe class="ifra" src="https://www.youtube.com/embed/a0oh5zglX54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	`;
 
 	cuerpo.innerHTML= contenido;
@@ -786,7 +796,8 @@ let crearPlantillaCliente = () =>{
 			<p class="parrafo">Si ha registrado una transacción para un cliente, no puede eliminar la tarjeta del cliente porque es posible 
 			que se necesiten las entradas del libro mayor para la auditoría. Para eliminar tarjetas de clientes con entradas del libro mayor, 
 			comuníquese con su socio de Microsoft para hacerlo a través del código.</p>
-			<p class="parrafo">Video Tutorial como crear un nuevo cliente <a href="https://www.youtube.com/watch?v=u_hwamiNs04">aquí</a>.</p>
+			<p class="parrafo">Video Tutorial como crear un nuevo cliente.</p>
+			<iframe class="ifra" src="https://www.youtube.com/embed/u_hwamiNs04" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 			`;
 
@@ -826,7 +837,8 @@ let configTerminosPagos = () =>{
 	<img src="img/termpago1.PNG" alt="">
 	</div>
 	<p class="parrafo">de esta manera hemos concluido la configuración de un nuevo término de pago.</p>
-	<p class="parrafo">Videotutorial Como configurar términos de pago<a href="https://www.youtube.com/watch?v=Jfp8v2GlUzg"> Aquí</a></p>
+	<p class="parrafo">Videotutorial Como configurar términos de pago.</p>
+	<iframe class="ifra" src="https://www.youtube.com/embed/Jfp8v2GlUzg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
 
 	`;
 
@@ -866,7 +878,8 @@ let configTerminosPagos = () =>{
 		<div class="img-content2">
 		<img src="img/pagoprovee2.PNG" alt="">
 		</div><br>
-		<p class="parrafo">Videotutorial como relizar pago a proveedores, <a href="https://www.youtube.com/watch?v=qbep1nVv91U">Aqui</a></p>
+		<p class="parrafo">Videotutorial como relizar pago a proveedores.</p>
+		<iframe  class="ifra" src="https://www.youtube.com/embed/qbep1nVv91U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 		`;
 
@@ -910,14 +923,162 @@ let configTerminosPagos = () =>{
 			<p class="parrafo">Vista del historial de movimientos contables del cliente.</p>
 			<div class="img-content2"><img src="img/pagoCli3.PNG" alt=""></div>
 
-			<p class="parrafo">Videoutorial como registrar un pago de un cliente, <a href="https://www.youtube.com/watch?v=1nKziXuV9GY">Aquí</a></p>
-			<p class="parrafo">Videotutorial Liquidar movimientos de clientes ya registrados en Business Central, <a href="https://www.youtube.com/watch?v=DCAtOLlcAzo">aquí</a></p>
-
+			<p class="parrafo">Videoutorial como registrar un pago de un cliente.</p>
+			<iframe class="ifra" src="https://www.youtube.com/embed/1nKziXuV9GY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<br>
+			<p class="parrafo">Videotutorial Liquidar movimientos de clientes ya registrados en Business Central.</p>
+			<iframe  class="ifra" src="https://www.youtube.com/embed/DCAtOLlcAzo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			`;
 
 			cuerpo.innerHTML= contenido;
 
 		}
+/*=======================
+Pagos Directo Sepa
+========================*/
+let pagoSepa = () =>{
+	let cuerpo = document.querySelector(".bodyContent");
+	let contenido = `
+
+	<h2 class="Subtitulos">Cobrar Pagos con Débito Directo SEPA</h2>
+	<p class="parrafo">Cuando llega la hora de gestionar facturas cualquier ayuda es bienvenida, ¿verdad?</p>
+	<p class="parrafo">Si eres autónomo o autónoma, los conceptos ‘recibo domiciliado’,  ‘remesas bancarias’ o ‘ficheros SEPA’ ya te tienen que sonar de algo. Pero, si todavía no has oído hablar de ellos, lee el siguiente articulo.</p>
+	<p class="parrafo">Para ser más eficaces, hay muchas tareas habituales que podemos delegar en un sistema de gestión empresarial.</p>
+	<p class="parrafo">Según la modalidad de cobro que utilices, las remesas bancarias o ficheros SEPA te permitirán gestionar y automatizar las operaciones de pago o de cobro a tus clientes de una forma mucho más cómoda. </p>
+	<h3>¿Qué son las remesas bancarias?</h3>
+	<p class="parrafo">Una remesa bancaria es un documento financiero, compuesto de uno o varios recibos domiciliados pendientes de pago, que tiene como objetivo liquidar una compraventa de un producto o servicio, y que entregamos a nuestro banco para su gestión.</p>
+	<p class="parrafo">Pongamos un <b>ejemplo</b>  para que quede más claro.</p>
+	<p class="parrafo">Imagina que tienes 100 clientes y para cada uno de ellos tienes que emitir una factura con el cobro mensual de tu servicio. En vez de realizar cada cobro por separado, envías un fichero al banco con todos los datos necesarios, y ellos se encargan de todo el procedimiento.</p>
+	<p class="parrafo">Esta práctica es mucho más rápida que realizar manualmente el cobro de cada una de las facturas.</p>
+	<h3>¿Qué es la normativa SEPA?</h3>
+	La normativa SEPA (<a href="https://www.sepaesp.es/sepa/es/">Single Euro Payment Area</a>) es la directiva que establece qué estructura debe tener una remesa. Esta normativa, aprobada en febrero de 2014 y en la que se acogen 34 países, se compone de una serie de normas estándar para facilitar y armonizar los trámites de compraventa.
+	<p class="parrafo"></p>
+	<p class="parrafo">Todos los ficheros de remesas bancarias tienen que adaptarse obligatoriamente a la normativa SEPA. </p>
+	<p class="parrafo">Por ello, deberás tramitar una autorización (mandato), firmada por el deudor con el consentimiento al banco para cargar cobros en su cuenta bancaria. Puede ser para un pago recurrente o puntual, y caduca 36 meses después del último pago.</p>
+	<p class="parrafo">Si no tienes un mandato SEPA firmado, las operaciones constarán como no autorizadas y el cliente puede devolver los recibos durante 13 meses. </p>
+	<h3>¿Cuándo es útil generar ficheros SEPA?</h3>
+	<p class="parrafo">Si tienes clientes que compran de forma recurrente o das un servicio que se cobra en una cuota mensual, este tipo de fichero es muy interesante ya que ahorras el tiempo de gestión de cada una de las facturas de tus clientes y te aseguras de recibir el dinero en la fecha pactada. </p>
+	<p class="parrafo">Aunque este proceso también se puede hacer introduciendo manualmente los datos de cobro en la web de tu banco, puede resultar muy tedioso cuando tienes que repetirlos cada mes.</p>
+	<p class="parrafo">Con el consentimiento de su cliente, puede cobrar los pagos directamente de la cuenta bancaria del cliente según el formato SEPA.</p>
+	<p class="parrafo">Primero, configure el formato de exportación del archivo bancario que le indica a su banco que realice un débito directo. Luego, configure el método de pago del cliente. Por último, configure el mandato de domiciliación bancaria que refleje su acuerdo con el cliente para cobrar sus pagos en un determinado período de acuerdo.</p>
+	<p class="parrafo">Para indicarle al banco que transfiera el monto del pago de la cuenta bancaria del cliente a la cuenta de su empresa, cree una entrada de cobro de débito directo, que contiene información sobre las cuentas bancarias, las facturas de venta afectadas y el mandato de débito directo. Luego, exporta un archivo XML basado en la entrada de cobro, que envía a su banco para su procesamiento. Cualquier pago que no haya podido procesarse le será comunicado por su banco y deberá rechazar manualmente los asientos de cobro domiciliados en cuestión.</p>
+	<p class="parrafo">Puede configurar códigos de ventas de clientes estándar con el método de pago de domiciliación bancaria y la información del mandato. A continuación, puede utilizar Crear cliente estándar. Trabajo por lotes de facturas para generar varias facturas de venta con la información de domiciliación precargada. Esto se puede hacer de forma manual o automática, según la fecha de vencimiento del pago.</p>
+
+	<p class="parrafo">Cuando los pagos se procesan con éxito, según lo comunicado por su banco, puede publicar los recibos de pago directamente desde Direct Debit Collect. Asientos o moviendo las líneas de pago al diario donde registra los recibos de pago, como la página Diario de recibos de efectivo . Alternativamente, dependiendo de su proceso de administración de efectivo, puede esperar y simplemente aplicar los pagos como parte de la conciliación bancaria.</p>
+	<p class="parrafo"><b>Nota</b><br>Para cobrar pagos mediante Débito Directo SEPA, la moneda de la factura de venta debe ser el EURO.</p>
+	<h3>Configuración de Débito Directo SEPA</h3>
+	<p class="parrafo">Desde la página de <b>Órdenes de domiciliación de adeudo directo SEPA</b> , puede exportar instrucciones a su banco electrónico para realizar un cobro por débito directo de la cuenta bancaria del cliente a su cuenta bancaria según el formato de Débito Directo SEPA.</p>
+	<p class="parrafo">Para habilitar la exportación de formatos de archivos bancarios que no se admiten de fábrica en Business Central, puede configurar una definición de intercambio de datos utilizando el marco de intercambio de datos. Para obtener más información, consulte <a href="https://learn.microsoft.com/en-us/dynamics365/business-central/across-how-to-set-up-data-exchange-definitions">Configurar definiciones de intercambio de datos</a>.</p>
+	<p class="parrafo">Antes de que pueda procesar pagos de clientes electrónicamente mediante la exportación de instrucciones de domiciliación bancaria en el formato de domiciliación bancaria SEPA, debe realizar los siguientes pasos de configuración:</p>
+	<div class="contentList">
+	<ul>
+	<li>Configure el formato de exportación del archivo bancario que le indica a su banco que realice un cobro por débito directo de la cuenta bancaria del cliente a su cuenta bancaria.</li>
+	<li>Configurar el método de pago del cliente.</li>
+	<li>Configure el mandato de domiciliación bancaria que refleje su acuerdo con el cliente para cobrar sus pagos en un determinado período de acuerdo.</li>
+	</ul>
+	</div>
+	<h3>Para configurar su cuenta bancaria para débito directo SEPA</h3>
+	<ul>
+	<li><b>1.</b> Elija el icono de busqueda, ingrese <b>Cuentas bancarias</b> y luego elija el enlace relacionado.</li>
+	<li><b>2.</b> Abra la cuenta bancaria que desea utilizar para la domiciliación bancaria.</li>
+	<li><b>3.</b> En la ficha desplegable Transferir, en el campo <b> Formato de eportación de débito directo SEPA</b>, elija la opción para débito directo SEPA.</li>
+	<li><b>4.</b> Rellenar Los campos <b>Código SWIFT</b>, <b>IBAN</b>, <b>Nº acreedor</b>.</li>
+	<li><b>5.</b> Guardamos los cambios.</li>
+	</ul>
+	<div class="img-content2"><img src="img/sepa1.PNG" alt=""></div>
+	<h3>Para configurar el método de pago del cliente para débito directo SEPA</h3>
+
+	<ul>
+	<li><b>1.</b> Elija el icono de busqueda, ingrese <b>Métodos de pago</b> y luego elija el enlace relacionado.</li>
+	<li><b>2.</b> Elija la accción <b>Nuevo</b>.</li>
+	<li><b>3.</b> Configura un método de pago. Rellene los campos específicos de domiciliación bancaria como se describe en la siguiente tabla. <br>
+	<table class="tabla1">
+	<tr>
+	<th>Campo</th>
+	<th>Descripción</th>
+	</tr>
+	<tr>
+	<td>Débito directo</td>
+	<td>Especificar si el método de pago es para cobro domiciliado SEPA.</td>
+	</tr>
+	<tr>
+	<td>Pago por Débito Directo Términos Código</td>
+	<td>Especifique las condiciones de pago, como NO PAGAR, que se muestran en las facturas de venta que se pagan con débito directo SEPA para indicar al cliente que el pago se cobrará automáticamente. Alternativamente, deje el campo vacío.</td>
+	</tr>
+	</table><br>
+	<p class="parrafo"><b>Nota <br></b>No ingrese un valor en <b>Bal. Campo de número de cuenta</b>.</p>
+
+	<div class="img-content2"><img src="img/sepa2.PNG" alt=""></div>
+
+	</li>
+	<li><b>4.</b> Elija El Boton <b>Aceptar</b> para cerrar la página <b>Formas de Pago</b>.</li>
+	<li><b>5.</b> Elija el icono de busqueda, ingrese <b>Clientes</b> y luego elija el enlace relacionado.</li>
+	<li><b>6.</b> Abra la tarjeta de cliente para el cliente que desea configurar el cobro de domicialiación bancaria Sepa.</li>
+	<li><b>7.</b> Elija el campo <b>Código de método de pago</b> y luego seleccione el código de método de pago que especificó en el paso 3. <br>
+	<div class="img-content2"><img src="img/sepa3.PNG" alt=""></div>
+	</li>
+	<li><b>8.</b> Repita los pasos 6 y 7 para todos los clientes que desee configurar para el cobro de domiciliación bancaria SEPA.</li> 
+	</ul>
+
+	<h3>Para configurar el mandato de domiciliación bancaria que representa el contrato de cliente</h3>
+	<ul>
+	<li><b>1.</b> Elija El icono de busqueda, ingrese <b>Clientes</b> y luego elija el enlace relacionado.</li>
+	<li><b>2.</b> Abra la tarjeta del cliente que desea configurar para domiciliaciones SEPA.</li>
+	<li><b>3.</b> Elija la acción <b>Cuentas Bancarias</b>.</li>
+	<li><b>4.</b> En la página <b>Lista de cuentas bancarias del cliente</b> , seleccione la cuenta bancaria del cliente que utilizará débitos directos y luego elija la acción <b>Mandatos de débito directo</b>.</li>
+	<li><b>5.</b> En la página de <b>Mandatos de Débito Directo SEPA</b>, complete los campos como se describe en la siguiente tabla. <br>
+	<table class="tabla1">
+	<tr>
+	<th>Campo</th>
+	<th>Descripción</th>
+	</tr>
+	<tr>
+	<td>Código de cuenta bancaria del cliente</td>
+	<td>Especifica la cuenta bancaria de la que se cobran los pagos de domiciliación bancaria. Este campo se llena automáticamente.</td>
+	</tr>
+	<tr>
+	<td>Válida desde</td>
+	<td>  Especifique la fecha en que comienza el mandato de domiciliación bancaria.</td>
+	</tr>
+	<tr>
+	<td>Válido hasta</td>
+	<td>Especifique la fecha en que finaliza el mandato de domiciliación bancaria.</td>
+	</tr>
+	<tr>
+	<td>Fecha de la firma</td>
+	<td>Especifique la fecha en que el cliente firmó el mandato de domiciliación.</td>
+	</tr>
+	<tr>
+	<td>Tipo de secuencia</td>
+	<td>Especifique si el acuerdo cubre múltiples ( recurrentes ) o un cobro único (único ) por domiciliación bancaria.</td>
+	</tr>
+	<tr>
+	<td>Número esperado de débitos</td>
+	<td>Especifique cuántos cobros domiciliados espera realizar. Este campo solo es relevante si seleccionó Recurrente en el campo Tipo de secuencia .</td>
+	</tr>
+	<tr>
+	<td>Contador de débito</td>
+	<td>Especifique cuántos cobros domiciliados espera realizar. Este campo solo es relevante si seleccionó Recurrente en el campo Tipo de secuencia .</td>
+	</tr>
+	<tr>
+	<td>Obstruido</td>
+	<td>  Especificar que los cobros por domiciliación no se pueden realizar mediante este mandato de domiciliación.</td>
+	</tr>
+	</table>
+	<br>
+	<div class="img-content2"><img src="img/sepa4.PNG" alt=""></div>
+
+	</li>
+	<li><b>6.</b> Repita los pasos del 1 al 5 para todos los clientes que desee configurar para domiciliaciones SEPA.</li>
+	</ul>
+	<p class="parrafo">Videotutorial pagos con débito directo SEPA</p>
+	<iframe class="ifra" src="https://www.youtube.com/embed/qas42ZTBjKc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	`;
+
+	cuerpo.innerHTML= contenido;
+
+}
 	/*===========================
 	Planificación de Almacenes
 	===========================*/
@@ -988,7 +1149,8 @@ let configTerminosPagos = () =>{
 		<br>
 		<p class="parrafo">¿Cuál es el nivel de almacén más adecuado para mi empresa en Business Central?</p>
 
-		<p class="parrafo">Videotutorial Mejor almacén para  mi empresa, <a href="https://www.youtube.com/watch?v=D96h9e4t9zU">aquí</a></p>
+		<p class="parrafo">Videotutorial Mejor almacén para  mi empresa</p>
+		<iframe   class="ifra" src="https://www.youtube.com/embed/D96h9e4t9zU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 		`;
 
@@ -1132,7 +1294,8 @@ let configTerminosPagos = () =>{
 		<td><a href="https://learn.microsoft.com/en-us/dynamics365/business-central/warehouse-how-ship-items">Enviar artículos</a></td>
 		</tr>
 		</table><br>
-		<p class="parrafo">Videotutorial Configuración de almacenes y gestión de inventario, <a href="https://www.youtube.com/watch?v=EL-X4VJ4KXM">aquí</a> </p>
+		<p class="parrafo">Videotutorial Configuración de almacenes y gestión de inventario.</p>
+		  <iframe   class="ifra" src="https://www.youtube.com/embed/EL-X4VJ4KXM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 		`;
 
@@ -1186,7 +1349,8 @@ let configTerminosPagos = () =>{
 		<img src="img/arti3.PNG" alt="">
 		</div>
 
-		<p class="parrafo">Videotutorial Como crear un nuevo producto, <a href="https://www.youtube.com/watch?v=pDuSfIWPlO4&list=PLyx3kyr4ant_aHVT5JXbKC4KOeO16N1Wv&index=1">aquí</a>.</p>
+		<p class="parrafo">Videotutorial Como crear un nuevo producto.</p>
+		  <iframe  class="ifra" src="https://www.youtube.com/embed/pDuSfIWPlO4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 		`;
 
@@ -1320,8 +1484,8 @@ let configTerminosPagos = () =>{
 			<div class="img-content2"><img src="img/compra3.PNG" alt=""></div>
 			</li>
 			</ul>
-			<p class="parrafo">Videotutorial como realizar un pedido de compra, <a href="https://www.youtube.com/watch?v=sQBYIRneaKk&list=PLOHrSC2gN59oIA7sFMOuhKYoQ_fvZxB4u&index=2">aquí</a>.</p>
-
+			<p class="parrafo">Videotutorial como realizar un pedido de compra.</p>
+			<iframe class="ifra" src="https://www.youtube.com/embed/sQBYIRneaKk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			`;
 
 			cuerpo.innerHTML= contenido;
@@ -1365,8 +1529,8 @@ let configTerminosPagos = () =>{
  	Si ya pagó artículos o servicios en la factura de compra registrada, debe crear una nota de crédito de compra para revertir la compra. 
  	Obtén más información en <a href="https://learn.microsoft.com/en-us/dynamics365/business-central/purchasing-how-process-purchase-returns-cancellations">
  	Procesar devoluciones o cancelaciones de compras</a>.</p>
- 	<p class="parrafo">Videotutorial de factura de compra desde pedido de venta en Business Central, 
- 	<a href="https://www.youtube.com/watch?v=phGrR_NKIeQ&list=PLOHrSC2gN59oIA7sFMOuhKYoQ_fvZxB4u&index=1"> aquí</a>.</p>
+ 	<p class="parrafo">Videotutorial de factura de compra desde pedido de venta en Business Central</p>
+ 	<iframe   class="ifra" src="https://www.youtube.com/embed/phGrR_NKIeQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  	`;
 
  	cuerpo.innerHTML= contenido;
@@ -1546,7 +1710,8 @@ let configTerminosPagos = () =>{
 		<td><a href="https://learn.microsoft.com/en-us/dynamics365/business-central/hr-how-manage-absence">Administrar la ausencia de los empleados</a></td>
 		</tr>
 		</table><br>  
-		<p class="parrafo">Videotutorial de Recursos humanos, <a href="https://www.youtube.com/watch?v=eojFSCQzebk">aquí</a>.</p>
+		<p class="parrafo">Videotutorial de Recursos humanos.</p>
+		<iframe class="ifra" src="https://www.youtube.com/embed/eojFSCQzebk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		`;
 
 		cuerpo.innerHTML= contenido;
@@ -1567,9 +1732,9 @@ let configTerminosPagos = () =>{
 			<p class="parrafo">Puede agregar nuevos empleados manualmente, completando los campos en la página de la Tarjeta de empleado , o puede usar plantillas que contienen 
 			información predefinida. Por ejemplo, puede crear plantillas para diferentes tipos de perfiles de empleados. El uso de plantillas ahorra tiempo al agregar nuevos
 			empleados y ayuda a garantizar que la información sea correcta cada vez. Si crea plantillas para más de un tipo de empleado, puede elegir la plantilla que usará
-			 cuando agregue un empleado. Si crea solo una plantilla, se usará para todos los nuevos empleados. Después de crear una plantilla, puede usar la acción Aplicar
-			  plantilla para aplicarla a uno o más empleados seleccionados. Para crear una plantilla, complete la información que desea reutilizar en la página Tarjeta de empleado
-			   y luego guárdela como plantilla.</p>
+			cuando agregue un empleado. Si crea solo una plantilla, se usará para todos los nuevos empleados. Después de crear una plantilla, puede usar la acción Aplicar
+			plantilla para aplicarla a uno o más empleados seleccionados. Para crear una plantilla, complete la información que desea reutilizar en la página Tarjeta de empleado
+			y luego guárdela como plantilla.</p>
 			<p class="parrafo">Puede modificar los datos de un empleado en cualquier momento. Mantener actualizados los registros de los empleados puede simplificar las tareas 
 			relacionadas con el personal. Por ejemplo, si cambia la dirección de un empleado, registre esto en la página Tarjeta de empleado.</p>
 			<h3>Para agregar un empleado</h3>
@@ -1605,7 +1770,7 @@ let ausenciaEmpleado = () =>{
 
 	<h2 class="Subtitulos">Administrar la ausencia de los empleados</h2>
 	<p class="parrafo">Para administrar la ausencia de un empleado, debe registrar la ausencia en la página de <b>Registro de Ausencias</b> . Luego se puede ver de diferentes
-	 maneras para el análisis y las necesidades de informes.</p>
+	maneras para el análisis y las necesidades de informes.</p>
 	<p class="parrafo">Puede ver las ausencias de los empleados en dos páginas diferentes: </p>
 	<div class="contentList">
 	<ul>
@@ -1626,127 +1791,234 @@ let ausenciaEmpleado = () =>{
 	<p class="parrafo"><b>Nota</b><br>Para obtener estadísticas significativas, utilice siempre la misma unidad de medida, hora o día, al registrar las ausencias de los empleados.</p>
 	<div class="img-content"><img src="img/emple2.PNG" alt=""></div>
 	<p class="parrafo">La visualización de las ausencias nos ayudará mucho a la hora de poder elaborar las nóminas de los trabajadores y determinar con exactitud el salario
-	 correspondiente de cada uno.</p>
+	correspondiente de cada uno.</p>
 
 	`;
 
 	cuerpo.innerHTML= contenido;
 
 }
+/*===========================
+ Permisos y Usuarios y grupos
+ ==========================*/
+ let permisosUsuarios = () =>{
+ 	let cuerpo = document.querySelector(".bodyContent");
+ 	let contenido = `
+ 	<h2 class="Subtitulos">Asignar permisos a usuarios y grupos</h2>
+ 	<p class="parrafo">El sistema de seguridad de Business Central controla a qué objetos puede acceder un usuario dentro de cada base de datos o entorno, en combinación con la licencia del usuario. Para cada usuario, puede especificar si puede leer, modificar o ingresar datos en los objetos de la base de datos.</p>
+ 	<p class="parrafo">Antes de asignar permisos a usuarios y grupos de usuarios, debe definir quién puede iniciar sesión creando usuarios de acuerdo con su licencia. Para obtener más información, consulte <a href="https://learn.microsoft.com/en-us/dynamics365/business-central/ui-how-users-permissions">Crear usuarios según las licencias</a>.</p>
+ 	<p class="parrafo">En Business Central, hay dos niveles de permisos para los objetos de la base de datos:</p>
+ 	<div class="contentList">
+ 	<ul>
+ 	<li>Permisos generales según la licencia, también denominados derechos. <br>
+ 	Las licencias incluyen conjuntos de permisos predeterminados. A partir del primer lanzamiento de versiones de 2022, los administradores pueden personalizar estos permisos predeterminados para los tipos de licencia relevantes. Para obtener más información, consulte <a href="https://learn.microsoft.com/en-us/dynamics365/business-central/ui-how-users-permissions#licensespermissions">Configurar permisos basados en licencias</a>.
+ 	</li>
+ 	<li>Permisos detallados que asigna en Business Central. <br>
+ 	Este artículo describe cómo puede definir, usar y aplicar permisos en Business Central para cambiar la configuración predeterminada.
+ 	Es posible que vea otros usuarios en la lista de <b>usuarios</b> además de los de su propia empresa. Cuando un administrador delegado de una empresa asociada distribuidora inicia sesión en un entorno de Business Central en nombre de su cliente, se crea automáticamente como usuario dentro de Business Central. De esta forma, las acciones realizadas por un administrador delegado se registran en Business Central, como la publicación de documentos, y se asocian con su ID de usuario.
+ 	</li>
+ 	</ul>
+ 	</div>
+
+ 	<p class="parrafo">Business Central en línea incluye grupos de usuarios predeterminados que se asignan a los usuarios automáticamente en función de su licencia. Puede cambiar la configuración predeterminada modificando o agregando grupos de usuarios, conjuntos de permisos y permisos. La siguiente tabla describe escenarios clave para modificar los permisos predeterminados.</p>
+ 	<table class="tabla1">
+ 	<tr>
+ 	<th>Descripción</th>
+ 	<th>Ver</th>
+ 	</tr>
+ 	<tr>
+ 	<td>Para facilitar la administración de permisos para múltiples usuarios, puede organizarlos en grupos de usuarios y luego asignar o cambiar un conjunto de permisos para muchos usuarios en una sola acción.</td>
+ 	<td><a href="https://learn.microsoft.com/en-us/dynamics365/business-central/ui-define-granular-permissions#to-manage-permissions-through-user-groups">Para administrar permisos a través de grupos de usuarios</a></td>
+ 	</tr>
+ 	<tr>
+ 	<td>Para administrar conjuntos de permisos para usuarios específicos</td>
+ 	<td><a href="https://learn.microsoft.com/en-us/dynamics365/business-central/ui-define-granular-permissions#to-assign-permission-sets-to-users">Para asignar conjuntos de permisos a los usuarios</a></td>
+ 	</tr>
+ 	<tr>
+ 	<td>Para aprender a definir un conjunto de permisos</td>
+ 	<td><a href="https://learn.microsoft.com/en-us/dynamics365/business-central/ui-define-granular-permissions#to-create-a-permission-set">Para crear un conjunto de permisos</a></td>
+ 	</tr>
+ 	<tr>
+ 	<td>Para ver o solucionar problemas de permisos de un usuario</td>
+ 	<td><a href="https://learn.microsoft.com/en-us/dynamics365/business-central/ui-define-granular-permissions#to-get-an-overview-of-a-users-permissions"> Para obtener una descripción general de los permisos de un usuario</a></td>
+ 	</tr>
+ 	<tr>
+ 	<td>Para obtener más información sobre la seguridad a nivel de registro</td>
+ 	<td><a href="https://learn.microsoft.com/en-us/dynamics365/business-central/ui-define-granular-permissions#security-filters-limit-a-users-access-to-specific-records-in-a-table">Los filtros de seguridad limitan el acceso de un usuario a registros específicos en una tabla</a></td>
+ 	</tr>
+ 	</table><br>
+ 	<h3>Para crear un conjunto de permisos</h3>
+ 	<p class="parrafo"><b>Nota</b> <br>
+ 	Cuando agrega un permiso del sistema, su conjunto de permisos definido por el usuario se actualizará automáticamente con cualquier cambio que Microsoft realice en esos permisos.
+ 	</p>
+ 	<ul>
+ 	<li><b>1.</b> Elija el icono de busqueda, ingrese <b> Conjuntos de permisos</b> y luego elija el enlace relacionado</li>
+ 	<li><b>2.</b> Elija la opción <b>Nuevo</b></li>
+ 	<li><b>3.</b> En la nueva línea, complete los campos según sea necesario. Pase el cursor sobre un campo para leer una breve descripción. <br>
+ 	<div class="img-content2"><img src="img/permisos1.PNG" alt=""></div>
+ 	</li>
+ 	<li><b>4.</b> Elija la opción <b>Permisos</b>.</li>
+ 	<li><b>5.</b> En la página <b>Conjunto de permisos</b>, en el campo <b>Tipo</b>, incluya o excluya permisos para el objetode la siguiente manera: <br>
+ 	<p class="parrafo">Para incluir el permiso, elija <b>Incluir</b> y luego elija el nivel de acceso para otorgar en los campos Permiso de <b>lectura, Permiso</b>  de <b>inserción, Permiso</b> de <b>modificación, Permiso</b> de <b>eliminación</b> y Permiso de <b>ejecución</b> . La siguiente tabla describe las opciones.</p>
+ 	<table class="tabla1">
+ 	<tr>
+ 	<th>Opción</th>
+ 	<th>Descripción</th>
+ 	<th>Clasificación</th>
+ 	</tr>
+ 	<tr>
+ 	<td>Vacio</td>
+ 	<td>El usuario no puede realizar la acción en el objeto.</td>
+ 	<td>Más bajo</td>
+ 	</tr>
+ 	<tr>
+ 	<td>Sí</td>
+ 	<td>El usuario puede realizar la acción en el objeto.</td>
+ 	<td>Más alto</td>
+ 	</tr>
+ 	<tr>
+ 	<td>Indirecto</td>
+ 	<td>El usuario puede realizar la acción en el objeto, pero solo a través de otro objeto relacionado al que el usuario tenga acceso total.</td>
+ 	<td>segundo más alto</td>
+ 	</tr>
+ 	</table><br>
+ 	<p class="parrafo">En la siguiente imagen vemos como hemos agregado permisos para 4 tablas, en todas no damos permiso de eliminación pero en las otras acciones  tienen diferentes opciones marcadas. </p>
+ 	<div class="img-content2"><img src="img/permisos2.PNG" alt=""></div>
+ 	</li>
+ 	<li><b>6.</b> Utilice los campos <b>Tipo</b> de objeto e <b>ID</b> de objeto para especificar el objeto al que está otorgando acceso. <br>
+ 	<p class="parrafo">Las nuevas líneas muestran los valores predeterminados. Por ejemplo, el campo <b>Tipo de objeto</b> contiene Datos de tabla y el campo <b>ID</b>. de objeto contiene 0 . Los valores predeterminados son solo marcadores de posición y no se utilizan. Debe elegir un tipo de objeto y un objeto en el campo Id. de objeto antes de poder crear otra línea nueva.</p>
+ 	</li>
+ 	<li><b>7.</b> si está definiendo permisos para un tipo de objeto de datos de tabla, en el campo <b>Filtro de seguridad</b> puede filtrar los datos a los que un usuario puede acceder en los campos de la tabla seleccionada. Por ejemplo, es posible que desee permitir que un usuario acceda solo a registros que contengan información sobre un cliente en particular. Para obtener más información, consulte
+ 	<a href="https://learn.microsoft.com/en-us/dynamics365/business-central/ui-define-granular-permissions#security-filters-limit-a-users-access-to-specific-records-in-a-table">Los filtros de seguridad limitan el acceso de un usuario a registros específicos en una tabla</a> y <a href="https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/security/security-filters">Uso de filtros de seguridad</a>. <br>
+ 	En la columna <b>Filtro de campo</b> , ingrese el valor del campo que desea usar para limitar el acceso. <br>
+ 	Por ejemplo, para limitar el acceso de un usuario solo a las ventas de Annette Hill, ingrese <b>AH </b>, que es el código de vendedor de Annette Hill, en la columna <b>Filtro de campo</b>. <br>
+ 	<div class="img-content2"><img src="img/permisos3.PNG" alt=""></div>
+ 	</li>
+ 	</ul>
+ 	<br>
+ 	<p class="parrafo">Videotutorial de Perfiles roles y permisos en Business Central</p>
+ 	<iframe class="ifra" src="https://www.youtube.com/embed/DH4LBo99Ero" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+ 	`;
+
+ 	cuerpo.innerHTML= contenido;
+
+ }
 
 
 
-/*Configuracion de finanzas*/
-let configfinanzas = () =>{
-	let cuerpo = document.querySelector(".bodyContent");
-	let contenido = `
-	<table class="tabla1">
-	<tr>
-	<th>A</th>
-	<th>Ver</th>
-	</tr>
-	<tr>
-	<td>Ver o editar cuentas del libro mayor en las que se contabilizan todas las entradas del libro mayor</td>
-	<td><a href="">Configurar o cambiar el plan de cuentas</a></td>
-	</tr>
-	<tr>
-	<td>Especifique cómo desea que le paguen los clientes y cómo desea pagar a sus proveedores.</td>
-	<td><a href="">Configurar métodos de pago</a></td>
-	</tr>
-	<tr>
-	<td>Especifique las condiciones de pago para administrar las fechas de vencimiento y calcular posibles descuentos por pago.</td>
-	<td><a href="">Configurar condiciones de pago</a></td>
-	</tr>
-	<tr>
-	<td>Especifique los grupos de contabilización que asignan entidades como clientes, proveedores, artículos, recursos y documentos de compra y venta a las cuentas del libro mayor.</td>
-	<td><a href="">Configurar grupos de contabilización</a></td>
-	</tr>
-	<tr>
-	<td>Cree informes financieros y defina categorías de cuentas que determinen el contenido de los gráficos e informes financieros, como los informes de hoja de balance y estado de resultados.</td>
-	<td><a href="">Preparar informes financieros con datos financieros y categorías de cuentas</a></td>
-	</tr>
-	<tr>
-	<td>Configure una tolerancia por la cual el sistema cierra una factura incluso si el pago, incluido cualquier descuento, no cubre completamente el monto de la factura.</td>
-	<td><a href="">Trabajar con tolerancias de pago y tolerancias de descuento de pago</a></td>
-	</tr>
-	<tr>
-	<td>Configurar periodos fiscales.</td>
-	<td><a href="">Trabajar con períodos contables y años fiscales</a></td>
-	</tr>
-	<tr>
-	<td>Configure los términos de la factura que les recuerden a sus clientes que deben realizar el pago.</td>
-	<td><a href="">Configurar términos y niveles de recordatorio</a></td>
-	</tr>
-	<tr>
-	<td>Defina cómo informa a las autoridades fiscales los importes del impuesto sobre el valor añadido (IVA) recaudados por las ventas.</td>
-	<td><a href="">Configurar el impuesto al valor agregado (IVA)</a></td>
-	</tr>
-	<tr>
-	<td>Prepárese para manejar el IVA no realizado en relación con los métodos de contabilidad basados ​​en efectivo.</td>
-	<td><a href="">Configurar el IVA no realizado para la contabilidad de caja</a></td>
-	</tr>
-	<tr>
-	<td>Defina las monedas extranjeras con las que comercia o reporta transacciones.</td>
-	<td><a href="">Configurar monedas</a></td>
-	</tr>
-	<tr>
-	<td>Configure sus funciones de Ventas y Compras para manejar pagos en moneda extranjera.</td>
-	<td><a href="">Habilitar la aplicación de asientos contables en diferentes monedas</a></td>
-	</tr>
-	<tr>
-	<td>Defina una o más monedas adicionales para que los montos se informen automáticamente tanto en la moneda local (LCY) como en una moneda de informe adicional en cada asiento del libro mayor (G/L) y en otros asientos.</td>
-	<td><a href="">Configurar una moneda de informe adicional</a></td>
-	</tr>
-	<tr>
-	<td>Ajuste periódicamente los equivalentes de divisas adicionales para compensar las fluctuaciones de los tipos de cambio.</td>
-	<td><a href="">Actualizar tipos de cambio de moneda</a></td>
-	</tr>
-	<tr>
-	<td>Defina múltiples tasas de interés para usar en diferentes períodos para pagos atrasados ​​en transacciones comerciales.</td>
-	<td><a href="">Configurar tasas de interés múltiples</a></td>
-	</tr>
-	<tr>
-	<td>Haga arreglos para que los montos se redondeen automáticamente a medida que se crean las facturas.</td>
-	<td><a href="">Configurar el redondeo de facturas</a></td>
-	</tr>
-	<tr>
-	<td>Agregue nuevas cuentas al plan de cuentas existente.</td>
-	<td><a href="">Configuración del plan de cuentas</a></td>
-	</tr>
-	<tr>
-	<td>Configure gráficos de inteligencia empresarial (BI) para analizar el flujo de caja.</td>
-	<td><a href="">Configuración del análisis de flujo de caja</a></td>
-	</tr>
-	<tr>
-	<td>Habilitar la facturación de un cliente no configurado en el sistema.</td>
-	<td><a href="">Configurar clientes en efectivo</a></td>
-	</tr>
-	<tr>
-	<td>Configure los informes de Intrastat y envíe el informe a una autoridad.</td>
-	<td><a href="">Configurar e informar Intrastat</a></td>
-	</tr>
-	<tr>
-	<td>Asegúrese de que un asiento de diario se asigne entre diferentes cuentas, como cantidad, porcentaje o monto, cuando lo publique en el diario.</td>
-	<td><a href="">Usar claves de asignación en diarios generales</a></td>
-	</tr>
-	<tr>
-	<td>Configure códigos fuente y códigos de motivo para ayudar a realizar un seguimiento de los registros de auditoría.</td>
-	<td><a href="">Configuración de códigos fuente y códigos de motivo para registros de auditoría</a></td>
-	</tr>
-	<tr>
-	<td>Especifique los informes predeterminados que se utilizarán para diferentes tipos de documentos.</td>
-	<td><a href="">Selección de informes en Business Central</a></td>
-	</tr>
-	</table>
-	<p class="parrafo"><b>Nota</b><br>Según su ubicación geográfica, algunas páginas de Business Central pueden contener 
-	campos que no se describen en los artículos enumerados anteriormente porque se aplican a personalizaciones o funciones locales. 
-	Pase el cursor sobre un campo para leer una breve descripción.</p>
+ /*Configuracion de finanzas*/
+ let configfinanzas = () =>{
+ 	let cuerpo = document.querySelector(".bodyContent");
+ 	let contenido = `
+ 	<table class="tabla1">
+ 	<tr>
+ 	<th>A</th>
+ 	<th>Ver</th>
+ 	</tr>
+ 	<tr>
+ 	<td>Ver o editar cuentas del libro mayor en las que se contabilizan todas las entradas del libro mayor</td>
+ 	<td><a href="">Configurar o cambiar el plan de cuentas</a></td>
+ 	</tr>
+ 	<tr>
+ 	<td>Especifique cómo desea que le paguen los clientes y cómo desea pagar a sus proveedores.</td>
+ 	<td><a href="">Configurar métodos de pago</a></td>
+ 	</tr>
+ 	<tr>
+ 	<td>Especifique las condiciones de pago para administrar las fechas de vencimiento y calcular posibles descuentos por pago.</td>
+ 	<td><a href="">Configurar condiciones de pago</a></td>
+ 	</tr>
+ 	<tr>
+ 	<td>Especifique los grupos de contabilización que asignan entidades como clientes, proveedores, artículos, recursos y documentos de compra y venta a las cuentas del libro mayor.</td>
+ 	<td><a href="">Configurar grupos de contabilización</a></td>
+ 	</tr>
+ 	<tr>
+ 	<td>Cree informes financieros y defina categorías de cuentas que determinen el contenido de los gráficos e informes financieros, como los informes de hoja de balance y estado de resultados.</td>
+ 	<td><a href="">Preparar informes financieros con datos financieros y categorías de cuentas</a></td>
+ 	</tr>
+ 	<tr>
+ 	<td>Configure una tolerancia por la cual el sistema cierra una factura incluso si el pago, incluido cualquier descuento, no cubre completamente el monto de la factura.</td>
+ 	<td><a href="">Trabajar con tolerancias de pago y tolerancias de descuento de pago</a></td>
+ 	</tr>
+ 	<tr>
+ 	<td>Configurar periodos fiscales.</td>
+ 	<td><a href="">Trabajar con períodos contables y años fiscales</a></td>
+ 	</tr>
+ 	<tr>
+ 	<td>Configure los términos de la factura que les recuerden a sus clientes que deben realizar el pago.</td>
+ 	<td><a href="">Configurar términos y niveles de recordatorio</a></td>
+ 	</tr>
+ 	<tr>
+ 	<td>Defina cómo informa a las autoridades fiscales los importes del impuesto sobre el valor añadido (IVA) recaudados por las ventas.</td>
+ 	<td><a href="">Configurar el impuesto al valor agregado (IVA)</a></td>
+ 	</tr>
+ 	<tr>
+ 	<td>Prepárese para manejar el IVA no realizado en relación con los métodos de contabilidad basados ​​en efectivo.</td>
+ 	<td><a href="">Configurar el IVA no realizado para la contabilidad de caja</a></td>
+ 	</tr>
+ 	<tr>
+ 	<td>Defina las monedas extranjeras con las que comercia o reporta transacciones.</td>
+ 	<td><a href="">Configurar monedas</a></td>
+ 	</tr>
+ 	<tr>
+ 	<td>Configure sus funciones de Ventas y Compras para manejar pagos en moneda extranjera.</td>
+ 	<td><a href="">Habilitar la aplicación de asientos contables en diferentes monedas</a></td>
+ 	</tr>
+ 	<tr>
+ 	<td>Defina una o más monedas adicionales para que los montos se informen automáticamente tanto en la moneda local (LCY) como en una moneda de informe adicional en cada asiento del libro mayor (G/L) y en otros asientos.</td>
+ 	<td><a href="">Configurar una moneda de informe adicional</a></td>
+ 	</tr>
+ 	<tr>
+ 	<td>Ajuste periódicamente los equivalentes de divisas adicionales para compensar las fluctuaciones de los tipos de cambio.</td>
+ 	<td><a href="">Actualizar tipos de cambio de moneda</a></td>
+ 	</tr>
+ 	<tr>
+ 	<td>Defina múltiples tasas de interés para usar en diferentes períodos para pagos atrasados ​​en transacciones comerciales.</td>
+ 	<td><a href="">Configurar tasas de interés múltiples</a></td>
+ 	</tr>
+ 	<tr>
+ 	<td>Haga arreglos para que los montos se redondeen automáticamente a medida que se crean las facturas.</td>
+ 	<td><a href="">Configurar el redondeo de facturas</a></td>
+ 	</tr>
+ 	<tr>
+ 	<td>Agregue nuevas cuentas al plan de cuentas existente.</td>
+ 	<td><a href="">Configuración del plan de cuentas</a></td>
+ 	</tr>
+ 	<tr>
+ 	<td>Configure gráficos de inteligencia empresarial (BI) para analizar el flujo de caja.</td>
+ 	<td><a href="">Configuración del análisis de flujo de caja</a></td>
+ 	</tr>
+ 	<tr>
+ 	<td>Habilitar la facturación de un cliente no configurado en el sistema.</td>
+ 	<td><a href="">Configurar clientes en efectivo</a></td>
+ 	</tr>
+ 	<tr>
+ 	<td>Configure los informes de Intrastat y envíe el informe a una autoridad.</td>
+ 	<td><a href="">Configurar e informar Intrastat</a></td>
+ 	</tr>
+ 	<tr>
+ 	<td>Asegúrese de que un asiento de diario se asigne entre diferentes cuentas, como cantidad, porcentaje o monto, cuando lo publique en el diario.</td>
+ 	<td><a href="">Usar claves de asignación en diarios generales</a></td>
+ 	</tr>
+ 	<tr>
+ 	<td>Configure códigos fuente y códigos de motivo para ayudar a realizar un seguimiento de los registros de auditoría.</td>
+ 	<td><a href="">Configuración de códigos fuente y códigos de motivo para registros de auditoría</a></td>
+ 	</tr>
+ 	<tr>
+ 	<td>Especifique los informes predeterminados que se utilizarán para diferentes tipos de documentos.</td>
+ 	<td><a href="">Selección de informes en Business Central</a></td>
+ 	</tr>
+ 	</table>
+ 	<p class="parrafo"><b>Nota</b><br>Según su ubicación geográfica, algunas páginas de Business Central pueden contener 
+ 	campos que no se describen en los artículos enumerados anteriormente porque se aplican a personalizaciones o funciones locales. 
+ 	Pase el cursor sobre un campo para leer una breve descripción.</p>
 
-	`;
+ 	`;
 
-	cuerpo.innerHTML= contenido;
+ 	cuerpo.innerHTML= contenido;
 
-}	
+ }	
 /*
 let tableRelation = () =>{
 	let cuerpo = document.querySelector(".bodyContent");

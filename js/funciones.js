@@ -315,9 +315,9 @@ let crearTabla = () =>{
 	<h3>Creando Tabla Persona</h3>
 	<div class="img-content2">
 	<img src="img/tabla1.PNG" alt="">
-	</div>
-	<p class="parrafo">En el enlace siguientes tienes un video como crear un tabla dentro de un proyecto.</p>
-	<p class="parrafo"><a href="https://www.youtube.com/watch?v=KScp95TOVh8">Video Tutorial de Crear Tabla </a></p>
+	</div><br>
+	<h4>Videotutorial crear tablas</h4>
+	<iframe class="ifra" src="https://www.youtube.com/embed/KScp95TOVh8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	<h3>Propiedades de Tablas</h3>
 	<ul>
 	<li><b>Caption: </b>Contiene el nombre de la tabla.</li>
@@ -570,8 +570,8 @@ let crearPageCard = () =>{
 	<img src="img/PageCard.PNG" alt="">
 	</div><br>
 	<p class="parrafo">En el ejemplo vemos como podemos crear una page card, que nos servirá para visualizar los campos de la tabla persona.</p>
-	<p class="parrafo">En el siguiente enlace podrás ver de manera más explicita como poder crear una Page Card.</p>
-	<p class="parrafo"><a href="https://www.youtube.com/watch?v=d4fNXF9YSic">Crear Page Card Video >></a> </p>
+	<h4>Videotutorial como crear una Page Card.</h4>
+	<iframe class="ifra" src="https://www.youtube.com/embed/d4fNXF9YSic" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 	`;
 
@@ -591,14 +591,14 @@ let crearPageList = () =>{
 	y también  referenciamos hacia la Page Card <br><b>"CardPageId = PersonaCard".</b> </p>
 	<p class="parrafo">Para Ver PResionamos CRTL + F5 y nos mostrara la interfaz de la página persona. </p>
 	<div class="img-content2">
-	<img src="img/pagelist2.PNG" alt="">
+	<img src="img/pagelist.PNG" alt="">
 	</div><br>
 	<p class="parrafo">Presionamos en nuevo y agregamos un registro a la base de datos persona</p>
 	<div class="img-content2">
 	<img src="img/pagelist3.PNG" alt="">
 	</div>
 	<p class="parrafo">Agregamos más clientes asi tenemos más registros.</p>
-	<div class="img-content2">
+	<div class="img-content">
 	<img src="img/pagelist4.PNG" alt="">
 	</div>
 	<p class="parrafo">En las páginas de las tarjetas podemos reorganizar u ocultar el contenido como deseen los clientes obtener los datos.</p>
@@ -634,20 +634,22 @@ let crearCodeunnits = () =>{
 	de un objeto en particular, y si estos procedimientos son necesarios tanto desde el interior como desde el exterior de
 	el informe, la mejor práctica sigue siendo ubicar los procedimientos en una codeunits.</p>
 	<p class="parrafo">Las <b>Codeunits</b> son en realidad archivos donde podremos guardar nuestras funciones o procesos, que luego podremos utilizarlos desde otras partes de nuestro proyecto.</p>
-	<p class="parrafo"><a href="https://www.youtube.com/watch?v=yQ2JUpKCfs0">Crear Codeunits Video >></a></p>
+	
 	<div class="img-content2">
 	<img src="img/codeunit1.PNG" alt="">
 	</div><br>
 	<p class="parrafo">En el siguiente ejemplo vemos como es la sintaxis de una codeunits.</p>
 	<p class="parrafo">Para acceder al resto de funciones, puede usar el desencadenador OnAction.</p>
+	<iframe class="ifra" src="https://www.youtube.com/embed/yQ2JUpKCfs0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 	`;
 
 	cuerpo.innerHTML= contenido;
 
 }
-/*
-actions*/
+/*===========
+actions
+===============*/
 let crearAction = () =>{
 	let cuerpo = document.querySelector(".bodyContent");
 	let contenido = `
@@ -682,63 +684,67 @@ let crearAction = () =>{
 
 }
 
-/*Enum*/
-let ennum = () =>{
-	let cuerpo = document.querySelector(".bodyContent");
-	let contenido = `
+/*===========
+	Enum
+	==================*/
+	let ennum = () =>{
+		let cuerpo = document.querySelector(".bodyContent");
+		let contenido = `
 
-	<h2 class="Subtitulos">Enumeraciones</h2>
-	<p class="parrafo">Un tipo de enumeración, también conocido como enumeración en programación, es una palabra clave utilizada para declarar un tipo que consiste en un conjunto de constantes con nombre. La lista de constantes con nombre se denomina lista de enumeración. Las enumeraciones se pueden usar como campos de tabla, variables locales y globales, y parámetros..</p>
-	<p class="parrafo">
-	Para declarar un en AL debe especificar un ID y un nombre. La lista de enumeración consta de valores y cada uno de los valores se declara con un identificador y un valor. El identificador de valor es el valor ordinal de la lista de enumeración y debe ser único. Cuando los valores de enumeración se muestran en la interfaz de usuario, se ordenan por el orden de declaración. Además, si la extensión B extiende la extensión A, los valores de enumeración declarados en la extensión A se muestran antes de los valores de enumeración declarados en la extensión B.enum
-	</p>
-	<p class="parrafo">En el siguiente ejemplo crearemos un Enum que se llamara Provincias, el cual usaremos en nuestra tabla Persona, adicionaremos un campo que tendrá para elegir las diferentes comunidades de España.</p>
-	<div class="img-content2">
-	<img src="img/ennum1.PNG" alt="">
-	</div>
-	<p class="parrafo">Agregamos el campo a nuestra tabla Persona, en este caso lo llamaremos Comunidad, Que obtendrá los valores de nuestra Enum Provincias.</p>
-	<div class="img-content2">
-	<img src="img/ennum2.PNG" alt="">
-	</div>
-	<p class="parrafo">Agregamos el campo Comunidad en nuestra PageList y nuestra PageCard.</p>
-	<div class="img-content2">
-	<img src="img/ennum3.PNG" alt="">
-	</div>
-	<p class="parrafo">Observamos que en la página Persona en el campo Comunidad se despliega las enumeraciones antes definidas con los nombres de las diferentes comunidades de España.</p>
-	<div class="img-content2">
-	<img src="img/ennum4.PNG" alt="">
-	</div>
+		<h2 class="Subtitulos">Enumeraciones</h2>
+		<p class="parrafo">Un tipo de enumeración, también conocido como enumeración en programación, es una palabra clave utilizada para declarar un tipo que consiste en un conjunto de constantes con nombre. La lista de constantes con nombre se denomina lista de enumeración. Las enumeraciones se pueden usar como campos de tabla, variables locales y globales, y parámetros..</p>
+		<p class="parrafo">
+		Para declarar un en AL debe especificar un ID y un nombre. La lista de enumeración consta de valores y cada uno de los valores se declara con un identificador y un valor. El identificador de valor es el valor ordinal de la lista de enumeración y debe ser único. Cuando los valores de enumeración se muestran en la interfaz de usuario, se ordenan por el orden de declaración. Además, si la extensión B extiende la extensión A, los valores de enumeración declarados en la extensión A se muestran antes de los valores de enumeración declarados en la extensión B.enum
+		</p>
+		<p class="parrafo">En el siguiente ejemplo crearemos un Enum que se llamara Provincias, el cual usaremos en nuestra tabla Persona, adicionaremos un campo que tendrá para elegir las diferentes comunidades de España.</p>
+		<div class="img-content2">
+		<img src="img/ennum1.PNG" alt="">
+		</div>
+		<p class="parrafo">Agregamos el campo a nuestra tabla Persona, en este caso lo llamaremos Comunidad, Que obtendrá los valores de nuestra Enum Provincias.</p>
+		<div class="img-content2">
+		<img src="img/ennum2.PNG" alt="">
+		</div>
+		<p class="parrafo">Agregamos el campo Comunidad en nuestra PageList y nuestra PageCard.</p>
+		<div class="img-content2">
+		<img src="img/ennum3.PNG" alt="">
+		</div>
+		<p class="parrafo">Observamos que en la página Persona en el campo Comunidad se despliega las enumeraciones antes definidas con los nombres de las diferentes comunidades de España.</p>
+		<div class="img-content2">
+		<img src="img/ennum4.PNG" alt="">
+		</div>
 
-	`;
+		`;
 
-	cuerpo.innerHTML= contenido;
+		cuerpo.innerHTML= contenido;
 
-}
+	}
 
-/*Opciones*/
-let opciones = () =>{
-	let cuerpo = document.querySelector(".bodyContent");
-	let contenido = `
+	/*Opciones*/
+	let opciones = () =>{
+		let cuerpo = document.querySelector(".bodyContent");
+		let contenido = `
 
-	<h2 class="Subtitulos">Opciones</h2>
-	<p class="parrafo">El tipo de datosb  <b>Option</b>  es un tipo de enumerador de base cero y, por lo tanto, permite convertir valores de <b>opción</b>  en enteros. Por esa razón, el tipo de datos Option es un tipo de datos numéricos, ya que los valores de <b>opción</b> se almacenan como números enteros.</p>
-	<p class="parrafo">Para definir una variable de tipo <b>Option</b>, no puede usar la propiedad OptionMembers que se usa en un campo de tipo de datos <b>Option</b>. Debe enumerar las opciones disponibles como una lista separada por comas después de definir la variable.</p>
-	<p class="parrafo">En el siguiente ejemplo vamos a agregar un campo a la tabla Persona, donde se pueda agregar el color de ojos, utilizara un option.</p>
-	<div class="img-content2">
-	<img src="img/option1.PNG" alt="">
-	</div>
-	<p class="parrafo">Después de agregar el campo color de ojos en la tabla Persona, agregaremos el mismo campo en la pageList y en la pageCard para visualizarlo en la interfaz.</p>
-	<div class="img-content">
-	<img src="img/option2.PNG" alt="">
-	</div>
-	<p class="parrafo">En la interfaz vemos como tenemos las diferentes opciones del campo color de ojos.</p>
+		<h2 class="Subtitulos">Opciones</h2>
+		<p class="parrafo">El tipo de datosb  <b>Option</b>  es un tipo de enumerador de base cero y, por lo tanto, permite convertir valores de <b>opción</b>  en enteros. Por esa razón, el tipo de datos Option es un tipo de datos numéricos, ya que los valores de <b>opción</b> se almacenan como números enteros.</p>
+		<p class="parrafo">Para definir una variable de tipo <b>Option</b>, no puede usar la propiedad OptionMembers que se usa en un campo de tipo de datos <b>Option</b>. Debe enumerar las opciones disponibles como una lista separada por comas después de definir la variable.</p>
+		<p class="parrafo">En el siguiente ejemplo vamos a agregar un campo a la tabla Persona, donde se pueda agregar el color de ojos, utilizara un option.</p>
+		<div class="img-content2">
+		<img src="img/option1.PNG" alt="">
+		</div>
+		<p class="parrafo">Después de agregar el campo color de ojos en la tabla Persona, agregaremos el mismo campo en la pageList y en la pageCard para visualizarlo en la interfaz.</p>
+		<div class="img-content">
+		<img src="img/option2.PNG" alt="">
+		</div>
+		<p class="parrafo">En la interfaz vemos como tenemos las diferentes opciones del campo color de ojos.</p>
 
-	`;
+		`;
 
-	cuerpo.innerHTML= contenido;
+		cuerpo.innerHTML= contenido;
 
-}
-/*Table relation*/
+	}
+/*=============
+Table relation
+==============*/
 
 let tableRelation = () =>{
 	let cuerpo = document.querySelector(".bodyContent");
@@ -1222,12 +1228,12 @@ let diccionary = () =>{
 
 			<p class="parrafo">Para crear un informe, puede usar el fragmento treport. Este fragmento genera el esqueleto del objeto de informe y, al usarlo, puede continuar diseñando un informe.
 			El conjunto de datos de un informe contiene los elementos de datos del informe. Puede agregar uno o más elementos de datos a un informe. Puede utilizar el fragmento tdataitem para agregar un elemento de datos a un informe y el fragmento tcolumn para agregar una columna a un elemento de datos.</p>
-			<p class="parrafo"> <a href="https://www.youtube.com/watch?v=0wh1TCYGryA">Video como crear un Reporte</a></p>
+			<h4>Videotutorial como crear un Reporte</h4>
+			<iframe class="ifra" src="https://www.youtube.com/embed/0wh1TCYGryA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 			`;
 
 			cuerpo.innerHTML= contenido;
-
 		}
 /*===============================
 	EVENTO SUSCRIPTOR
@@ -1344,13 +1350,12 @@ let diccionary = () =>{
 		<p class="parrafo"> Observamos que al escribir texto en el campo teléfono nos salta un error y no podremos guardar los cambios hasta introducir números enteros dentro del campo teléfono.</p>
 		<p class="parrafo">Documentación de Creación de un método de suscriptor de eventos <a href="https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-subscribing-to-events">Aquí</a>.</p>
 		<p class="parrafo">Videos sobre como funciona los eventos : </p>
-		<div class="contentList">
-		<ul>
-		<li><a href="https://www.youtube.com/watch?v=_MiBa2Fms1g">Single Instance EventSubscribers in AL and Business Central</a></li>
-		<li><a href="https://www.youtube.com/watch?v=vLCdLmrXmZE">Easy implement Event Subscribers in AL</a></li>
-		</ul>
-		</div>
-
+		
+		<p class="parrafo">Single Instance EventSubscribers in AL and Business Central </p>
+		<iframe class="ifra" src="https://www.youtube.com/embed/_MiBa2Fms1g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<br>
+		  <p class="parrafo">Easy implement Event Subscribers in AL</p>
+		<iframe class="ifra" src="https://www.youtube.com/embed/vLCdLmrXmZE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 		`;
 
