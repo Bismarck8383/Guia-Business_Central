@@ -172,5 +172,31 @@
   0 0  0 2px rgb(255,255,255),
   0.3em 0.3em 1em rgba(0,0,0,0.3);
 }
+.ifraWeb{
+  width: 100%;
+  height: 600px;
+  box-shadow:
+  inset 0 -3em 3em rgba(0,0,0,0.1),
+  0 0  0 2px rgb(255,255,255),
+  0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+.content-code{
+  width: 80%;
+  margin: auto;
+  background: black;
+  border: 3px solid silver;
+  overflow-y: scroll;
 
+  max-height: 400px;
+}
+.lang-al-language{
+  width: 100%;
+  color: white;
+}
+.borders{
+  border: 1px solid black;
+}
+.rojo{
+  color: red;
+}
 

@@ -32,23 +32,31 @@
   </div>
   <div class="dropdown botonera">
     <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-      Instalación
-    </button>
-    <ul class="dropdown-menu" >
-      <li><a class="dropdown-item" onclick="instalacionBussines()">Business Central</a></li>
-      <li><a class="dropdown-item" onclick= "instalacionVisual()">Visual Studio Code</a></li>
-      <li><a class="dropdown-item" onclick="instalacionDoker()">Docker</a></li>
-      <li><a class="dropdown-item" onclick="levantarDoker()">Levantar Docker</a></li>
-      <li><a class="dropdown-item" onclick="crearNuevoProyecto()">Crear Nuevo Proyecto</a></li>
-    </ul>
-  </div>
-  <div class="dropdown botonera">
-    <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-     Tables 
+     Sintaxis
    </button>
-   <ul class="dropdown-menu" >   
-    <li><a class="dropdown-item" onclick= "crearTabla()">Crear Tabla</a></li>
+   <ul class="dropdown-menu">
+    <li><a class="dropdown-item" onclick="sintaxis()" >Sintaxis de AL</a></li>
   </ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Instalación
+  </button>
+  <ul class="dropdown-menu" >
+    <li><a class="dropdown-item" onclick="instalacionBussines()">Business Central</a></li>
+    <li><a class="dropdown-item" onclick= "instalacionVisual()">Visual Studio Code</a></li>
+    <li><a class="dropdown-item" onclick="instalacionDoker()">Docker</a></li>
+    <li><a class="dropdown-item" onclick="levantarDoker()">Levantar Docker</a></li>
+    <li><a class="dropdown-item" onclick="crearNuevoProyecto()">Crear Nuevo Proyecto</a></li>
+  </ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+   Tables 
+ </button>
+ <ul class="dropdown-menu" >   
+  <li><a class="dropdown-item" onclick= "crearTabla()">Crear Tabla</a></li>
+</ul>
 </div>
 <div class="dropdown botonera">
   <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -58,6 +66,7 @@
     <li><a class="dropdown-item" onclick="paginas()">Páginas</a></li>
     <li><a class="dropdown-item" onclick="crearPageCard()">Crear Page Card</a></li>
     <li><a class="dropdown-item" onclick="crearPageList()">Crear Page List</a></li>
+    <li><a class="dropdown-item" onclick="crearPageDocument()">Crear Page Document</a></li>
     <li><a class="dropdown-item" onclick="crearAction()">Actions</a></li> 
   </ul>
 </div>
@@ -67,6 +76,8 @@
   </button>
   <ul class="dropdown-menu" >
     <li><a class="dropdown-item" onclick="crearCodeunnits()"> Codeunits</a></li>
+    <li><a class="dropdown-item" onclick="codeunit80()"> Codeunit 80 Ventas</a></li>
+    <li><a class="dropdown-item" onclick="codeunit90()"> Codeunit 90 Compras</a></li>
 
   </ul>
 </div>
@@ -127,6 +138,7 @@
  </button>
  <ul class="dropdown-menu" >
   <li><a class="dropdown-item" onclick="reportes()"> Reports</a></li>
+  <li><a class="dropdown-item" onclick="requestpage()">Requestpage</a></li>
 </ul>
 </div>
 <div class="dropdown botonera">
@@ -139,13 +151,21 @@
   <li><a class="dropdown-item" onclick="eventosTrigger()"> Triggers Eventos</a></li>
 </ul>
 </div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+   Idiomas
+ </button>
+ <ul class="dropdown-menu" >
+  <li><a class="dropdown-item" onclick="traduccionFiles()">Crear Archivos de traducción </a></li>
+</ul>
+</div>
 <!--Business Central Funcional-->
 <div class="temario">
  <p>Business Central</p>
 </div>
 <div class="dropdown botonera">
   <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Introducció BC
+    Introducción BC
   </button>
   <ul class="dropdown-menu" >
     <li><a class="dropdown-item" onclick="introBc()"> Introducción</a></li>
@@ -166,10 +186,11 @@
 </div>
 <div class="dropdown botonera">
   <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Periodo Contable
+    Periodos Contables
   </button>
   <ul class="dropdown-menu" >
-    <li><a class="dropdown-item" onclick="periodoContable()"> Crear Año Fiscal</a></li>
+    <li><a class="dropdown-item" onclick="crearPeriodoContable()"> Crear Año Fiscal</a></li>
+    <li><a class="dropdown-item" onclick="cerrarPeriodoContable()"> Cerrar Año Fiscal</a></li>
   </ul>
 </div>
 <div class="dropdown botonera">
@@ -178,7 +199,7 @@
   </button>
   <ul class="dropdown-menu" >
     <li><a class="dropdown-item" onclick="crearPlantillaCliente()"> Crear Plantilla Cliente</a></li>
-    <li><a class="dropdown-item" onclick="crearCliente()"> Crear Cliente</a></li>
+    <li><a class="dropdown-item" onclick="crearCliente()">Crear Cliente</a></li>
   </ul>
 </div>
 <div class="dropdown botonera">
@@ -186,7 +207,7 @@
     Ventas
   </button>
   <ul class="dropdown-menu" >
-    <li><a class="dropdown-item" onclick="resumenVentas()"> Resumen Ventas</a></li>
+    <li><a class="dropdown-item" onclick="resumenVentas()">Resumen Ventas</a></li>
     <li><a class="dropdown-item" onclick="confiVentas()"> Configuración Ventas</a></li>
     <li><a class="dropdown-item" onclick="pedidoVentas()"> Crear pedido Ventas</a></li>
     <li><a class="dropdown-item" onclick="facturaVenta()"> Crear factura Ventas</a></li>
@@ -231,6 +252,7 @@
     <li><a class="dropdown-item" onclick="crearCompra()"> Crear Oferta Compra</a></li>
     <li><a class="dropdown-item" onclick="facturaCompra()"> Crear Factura Compra</a></li>
     <li><a class="dropdown-item" onclick="registroCompra()"> Registro Compra</a></li>
+    <li><a class="dropdown-item" onclick="confPrecioCompra()">Conf Precios de Compras</a></li>
   </ul>
 </div>
 <div class="dropdown botonera">
@@ -292,28 +314,37 @@
     </div>
     <hr>
     <!--Inicio de la Function-->
-  
-
-
-
-  <p class="parrafo"></p>
-  <p class="parrafo"></p>
-  <p class="parrafo"></p>
 
 
 
 
 
-  <!--Fin  la Function-->
+
+
+
+<p class="parrafo"></p>
+<p class="parrafo"></p>
+<p class="parrafo"></p>
+
+
+
+
+
+
+<!--Fin  la Function-->
     <!--
-        <h2 class="Subtitulos"></h2>
-        <div class="img-content2"><img src="img/" alt=""></div>
-        <p class="parrafo"></p>
-        <div class="contentList"></div>
-        class="ifra"
-      -->
-    </div>
+      &lt; y &gt;, 
+      <h2 class="Subtitulos"></h2>
+    <div class="img-content2"><img src="img/" alt=""></div>
+      <p class="parrafo"></p>
+      <div class="contentList"></div>
+      class="ifra"
+        <pre class="content-code"> <code class="lang-al-language"></code></pre>
+      <span class="rojo"></span>
+
+    -->
   </div>
+</div>
 
 </div>
 <footer class="bg-light text-center text-lg-start">
@@ -326,6 +357,7 @@
 </footer>
 <script type="text/javascript" src="js/funciones.js"></script>
 <script type="text/javascript" src="js/bcFuncional.js"></script>
+<script type="text/javascript" src="js/sintaxis.js"></script>
 </body>
 </html>
 
