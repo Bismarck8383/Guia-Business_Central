@@ -1,6 +1,6 @@
 /*============================
-	Introducción business Central
-	===============================*/
+Introducción business Central
+===============================*/
 
 let introBc = () =>{
 	let cuerpo = document.querySelector(".bodyContent");
@@ -48,16 +48,16 @@ let introBc = () =>{
 	<p class="parrafo">Videotutorial introducción a Business Central</p>
 	<iframe class="ifra" src="https://www.youtube.com/embed/Zgycf_fcQ4s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+	<h3>Introducción a Microsoft Business Central</h3>
+	<iframe class="ifra" src="https://www.youtube.com/embed/Sm8Cpv1GdFc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	`;
 
 	cuerpo.innerHTML= contenido;
 
 }
-	/*=======================
-		Suscripciones
-		==========================*/
-
-
+/*=======================
+Suscripciones
+==========================*/
 let suscripciones = () =>{
 	let cuerpo = document.querySelector(".bodyContent");
 	let contenido = `
@@ -188,19 +188,17 @@ let configuracion = () =>{
 	cuerpo.innerHTML= contenido;
 
 }
- /*============================
-		Crear Empresa
-		================================= */
+/*================
+Crear Empresa
+================== */
 let crearEmpresa = () =>{
 	let cuerpo = document.querySelector(".bodyContent");
 	let contenido = `
 
-	<h2 class="Subtitulos">Crear nuevas en empresas en Business Central</h2>
+	<h2 class="Subtitulos">Crear nuevas empresas con datos de configuración</h2>
 	<p class="parrafo">En Business Central, el contenedor para datos empresariales que pertenece a una unidad de negocio o entidad legal se denomina empresa. Cuando se registra en Business Central, recibe una empresa de demostración y una empresa vacía, Mi empresa. Cambiar entre las empresas es fácil, solo tiene que ir a Mi configuración y cambiar a la otra empresa. Pero también puede crear nuevas empresas en Business Central, según sus necesidades comerciales.</p>
-	<p class="parrafo">Al crear una empresa nueva, una guía de configuración asistida le ayuda a obtener los elementos básicos. A continuación, puede importar datos relevantes de su sistema heredado u otra empresa en Business Central.</p>
-	<div class="img-content2">
-	<img src="img/crearEmpresa.PNG" alt="">
-	</div>
+	<p class="parrafo">Si desea comenzar rápidamente con una nueva empresa, seleccione <b>Producción: solo datos de configuración</b> y luego importe sus propios datos comerciales, como clientes, artículos y proveedores.</p>
+	<p class="parrafo">Puede usar la opción <b>Producción - Solo datos de configuración</b> en el asistente para crear una nueva empresa, para crear una empresa con datos de configuración pero sin datos de muestra. Este proceso crea una empresa que contiene datos y configuración, como un plan de cuentas y métodos de pago listos para usar por empresas con procesos estándar. Configure sus propios artículos y clientes y comience a publicar de inmediato.</p>
 	<h3>Elegir la plantilla adecuada</h3>
 	<p class="parrafo">Si decide agregar una empresa al Business Central, puede utilizar la guía de configuración asistida Crear nueva empresa para comenzar. El asistente de configuración está disponible en la página Empresas y en la búsqueda en el campo Empresa en la página Mi configuración.</p>
 	<p class="parrafo">El asistente de configuración ofrece dos plantillas y una opción en blanco:</p>
@@ -213,26 +211,286 @@ let crearEmpresa = () =>{
 	</div>
 	<p class="parrafo">Si desea empezar fácilmente con una empresa nueva, elija Producción - Solo datos de configuración y, a continuación, importe sus propios datos empresariales, como clientes, productos, y proveedores. Seleccione la plantilla Nuevo si desea configurar todos los parámetros desde cero. En ese caso, puede utilizar la guía de configuración asistida Configuración de la empresa para obtener ayuda con los datos esenciales de configuración.</p>
 	<p class="parrafo"><b>Nota</b><br>Al crear una empresa nueva, tarda algunos minutos antes de tener acceso en Business Central. El estado de configuración de la página Empresas muestra cuando la nueva empresa está lista. A continuación, puede cambiar a la nueva empresa mediante <b>Mi configuración.</b></p>
+	<p class="parrafo">Para crear una nueva empresa con datos de configuración, siga estos pasos:</p>
+	<ul>
+	<li><b>1.</b> En la página Mi configuración , abra el botón de edición de asistencia a la derecha del cuadro de texto Empresa . <br>
+	<div class="img-content2"><img src="img/crearEmpresa1.PNG" alt=""></div>
+	</li>
+	<li><b>2.</b> En la ventana de empresas permitidas que se abre, seleccione <b>Nuevo </b>y luego, <b>Crear nueva empresa</b>. <br>
+	<div class="img-content2"><img src="img/crearEmpresa.PNG" alt=""></div>
+	</li>
+	<li><b>3.</b> Se abre el asistente para crear una nueva empresa. <br>
+	<div class="img-content2"><img src="img/crearEmpresa2.PNG" alt=""></div>
+	</li>
+	<li><b>4.</b> Haga clic en <b>Siguiente</b>.</li>
+	<li><b>5.</b> Ingrese un nombre para la nueva empresa y seleccione la opción: <b>Producción - Solo datos de configuración</b> 
+	<div class="img-content2"><img src="img/crearEmpresa3.PNG" alt=""></div>
+	</li>
+	<li><b>6.</b> En la siguiente página del asistente, haga clic en <b>Administrar usuarios</b> para agregar o eliminar usuarios de la nueva empresa y luego haga clic en <b>Siguiente</b>. <br>
+	<div class="img-content2"><img src="img/crearEmpresa4.PNG" alt=""></div>
+	</li>
+	<li><b>7.</b> Elija <b>Finalizar</b> para crear la empresa. Esto puede tardar unos minutos en completarse.</li>
+	</ul>
+	<p class="parrafo">La empresa se crea y se incluye en la lista de empresas, pero antes de que pueda usarla, se requiere algo de tiempo para configurar algunos datos y configuraciones. Esto puede demorar hasta 10 minutos, así que tómese un breve descanso antes de comenzar a usarlo.</p>
+	<h2 class="Subtitulos">Crear nuevas empresas sin datos</h2>
+	<p class="parrafo">Puede usar la opción <b>Crear nuevo: sin datos</b> en el asistente para crear una nueva empresa, para crear una empresa en blanco sin datos de configuración. Cuando seleccione esta opción, obtendrá una empresa en blanco y tendrá la libertad de configurarla desde cero, ya sea manualmente o mediante una configuración asistida.</p>
+	<p class="parrafo">Seleccione esta opción si su empresa tiene estructuras y procesos comerciales diferentes de los procesos estándar proporcionados por Business Central.</p>
+	<p class="parrafo">Para crear una nueva empresa sin ningún dato, siga estos pasos:</p>
+	<ul>
+	<li><b>1.</b> En la página <b>Mi configuración</b>  , abra el botón de edición de asistencia a la derecha del cuadro de texto <b>Empresa</b>. <br>
+	<div class="img-content2"><img src="img/crearEmpresa1.PNG" alt=""></div>
+	</li>
+	<li><b>2.</b> En la ventana de empresas permitidas que se abre, seleccione Nuevo y luego, Crear nueva empresa . <br> 
+	<div class="img-content2"><img src="img/crearEmpresa.PNG" alt=""></div>
+	</li>
+	<li><b>3.</b> Se abre el asistente para crear una nueva empresa. <br>
+	<div class="img-content2"><img src="img/crearEmpresa2.PNG" alt=""></div>
+	</li>
+	<li><b>4.</b>  Haga clic en <b>Siguiente</b>.</li>
+	<li><b>5.</b> Ingrese un nombre para la nueva empresa y seleccione la opción: <b>Producción - Sin datos</b> 
+	<div class="img-content2"><img src="img/crearEmpresa5.PNG" alt=""></div>
+	</li>
+	<li><b>6.</b> Luego haga clic en Siguiente .</li>
+	<li><b>7.</b> En la siguiente página del asistente, haga clic en <b>Administrar usuarios</b> para agregar o eliminar usuarios de la nueva empresa y luego haga clic en <b>Siguiente</b>. 
+	<div class="img-content2"><img src="img/crearEmpresa4.PNG" alt=""></div>
+	</li>
+	</ul>
+	<p class="parrafo">La nueva empresa ya se está creando. Puede tomar un tiempo antes de que esté listo. Cuando esté listo, lo verás en la ventana de empresas permitidas:</p> 
+	<div class="img-content2"><img src="img/crearEmpresa6.PNG" alt=""></div>
+	<h2 class="Subtitulos">Cree nuevas empresas con datos de configuración y demostración</h2>
+	<p class="parrafo">Si desea comenzar rápidamente con una nueva empresa que contiene datos de configuración y demostración, entonces la opción <b>Evaluación - Datos de muestra</b>  es la mejor opción.</p> 
+	<p class="parrafo">Puede utilizar la opción  <b>Evaluación - Datos de muestra</b> en el asistente para crear una nueva empresa, para crear una empresa que sea como la empresa de demostración con datos de muestra y datos de configuración.</p> 
+	<p class="parrafo">La empresa se crea con el alcance de la funcionalidad esencial que contiene todo lo necesario para evaluar el producto para empresas con procesos estándar. Por ejemplo, las facturas de muestra y las entradas del libro mayor le permiten ver gráficos e informes.</p> 
+	<p class="parrafo">Para crear una nueva empresa con datos de configuración y demostración, siga estos pasos:</p> 
+	<ul>
+	<li><b>1.</b> En la página <b>Mi configuración</b> , abra el botón de edición de asistencia a la derecha del cuadro de texto  <b>Empresa</b> . <br>
+	<div class="img-content2"><img src="img/crearEmpresa1.PNG" alt=""></div>
+	</li>
+	<li><b>2.</b> En la ventana de empresas permitidas que se abre, seleccione Nuevo y luego, Crear nueva empresa . <br>
+	<div class="img-content2"><img src="img/crearEmpresa.PNG" alt=""></div>
+	</li>
+	<li><b>3.</b> Se abre el asistente para crear una nueva empresa. <br>
+	<div class="img-content2"><img src="img/crearEmpresa2.PNG" alt=""></div>
+	</li>
+	<li><b>4.</b> Haga clic en <b>Siguiente</b>.</li>
+	<li><b>5.</b> Ingrese un nombre para la nueva empresa y seleccione la opción: <b>Evaluación de datos de muestra</b> <br>
+	<div class="img-content2"><img src="img/crearEmpresa7.png" alt=""></div>
+	</li>
+	<li><b>6.</b> Haga clic en <b>Siguiente </b> .</li>
+	<li><b>7</b> En la siguiente página del asistente, haga clic en <b>Administrar usuarios</b> para agregar o eliminar usuarios de la nueva empresa y luego haga clic en <b>Siguiente</b> .</li>
+	<li><b>8.</b> Elija <b>Finalizar</b> para crear la empresa. Este proceso puede tardar unos minutos en completarse.</li>
+	</ul>
 	<h3>Copiar una empresa</h3>
 	<p class="parrafo">En la página Empresas, puede usar la acción Copiar para crear una segunda empresa basada en los contenidos de una empresa existente. Eso es útil, por ejemplo, cuando desea probar una empresa sin interrumpir los datos de producción.</p>
 	<div class="img-content2">
 	<img src="img/CopiarEmpresa.PNG" alt="">
 	</div>
 	<p class="parrafo"><b>Nota</b><br>Esta función no se puede utilizar para hacer una copia de seguridad de una empresa. Hacer una copia de seguridad de la empresa comienza exportando la base de datos como un archivo .bacpac.</p>
-	<h3>Establecer la empresa</h3>
-	<p class="parrafo">Cuando inicie sesión en una empresa nueva, se ejecutará el asistente Configuración de la empresa automáticamente y le ayudará a empezar. Se le pedirá información sobre su empresa, como la dirección, los datos bancarios y el método de cálculo de costes de inventario. Pedimos esta información porque se utiliza como base para muchas áreas en Business Central que no tendrá que configurar manualmente más adelante.</p>
-	<p class="parrafo">Por ejemplo, Business Central incluye la dirección de su empresa en las facturas y otros documentos y su información bancaria en los pagos. El método de coste se utiliza para calcular los precios y la valoración del inventario.</p>
-	<p class="parrafo">Una vez que tenga los elementos básicos, puede configurar las áreas restantes. A continuación, puede agregar datos empresariales, como clientes y proveedores.</p>
-	
+	<h3>Configurar la información de la empresa</h3>
+	<p class="parrafo">La página Información de la empresa contiene información general que se utiliza en informes y documentos fiscales.</p>
+	<p class="parrafo">Para configurar la información de la empresa, siga estos pasos.</p>
+	<ul>
+	<li><b>1.</b>Seleccione el ícono <b>Buscar página</b> en la esquina superior derecha de la página, ingrese <b>la información de la empresa</b>  y seleccione el enlace relacionado.</li>
+	<li><b>2.</b> Ingrese la información en las fichas desplegables como se describe a continuación. <br>
+	<div class="contentList">
+	<ul>
+	<li><b>General</b>  : la ficha desplegable General contiene la información general de la empresa, como el nombre y los detalles de la dirección. En el campo Imagen , puede cargar el logotipo de la empresa que puede usar en documentos como facturas de venta.
+
+	</li>
+	<li><b>Comunicación</b>  : en la ficha desplegable <b>Comunicación</b>  , puede ingresar la información de contacto de la empresa, como el número de teléfono y la dirección de correo electrónico. Si la empresa es un socio de empresas vinculadas, puede especificar el código de socio de IC que se utiliza para identificar a la empresa en las transacciones de empresas vinculadas.</li>
+	<li><b>Pagos</b> : la ficha desplegable Pagos contiene la información bancaria de la empresa. Esta información se utiliza en documentos como facturas de venta. Para procesar cuentas bancarias en Business Central, debe configurar cuentas bancarias en la gestión de efectivo.</li>
+	<li><b>Envío</b>  : en la ficha desplegable Envío , puede ingresar la información de envío de la empresa.</li>
+	<li><b>Insignia de la empresa: en la ficha desplegable Insignia</b> de la empresa, puede especificar la configuración de la insignia de la empresa. Con la insignia de la empresa, puede mostrar un texto personalizado en la esquina superior derecha de la página. Al elegir la insignia de la empresa, el sistema muestra la empresa y el entorno en el que está trabajando.</li>
+	<li><b>Experiencia</b> del usuario: en la ficha desplegable <b>Experiencia</b>  del usuario , puede configurar la experiencia del usuario. Esto especifica qué elementos de la interfaz de usuario se muestran y qué características están disponibles. La configuración se aplica a todos los usuarios.
+	<br>
+	<div class="contenList">
+	<ul>
+	<li><b>Esencial</b> : muestra todas las acciones y campos para todas las funciones comerciales comunes.</li>
+	<li><b>Premium</b>  : muestra todas las acciones y campos para todas las funciones comerciales, incluida la gestión de fabricación y servicios.</li>
+	</ul>
+	</div>
+	</li>
+	</ul>
+	</div>
+
+	</li>
+	</ul>
+
+	`;
+	cuerpo.innerHTML= contenido;
+}
+/*===================
+Diario Generales
+====================*/
+let diarioGenerales = () =>{
+	let cuerpo = document.querySelector(".bodyContent");
+	let contenido = `
+	<h2 class="Subtitulos">Diarios Generales</h2>
+	<p class="parrafo">Los diarios generales le permiten registrar transacciones en cuentas 
+	contables y en otras cuentas, como las cuentas de clientes, cuentas de  proveedores y cuentas de bancos. </p>
+	<p class="parrafo">Los movimientos pueden registrase directamente en el área de la 
+	aplicación Contabilidad, pero también puede venir de las áreas de 
+	aplicación Ventas y cobros, Compras y pagos y Activos fijos. La 
+	información que contienen estos diarios tiene carácter temporal y puede 
+	modificarse antes de que se registre el diario. Algunos diarios también se 
+	registran como parte de un proceso. Esto es habitual en las áreas de la aplicación Proyectos y Existencias</p>
+	<p class="parrafo">Una vez registrado el diario, las transacciones no se pueden eliminar, pero 
+	puede anularlas mediante movimientos de registro adicionales. </p>
+	<h3>Trabajar con diarios generales</h3>
+	<p class="parrafo">La mayoría de las transacciones financieras se registran en la contabilidad a través de documentos, como facturas de compra y pedidos de ventas. Sin embargo, también puede procesar actividades comerciales como:</p>
+	<div class="contentList">
+	<ul>
+	<li>Compras</li>
+	<li>Pagos</li>
+	<li>Uso de diarios recurrentes para contabilizar acumulaciones</li>
+	<li>Reembolso de gastos de empleados mediante la contabilización de líneas de diario en diario.</li>
+	</ul>
+	</div>
+	<p class="parrafo">La mayoría de los diarios se basan en el diario general y puede procesar todas las transacciones en la página Diario general. </p>
+	<p class="parrafo">Utiliza diarios generales para registrar transacciones financieras de cuentas de la contabilidad general y otras cuentas. Las otras cuentas incluyen cuentas bancarias, de clientes, de proveedores y de empleados. La contabilización con un diario general crea entradas en las cuentas del libro mayor incluso cuando, por ejemplo, contabiliza una línea de diario en una cuenta de cliente. El asiento se contabiliza en una cuenta de cobros del libro mayor a través de un grupo de contabilización.</p>
+	<p class="parrafo">La información que introduzca en un diario es temporal y se puede modificar mientras se encuentre en el diario. Al registrar el diario, la información se transfiere a movimientos en cuentas individuales, donde no se puede modificar. Sin embargo, puede desliquidar los movimientos registrados y puede registrar movimientos de inversión o correctores. Para obtener más información, vea <a href="https://learn.microsoft.com/es-es/dynamics365/business-central/finance-how-reverse-journal-posting">Revertir los registros de diario y deshacer los recibos/envíos</a>. </p>
+	<p class="parrafo"><b>Nota</b> <br>
+	El diario general solo muestra un número limitado de campos en la línea de diario de forma predeterminada. Si desea ver otros campos, como el campo <b>Tipo de cta</b>., seleccione la acción Mostrar más columnas. Para ocultar los campos adicionales de nuevo, elija la acción Mostrar menos columnas. Cuando ve menos columnas, se utiliza la misma fecha de registro para todas las líneas. Si desea tener varias fechas de registro para el mismo movimiento de diario, seleccione la acción Mostrar más columnas.
+	</p>
+	<div class="img-content2"><img src="img/diariogenerales.PNG" alt=""></div>
+	<h3>Usar libros y secciones del diario</h3>
+	<p class="parrafo">Existen varias plantillas de diario general. Cada plantilla de diario se representa mediante una página específica con funciones particulares y los campos que se requieren para admitir estas funciones, como la página <b>Diario de conciliación de pagos</b>  para procesar pagos bancarios y la página <b>Diario de pagos</b>  para pagar a sus proveedores o reembolsar a sus empleados. </p>
+	<p class="parrafo">Para cada plantilla de diario, puede configurar su propio diario personal como una sección de diario. Por ejemplo, puede definir su propia sección de diario del diario de pagos que tiene su diseño y configuración personal. La sugerencia siguiente es un ejemplo de cómo personalizar un diario.</p>
+	<h3>Descripción de las cuentas principales y las cuentas de contrapartida</h3>
+	<p class="parrafo">Si ha configurado cuentas de contrapartida predeterminadas para las secciones del diario en la página <b>Diarios generales</b>, la cuenta de contrapartida se rellenará automáticamente cuando rellene el campo <b>Nº cuenta</b>. En caso contrario, deberá rellenar manualmente tanto el campo Nº cuenta como el campo <b>Cta. contrapartida</b>. Un importe positivo en el campo Importe se adeuda en la cuenta principal y se carga en la cuenta de contrapartida. Un importe negativo se carga en la cuenta principal y se adeuda en la cuenta de contrapartida.</p>
+	<h3>Trabajar con diarios periódicos</h3>
+	<p class="parrafo">En un diario periódico, crea las entradas que se van a registrar con regularidad solo una vez. Por ejemplo, las cuentas, las dimensiones, los valores de dimensiones y demás, permanecen en el diario después del registro. Si se necesitan cambios, puede hacerlos cada vez que publique.</p>
+	<div class="img-content2"><img src="img/diariogenerales1.PNG" alt=""></div>
+	<h3>Campo Periodicidad</h3>
+	<p class="parrafo">Este campo determina la forma en que se tratará el importe en la línea de diario una vez realizado el registro. Por ejemplo, si usa el mismo importe cada vez que se registra la línea, puede permitir que el valor se mantenga. Si usa las mismas cuentas y texto de la línea, pero el importe varía en cada una, puede optar por borrar el importe después de cada registro.</p>
+	<div class="img-content2"><img src="img/diariogenerales2.PNG" alt=""></div><br>
+	<table class="tabla1">
+	<tr>
+	<th>Para</th>
+	<th>Descripción</th>
+	</tr>
+	<tr>
+	<td>F Fijo</td>
+	<td>El importe de la línea del diario permanecerá una vez realizado el registro.</td>
+	</tr>
+	<tr>
+	<td>V Variable</td>
+	<td>El importe de la línea del diario se borrará una vez realizado el registro.</td>
+	</tr>
+	<tr>
+	<td>S Saldo</td>
+	<td>El importe registrado en la cuenta de la línea se distribuirá entre las cuentas especificadas para la línea de la tabla Diario gen. distribución. El saldo de la cuenta se establecerá a cero. No olvide rellenar el campo % Distribución en la página Asignaciones.</td>
+	</tr>
+	<tr>
+	<td>CF Contraasiento fijo</td>
+	<td>El importe de la línea del diario se mantendrá después del registro y se registrará un movimiento de contrapartida al día siguiente.</td>
+	</tr>
+	<tr>
+	<td>CV Contraasiento variable</td>
+	<td>El importe de la línea del diario se borrará después del registro y se registrará un movimiento de contrapartida al día siguiente.</td>
+	</tr>
+	<tr>
+	<td>CS Contraasiento de saldo</td>
+	<td>El importe registrado en la cuenta de la línea se distribuirá entre las cuentas especificadas para la línea de la página Asignaciones. El saldo en la cuenta se establecerá en cero y se contabilizará un movimiento de saldo el día siguiente.</td>
+	</tr>
+	<tr>
+	<td>SD Saldo por dimensión</td>
+	<td>La línea de diario asigna los costes según el saldo de una cuenta por dimensión. Se le pedirá que configure los filtros de dimensión que se utilizarán para calcular el saldo de la cuenta de origen por dimensión desde la que desea asignar los costes. Alternativamente, elija más tarde la acción Establecer filtros de dimensión.</td>
+	</tr>
+	<tr>
+	<td>Contraasiento saldo RBD por dimensión</td>
+	<td>La línea de diario asigna los costes según el contraasiento una cuenta por dimensión. Se le pedirá que configure los filtros de dimensión que se utilizarán para calcular el saldo de la cuenta de origen por dimensión desde la que desea asignar los costes. También puede elegir más tarde la acción Establecer filtros de dimensión.</td>
+	</tr>
+	</table>
+
+
 
 	`;
 
 	cuerpo.innerHTML= contenido;
 
 }
-/*======================
+/*===================
+Gestion de Iva
+====================*/
+let gestionIva = () =>{
+	let cuerpo = document.querySelector(".bodyContent");
+	let contenido = `
+	<h2 class="Subtitulos">Gestión del IVA </h2>
+	<p class="parrafo">Cuando registra una línea del diario en el área de la aplicación 
+	Contabilidad y el movimiento tiene un código de IVA, el sistema crea un movimiento de IVA. Puede ver los movimientos de IVA si selecciona 
+	Contabilidad, Registros se abre la ventana Registros, a continuación, en el icono de busqueda  escriba <b>Movs. IVA</b> y seleccione el enlace relacionado.</p>
+	<div class="img-content2"><img src="img/iva1.PNG" alt=""></div>
+	<p class="parrafo">Como se observa en la imágen Dispone de varios cálculos de tipos de IVA, que se requieren para las relaciones comerciales en la UE y otros países. Éstos incluyen las transacciones de IVA normales, las transacciones de reversión de IVA y las transacciones de IVA completas.</p>
+	<p class="parrafo">El sistema también contiene algunas tablas especiales para gestionar las tareas necesarias para liquidar el IVA e informar a las aduanas y autoridades fiscales. Puede utilizar estas tablas para hacer que el sistema:</p>
+	<div class="contentList">
+	<ul>
+	<li>calcule el IVA devengado en un periodo.</li>
+	<li>prepare e imprima la declaración de IVA, que puede copiarse directamente al formulario de envío. </li>
+	<li>imprima una lista de ventas a países de la UE (en papel o en un disquete). </li>
+	</ul>
+	</div>
+	<h3>Cinco declaraciones de IVA que tendrás que presentar a Hacienda</h3>
+	<p class="parrafo">Existen varios modelos de declaración de impuestos y cuentas de la actividad empresarial que se deben presentar a lo largo del año.</p>
+	<p class="parrafo">Todas las personas jurídicas que realicen actividades empresariales deben presentar diferentes <b>declaraciones de IVA</b> de forma periódica a lo largo del año. Concretamente, los <b>modelos 303, 340, 347, 349 y 390</b> son los que las compañías y autónomos deben presentar. Esto puede ser una tarea ardua para empresarios, autónomos y gestorías. Aunque bien es cierto que sistemas de gestión empresarial del estilo de Sage han facilitado la ejecución de estos trámites frente a la Agencia Tributaria.</p>
+	<h3>Modelos: tipos y supuestos</h3>
+	<div class="contentList">
+	<ul>
+	<li><b>Modelo 303:</b>  es el correspondiente a la autoliquidación del Impuesto de Valor Añadido (IVA). Es de carácter periódico y se declara cada trimestre. Está obligado a presentarlo cualquier persona física o jurídica que desarrolle cualquier tipo de operación y/o actividad comercial. Sustituye a los modelos 310, 311, 370 y 371 y el procedimiento para presentarlo es el siguiente: las personas físicas que no estén obligadas a utilizar la firma electrónica avanzada, podrán presentarlo mediante la utilización del PIN 24H o presentando el modelo impreso; y las entidades no obligadas a usar la firma electrónica, deben presentar el modelo impreso. Sin embargo, las que estén obligadas deberán hacerlo a través de Internet, con el correspondiente certificado electrónico o DNI-e.</li>
+	<li><b>Modelo 340:</b> es el que corresponde a los datos contables que sirven de soporte a la liquidación de IVA de cada periodo. Debe ir acompañado libro registro de facturas, el libro de bienes de inversión y el registro de las operaciones intracomunitarias, además de las operaciones no sujetas y exentas, las facturas de importaciones, las de entregas y adquisiciones intracomunitarias y las que generan inversión del sujeto pasivo. Se prsenta trimestralmente y están obligados los contribuyentes que tengan que presentar telemáticamente las autoliquidaciones o declaraciones del Impuesto sobre Sociedades, IVA o IGIC.</li>
+	<li><b>Modelo 347:</b> es aquel que recoge las operaciones realizadas con un cliente o un proveedor que sean superiores a 3005,06€. Se hace una vez al año y sólo en el caso de superar esa cifra. Pero si por ejemplo un autónomo ha facturado a un cliente más de 3.005,06€ en un año pero en todas las facturas ha retenido IRPF, no se debe presentar este modelo. Tampoco están obligados aquellos que tengan la sede de su actividad empresarial fuera de España o los que tributan el IRPF por el método de estimación objetiva y estén dentro de los regímenes de agricultura, ganadería y pesca.</li>
+	<li><b>Modelo 349:</b> debe presentarlo todos los empresarios y profesionales, con independencia régimen del IVA en el que tributen y su cuantía. En él se reflejan las operaciones (entregas o adquisiciones de bienes o servicios) intracomunitarias. Se presenta una vez al mes, excepto si las cantidades superan los 50.000 euros (bimensual), los 100.000 euros (trimestral) o anual si no superan los 35.000 euros.</li>
+	<li><b>Modelo 390:</b> es el resumen anual de la declaración del IVA. Está obligados a presentarlo todos aquellos sujetos pasivos del IVA que tengan la obligación de presentar autoliquidaciones periódicas por este Impuesto (mensuales o trimestrales) y realicen actividades que tributen en régimen simplificado del IVA o de arrendamiento de bienes inmuebles urbanos. Se puede presentar a través de un certificado electrónico, con Clave PIN o a través de un sms.</li>
+	</ul>
+	</div>
+	<h3>Configurar tipos de declaración de IVA y nombres de declaración de IVA</h3>
+	<p class="parrafo">Las autoridades fiscales pueden modificar, y lo hacen, sus requisitos para registrar el IVA. Los tipos de declaración del IVA y los nombres de declaración del IVA pueden ayudarle a prepararse para los próximos cambios y hacer una transición sin problemas a los nuevos requisitos. Puede usar plantillas de declaración de IVA para configurar diferentes informes al elegir imprimir la declaración. Cada plantilla de declaración de IVA puede tener varios nombres de declaración de IVA que a su vez definen los cálculos, y puede crear un nuevo nombre de declaración de IVA cuando cambien los requisitos. Por ejemplo, un nombre podría calcular el IVA para este año basándose en los requisitos actuales y otro podría calcular el IVA basándose en los requisitos para el próximo año. Los nombres también son una forma de mantener un historial de los formatos de las declaraciones del IVA, por ejemplo, para que pueda consultar cómo calculó el IVA en años anteriores.</p>
+	<h3>Para definir una declaración de IVA</h3>
+	<p class="parrafo">Las declaraciones de IVA le permiten calcular el importe de liquidación de IVA de un determinado periodo, por ejemplo, un trimestre.</p>
+	<ul>
+	<li><b>1.</b> Elija el icono de busqueda que abre la función Dígame. , escriba <b>Declaraciones de IVA</b> y luego elija el enlace relacionado.</li>
+	<li><b>2.</b> Elija el campo <b>Nombre</b> y después <b>Nuevo</b> en la página <b>Nombres declar. IVA.</b></li>
+	<li><b>3.</b> Rellene los campos requeridos. Por lo general, desea tener una configuración para cada combinación de grupo de registro de IVA de negocio/grupo de registro IVA de producto. Para los números de fila tiene sentido usar números o códigos equivalentes como en su declaración de IVA oficial Pase el cursor sobre un campo para leer una breve descripción.
+	</li>
+	</ul>
+	<div class="img-content2"><img src="img/iva2.PNG" alt=""></div>
+	<h3>Configurar los cálculos y los métodos de registro del impuesto sobre el valor añadido</h3>
+	<p class="parrafo">Los consumidores y las empresas pagan el impuesto sobre el valor añadido (IVA) cuando compran mercancías o servicios. El importe de IVA a pagar puede variar, dependiendo de varios factores. En Business Central, puede configurar el IVA para especificar las tasas que usó para calcular los importes de impuesto a partir de los siguientes parámetros:</p>
+	<div class="contentList">
+	<ul>
+	<li>A quién vende</li>
+	<li>A quién compra</li>
+	<li>Qué vende</li>
+	<li>Qué compra</li>
+	</ul>
+	</div>
+	<p class="parrafo">Puede configurar los cálculos de IVA de forma manual, pero puede ser difícil y largo. La razón es que es muy sencillo usar tasas de IVA distintas por error, y crear 
+	informes relacionados con IVA inexactos. Para facilitar la <b>configuración del IVA</b>, le recomendamos que utilice la guía asistida Configuración de IVA provista en el producto.</p>
+	<p class="parrafo">Sin embargo, si desea configurar los cálculos del IVA, o solo desea obtener información acerca de cada paso, este artículo contiene descripciones de cada paso.</p>
+	<h3>Configurar el IVA mediante la guía de configuración asistida (recomendado)</h3>
+	<p class="parrafo nota-solo">
+	Puede usar la guía Configuración de IVA únicamente si ha creado una Mi empresa y no ha registrado transacciones que incluyen IVA todavía.
+	</p>
+	<ul>
+	<li><b>1.</b> Elija el icono Bombilla que abre la característica Dígame 1. y escriba <b>Configuración asistida</b>.</li>
+	<li><b>2.</b> Escoja <b>Configurar IVA</b> y complete los pasos.</li>
+	<li><b>3.</b> Cuando haya completado la configuración asistida, visite la página <b>Configuración de registro de IVA</b> para verificar si necesita completar campos adicionales 
+	de acuerdo con los requisitos locales de su versión de Business Central.</li>
+	</ul>
+	<h3>Comprobar la configuración de registro de IVA</h3>
+	<p class="parrafo">Para ayudarle a empezar rápido, Business Central le notifica si le faltan cuentas de contabilidad general (CG) en grupos contables o configuraciones de registro, 
+	como en la página <b>Configuración de registro de IVA</b>. Puede activar o desactivar este tipo de notificación utilizando la notificación Cuentas contables que faltan en grupo de 
+	registro o configuración en la página <b>Mis notificaciones</b>. Solo tiene que ir a la página <b>Mi configuración</b> y luego elegir Cambiar cuándo recibo notificaciones. .</p>
+	<p class="parrafo">Si elige esta notificación, Business Central crea automáticamente esas configuraciones de registro en función de los grupos de registro en el documento o diario 
+	en el que esté trabajando actualmente.</p>
+	<p class="parrafo">En este punto, puede completar las cuentas de contabilidad general que falten. Sin embargo, más adelante, cuando redefina aún más la configuración, es posible que se dé cuenta de que esta configuración era errónea. Y Business Central no permite la eliminación de una configuración de registro de IVA y la configuración de registro general cuando se han creado entradas basadas en dichas configuraciones. Por lo tanto, a partir del primer lanzamiento de versiones de 2022, puede usar el campo <b>Bloqueado</b> en la página
+	<b>Configuración de registro de IVA</b> para evitar que los usuarios utilicen por error una configuración que ya no es pertinente para los nuevos registros.</p>
+	`;
+	cuerpo.innerHTML= contenido;
+}
+/*=====================
 Paquetes Configuracion
-===========================*/
+=======================*/
 let rapidStart = () =>{
 	let cuerpo = document.querySelector(".bodyContent");
 	let contenido = `
@@ -246,7 +504,7 @@ let rapidStart = () =>{
 	<img src="img/rapid1.png" alt="">
 	</div>
 	<p class="parrafo">En ella, deberemos asignar un código y descripción única que identifique nuestro paquete, una numeración de versión (este dato es opcional pero nos ayudará a llevar un control de versiones de un mismo paquete de configuración) y un Id. Idioma.</p>
-	<h3>Seleccionar compos incluidos</h3>
+	<h3>Seleccionar campos incluidos</h3>
 	<p class="parrafo">A continuación, deberemos ir seleccionando los campos que nos interesan importar de cada tabla. Para ello clicaremos en “nº de campos disponibles” O nos iremos a Tabla – Campos.</p>
 	<p class="parrafo">Independientemente de la opción elegida, marcaremos con un check los campos que vamos a incluir, y los campos que, además, queremos que se validen, como se ve en la siguiente imagen:</p>
 	<div class="img-content2">
@@ -274,13 +532,11 @@ let rapidStart = () =>{
 	<p class="parrafo">Videotutorial <b>RapidStart y Excel</b>, importación y exportacioón de paquetes de configuración.</p>
 	<iframe    class="ifra" src="https://www.youtube.com/embed/Dtq4si2Vrgc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	`;
-
 	cuerpo.innerHTML= contenido;
-
 }
 /*=================
-	Serie Numerica
-	====================*/
+Serie Numerica
+====================*/
 let serieNumerica = () =>{
 	let cuerpo = document.querySelector(".bodyContent");
 	let contenido = `
@@ -332,6 +588,969 @@ let serieNumerica = () =>{
 	con mayor frecuencia a su Business Central. En ese caso, configure la serie de números relevante, vincúlelos a través de relaciones y luego agregue la primera serie de números en la 
 	relación relevante a la página de configuración correspondiente. Luego, cuando un usuario crea un cliente, elige la plantilla correspondiente y el nuevo cliente obtiene un número 
 	asignado de la serie de números definida para esa plantilla.</p>
+
+	`;
+
+	cuerpo.innerHTML= contenido;
+
+}
+
+/*==============================
+Config contabilidad General
+==============================*/
+let ConfigContabGeneral = () =>{
+	let cuerpo = document.querySelector(".bodyContent");
+	let contenido = `
+	<h2>Configuración contabilidad general</h2>
+	<p class="parrafo">En la página Configuración de la contabilidad general, puede especificar una configuración predeterminada para la contabilidad general y otras áreas de aplicación. Asegúrese de finalizar la configuración de la contabilidad general para cada empresa que defina en Microsoft Dynamics 365 Business Central.</p>
+	<p class="parrafo">Las cinco fichas desplegables de la página Configuración de la contabilidad general son:</p>
+	<div class="contentList">
+	<ul>
+	<li>General</li>
+	<li>Dimensiones</li>
+	<li>Registro de Fondo</li>
+	<li>Informes</li>
+	<li>APlicación</li>
+	</ul>
+	</div>
+	<p class="parrafo">Para acceder a la página Configuración de la contabilidad general, seleccione el icono Buscar página en la esquina superior derecha de la página, escriba <b>configuración de contabilidad</b> y, después, seleccione el vínculo relacionado.</p>
+	<p class="parrafo">En la página Configuración de contabilización general , especifique cómo desea configurar las combinaciones de grupos de contabilización de productos generales y comerciales generales. Los grupos de contabilización asignan entidades como clientes, proveedores, artículos, recursos y documentos de compra y venta a las cuentas del libro mayor.</p>
+	<div class="img-content2"><img src="img/contab01.png" alt=""></div>
+	<h3>Configurar ficha desplegable de contabilidad general</h3>
+	<p class="parrafo">La ficha desplegable General contiene los valores predeterminados de configuración básica. Para mostrar todos los campos, seleccione Mostrar más. Puede leer una breve descripción seleccionando el nombre del campo.</p>
+	<h3>General</h3>
+	<p class="parrafo">Los campos más utilizados de la ficha desplegable General son los siguientes:</p>
+	<div class="contentList">
+	<ul> 
+	<li><b>Permitir registro desde/Permitir registro hasta: </b> estos campos especifican un intervalo de fechas en el que todos los usuarios pueden registrar transacciones. Dado que los períodos contables específicos no se pueden cerrar en Business Central, el establecimiento del intervalo de fechas de registro evita que los usuarios registren movimientos fuera de ese intervalo de fechas. Aparte de especificar estas fechas en la configuración de la contabilidad general, también puede asignarlas a los usuarios en la página Configuración de usuario.</li>
+	<li><b>Formato de dirección local: </b> especifica el formato con que deben mostrarse las direcciones en las copias impresas. Por ejemplo, Ciudad+Estado+Código postal. Además del formato de dirección local, puede especificar el formato de dirección para cada país en la página Países o regiones. Cuando selecciona el campo Requerir el código de país o región en la dirección en la configuración de contabilidad general, los campos Código postal, Ciudad y Estado cambiarán cuando se cambie el valor del campo Código de país o región. Esto brinda a los usuarios más control sobre la información de la dirección.</li>
+	<li><b>Configuración de moneda local: </b>en la ficha desplegable General, puede especificar la moneda local de la empresa y la configuración relacionada:</li>
+	<li><b>Código LCY:</b> especifica la moneda local (LCY) con la que trabaja la empresa.</li>
+	<li><b>Precisión de redondeo de facturas: </b>  especifica el tamaño del intervalo a utilizar para redondear importes de facturas en LCY. En la página Monedas, puede especificar cómo redondear las facturas en monedas extranjeras.</li>
+	<li><b>Tipo de redondeo de facturas: </b> especifica cómo redondear los importes de las facturas. El contenido de este campo determina si el importe de la factura a redondear se redondeará al alza o a la baja hasta el intervalo más próximo, según se especifica en el campo Precisión de redondeo de facturas. Si selecciona Más cercano, los dígitos mayores o iguales que cinco se redondearán hacia arriba y los dígitos menores o iguales que cinco se redondearán hacia abajo.</li>
+	<li><b>Precisión del redondeo de importes:</b>  especifica el tamaño del intervalo a utilizar al redondear importes en LCY. En la página Monedas, puede especificar cómo se redondean las cantidades en monedas extranjeras.</li>
+	<li><b>Posiciones decimales de los importes:</b> especifica el número de posiciones decimales a mostrar para los importes en LCY. Este campo cubre los importes creados con todo tipo de transacciones, y es útil para ayudar a evitar incoherencias al ver o sumar diferentes importes. La configuración pretederminada es 2:2, lo que especifica que todos los importes en LCY se mostrarán con un mínimo de dos posiciones decimales y un máximo de dos posiciones decimales. También puede introducir un número fijo, como 2, lo que también significa que los importes mostrarán dos decimales. En la página Monedas, puede especificar cuántas posiciones decimales mostrar para los importes en monedas extranjeras.</li>
+	<li><b>Precisión del redondeo de unidades-importes: </b>especifica el tamaño del intervalo a utilizar al redondear importes, artículos o precios de recursos unitarios, para cada unidad en LCY. Como ejemplos de unidades-importes pueden citarse los precios de artículos y los precios de recursos. En la página Monedas, puede especificar cómo se redondean las cantidades unitarias en monedas extranjeras.</li>
+	<li><b>Posiciones decimales de unidades-importes: </b> especifica el número de posiciones decimales a mostrar para cantidades unitarias, artículos o precios de recursos, para cada unidad en LCY. En la página Monedas, puede especificar cuántas posiciones decimales mostrar para los importes unitarios en moneda extranjera.</li>
+	<li><b>Símbolo de moneda local: </b>especifica el símbolo de la moneda local que quiere que aparezca en los cheques y gráficos, por ejemplo, el símbolo de dólar ($) para los dólares de EE. UU. (USD).</li>
+	<li><b>Descripción de moneda local: </b>especifica la descripción de la moneda local.</li>
+	<li><b>Tipo de redondeo de impuestos/IVA: </b> especifica cómo el programa redondeará los impuestos o el IVA para la moneda local. Al introducir un importe que incluya impuestos /IVA en un documento, el sistema primero calcula y redondea el importe sin incluir impuestos /IVA y luego calcula mediante resta el importe de impuestos /IVA, dado que el importe total debe corresponder al importe con impuestos /IVA introducido manualmente. En ese caso, el tipo de redondeo de impuestos /IVA no se aplica, porque el importe sin incluir impuestos/IVA ya se ha redondeado con la precisión de redondeo del importe.</li>
+	<li><b>Números de cuentas bancarias:</b>  especifica el código de la serie numérica que se utilizará para asignar números a las cuentas bancarias.</li>
+	<li><b>Números de documentos de ajuste de conciliación bancaria:</b> especifica el número de documento del ajuste de conciliación bancaria para la configuración de la contabilidad general. Puede seleccionar el número de documento en la tabla N.º de serie.</li>
+	<li><b>Conciliación bancaria con coincidencia automática:</b>especifica la característica a usar para conciliar cuentas bancarias. Si activa este conmutador de alternancia, usará la página Diarios de conciliación de pagos, que admite la importación de archivos de extractos bancarios. Si está desactivado, deberá usar la página Hoja de cálculo de reconciliación bancaria, que es mejor para cheques y depósitos.
+	</li>
+	<li><b>IVA caja:</b> Especifica si se pueden fraccionar los pagos de impuestos hasta el momento de la recepción de la cantidad facturada.</li>
+	<li><b>Mostrar Importes: </b> Especifica el tipo de importes que se muestran en los diarios y en las ventanas de movimientos. Solo importe: se muestran los campos Importe e Importe (DL). Debe/haber: se muestran los campos Importe debe, Importe debe (DL), Importe haber e Importe haber (DL). Todos importes: se muestran todos los campos de importe.</li>
+	</ul>
+	<div class="img-content2"><img src="img/contab02.PNG" alt=""></div>
+	<h3>Dimensiones</h3>
+	</div>
+	<p class="parrafo">En la ficha desplegable Dimensiones, puede configurar las dimensiones globales y abreviadas. Normalmente, las dos dimensiones globales son las de la empresa y se utilizan en los informes de análisis. Para configurar las dimensiones globales, seleccione <b>General</b> y luego Cambiar <b>dimensiones globales</b>.</p>
+	<p class="parrafo">Las dos dimensiones globales son siempre las dos primeras dimensiones abreviadas. Puede agregar dimensiones abreviadas a diarios y líneas de documentos para introducir valores de dimensión de forma rápida y eficiente. Además de las dos primeras dimensiones abreviadas, que son de forma predeterminada las dos dimensiones globales, puede seleccionar otras seis dimensiones abreviadas.</p>
+	<div class="contentList">
+	<ul>
+	<li><b>Cod.dimensiones global 1 : </b>Especifica el código de una dimensión global que está vinculada al registro o al movimiento para fines de análisis. Hay dos dimensiones globales, normalmente para las actividades más importantes de la empresa, disponibles en todas las fichas, los documentos, los informes y las listas.</li>
+	<li><b>Cod.Dim.acceso dir 2</b> Especifica el código de la Dimensión de acceso directo 1, cuyos valores de dimensión puede introducir a continuación directamente en diarios y líneas de compra o de venta.</li>
+	</ul>
+	</div>
+	<div class="img-content"><img src="img/contab03.png" alt=""></div>
+	<h3>Registro de Fondo</h3>
+	<p class="parrafo">En la ficha desplegable Registro de fondo, puede especificar si desea registrar documentos de contabilidad general en segundo plano. Utilice las entradas de la cola de trabajos para programar registros de contabilidad general, como después del horario laboral.</p>
+	<p class="parrafo">Puede establecer los siguientes campos:</p>
+	<div class="contentList">
+	<ul>
+	<li><b>Registrar con cola de proyectos: </b> especifica si usa colas de proyectos para registrar documentos de contabilidad general en segundo plano.</li>
+	<li><b>Registrar e imprimir con cola de proyectos: </b>especifica si usa colas de proyectos para registrar e imprimir documentos de contabilidad general en segundo plano.</li>
+	<li><b>Categoría cola proyectos: </b> especifica el código para la categoría de la cola de proyecto que desea asociar al registro en segundo plano. Puede asignar estos códigos a la entrada de la cola de trabajos que desee utilizar para contabilizar documentos del libro mayor.</li>
+	<li><b>Notificar operación correcta: </b> especifica si se envía una notificación al registrar e imprimir de manera correcta.</li>
+	<li><b>Tipo de salida de informe: </b> especifica el resultado del informe que se programará con un movimiento de cola de proyecto cuando la opción Registrar e imprimir con la cola de proyecto esté seleccionada.</li>
+	</ul>
+	</div>
+	<h3>Informes</h3>
+	<p class="parrafo">La ficha desplegable Informes le ayuda a determinar si se va a utilizar otra divisa de notificación. Se utiliza otra divisa de notificación cuando la información de la transacción también debe estar disponible en una divisa diferente a la local.</p>
+	<p class="parrafo">Al configurar otra divisa de notificación, los usuarios podrán ejecutar informes financieros tanto en la divisa local como en la otra divisa de notificación.</p>
+	<p class="parrafo">También puede especificar los esquemasde cuenta para los siguientes informes:</p>
+	<div class="contentList">
+	<ul>
+	<li><b>Informe financiero del balance de situación: </b>Especifica qué informe financiero se usa para generar el informe de balance de situación.</li>
+	<li><b>Informe financiero del balance de ingresos: </b>Especifica qué informe financiero se usa para generar el informe de balance de ingresos.</li>
+	<li><b>Informe financiero para extracto de flujo de efectivo: </b>Especifica qué informe financiero se usa para generar el informe de extracto de flujos de efectivo.</li>
+	<li><b>Informe financiero de las ganancias retenidas: </b>Especifica qué informe financiero se usa para generar el informe de ganancias retenidas.</li>
+	<li><b>Informe de divisa adicional: </b>Especifica la divisa que se va a usar como divisa adicional para informes.</li>
+	<li><b>Tipo cambio ajuste IVA: </b>Especifica cómo se ajustarán las cuentas configuradas para registrar el IVA en la ventana Configuración de contabilización de IVA para las fluctuaciones del tipo de cambio.</li>
+	</ul>
+	</div>
+	<h3>Aplicación</h3>
+	<p class="parrafo">La ficha desplegable Aplicación incluye los siguientes campos:</p>
+	<div class="contentList">
+	<ul>
+	<li><b>Precisión de redondeo de la aplicación: </b>especifica el tamaño del intervalo para las diferencias de redondeo de la divisa local (LCY). Este parámetro surte efecto cuando aplica las entradas de LCY a las entradas en una divisa diferente.</li>
+	<li><b>Advertencia de tolerancia de descuentos de pago, Registrar tolerancia de descuentos de pago y Período de gracia de descuento de pago:</b> complete estos campos para permitir tolerancias en los términos de descuento de pago.</li>
+	<li><b>Advertencia de tolerancia de pago y Registro de tolerancia de pago: </b> complete estos campos para cerrar cuentas por cobrar y por pagar pendientes con importes de pago distintos a los que se deben.</li>
+	<li><b>Porcentaje de tolerancia de pago: </b>indique el porcentaje de diferencia que pueden tener el pago o el reembolso respecto del importe de la factura o el abono.
+	</li>
+	<li><b>Importe máximo de tolerancia pago: </b>especifica el importe máximo de diferencia que pueden tener el pago o el reembolso respecto del importe de la factura o el abono.</li>
+	</ul>
+	</div>
+	<div class="img-content2"><img src="img/contab04.PNG" alt=""></div>
+	<p class="parrafo">Para cambiar la tolerancia de pago, siga los siguientes pasos:</p>
+	<ul>
+	<li><b>1.</b> En la página Configuración de contabilidad general, seleccione <b>Acciones > Funciones > Cambiar tolerancia de pago.</b></li>
+	<li><b>2.</b> Seleccione la casilla <b>Todas las divisas</b> si desea utilizar la misma configuración de tolerancia de pago para las monedas locales y extranjeras.</li>
+	<li><b>3.</b> Deje el campo <b>Código de divisa</b> vacío si desea configurar tolerancias de pago para la divisa local. En este caso, puede configurar los ajustes de tolerancia para divisas extranjeras en la página Tarjeta de divisa.</li>
+	<li><b>4.</b> Indique un porcentaje en el campo <b>Porcentaje de tolerancia de pago.</b></li>
+	<li><b>5.</b> Escriba un importe en el campo <b>Porcentaje de tolerancia de pago.</b>.</li>
+	<li><b>6.</b> Seleccione Aceptar para ejecutar el trabajo por lotes <b>Cambiar tolerancia de pago.</b></li>
+	</ul>
+	<div class="img-content2"><img src="img/contab05.PNG" alt=""></div>
+	<h3>Tabla de configuración de finanzas</h3>
+	<table class="tabla1">
+	<tr>
+	<th>Descripción</th>
+	<th>Ver</th>
+	</tr>
+	<tr>
+	<td>Ver o editar cuentas del libro mayor en las que se contabilizan todas las entradas del libro mayor</td>
+	<td><a href="">Configurar o cambiar el plan de cuentas</a></td>
+	</tr>
+	<tr>
+	<td>Especifique cómo desea que le paguen los clientes y cómo desea pagar a sus proveedores.</td>
+	<td><a href="">Configurar métodos de pago</a></td>
+	</tr>
+	<tr>
+	<td>Especifique las condiciones de pago para administrar las fechas de vencimiento y calcular posibles descuentos por pago.</td>
+	<td><a href="">Configurar condiciones de pago</a></td>
+	</tr>
+	<tr>
+	<td>Especifique los grupos de contabilización que asignan entidades como clientes, proveedores, artículos, recursos y documentos de compra y venta a las cuentas del libro mayor.</td>
+	<td><a href="">Configurar grupos de contabilización</a></td>
+	</tr>
+	<tr>
+	<td>Cree informes financieros y defina categorías de cuentas que determinen el contenido de los gráficos e informes financieros, como los informes de hoja de balance y estado de resultados.</td>
+	<td><a href="">Preparar informes financieros con datos financieros y categorías de cuentas</a></td>
+	</tr>
+	<tr>
+	<td>Configure una tolerancia por la cual el sistema cierra una factura incluso si el pago, incluido cualquier descuento, no cubre completamente el monto de la factura.</td>
+	<td><a href="">Trabajar con tolerancias de pago y tolerancias de descuento de pago</a></td>
+	</tr>
+	<tr>
+	<td>Configurar periodos fiscales.</td>
+	<td><a href="">Trabajar con períodos contables y años fiscales</a></td>
+	</tr>
+	<tr>
+	<td>Configure los términos de la factura que les recuerden a sus clientes que deben realizar el pago.</td>
+	<td><a href="">Configurar términos y niveles de recordatorio</a></td>
+	</tr>
+	<tr>
+	<td>Defina cómo informa a las autoridades fiscales los importes del impuesto sobre el valor añadido (IVA) recaudados por las ventas.</td>
+	<td><a href="">Configurar el impuesto al valor agregado (IVA)</a></td>
+	</tr>
+	<tr>
+	<td>Prepárese para manejar el IVA no realizado en relación con los métodos de contabilidad basados ​​en efectivo.</td>
+	<td><a href="">Configurar el IVA no realizado para la contabilidad de caja</a></td>
+	</tr>
+	<tr>
+	<td>Defina las monedas extranjeras con las que comercia o reporta transacciones.</td>
+	<td><a href="">Configurar monedas</a></td>
+	</tr>
+	<tr>
+	<td>Configure sus funciones de Ventas y Compras para manejar pagos en moneda extranjera.</td>
+	<td><a href="">Habilitar la aplicación de asientos contables en diferentes monedas</a></td>
+	</tr>
+	<tr>
+	<td>Defina una o más monedas adicionales para que los montos se informen automáticamente tanto en la moneda local (LCY) como en una moneda de informe adicional en cada asiento del libro mayor (G/L) y en otros asientos.</td>
+	<td><a href="">Configurar una moneda de informe adicional</a></td>
+	</tr>
+	<tr>
+	<td>Ajuste periódicamente los equivalentes de divisas adicionales para compensar las fluctuaciones de los tipos de cambio.</td>
+	<td><a href="">Actualizar tipos de cambio de moneda</a></td>
+	</tr>
+	<tr>
+	<td>Defina múltiples tasas de interés para usar en diferentes períodos para pagos atrasados ​​en transacciones comerciales.</td>
+	<td><a href="">Configurar tasas de interés múltiples</a></td>
+	</tr>
+	<tr>
+	<td>Haga arreglos para que los montos se redondeen automáticamente a medida que se crean las facturas.</td>
+	<td><a href="">Configurar el redondeo de facturas</a></td>
+	</tr>
+	<tr>
+	<td>Agregue nuevas cuentas al plan de cuentas existente.</td>
+	<td><a href="">Configuración del plan de cuentas</a></td>
+	</tr>
+	<tr>
+	<td>Configure gráficos de inteligencia empresarial (BI) para analizar el flujo de caja.</td>
+	<td><a href="">Configuración del análisis de flujo de caja</a></td>
+	</tr>
+	<tr>
+	<td>Habilitar la facturación de un cliente no configurado en el sistema.</td>
+	<td><a href="">Configurar clientes en efectivo</a></td>
+	</tr>
+	<tr>
+	<td>Configure los informes de Intrastat y envíe el informe a una autoridad.</td>
+	<td><a href="">Configurar e informar Intrastat</a></td>
+	</tr>
+	<tr>
+	<td>Asegúrese de que un asiento de diario se asigne entre diferentes cuentas, como cantidad, porcentaje o monto, cuando lo publique en el diario.</td>
+	<td><a href="">Usar claves de asignación en diarios generales</a></td>
+	</tr>
+	<tr>
+	<td>Configure códigos fuente y códigos de motivo para ayudar a realizar un seguimiento de los registros de auditoría.</td>
+	<td><a href="">Configuración de códigos fuente y códigos de motivo para registros de auditoría</a></td>
+	</tr>
+	<tr>
+	<td>Especifique los informes predeterminados que se utilizarán para diferentes tipos de documentos.</td>
+	<td><a href="">Selección de informes en Business Central</a></td>
+	</tr>
+	</table>
+	<p class="parrafo"><b>Nota</b><br>Según su ubicación geográfica, algunas páginas de Business Central pueden contener 
+	campos que no se describen en los artículos enumerados anteriormente porque se aplican a personalizaciones o funciones locales. 
+	Pase el cursor sobre un campo para leer una breve descripción.</p>
+
+	`;
+
+	cuerpo.innerHTML= contenido;
+}
+/*======================
+Config Plan de Cuentas
+=======================*/
+let configPlanCuenta = () =>{
+	let cuerpo = document.querySelector(".bodyContent");
+	let contenido = `
+
+	<h2 class="Subtitulos">Configurar cuentas de contabilidad general</h2>
+	<p class="parrafo">El balance de ingresos y el balance de situación son dos informes financieros importantes para la empresa. En Business Central, una cuenta en el balance de situación y en el balance de ingresos se llama cuenta de contabilidad y todas esas cuentas conforman la lista de <b>Plan de cuentas</b>.</p>
+	<p class="parrafo">El plan de cuentas (COA) muestra las cuentas de contabilidad que almacenan sus datos financieros. Business Central incluye un COA estándar que está preparado para respaldar su negocio. Sin embargo, puede cambiar las cuentas predeterminadas y agregar nuevas cuentas.</p>
+	<p class="parrafo">En la lista <b>Plan de cuentas</b>, todas las cuentas de contabilidad están disponibles y se pueden ver al mismo tiempo. Sin embargo, también hay una Ficha de cuenta de contabilidad para cada cuenta, a la que se puede acceder desde la lista  <b>Plan de cuentas</b> .</p>
+	<p class="parrafo"></p>
+	<p class="parrafo">Puede usar las fichas de las cuentas de contabilidad para crear y editar cuentas de contabilidad. La ficha de cuenta de contabilidad contiene cinco fichas desplegables:</p>
+	<div class="contentList">
+	<ul>
+	<li>General</li>
+	<li>Registro</li>
+	<li>Consolidación</li>
+	<li>Informes</li>
+	<li>Contabilidad de costes</li>
+	</ul>
+	</div>
+	<div class="img-content2"><img src="img/planCuenta.png" alt=""></div>
+	<p class="parrafo">En este escenario, supongamos que tiene que crear una nueva cuenta de contabilidad para gastos telefónicos. Para crear una cuenta, siga estos pasos:</p>
+	<ul>
+	<li><b>1.</b> Seleccione el icono Buscar página en la esquina superior derecha de la página, especifique Plan de cuentas y, después, seleccione el vínculo relacionado.</li>
+	<li><b>2.</b> Seleccione Nueva.</li>
+	<li><b>3.</b> Expanda la ficha desplegable <b>General</b>. La siguiente tabla incluye descripciones de los campos de la ficha desplegable General y los datos que introducimos en esta demostración. <br>
+	<table class="tabla1">
+	<tr>
+	<th>Campo</th>
+	<th>Descripción</th>
+	<th>Datos de demostración</th>
+	</tr>
+	<tr>
+	<td>N.º</td>
+	<td>El número de la cuenta de contabilidad.</td>
+	<td>613500</td>
+	</tr>
+	<tr>
+	<td>Nombre</td>
+	<td>El nombre o la descripción.</td>
+	<td>Gastos de teléfono</td>
+	</tr>
+	<tr>
+	<td>Ingresos/Saldo</td>
+	<td>Indica si la cuenta se clasifica como balance de ingresos o cuenta de balance de situación. Este campo es importante para determinar si la cuenta debe cerrarse al final del año fiscal.</td>
+	<td>Balance de ingresos</td>
+	</tr>
+	<tr>
+	<td>Categoría de cuenta</td>
+	<td>Especifica la categoría de la cuenta de contabilidad, como activos, recursos propios, etc. Este campo se utiliza para crear informes financieros.</td>
+	<td>Gastos</td>
+	</tr>
+	<tr>
+	<td>Subcategoría de cuenta</td>
+	<td>Especifica la subcategoría de la cuenta contable. Este campo se utiliza para crear informes financieros.</td>
+	<td>Gastos en servicios públicos</td>
+	</tr>
+	<tr>
+	<td>Debe/Haber</td>
+	<td>Indica el tipo de movimientos que se publicarán en esta cuenta. La selección realizada no sirve como restricción para el tipo de transacciones publicadas en la cuenta.</td>
+	<td>Ambas</td>
+	</tr>
+	<tr>
+	<td>Tipo de cuenta</td>
+	<td>Indica el propósito de la cuenta en diferentes listas, diarios e informes. Las opciones disponibles son: Registro: el único tipo de cuenta donde se pueden registrar movimientos. Cabecera: solo se usa para descripciones e informes. Total: se usa para calcular el total de las cuentas con el campo Sumatorio. Inicio-total: marca el comienzo de un rango de cuentas en el campo Sumatorio. Fin-total: marca el final de un rango de cuentas en el campo Sumatorio.</td>
+	<td>Registro</td>
+	</tr>
+	<tr>
+	<td>Sumatorio</td>
+	<td>Especifica un intervalo de cuentas o una lista de números de cuenta. El programa sumará los movimientos de las cuentas que se muestran en este campo. Las fórmulas sumatorias son posibles para las cuentas de contabilidad de tipo Total y Fin-Total.</td>
+	<td> &lt;blank &gt;</td>
+	</tr>
+	<tr>
+	<td>Saldo</td>
+	<td>Muestra el saldo actual de la cuenta. Seleccione el importe del saldo para acceder a la lista Movs. contabilidad.</td>
+	<td></td>
+	</tr>
+	<tr>
+	<td>Cuenta de conciliación</td>
+	<td>Determina si la cuenta de contabilidad se incluye en la lista de Conciliación en los diarios generales. Usa la lista de Conciliación antes de publicar para revisar el efecto de registrar las cuentas en el diario.</td>
+	<td>No</td>
+	</tr>
+	<tr>
+	<td>Texto adicional automático</td>
+	<td>Si se selecciona este campo, el texto adicional que se configure en las cuentas se agrega automáticamente a los documentos de venta y compra en el campo Descripción. Si no se selecciona este campo, el texto adicional aún puede configurarse en la cuenta y agregarse a los documentos manualmente. Para crear texto adicional, seleccione Textos adicionales en la pestaña Navegar.</td>
+	<td>No</td>
+	</tr>
+	<tr>
+	<td>Entrada directa</td>
+	<td>Indica si el registro puede moverse directamente a la cuenta desde una línea del diario. Este campo se selecciona automáticamente cuando se crean cuentas nuevas. Las cuentas de contabilidad, como una cuenta de cobros (deudores comerciales), que se registran según los grupos contables normalmente se configurar para registro indirecto.</td>
+	<td>Sí</td>
+	</tr>
+	<tr>
+	<td>Bloqueada</td>
+	<td>  Si selecciona este campo, impedirá que los movimientos se registren en esta cuenta. Las cuentas se pueden bloquear y abrir según se necesite.</td>
+	<td></td>
+	</tr>
+	<tr>
+	<td>Fecha últ. modificación</td>
+	<td>Un campo generado por el sistema que muestra la fecha en la que se modificó por última vez la cuenta de contabilidad.</td>
+	<td>Generado por el sistema</td>
+	</tr>
+	<tr>
+	<td>Omitir descripción predeterminada en el diario.</td>
+	<td>Especifica si la descripción predeterminada se inserta automáticamente en el campo Descripción en las líneas del diario creadas para esta cuenta de contabilidad general.</td>
+	<td>No</td>
+	</tr>
+	</table>
+	</li>
+	<li><b>4.</b> Abra la ficha desplegable <b>Registro</b>. La siguiente tabla incluye descripciones de los campos de la ficha desplegable Registro y los datos que introducimos en esta demostración. <br>
+	<table class="tabla1">
+	<tr>
+	<th>Campo</th>
+	<th>Descripción</th>
+	<th>Datos de demostración</th>
+	</tr>
+	<tr>
+	<td>Tipo de registro general</td>
+	<td>Define si la cuenta se usa solo para una transacción de venta o compra o con ambos tipos de transacciones. Este campo se usa junto a los campos Grupo registro IVA neg. y Grupo registro IVA prod. para determinar si el sistema registrará el IVA. Las siguientes opciones están disponibles: <Blank>, compra y venta.</td>
+	<td>Compra</td>
+	</tr>
+	<tr>
+	<td>Grupo de registro de negocio general</td>
+	<td>Identifica el grupo contable de negocio general predeterminado para la cuenta. Este campo se usa junto a los campos Grupo de registro de producción general y Tipo de registro general para encontrar las cuentas de contabilidad general en las que registrar ventas, compras, importes de descuento, costes de bienes vendidos (COGS) y ajustes de inventario. Dado que el grupo contable de negocio general indica a quién compra o vende, el grupo contable de negocio general del cliente o del proveedor tiene prioridad sobre el grupo contable de negocio general de la cuenta de contabilidad general. Si no hay ningún cliente o proveedor implicado en una transacción, el programa usará el grupo contable de negocio general de la cuenta de contabilidad general.</td>
+	<td>NAC</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td> Identifica el grupo contable de producto general predeterminado para la cuenta. Este campo se usa junto a los campos Grupo de registro de negocio general y Tipo de registro general para encontrar las cuentas de contabilidad general en las que registrar ventas, compras, importes de descuento, COGS y ajustes de inventario. El grupo de registro de negocio general de un producto tiene prioridad sobre el grupo de registro de negocio general de la cuenta de contabilidad general.</td>
+	<td>SERVICIOS</td>
+	</tr>
+	<tr>
+	<td>Grupo registro IVA neg.</td>
+	<td>Identifica el grupo de registro de IVA de negocio predeterminado para la cuenta. Este campo se usa junto con los campos Grupo registro IVA prod. y Tipo de registro general para determinar el porcentaje de IVA y el tipo de cálculo de IVA y para encontrar las cuentas de contabilidad general donde el programa registrará el IVA. Dado que el grupo de registro de IVA de negocio indica a quién compra o vende, el grupo de registro de IVA de negocio del cliente o del proveedor tiene prioridad sobre el grupo de registro de IVA de negocio de la cuenta de contabilidad general. Si no hay ningún cliente o proveedor implicado en una transacción, el programa usará el grupo de registro de IVA de negocio de la cuenta de contabilidad general.</td>
+	<td>NAC</td>
+	</tr>
+	<tr>
+	<td>Grupo registro IVA prod.</td>
+	<td>Identifica el grupo de registro de IVA de producto predeterminado para la cuenta. Este campo se usa junto con los campos Grupo registro IVA neg. y Tipo de registro general para determinar el porcentaje de IVA y el tipo de cálculo de IVA y para encontrar las cuentas de contabilidad general donde el programa registrará el IVA. El grupo de registro de IVA de producto de un artículo tiene prioridad sobre el grupo de registro de IVA de producto de la cuenta de contabilidad general.</td>
+	<td>IVA25</td>
+	</tr>
+	<tr>
+	<td>N.º cuenta IC asociada predet.</td>
+	<td>Identifica el número de cuenta de contabilidad de empresas vinculadas (IC) para esta cuenta de contabilidad. Cuando introduce esta cuenta en el diario general de empresas vinculadas, la cuenta IC que se especifica en este campo se usa como número de cuenta de contrapartida predeterminado.</td>
+	<td>&lt;blank &gt;</td>
+	</tr>
+	<tr>
+	<td>Plantilla de fraccionamiento predeterminada</td>
+	<td>Especifica la plantilla de fraccionamiento predeterminada que rige el modo de fraccionar ingresos y gastos en los periodos en los que se produjeron.</td>
+	<td>&lt;blank &gt;</td>
+	</tr>
+	</table>
+	</li>
+	<li><b>5.</b> En la ficha desplegable <b>Consolidación</b>, puede introducir la cuenta de débito y de crédito de la empresa de consolidación a la que asignarla. Al ejecutar la consolidación desde la empresa de consolidación, el programa crea líneas del diario generales para cada unidad de negocio, según la asignación que se haya introducido aquí. Cuando la empresa tiene una divisa local diferente a la de la empresa de consolidación, puede seleccionar un método de conversión de consolidación para la cuenta de contabilidad. Esto especifica la tasa de conversión de divisa que se aplicará a la cuenta.</li>
+	<li><b>6.</b> En la ficha desplegable Informes, puede especificar si desea procesar ajustes de tipo de cambio entre la divisa local y la divisa de notificación adicional de esta cuenta.</li>
+	<li><b>7.</b> La ficha desplegable Contabilidad de costes muestra el tipo de coste al que está asignada la cuenta de contabilidad.</li>
+	</ul>
+	<h3>Usar el plan de cuentas</h3>
+	<p class="parrafo">El plan de cuentas muestra las cuentas del mayor que almacenan los datos financieros.</p>
+	<div class="img-content2"><img src="img/planCuenta02.PNG" alt=""></div>
+	<p class="parrafo">Desde el plan de cuentas, puede abrir cada una de las cuentas del mayor. Sin embargo, al seleccionar Editar lista, también puede actualizar las cuentas presentes o crear otras nuevas cuentas del mayor. Puede explorar en profundidad los campos Cambio neto y Saldo para visualizar los movimientos de las cuentas del mayor.</p>
+	<p class="parrafo">La página Descripción general del plan de cuentas es una versión simplificada del plan de cuentas. Si solo desea obtener una rápida descripción general de los conceptos básicos, como los cambios netos y los saldos, la página Descripción general del plan de cuentas es una alternativa útil</p>
+	<p class="parrafo">Al igual que el plan de cuentas, muestra información básica, como el cambio neto y el saldo de todas las cuentas del mayor. Puede contraer las filas de tipo de cuenta Inicio-Total. Si guarda como marcador la página Descripción general del plan de cuentas, dispondrá de acceso directo desde su área de trabajo.</p>
+	<h4>Videotutorial Plan de cuenta</h4>
+	<iframe class="ifra" src="https://www.youtube.com/embed/mcwUa3KVPIc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	`;
+
+	cuerpo.innerHTML= contenido;
+
+}
+/*=================
+Grupos Contables
+===================*/
+let configGrupoContables = () =>{
+	let cuerpo = document.querySelector(".bodyContent");
+	let contenido = `
+
+	<h2 class="Subtitulos">Configurar los grupos Contables</h2>
+	<p class="parrafo">
+	El objetivo principal de los grupos contables es identificar las cuentas de balance de ingresos para la contabilidad de cada filial o contabilidad complementaria. Los grupos contables se utilizan para vincular la contabilidad general a la contabilidad de las filiales o complementarias siguientes:
+	</p>
+	<div class="contentList">
+	<ul>
+	<li>transacciones de productos, transacciones de recurso, o ambas, y documentos de compras y ventas</li>
+	<li>Diarios de productos y diarios de proyectos</li>
+	<li>Centros de máquina, centros de trabajo y cargos de producto</li>
+	</ul>
+	</div>
+	<p class="parrafo">Los grupos contables asignan entidades a cuentas de contabilidad. Algunos ejemplos de entidades son clientes, proveedores, artículos, recursos y documentos de compra y venta. Los grupos contables ahorran tiempo y ayudan a evitar errores al registrar las transacciones. Los valores de transacción se envían a las cuentas especificadas en el grupo contable de dicha entidad. El único requisito es que tenga un plan de cuentas. Para obtener más información, vea <a href="https://learn.microsoft.com/es-es/dynamics365/business-central/finance-setup-chart-accounts"></a> Configuración del plan de cuentas.</p>
+	<p class="parrafo"> Los grupos contables tienen tres divisiones:</p>
+	<div class="contentList">
+	<ul>
+	<li><b>General</b><br>
+	Defina a quién vende y de quién compra, y lo que vende y compra. También puede combinar grupos para especificar aspectos como las cuentas de regularización para registrar, o usar grupos para filtrar informes.
+	</li>
+	<li><b>Específico</b><br> Use documentos de ventas, por ejemplo, en lugar de registrar movimientos directamente en contabilidad. Al crear movimientos de clientes, en contabilidad se crean los movimientos correspondientes.<br>  
+	</li>
+	<li><b>Tributos</b><br>
+	Defina los porcentajes de impuestos y los tipos de cálculo que se aplican a quién se vende y de quién se compra, y a lo que vende y compra.
+	</li>
+	</ul>
+	</div>
+	<h3>Generales</h3>
+	<p class="parrafo">La tabla siguiente describe los grupos contables generales.</p>
+	<table class="tabla1">
+	<tr>
+	<th>Contables Generales</th>
+	<th>Descripción</th>
+	</tr>
+	<tr>
+	<td>Grupos contables negocio</td>
+	<td> negocio  Asigne este grupo a proveedores y clientes para especificar a quién vende y de quién compra. Configure estos grupos contables en la página Grupos registro negocio gen.. Al hacerlo, piense en cuántos grupos necesita para desglosar las ventas y las compras. Por ejemplo, agrupe clientes y proveedores por área geográfica, o el tipo de negocio.</td>
+	</tr>
+	<tr>
+	<td>Grupos contables de producto</td>
+	<td>Asigne este grupo a productos y recursos para especificar lo que vende y lo que compra. Configure estos grupos contables en la página Grupos registro producto gen.. Al hacerlo, considere el número de grupos que necesitará para desglosar las ventas por producto (productos y recursos) y las compras por producto. Por ejemplo, divida estos grupos por materias primas, mercaderías, recursos, capacidad, etc.</td>
+	</tr>
+	<tr>
+	<td>Configuraciones grupos contables</td>
+	<td>Combine grupos contables de negocio y de producto, y seleccione las cuentas en las que se registrarán. Para cada combinación de grupos contables de negocios y productos, puede asignar un conjunto de cuentas de contabilidad. Por ejemplo, puede registrar la venta del mismo producto en diferentes cuentas de contabilidad porque varios clientes se asignan a diferentes grupos contables de negocio. Establezca estas configuraciones en la página Configuración grupos contables.</td>
+	</tr>
+	</table>
+	<h3>Específicos</h3>
+	<p class="parrafo">El objetivo principal de los grupos contables específicos es identificar las cuentas de balance de situación para la contabilidad de cada filial o contabilidad complementaria.</p>
+	<p class="parrafo">Por ejemplo, el saldo pendiente total de todos los clientes se debe corresponder con el saldo total de las cuentas de clientes en el balance de situación.</p>
+	<p class="parrafo">Normalmente, estas cuentas de balance de situación están configuradas para que no se permita el registro directo. Los únicos registros permitidos se realizan mediante la contabilidad complementaria, con lo que se evitan las diferencias entre el saldo total en la contabilidad complementaria y la general.</p>
+	<p class="parrafo">En la tabla siguiente se proporcionan descripciones de grupos contables específicos y dónde se asignan.</p>
+	<table class="tabla1">
+	<tr>
+	<th>Grupo contable específico</th>
+	<th>Descripción</th>
+	</tr>
+	<tr>
+	<td>Grupo contable de cliente</td>
+	<td>Asigna la cuenta de clientes, las cuentas de descuento por pronto, las cuentas de redondeo de facturación y aplicación y las cuentas de intereses y honorarios relacionadas con los clientes.</td>
+	</tr>
+	<tr>
+	<td>Grupo contable de proveedor</td>
+	<td>Asigna la cuenta de proveedores, las cuentas de descuento por pronto, las cuentas de redondeo de facturación y aplicación y las cuentas de intereses y honorarios relacionadas con los proveedores.</td>
+	</tr>
+	<tr>
+	<td>Grupo contable de inventario/configuración de registro de inventario</td>
+	<td>Los grupos de registro de inventario especifican el tipo de inventario y después se combinan con códigos de almacén en la página Config. registro inventario. Cada combinación se asigna a las cuentas de inventario, la WIP cuenta y otras cuentas de desviación relacionadas con el inventario en el plan de cuentas. Estas combinaciones también proporcionan una buena forma de organizar su inventario para que pueda separar los artículos del grupo contable cuando se generan informes.</td>
+	</tr>
+	<tr>
+	<td>Grupo contable de cuenta bancaria</td>
+	<td>Asigna una cuenta bancaria a una cuenta C/G de un banco.</td>
+	</tr>
+	<tr>
+	<td>Grupo contable de activos fijos</td>
+	<td>Define cuentas para distintos tipos de gastos y costes, como costes de adquisición, importes de amortización acumulada, costes de venta/baja, amortización acumulada en venta/baja, ganancias en venta/baja, pérdidas en venta/baja, gastos de mantenimiento y gastos de depreciación.</td>
+	</tr>
+	<tr>
+	<td>Grupos contables de proyecto</td>
+	<td>Especifica las cuentas en las que se registran las transacciones relacionadas con proyectos.</td>
+	</tr>
+	</table>
+	<p class="parrafo">Para configurar un grupo contable de cliente, siga estos pasos:</p>
+	<ul>
+	<li><b>1.</b> Seleccione el icono Buscar página en la esquina superior derecha de la página, introduzca <b>Grupos registro cliente</b> y seleccione el vínculo relacionado para abrir la página <b>Grupos registro de cliente</b>.</li>
+	<li><b>2.</b> Seleccione <b>Mostrar todas las cuentas</b> para mostrar todas las cuentas disponibles.</li>
+	<li><b>3.</b> Seleccione <b>Nuevo</b></li>
+	<li><b>4.</b> En el campo <b>Código</b>, escriba un identificador único.</li>
+	<li><b>5.</b> En cada campo pertinente de la cuenta, especifique las cuentas que se utilizan para registrar transacciones para: <br>
+	<div class="contentList">
+	<ul>
+	<li>Cobros</li>
+	<li>Cargos por servicios</li>
+	<li>Descuentos por pronto pago</li>
+	<li>Recargos</li>
+	<li>Interés</li>
+	<li>Redondeo de facturas</li>
+	<li>Tolerancias de pago</li>
+	</ul>
+	</div>
+
+	</li>
+	<li><b>6.</b> Cierre la página de grupos contables de cliente. <br>
+	<div class="img-content2"><img src="img/gcontable1.PNG" alt=""></div>
+	</li>
+	</ul>
+
+	<p class="parrafo">Para asignar un grupo contable de cliente, siga estos pasos:</p>
+	<ul>
+	<li><b>1.</b> Seleccione el icono de Buscar página en la esquina superior derecha de la página, escriba <b>Clientes</b> y luego elija el vínculo relacionado.</li>
+	<li><b>2.</b> Localice al cliente y abra la ficha del cliente.</li>
+	<li><b>3.</b> Expanda la ficha desplegable <b>Facturación</b>.</li>
+	<li><b>4.</b> En la ficha desplegable <b>Facturación</b>, en el campo <b>Grupo contable de cliente</b>, especifique el grupo contable apropiado.</li>
+	</ul>
+	<p class="parrafo">Cuando se registran transacciones relacionadas con el cliente como pedidos, facturas, abonos y pagos, Business Central utiliza el grupo contable de cliente para localizar y registrar las cuentas especificadas.</p>
+	<p class="parrafo">El proceso de configuración de grupos contables de proveedor es similar a la configuración de grupos contables de cliente.</p>
+
+	<h3>Tributos o IVA</h3>
+	<p class="parrafo">La tabla siguiente describe los grupos contables relacionados con los impuestos.</p>
+	<table class="tabla1">
+	<tr>
+	<th>Grupo contable IVA</th>
+	<th>Descripción</th>
+	</tr>
+	<tr>
+	<td>Grupos contables negocio impuesto</td>
+	<td>Determine cómo calcular y registrar el impuesto de venta para clientes y proveedores. Configure estos grupos contables en la página Grupos contables negocio impuesto. Al hacerlo, piense en cuántos grupos necesita. Por ejemplo, puede depender de factores como la legislación local y si la actividad económica de la empresa es tanto nacional como internacional.</td>
+	</tr>
+	<tr>
+	<td>Grupos contables productos impuesto</td>
+	<td>Indique los cálculos de impuesto necesarios para los tipos de productos o recursos que compre o venda.</td>
+	</tr>
+	<tr>
+	<td>Configuración de registro impuesto</td>
+	<td>Combine grupos registro IVA negocio y grupos registro IVA producto. Cuando rellene una línea de diario general, línea de compra o línea de venta, examinaremos la combinación para identificar las cuentas que se deben usar.</td>
+	</tr>
+	</table>
+	<p class="parrafo">Existe también los  grupos contables de Inventario.</p>
+	<h3>Configurar y asignar grupos contables de inventario</h3>
+	<p class="parrafo">Los grupos contables de inventario se usan para agrupar productos y asignarlos a cuentas de inventarios, WIP Cuentas y otras cuentas relacionadas con el inventario. Los informes, como la <b>Valoración de inventario</b>, y los trabajos por lotes, como Registrar valoración de existencias en contabilidad, utilizan los grupos contables de inventario para mostrar los resultados.</p>
+	<p class="parrafo">La configuración de los grupos contables de inventario es ligeramente diferente a la de los grupos contables de clientes y proveedores, ya que emplea dos páginas:</p>
+	<div class="contentList">
+	<ul>
+	<li>Grupos contables de inventario</li>
+	<li>Configuración del registro de inventario</li>
+	</ul>
+	</div>
+	<p class="parrafo">En la página <b>Grupos contables de inventario</b> , se especifican los grupos de productos de inventario. Con esta configuración, los usuarios pueden vincular las cuentas a grupos de productos, y no a productos específicos.</p>
+	<p class="parrafo">La página <b>Configuración del registro de inventario</b> contiene los vínculos entre el grupo contable de inventario, las ubicaciones de inventario y las cuentas.</p>
+	<div class="img-content2"><img src="img/gcontable2.PNG" alt=""></div>
+	<p class="parrafo">Cuando se asigna la configuración del registro de inventario a un producto, Business Central hace un registro en la cuenta especificada para la combinación de grupo contable de inventario y código de almacén que se haya especificado en el movimiento de línea de producto de la transacción.</p>
+	<p class="parrafo">Para configurar los grupos contables de inventario, siga estos pasos:</p>
+	<ul>
+	<li><b>1.</b> Seleccione el icono de Buscar página en la esquina superior derecha, escriba <b>grupos registro de inventario</b> y seleccione el vínculo relacionado para abrir la página <b>Grupos registro de inventario</b>.</li>
+	<li><b>2.</b> Seleccione <b>Nuevo</b>.</li>
+	<li><b>3.</b> En el campo <b>Código</b>, escriba un identificador único y descriptivo.</li>
+	<li><b>4.</b> En el campo <b>Descripción</b>, escriba una breve descripción del grupo contable de inventario.</li>
+	<li><b>5.</b> Cierre la página <b>Grupos registro de inventario</b>.</li>
+	</ul>
+	<p class="parrafo">A continuación, combine los grupos contables de inventario con todos los almacenes configurados en Business Central:</p>
+	<ul>
+	<li><b>1.</b> Seleccione el icono de Buscar página en la esquina superior derecha, escriba <b>configuración del registro de inventario</b> y seleccione el vínculo relacionado para abrir la página <b>Configuración del registro de inventario</b>.</li>
+	<li><b>2.</b> Introduzca una nueva linea</li>
+	<li><b>3.</b> En el campo <b>Código de almacén</b>, especifique el almacén correspondiente a combinar con el grupo contable de inventario.</li>
+	<li><b>4.</b> En el campo <b>Código de grupo contable de inventario</b>, especifique el grupo contable de inventario correspondiente.</li>
+	<li><b>5.</b> En cada campo pertinente de la cuenta, especifique las cuentas que se utilizarán para registrar transacciones en las siguientes cuentas: <br>
+	<div class="contentList">
+	<ul>
+	<li>Cuenta de Inventario</li>
+	<li>WIP</li>
+	<li>Cuenta de fabricación</li>
+	</ul>
+	</div>
+
+	</li>
+	<li><b>6.</b> Cierre la página Configuración del registro de inventario. <br>
+	<div class="img-content2"><img src="img/gcontable3.PNG" alt=""></div>
+	</li>
+	</ul>
+	<p class="parrafo">Para asignar los grupos contables de inventario, siga estos pasos:</p>
+	<ul>
+	<li><b>1.</b> Seleccione el icono de Buscar página en la esquina superior derecha, escriba <b>productos</b> y seleccione el vínculo relacionado para abrir la página Ficha de producto.</li>
+	<li><b>2.</b> Busque el producto y abra su ficha.</li>
+	<li><b>3.</b> Expanda la ficha desplegable <b>Costes y registro</b>.</li>
+	<li><b>4.</b> En el campo Grupo contable de cliente de la ficha desplegable <b>Costes y registro</b>, introduzca el grupo contable correspondiente.</li>
+	<li><b>5.</b> Cierre la página <b>Ficha de producto</b>. <br>
+
+	<div class="img-content2"><img src="img/gcontable4.PNG" alt=""></div>
+	</li>
+	</ul>
+	<h3>Videotutorial de uso de varios grupos contables para el cliente o proveedor</h3>
+	<iframe  class="ifra" src="https://www.youtube.com/embed/PPl0QrEyfJM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+	<h3> vídeo en el que se demuestra cómo crear grupos contables en Business Central.</h3>
+	<iframe  class="ifra" src="https://www.microsoft.com/es-es/videoplayer/embed/RE3wgV4?postJsllMsg=true&autoCaptions=es-es" frameborder="0"></iframe>
+	<br>
+	<h3>Grupos Contables en Dynamics NAV</h3>
+	<iframe class="ifra" src="https://www.youtube.com/embed/jdXCK31yNF4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	</hr>
+	<h3>Dynamics NAV Creación Grupos Contables</h3>
+	<iframe class="ifra" src="https://www.youtube.com/embed/7J-BIVckUck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	`;
+
+	cuerpo.innerHTML= contenido;
+
+}
+/*=====================
+Esquemas de Cuentas
+=====================*/
+let configEsqueCentas = () =>{
+	let cuerpo = document.querySelector(".bodyContent");
+	let contenido = `
+	<h1 >Configuración de los Esquemas de Cuentas</h1>
+	<p class="parrafo"> Los esquemas de cuentas analizan cifras en cuentas de contabilidad y comparan los movimientos de contabilidad con los presupuestados. Los resultados se muestran en gráficos en la página principal, como el gráfico Flujo de efectivo.</p>
+	<p class="parrafo">Puede utilizar esquemas de cuentas para crear informes financieros de una forma flexible y sin tener que desarrollarlos.</p>
+	<p class="parrafo">Puede usar esquemas de cuentas para organizar cuentas que aparezcan en el plan de cuentas, el plan de tipos de coste y el plan de cuentas de flujo de efectivo de formas que ofrezcan información sobre esas cuentas. Los usuarios pueden configurar diferentes diseños para definir la información que quieran extraer de cualquiera de estos planes.</p>
+	<p class="parrafo">Uno de los objetivos principales de los esquemas de cuentas es ofrecer un lugar para realizar cálculos que no se pueden realizar directamente en el plan de cuentas. Por ejemplo, los usuarios pueden crear esquemas de cuentas para calcular márgenes de beneficios en dimensiones como departamentos o grupos de clientes. Además, los usuarios pueden filtrar movimientos y movimientos de presupuesto, como por ejemplo por saldo periodo o importe del debe.</p>
+	<p class="parrafo">Al utilizar tipos de coste y cuentas de movimientos de flujo de efectivo en los esquemas de cuentas, puede crear informes de contabilidad de costes y de flujo de efectivo.</p>
+	<p class="parrafo">Con los esquemas de cuentas puede realizar las siguientes tareas:</p>
+	<div class="contentList">
+	<ul>
+	<li>Crear informes financieros personalizados sin usar el Diseñador de informes.</li>
+	<li>Crear tantos esquemas de cuentas como sea necesario, cada uno de ellos con un nombre exclusivo.</li>
+	<li>Configurar diversos diseños de informes e imprimir los informes con las cifras actuales.</li>
+	<li>Exportar datos financieros a Microsoft Excel.</li>
+	</ul>
+	</div>
+	<p class="parrafo">Una programación de cuenta consta de los siguientes componentes:</p>
+	<div class="contentList">
+	<ul>
+	<li>Un nombre de un esquema de cuentas</li>
+	<li>Varias líneas</li>
+	<li>Un diseño de columnas</li>
+	</ul>
+	</div>
+
+	<p class="parrafo">Al crear un esquema de cuentas, el primer paso es configurar un nombre para el esquema de cuentas.</p>
+	<p class="parrafo">Para crear una Programación de cuenta, siga estos pasos:</p>
+	<ul>
+	<li><b>1.</b> Seleccione el icono <b>Buscar página</b> en la esquina superior derecha de la página, introduzca esquemas de cuentas y, a continuación, seleccione el vínculo relacionado.</li>
+	<li><b>2.</b> Selecione <b>Nueva</b>. <br>
+	<div class="img-content2"><img src="img/esquemas1.png" alt=""></div>
+	</li>
+	<li><b>3.</b> Rellene los campos necesarios. En el ejemplo hemos creado un nuevo esquema de cuenta llamado <b>BALANCE1</b>.<br>
+	<div class="img-content2"><img src="img/esquemas2.png" alt=""></div>
+	</li>
+	</ul>
+	<p class="parrafo">La página Programas de cuentas contiene los siguientes campos:</p>
+	<div class="contentList">
+	<ul>
+	<li><b>Nombre:</b> especifica el nombre del esquema de cuentas.</li>
+	<li><b>Descripción:</b>  Especifica una descripción del esquema de cuentas.</li>
+	<li><b>Diseño de columnas predeterminado: </b> Especifica el nombre de diseño de columnas que quiera utilizar como predeterminado en este esquema de cuentas.</li>
+	<li><b>Nombre de vista de análisis:</b> Especifica el nombre de la vista de análisis en la que quiera basar el esquema de cuentas. Si vincula una vista de análisis a un esquema de cuentas, puede usar las dimensiones asignadas a la vista de análisis en las líneas del esquema de cuentas. De lo contrario, solo puede usar las dos dimensiones globales en un esquema de cuentas.</li>
+	</ul>
+	</div>
+	<p class="parrafo">También puede crear un nuevo esquema de cuentas seleccionando <b>Proceso > Copiar esquema de cuentas</b>, rellenando los dos campos y seleccionando el botón Aceptar.</p>
+	<p class="parrafo">Vea este vídeo para observar una demostración de cómo configurar un esquema de cuentas.</p>
+	<iframe src="https://www.microsoft.com/es-es/videoplayer/embed/RE3AAQI?postJsllMsg=true&autoCaptions=es-es" class="ifra"></iframe>
+	<br>
+	<h3>Exportar sus esquemas de cuentas a Excel</h3>
+	<p class="parrafo">Puede exportar esquemas de cuentas a Excel. La exportación a Excel le permite controlar sus datos utilizando las funciones y características de Excel, además de compartir datos con otras personas que no trabajan con Business Central.</p>
+	<p class="parrafo">Para exportar un esquema de cuentas a Excel, siga estos pasos:</p>
+	<ul>
+	<li><b>1.</b> Seleccione el icono <b>Buscar página</b> en la esquina superior derecha de la página, introduzca <b>esquemas de cuentas</b> y, a continuación, seleccione el vínculo relacionado.</li>
+	<li><b>2.</b> Seleccione el esquema de cuentas que desea exportar y seleccione <b>Proceso > Descripción general</b>.</li>
+	<li><b>3.</b> En la página Panorama esq. cta., seleccione <b>Acciones > Excel > Exportar a Excel</b>.</li>
+	<li><b>4.</b> Si desea crear una nueva hoja de cálculo de Excel, seleccione <b>Crear documento nuevo</b>. Si desea actualizar un libro de Excel existente, seleccione <b>Actualizar documento existente</b> y busque el archivo de Excel que desea actualizar.</li>
+	</ul>
+	<p class="parrafo">Business Central abre Excel y exporta los datos y la información del filtro desde el esquema de cuentas seleccionado. El nombre de la hoja de cálculo es el mismo que el nombre del esquema de cuentas.</p>
+	<p class="parrafo">Videotutorial Esquema de cuentas</p>
+	<iframe class="ifra" src="https://www.youtube.com/embed/69MxHBs_GWI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	`;
+
+	cuerpo.innerHTML= contenido;
+
+}
+/*=====================
+Presupuestos contables
+=======================*/
+let presupuestos = () =>{
+	let cuerpo = document.querySelector(".bodyContent");
+	let contenido = `
+	<h2 class="Subtitulos">Presupuestos Contables</h2>
+	<p class="parrafo">
+	El presupuesto contable es un documento que refleja una previsión o predicción de cómo serán los resultados y los flujos de dinero que se obtendrán en un periodo futuro. 
+	Este es un cálculo aproximado de los ingresos y gastos que se obtendrán tras la realización de la actividad.
+	</p>
+	<p class="parrafo">Un presupuesto contable Sirve para tener el control de tus gastos, identificar los innecesarios, conocer tus posibilidades de ahorro para lograr tus 
+	objetivos y saber tu capacidad de pago para evitar contraer deudas que no puedes pagar. </p>
+	<p class="parrafo">Mediante la ventana Presupuestos puede crear presupuestos en el área de la aplicación Contabilidad. Puede crear tantos presupuestos como desee. 
+	Puede crear presupuestos contables sencillos para periodos específicos. También puede utilizar las dimensiones de la empresa al introducir el presupuesto para crear 
+	presupuestos detallados. Con las dimensiones, es posible crear presupuestos de ventas detallados por cliente o proceso de cada cuenta de ventas en contabilidad. 
+	Si desea limitar un presupuesto para que sólo se utilice con determinadas dimensiones o empresas, puede establecer un filtro en la pestaña Filtrosde la ventana Presupuesto. 
+	A continuación, puede introducir los valores del presupuesto. 
+	</p>
+	<p class="parrafo">También puede exportar e importar presupuestos de Microsoft Excel. Puede importar varios archivos Excel en el mismo presupuesto. 
+	La funcionalidad de exportación le permite distribuir la información de presupuestos a terceros que no tienen acceso al sistema. De igual modo, la funcionalidad de 
+	importación le permite consolidar la información de presupuestos de terceros que no tienen acceso al sistema</p>
+	<h3>Crear presupuestos contables</h3>
+	<p class="parrafo">Puede tener varios presupuestos para idénticos periodos de tiempo si crea presupuestos con nombres distintos. En primer lugar, debe configurar el nombre 
+	del presupuesto e introducir las cifras del presupuesto. El nombre del presupuesto se incluye en todos los movimientos de presupuesto que cree.</p>
+	<p class="parrafo">Al crear un presupuesto, puede definir cuatro dimensiones específicas del presupuesto, llamadas dimensiones presupuestarias, para cada presupuesto. 
+	Seleccione las dimensiones de presupuesto para cada uno de los presupuestos a partir de las dimensiones que ya ha configurado. Es posible utilizar las dimensiones de 
+	presupuesto para filtrar en un presupuesto y para agregar información de dimensiones a movimientos de presupuesto</p>
+	<p class="parrafo">Los presupuestos juegan un papel importante en la inteligencia empresarial. Ejemplos son los extractos financieros en función de los informes financieros
+	que incluyen movimientos de presupuesto o al analizar los importes presupuestados frente a los reales en el plan de cuentas</p>
+	<p class="parrafo">Con la función de presupuesto en Business Central, puede:</p>
+	<div class="contentList">
+	<ul>
+	<li>Crear varios presupuestos para periodos de tiempo idénticos.</li>
+	<li>Crear presupuestos simples o complejos seleccionando una combinación de cuenta, periodo, dos dimensiones globales y cuatro dimensiones de presupuesto.</li>
+	<li>Copiar presupuestos de periodos anteriores y revisar las cifras reales o de presupuesto usando un factor de ajuste.</li>
+	<li>Exportar e importar presupuestos desde Excel.</li>    
+	</ul>
+	</div>
+	<h3>Para crear un nuevo presupuesto contable</h3>
+	<ul>
+	<li><b>1.</b> Elija el icono busqueda que abre la característica Dígame. , escriba <b>Presupuestos contables</b> y luego elija el enlace relacionado.</li>
+	<li><b>2.</b> Elija la acción <b>Editar lista</b> y, a continuación, rellene los campos según sea necesario. Pase el cursor sobre un campo para leer una breve descripción.</li>
+	<li><b>3.</b> Seleccione la acción <b>Editar presupuesto</b>.</li>
+	<li><b>4.</b> En la parte superior de la página <b>Presupuesto</b> rellene los campos según sea necesario para definir lo que se muestra. <br>Solo se mostrarán los 
+	movimientos que contengan el nombre del presupuesto que ha introducido en el campo <b>Nombre presupuesto</b> . Dado que acaba de crear el nombre del presupuesto, 
+	no hay movimientos que coincidan con el filtro. Por tanto, la página está vacía. <br>
+	<div class="img-content2"><img src="img/presupuestos.PNG" alt=""></div>
+	</li>
+	<li><b>5.</b> Para escribir una cantidad, seleccione la celda correspondiente de la matriz. Se abre la página <b>Movs. pptos. contabilidad</b>.</li>
+	<li><b>6.</b> Cree una nueva línea y rellene el campo <b>Importe</b>. Cierre la página <b>Movs. pptos. contabilidad</b>. <br>
+	<div class="img-content2"><img src="img/presupuestos1.PNG" alt=""></div>
+	</li>
+	<li><b>7.</b> Repita los pasos de 5 y 6 hasta que escriba todos los importes del presupuesto.</li>
+	</ul>
+	<p class="parrafo">Puede usar las dimensiones de presupuesto para establecer filtros en un presupuesto y agregar información de la dimensión a los movimientos del mismo.
+	Las dimensiones de presupuesto le permiten usar dimensiones en presupuestos de la misma forma que las usaría publicando ventas y adquisiciones.</p>
+	<p class="parrafo">Por ejemplo, puede comparar las ventas reales por región con las ventas presupuestadas por región.</p>
+	<h3>Crear Presupuestos Contables video tutorial</h3>
+	<iframe class="ifra" src="https://www.youtube.com/embed/TEECGoTOeYg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+	encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	<br>
+	<br>
+	<h3>Copiar presupuestos</h3>
+	<p class="parrafo">Puede tardar mucho tiempo al introducir presupuestos manualmente. Para evitar escribir manualmente un nuevo presupuesto, puede usar la función Copiar 
+	presupuesto para copiar de movimientos de presupuestos de contabilidad existentes o de movimientos de contabilidad.</p>
+	<p class="parrafo">Dado que puede usar opciones como fórmula de cambio de fecha y factores de ajuste, la función Copiar presupuesto le permitirán ahorrar tiempo al crear 
+	presupuestos para períodos distintos.</p>
+	<p class="parrafo">Para acceder a la función Copiar presupuesto, siga estos pasos:</p>
+	<ul>
+	<li><b>1.</b> Seleccione el icono Buscar página en la esquina superior derecha de la página, introduzca <b>Presupuestos contables</b> y, a continuación, seleccione el vínculo 
+	relacionado.</li>
+	<li><b>2.</b> Seleccione un nombre de presupuesto para abrir la página <b>Presupuesto</b>.</li>
+	<li><b>3.</b> Seleccione <b>Presupuesto > Copiar presupuesto</b>. <br>
+	<div class="img-content2"><img src="img/presupuestos2.PNG" alt=""></div> <br>
+	<p class="parrafo">Puede usar el área <b>Copiar desde</b> para determinar de dónde proceden los movimientos de presupuesto copiados. Los campos de esta área se especifican en 
+	función de la selección en el campo <b>Origen</b>.</p>
+	<div class="contentList">
+	<ul>
+	<li><b>Movimiento de contabilidad:</b> el presupuesto se basa en movimientos de contabilidad reales para un período específico. Cuando se selecciona <b>movimiento de 
+	contabilidad</b>, debe especificar:
+	<div class="contentList">
+	<ul>
+	<li>Un intervalo de cuentas y un intervalo de fechas en los campos <b>N.º cuenta y Fecha</b> para determinar la información que se copiará.</li>
+	<li>Ya sea para incluir o excluir movimientos de cierre en el campo <b>Movimientos de cierre</b>.</li>
+	</ul>
+	</div>
+	</li>
+	<li><b>Movimiento de presupuesto de contabilidad:</b> el presupuesto se basa en movimientos de presupuesto de contabilidad de un presupuesto existente. 
+	Al seleccionar  <b>Movimiento presupuesto de contabilidad</b>, debe especificar:
+	<div class="contentList">
+	<ul>
+	<li>Un nombre de presupuesto existente para copiar en el campo <b>Nombre del presupuesto</b> .</li>
+	<li>Intervalo de cuentas y un intervalo de fechas en los campos <b>N.º cuenta y Fecha</b>  para filtrar la información que se copia.</li>
+	</ul>
+	</div>
+	</li>
+	</ul>
+	</div>
+	<p class="parrafo"> En Ambas opciones <b>Origen,</b> selecione el campo Dimensiones</p>
+	<div class="contentList">
+	<ul>
+	<li>Seleccione la casilla Seleccionado en cada dimensión que se copie a los movimientos del nuevo presupuesto.</li>
+	<li>Para configurar filtros adicionales para el proceso de copia, defina Filtros de valor de dimensión.</li>
+	<li>En el campo Nuevo cód. valor dim. determine el nuevo valor de dimensión al que se copiará.</li>
+	</ul>
+	</div>
+	</li>
+	<li><b>4.</b> Use el área <b>Copiar</b> a para especificar dónde se enviará la información del presupuesto copiada. Los siguientes campos se incluyen en el área
+	<b>Copiar a:</b>
+	<div class="contentList">
+	<ul>
+	<li><b>Nombre del presupuesto:</b> introduzca el nombre del nuevo presupuesto o seleccione el campo para seleccionar un nombre de presupuesto existente.</li>
+	<li><b>Nº Cuenta:</b> introduzca el número de cuenta si uno o varios movimientos se deben copiar en una cuenta.</li>
+	</ul>
+	</div>
+	</li>
+	<li><b>5.</b> El área Aplicar incluye varias opciones del cálculo que puede usar al copiar presupuestos:
+	<div class="contentList">
+	<ul>
+	<li><b>Factor de ajuste:</b>  introduzca un factor de ajuste por el que se multipliquen los movimientos de origen durante el proceso de copia. Por ejemplo, un ajuste de 1,1 aumenta los importes en un 10 por ciento y un ajuste de 0,89 reduce los importes en un 11 por ciento.</li>
+	<li><b>Método de redondeo</b> especifique cómo se redondean los movimientos del nuevo presupuesto.
+
+	</li>
+	<li><b>Fórmula de cambio de fecha:</b> introduzca una fórmula que calcule la fecha de los nuevos movimientos en función de los movimientos que se copian. Por ejemplo, escriba 1M para el próximo mes.
+
+	</li>
+	<li><b>Compresión por fechas:</b> comprima los movimientos que se copian para un período seleccionado para reducir el número de nuevos movimientos que se crean.</li>    
+	</ul>
+	</div>
+	</li>
+	</ul>
+	<h3>Exportar e importar presupuestos contables con Excel</h3>
+	<p class="parrafo">Prácticamente en todas las demás páginas, puede exportar datos en páginas de presupuesto a Microsoft Excel para su posterior procesamiento o análisis. </p>
+	<p class="parrafo nota-solo">Nota <br>
+	El plan de cuentas, en el que se basan los presupuestos contables (G/L), tiene líneas de tipo de cuenta Mayor que contienen el total de las líneas siguientes. 
+	Cuando se exporta un presupuesto contable, se exportan los datos de todas las líneas independientemente del tipo de cuenta. Sin embargo, solo se pueden volver a importar 
+	los datos de las líneas del tipo Registro.
+	</p>
+	<p class="parrafo">En consecuencia, al importar un presupuesto contable, todos los valores que existían en las líneas de cabecera se eliminan. Esto sirve para evitar 
+	cantidades totales erróneas después de importar datos que se han creado o editado en Excel.</p>
+	<p class="parrafo">Business Central le ofrece la opción de crear presupuestos utilizando las funciones de exportación e importación.</p>
+	<p class="parrafo">Puede exportar presupuestos a Excel mediante el proceso Exportar ppto. a Excel. Cuando se exportan los presupuestos, se pueden realizar las siguientes
+	tareas:</p>
+	<div class="contentList">
+	<ul>
+	<li>Utilizar Excel para modificar y agregar al presupuesto.</li>
+	<li>Crear nuevos presupuestos basados en las cifras del presupuesto exportado.</li>
+	</ul>
+	</div>
+	<div class="img-content2"><img src="img/presupuestos3.png" alt=""></div>
+	<p class="parrafo">Puede importar presupuestos de Excel mediante el trabajo por lotes Importar ppto. de Excel. Al importar presupuestos de Excel, existen las siguientes
+	posibilidades:</p>
+	<div class="contentList">
+	<ul>
+	<li>Importar los presupuestos exportados anteriormente de Business Central en un presupuesto existente o nuevo.</li>
+	<li>Cree nuevos movimientos de presupuesto reemplazando los existentes.</li>
+	<li>Agregar movimientos de presupuesto a un presupuesto existente.</li>
+	</ul>
+	</div>
+	<p class="parrafo">Antes de importar un presupuesto en Excel, le recomendamos que exporte un presupuesto de Business Central para obtener el formato correcto.</p>
+	<div class="img-content2"><img src="img/presupuestos4.PNG" alt=""></div>
+	<p class="parrafo">El plan de cuentas, en el que se basan los presupuestos de CG, tiene líneas de tipo de cuenta Cabecera que incluyen el total de las líneas inferiores.
+	Al exportar un presupuesto de CG, los datos de todas las líneas se exportan independientemente del tipo de cuenta.</p>
+	<p class="parrafo">Sin embargo, se pueden volver a importar los datos del tipo de cuenta <b>Cabecera</b>. Al seleccionar la opción <b>Agregar movimientos</b> en el trabajo 
+	por lotes Importar ppto. de Excel, se omitirá cualquier valor en las líneas <b>Cabecera</b>. Al seleccionar la opción <b>Reemplazar movimientos</b>, se eliminará cualquier 
+	valor que ya exista en las líneas <b>Cabecera</b>.</p>
+	`;
+
+	cuerpo.innerHTML= contenido;
+
+}
+/*===================
+Dimensiones
+===================*/
+let dimensiones = () =>{
+	let cuerpo = document.querySelector(".bodyContent");
+	let contenido = `
+	<h2 class="Subtitulos">Dimensiones</h2>  
+	<p class="parrafo">La funcionalidad de dimensiones le ayuda a responder a preguntas  relacionadas con sus negocios. Utilizando dimensiones de movimientos
+	registrados y de movimientos de presupuestos puede supervisar el comportamiento de unidades individuales (por ejemplo, un departamento 
+	responsable o una zona) y comparar su rendimiento con otras unidades (como cifras presupuestadas o de periodos anteriores).</p>
+	<p class="parrafo">Puede asegurarse de la coherencia de los datos si configura reglas para  las dimensiones. Determine la forma de combinación de las dimensiones 
+	para garantizar que reflejan las directivas de la empresa. También puede controlar la forma en la que funciona su negocio si define dimensiones 
+	predeterminadas. Las dimensiones predeterminadas pueden configurarse para todas las cuentas, incluidas las cuentas contables y las cuentas de
+	clientes y proveedores. Para cada valor predeterminado, puede definir  reglas de registro que determinan la forma en la que puede registrarse la 
+	información de la dimensión. Esto garantiza una entrada de datos más rápida y con menos errores. 
+	</p>
+	<p class="parrafo">Puede cambiar las dimensiones existentes para reflejar sus procesos 
+	empresariales: </p>
+	<div class="contentList">
+	<ul>
+	<li>puede nombrarlos de forma que reflejen las costumbres de creación de 
+	informes de la empresa y los requisitos de los empleados. </li>
+	<li>cuando ya no necesite una dimensión determinada, simplemente 
+	puede bloquear su uso.</li>
+	<li>puede estructurar valores en una jerarquía que refleje las estructuras 
+	de creación de informes existentes. </li>
+	<li>puede cambiar las dimensiones (o agregar nuevas) con la frecuencia 
+	que desee, sin cambiar la estructura contable. </li>    
+	</ul>
+	</div>
+	<p class="parrafo">Tradicionalmente, el análisis de la información financiera en la contabilidad era posible creando un plan de cuentas detallado con muchas cuentas. 
+	Con las capacidades analíticas de las dimensiones, puede reducir la necesidad de crear muchas cuentas detalladas en el plan de cuentas</p>
+	<p class="parrafo">Las dimensiones pueden ser una herramienta útil para una empresa que quiera obtener información adicional sobre sus datos financieros. Por ejemplo, las dimensiones se pueden utilizar para simplificar los análisis de los costes e ingresos registrados.</p>
+	<p class="parrafo">Una dimensión es el tipo de información que quiere agregar a su movimiento. Por ejemplo, el controlador de costes quiere analizar los gastos de cada departamento. En lugar de configurar cuentas de contabilidad general diferentes para cada departamento, se puede configurar una dimensión que se llame Departamento.</p>
+	<p class="parrafo">El valor de la dimensión es uno de los posibles valores de una dimensión que puede agregar a su movimiento. Por ejemplo, el controlador de costes puede configurar un valor de dimensión para cada departamento y que se llamen Ventas, Administración, etc. Cada dimensión puede tener una serie ilimitada de valores de dimensión que serían unidades secundarias de dicha dimensión.</p>
+	<p class="parrafo">El usuario define las dimensiones y los valores de dimensión y son ilimitados, lo que quiere decir que las dimensiones son personalizadas para cada empresa. Cuantas más dimensiones use, más detallados serán los informes sobre los que tomará decisiones para su negocio. Por ejemplo, un solo movimiento de ventas puede incluir varias informaciones de dimensión, como:</p>
+	<div class="contentList">
+	<ul>
+	<li>La cuenta en la que se ha registrado la venta del producto</li>
+	<li>Dónde (región) se ha vendido el producto</li>
+	<li>Quién vendió el producto</li>
+	<li>El tipo de cliente que compró el producto</li>
+	
+	</ul>
+	</div>
+	<p class="parrafo">Para crear manualmente nuevas dimensiones, siga los siguientes pasos:</p>
+	<ul>
+	<li><b>1.</b> Seleccione el icono Buscar página en la esquina superior derecha de la página, introduzca <b>dimensiones</b> y, a continuación, seleccione el vínculo relacionado.</li>
+	<li><b>2.</b> Seleccione <b>Nuevo</b>.</li>
+	<li><b>3.</b> En el campo <b>Código</b>, especifique un identificador único para la dimensión.</li>
+	<li><b>4.</b> En el campo <b>Nombre</b>, escriba el nombre completo de la dimensión.</li>
+	</ul>
+	<p class="parrafo">Además de los campos de Código y Nombre, la página de Dimensiones también incluye los siguientes campos:</p>
+	<div class="contentList">
+	<ul>
+	<li><b>Título de código:</b> determina el nombre del campo de un acceso directo a una dimensión. Si una dimensión se configura para que tenga acceso directo, esa dimensión se mostrará como un campo cuando introduzca las dimensiones en un diario o documento.
+
+	</li>
+	<li><b>Título de filtro:</b>  determina el nombre del campo del filtro de la dimensión cuando una dimensión se usa como filtro.</li>
+	<li><b>Descripción: </b> describe la dimensión para aclarar su propósito.</li>
+	<li><b>Bloqueado:</b> bloquea el registro de diarios que incluyen dimensiones específicas.</li>
+	</ul>
+	</div>
+	<div class="img-content2"><img src="img/dimensiones.PNG" alt=""></div>
+
+	<p class="parrafo">Después de crear una dimensión nueva, puede configurar los valores de dimensión. Por ejemplo, si ha creado una dimensión de departamento, puede configurar valores como Ventas, Administración o Producción. Una dimensión puede tener tantos valores como desee.</p>
+	<p class="parrafo">Para crear nuevos valores de dimensión, siga estos pasos:</p>
+	<ul>
+	<li><b>1.</b> Seleccione el icono Buscar página en la esquina superior derecha de la página, introduzca <b>dimensiones</b> y, a continuación, seleccione el vínculo relacionado.</li>
+	<li><b>2.</b> Seleccione la línea con la dimensión para la que quiere configurar nuevos valores de dimensión.</li>
+	<li><b>3.</b> En el menú de acciones, seleccione <b>Dimensión</b> y, después,<b>Valores de dimensión</b>.</li>
+	<li><b>4.</b> Añada información a los siguientes campos: <br>
+	<div class="contentList">
+	<ul>
+	<li><b>Código:</b>  proporciona un código único para el valor de la dimensión. </li>
+	<li><b>Nombre:</b> proporciona el nombre completo del valor de la dimensión.</li>
+	<li><b>Tipo de valor de dimensiones:</b>  determina cómo se utiliza un valor de dimensión cuando se registra. Al usar estos tipos, se puede configurar una relación jerárquica entre los valores de dimensiones. Business Central puede considerar algunos valores de dimensión secundarios con respecto a otros valores de dimensión. Las opciones de este campo son: <br>
+	<div class="contentList">
+	<ul>
+	<li><b>Estándar:</b> registro estándar de valores de dimensión.</li>
+	<li><b>Cabecera:</b>  la cabecera de un grupo de valores de dimensión.</li>
+	<li><b>Total:</b> el total de una serie de balances de valores de dimensión que no surgen inmediatamente antes del valor de dimensión total.</li>
+	<li><b>Inicio-Total:</b> un marcador para el principio de una serie de valores de dimensión que después se sumarán. Esta opción se usa de forma conjunta con el tipo de valor de dimensión <b>Fin-Total</b></li>
+	<li><b>Fin-Total:</b>  el total de una serie de valores de dimensión. Esta opción se usa de forma conjunta con el tipo de valor de dimensión <b>Inicio-Total</b>.</li>
+	</ul>
+	</div>
+	</li>
+	<p class="parrafo">Los registros solo pueden hacerse en valores de dimensión con un tipo de valor Estándar o Inicio-Total.</p>
+	<li><b>Sumatorio:</b> identifica el intervalo de un valor de dimensión o una lista de ellos que se usan para sumar los movimientos de los valores de dimensión mostrados en el campo para elaborar un saldo total. Las opciones de este campo son: <br>
+	<div class="contentList">
+	<ul>
+	<li>En blanco: si el Tipo de valor de dimensión es Estándar, Cabecera o Inicio-Total.</li>
+	<li>Rellenar manualmente: si el Tipo de valor de dimensión es Total (o Fin-Total).</li>
+	<li>Rellenar automáticamente: cuando la función de Indent. valores de dimensión se ejecuta o si se selecciona Fin-Total.</li>
+	</ul>
+	</div>
+	</li>
+	<li><b>Bloqueado:</b> bloquea el registro de diarios que incluyen valores de dimensión específicos.</li>
+	</ul>
+	</div>
+	</li>
+	</ul>
+	<div class="img-content2"><img src="img/dimensiones2.PNG" alt=""></div>
+	<p class="parrafo">Para acceder a la función <b>Indent. valores dimensión</b>, seleccione <b>Acciones > Funciones > Indent. valores dimensión</b>.</p>
+	<p class="parrafo">Los siguientes resultados se crean cuando usa la función <b>Indent. valores dimensión:</b></p>
+	<div class="contentList">
+	<ul>
+	<li>Se marcan todos los valores de dimensión entre Inicio-Total y el Fin-Total correspondiente en un nivel.</li>
+	<li>Se suman todos los valores de dimensión en el mismo rango y se actualiza el campo Sumatorio para cada Fin-Total.</li>    
+	</ul>
+	</div>
+	<h3>Crear Dimensiones Videotutorial</h3>
+	<iframe class="ifra" src="https://www.youtube.com/embed/K5PA0MFi15E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
+	<h3>Introducir dimensiones manualmente en un pedido de ventas Videotutorial</h3><br>
+	<iframe class="ifra" src="https://www.microsoft.com/es-es/videoplayer/embed/RE3wGXQ?postJsllMsg=true&autoCaptions=es-es"></iframe>
 
 	`;
 
@@ -496,7 +1715,184 @@ let cerrarPeriodoContable = () =>{
 
 }
 
-/*=================
+/*==========
+Modelo 340
+============*/
+let crearModelo340 = () =>{
+	let cuerpo = document.querySelector(".bodyContent");
+	let contenido = `
+	<h2 class="Subtitulos">Modelo 340</h2>
+	<p class="parrafo">El Informe <b>340</b> contiene información sobre facturas e impuestos emitidos o recibidos por su empresa en un período determinado y se basa en Fecha de IVA. El informe se genera en un formato que ha aprobado la administración fiscal. Este informe debe enviarse en el período de liquidación mensual o trimestral de la empresa, según el tamaño de la empresa.</p>
+	<p class="parrafo">El modelo <b>340</b> es una declaración informativa (por lo que no tendrás que pagar nada) donde se incluye el detalle de todas las facturas emitidas (las que haces a tus clientes) y las recibidas (las de tus gastos).
+	</p>
+	<p class="parrafo">Es obligatorio presentar el modelo 340 sólo si estás inscrito en el Régimen Especial de Devolución Mensual  (REDEME), es decir, aquellos que devuelven el IVA mensualmente.</p>
+	<p class="parrafo">Tendrás que hacerlo junto al modelo 303 IVA mensual que presentas todos los meses.</p>
+	<p class="parrafo">Este formulario es igual tanto para autónomos como para sociedades.</p>
+	<h3>Formato de archivo</h3>
+	<p class="parrafo">El formato de archivo del <b>informe 340</b> incluye un registro de deponente y al menos una de las facturas emitidas y facturas recibidas. La información de deponente se obtiene de la tabla Información empresa y del formulario de solicitud. Las facturas emitidas se obtienen de las empresas a las que se han vendido mercancías o servicios. La información de cliente se obtiene de la tabla Cliente. Las facturas recibidas se obtienen de las empresas a las que se han comprado mercancías o servicios. La información de proveedor se obtiene de la tabla Proveedor.</p>
+	<p class="parrafo"><b>Nota</b> <br> Si no hay ningún registro de formato, el archivo no se crea y se muestra un mensaje de error.</p>
+	<h3>Movimientos incluidos en el informe 340</h3>
+	<p class="parrafo">Los movimientos incluidos en el <b>informe 340</b> deben haberse registrado durante el ejercicio y el periodo que se ha indicado en el formulario de solicitud. Los movimientos que se incluyen en el informe de pagos en efectivo se pueden registrar del año anterior.</p>
+	<div class="contentList">
+	<ul>
+	<li>Facturas de ventas y abonos registrados.</li>
+	<li>Facturas de compras y abonos registrados.</li>
+	<li>Facturas de servicios y abonos registrados.</li>
+	<li>Autofacturas y autoabonos.</li>
+	<li>Pagos en efectivo.</li>
+	</ul>
+	</div> 
+	<p class="parrafo">Los movimientos del informe <b>Libro facturas emitidas</b> se deben incluir en el informe como facturas emitidas.</p>
+	<p class="parrafo">Los movimientos del informe <b>Libro facturas recibidas</b> se deben incluir en el informe como facturas recibidas.</p>
+	<h3>Restricciones del formato de archivo</h3>
+	<p class="parrafo">Antes de crear el informe 340, debe tener en cuenta las siguientes restricciones de formato de archivo:</p>
+	<div class="contentList">
+	<ul>
+	<li>Todos los importes se deben expresar en euros.</li>
+	<li>Todos los importes deben ser positivos. En los campos donde son posibles importes negativos, se indica N.</li>
+	<li>Todo el texto deber estar en mayúsculas.</li>
+	<li>Todos los campos alfanuméricos se deben alinear a la izquierda.</li>
+	<li>Todos los campos numéricos deben ir alineados a la derecha.</li>
+	<li>Los caracteres especiales se convierten a caracteres estándar.</li>
+	<li>Si no contienen ningún valor, los campos alfanuméricos se dejarán en blanco y los campos numéricos se rellenarán con ceros.</li>
+	</ul>
+	</div>
+	<h3>Plazos para presentar el modelo 340</h3>
+	<p class="parrafo">El modelo 340 es el modelo que acompaña al modelo 303 IVA mensual, así que <b>tendrás que presentarlo todos los meses</b>.</p>
+	<p class="parrafo">El plazo máximo para presentarlo finaliza los <b>días 20 de cada mes</b>, fecha en la que deberás presentar los datos del mes anterior.</p>
+	<p class="parrafo">Es decir, que en febrero deberás presentar los datos generados en enero, y así sucesivamente.</p>
+	<div class="img-content2"><img src="img/modelo340.png" alt=""></div>
+	<h3>Para crear el informe 340</h3>
+	<ul>
+	<li><b>1.</b> Elija el icono de busqueda, escriba <b>Modelo 340</b> y luego elija el enlace relacionado. <br>
+	<div class="img-content2"><img src="img/modelo340-1.PNG" alt=""></div>
+
+	</li>
+	<li><b>2.</b> En la ficha desplegable <b>Opciones</b> de la página <b>Modelo 340</b>, rellene los campos tal y como se describe en la tabla siguiente. <br>
+	<table class="tabla1">
+	<tr>
+	<th>Campo</th>
+	<th>Descripción</th>
+	</tr>
+	<tr>
+	<td>Ejercicio</td>
+	<td>Escriba el año fiscal para el que desea crear la declaración de la operación.</td>
+	</tr>
+	<tr>
+	<td>Mes</td>
+	<td>Seleccione el mes que desea incluir en la declaración.</td>
+	</tr>
+	<tr>
+	<td>Importe pago mín.</td>
+	<td>Escriba el importe que ha recibido en efectivo en la Cuenta para pagos en efectivo seleccionada. Importante: El campo está diseñado para realizar pagos en efectivo. El importe seleccionado decide la suma de los movimientos de cliente en el informe. Si el importe total facturado para un cliente por año es menor que el importe especificado en el campo, la suma de los movimientos de cliente no se incluye en el informe. Si el importe total facturado para un cliente por año es mayor que el importe especificado en el campo, la suma de los movimientos de cliente se incluye en el informe. Cuando exporte los datos a un archivo de declaración .txt, verá que el campo Cantidad recibida en efectivo en el archivo .txt de declaración contiene el importe acumulado de movimientos de clientes en una línea por año.</td>
+	</tr>
+	<tr>
+	<td>Cuenta para pagos en efectivo</td>
+	<td>Seleccione uno o más en cuentas de contabilidad para incluir solo los movimientos que se registran en cuentas de contabilidad filtradas en el informe. Importante: El campo está diseñado para realizar pagos en efectivo. Cuando exporte los datos a un archivo de declaración .txt, verá que el campo Cantidad recibida en efectivo en el archivo .txt de declaración contiene el valor acumulado para las cuentas seleccionadas. Si no selecciona ninguna cuenta contable, no se crearán líneas del tipo 2 para pagos en efectivo.</td>
+	</tr>
+	<tr>
+	<td>Nombre contacto</td>
+	<td>Introduzca el apellido y el nombre de la compañía que está creando la declaración de operaciones.</td>
+	</tr>
+	<tr>
+	<td>Número de teléfono</td>
+	<td>Introduzca el número de teléfono de la compañía que está creando la declaración de operaciones.</td>
+	</tr>
+	<tr>
+	<td>Grupos reg. prod. gen. no deduc.</td>
+	<td>Seleccione el grupo contable de producto. Los grupos de registro seleccionados se consideran como IVA no deducible.</td>
+	</tr>
+	<tr>
+	<td>Nº modelo</td>
+	<td>Introduzca el número para identificar la declaración de operaciones.</td>
+	</tr>
+	<tr>
+	<td>Código electrónico</td>
+	<td>Especifique el código electrónico que proporciona la administración fiscal.</td>
+	</tr>
+	<tr>
+	<td>Tipo de medio modelo</td>
+	<td>Seleccione el tipo de medio del modelo.</td>
+	</tr>
+	<tr>
+	<td>Modelo de sustitución</td>
+	<td>Seleccione si se trata de una sustitución de una declaración anteriormente registrada.</td>
+	</tr>
+	<tr>
+	<td>Número de modelo anterior</td>
+	<td>Escriba el número de modelo anterior si la opción Modelo de sustitución está activada.</td>
+	</tr>
+	</table>
+	</li>
+	<li><b>3.</b> Seleccione los filtros apropiados y, a continuación, elija el botón <b>Aceptar</b>. Se creará el archivo de texto del Informe 340 en la ruta especificada. <br> 
+	<div class="img-content2"><img src="img/modelo340-2.PNG" alt=""></div>
+
+	</li>
+	</ul>
+	<h3>Sanciones del modelo 340</h3>
+	<p class="parrafo">La sanción consistirá en una multa pecuniaria fija de <b>20 euros por cada dato</b> o conjunto de datos referidos a una misma persona o entidad que hubiera debido incluirse en la declaración con un mínimo de 300 euros y un máximo de 20.000 euros.</p>
+	<p class="parrafo">El impacto sobre la economía de tu negocio que puede tener una presentación fuera de plazo de este modelo es muy importante.</p>
+	<p class="parrafo">Estás obligado a aportar  <b>todas las facturas y documentos</b> que justifiquen tus ingresos y gastos en el plazo indicado.</p>
+	<p class="parrafo">Al estar inscrito en devolución de IVA mensual es obligatorio presentar el modelo 303 y el modelo 340 de forma telemática a través de la página de la Agencia Tributaria.</p>
+
+	`;
+
+	cuerpo.innerHTML= contenido;
+
+}
+/*================
+Modelo SII
+==============*/
+let modeloSii = () =>{
+	let cuerpo = document.querySelector(".bodyContent");
+	let contenido = `
+	<h2 class="Subtitulos">Suministro Inmediato de Información (SII)</h2>
+	<p class="parrafo">La transformación digital es una realidad. En pocos años hemos visto como las nuevas tecnologías han revolucionado la forma en la que las organizaciones interactúan, se comunican y desarrollan su actividad económica. En este sentido, las administraciones fiscales no podían quedarse atrás y su respuesta ha sido el <strong>Suministro Inmediato de Información (SII)</strong>.</p>
+	<p class="parrafo">El SII surge de la necesidad de agilizar los procesos de gestión del IVA, adaptándola al entorno digital. La digitalización de los impuestos permitirá, además, luchar contra el fraude de manera más efectiva.</p>
+	<h3>¿Qué es el Suministro Inmediato de Información (SII)?</h3>
+	<p class="parrafo">El Suministro Inmediato de Información (SII) es el nuevo sistema de tramitación del IVA, desarrollado por la Agencia Tributaria (AEAT), para la gestión electrónica de los libros registro del Impuesto sobre el Valor Añadido.</p>
+
+	<p class="parrafo">Este nuevo sistema obliga a suministrar la información relativa a los registros de facturación (expedidas y recibidas) a través de la Sede Electrónica de la Agencia Tributaria en un plazo máximo de cuatro días, incluidas las facturas simplificadas. El plazo se ampliará a 8 días para aquellas organizaciones cuyas facturas sean emitidas por un tercero autorizado.</p>
+	<h3>¿Para qué empresas es obligatorio el SII?</h3>
+	<p class="parrafo">En una primera fase, el nuevo sistema SII será de carácter obligatorio para aquellas organizaciones que actualmente tienen obligación de autoliquidar el <b>IVA de forma mensual:</b></p>
+	<div class="contentList">
+	<ul>
+	<li>Grandes empresas (facturación superior a 6 millones de euros).</li>
+	<li>Empresas inscritas en grupos de IVA.</li>
+	<li> Empresas inscritas en el Régimen de Devolución Mensual del IVA (REDEME).</li>
+	<li>Todas aquellas empresas que, voluntariamente, decidan sumarse a este nuevo sistema telemático de gestión del IVA.</li>
+	</ul>
+	</div>
+	<h3>Configurar SII para informes de IVA</h3>
+	<p class="parrafo">Business Central admite los requisitos del SII españoles para la declaración del IVA (suministro de información inmediato).</p>
+	<p class="parrafo">Para configurar el SII se debe realizar los siguientes pasos: </p>
+	<ul>
+	<li><b>1.</b> Elija el icono de busqueda que abre la función Dígame. , escriba <b>Configuración de SII</b> y luego elija el enlace relacionado.</li>
+	<li><b>2.</b> En la ficha desplegable <b>General</b>, seleccione el campo <b>Habilitado</b>. <br> El campo <b>Habilitado</b> se selecciona automáticamente si importa un certificado en el campo Código de certificado en la ficha desplegable <b>Certificado</b>. <br> 
+	<div class="img-content2"><img src="img/SII.PNG" alt=""></div>
+	</li>
+	<li><b>3.</b> En el campo <b>Fecha operación</b>, especifique si desea utilizar Fecha registro o Fecha emisión documento como fecha de operación en el archivo XML que se envía a través del SII a las autoridades fiscales.</li>
+	<li><b>4.</b> Si desea enviar documentos en lotes, seleccione el campo Habilitar envío de lotes.</li>
+	<li><b>5.</b> Configure los otros campos, importe un certificado válido y especifique los puntos finales relevantes con la URL de destino. Pase el cursor sobre un campo para leer una breve descripción.</li>
+	</ul>
+	<h3>Umbral de envíos de lotes de proyectos</h3>
+	<p class="parrafo">Si desea utilizar el envío automático por lotes, el campo Umbral de envío de lotes de proyectos especifica el número de umbral de documentos con el estado Pendiente y eso activará un envío automático por lotes.</p>
+	<p class="parrafo"><b>Nota</b> <br>
+	Los campos <b>Habilitado y Envíos de lotes habilitados</b> deben seleccionarse para que el valor de umbral tenga efecto.
+	</p>
+	<p class="parrafo">Si el umbral se establece en 0, los documentos se enviarán cuando se registren.</p>
+	<p class="parrafo">Si el umbral se establece en 1 o más, los documentos se envían automáticamente en lotes. Si el número de entradas pendientes supera el valor del umbral, todas las entradas pendientes se envían automáticamente.</p>
+	<p class="parrafo">Siempre puede enviar documentos manualmente con un estado Pendiente eligiendo las acciones <b>Reintentar</b> o <b>Reintentar</b>  todo de la página <b>Historial SII</b> .</p>
+	<h3>Videotutorial como Configurar SII</h3>
+	<iframe class="ifra" src="https://www.youtube.com/embed/00mcDZSTyu0" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	`;
+
+	cuerpo.innerHTML= contenido;
+
+}
+
+/*=============
 Resumen Ventas
 ==============*/
 let resumenVentas = () =>{
@@ -852,8 +2248,8 @@ let crearPlantillaCliente = () =>{
 
 
 /*=====================
-		Clientes
-		=====================*/
+Clientes
+=====================*/
 let crearCliente = () =>{
 	let cuerpo = document.querySelector(".bodyContent");
 	let contenido = `
@@ -948,8 +2344,8 @@ let configTerminosPagos = () =>{
 
 }
 /*=======================
-	Pago Proveedores
-	============================*/
+Pago Proveedores
+============================*/
 
 let pagoProveedores = () =>{
 	let cuerpo = document.querySelector(".bodyContent");
@@ -988,9 +2384,9 @@ let pagoProveedores = () =>{
 	cuerpo.innerHTML= contenido;
 
 }
-	/*=====================
-		Pago Clientes
-		==========================*/
+/*==============
+Pago Clientes
+================*/
 
 let pagoCliente = () =>{
 	let cuerpo = document.querySelector(".bodyContent");
@@ -1181,6 +2577,158 @@ let pagoSepa = () =>{
 	cuerpo.innerHTML= contenido;
 
 }
+/*=======================
+Cartera de pagos y cobros
+==========================*/
+let carterapagos = () =>{
+	let cuerpo = document.querySelector(".bodyContent");
+	let contenido = `
+	<h2 class="Subtitulos">Cartera  de pagos</h2>
+	<p class="parrafo">En Dynamics 365 Business Central, los pagos recibidos de los clientes se registran en el recibo de cobro, que se registra en la contabilidad, el banco, el cliente, el proveedor y las cuentas de activos fijos. Puede aplicar el pago a una o varias entradas del Debe cuando se contabiliza el pago o puede aplicar desde las entradas contabilizadas más tarde.</p>
+	<p class="parrafo">Los pagos a proveedores se crean y registran en el diario de pagos. El diario de pagos es un diario general que se optimiza para realizar pagos e incluye varias funciones e informes potentes como la función Proponer pagos a proveedores que encuentra los pagos del proveedor vencidos y el informe Proveedor - Pagos por periodos que muestra una visión general de pagos de proveedor pendientes.</p>
+	<p class="parrafo">El módulo Cartera permite utilizar documentos específicos, como letras de cambio y pagarés, para administrar pagos de clientes y proveedores.</p>
+	<p class="parrafo">El módulo Cartera se puede utilizar para administrar transacciones efectuadas con diferentes unidades financieras, en función de:</p>
+	<div class="contentList">
+	<ul>
+	<li>Tipo de documento</li>
+	<li>Coste</li>
+	<li>Límite de crédito</li>
+	</ul>
+	</div>
+	<p class="parrafo">Los saldos se conservan en la divisa local y original.</p>
+	<p class="parrafo">El módulo Docs. cartera a cobrar permite administrar las facturas generadas a partir de facturas de ventas. Los documentos se pueden administrar por:</p>
+	<div class="contentList">
+	<ul>
+	<li>Fecha de vencimiento</li>
+	<li>Banco</li>
+	<li>Valor</li>
+	<li>Tipo de Documento</li>
+	<li>Divisa</li>
+	</ul>
+	</div>
+	<p class="parrafo">Mediante el <b>Diario Cartera</b> se pueden crear facturas manualmente. También se puede utilizar el módulo Docs. cartera a cobrar para administrar todas las facturas de ventas que la empresa proporciona a una entidad de factoring.</p>
+	<h3>Videotutorial  Business Central - Diario Cartera Cobros y Pagos </h3>
+	<iframe class="ifra" src="https://www.youtube.com/embed/Qhtv-_gT8x0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<h3>Remesas</h3>
+	<p class="parrafo">Mediante el módulo Docs. cartera a cobrar, se pueden administrar remesas y remesas de descuento en la divisa local u original.</p>
+	<p class="parrafo">Existen diferentes criterios para agrupar documentos en una remesa. Se pueden agrupar documentos girados para el mismo cliente, se pueden agrupar documentos que tengan la misma fecha de vencimiento, documentos girados en la misma plaza, etc. Pueden agruparse en una remesa uno o más documentos a cobrar.</p>
+	<p class="parrafo">Una remesa se compone de uno o varios documentos que se agrupan para su entrega a un banco. Se puede enviar al cobro o descuento.</p>
+	<p class="parrafo">Si se envían al cobro, el banco sólo es responsable de procesar el cobro de los documentos en la fecha de vencimiento.</p>
+	<p class="parrafo">Si la remesa se envía al descuento, el banco avanzará el importe de la remesa (o una parte de este, en el caso de factoring) a la empresa y será responsable de cobrar en las fechas de vencimiento de los documentos que forman la remesa.</p>
+	<p class="parrafo">Una remesa de facturas se puede enviar a una entidad de crédito (factor) para factoring con recurso (la empresa cubre el riesgo de insolvencia) o factoring sin recurso (el factor cubre el riesgo de insolvencia).</p>
+	<p class="parrafo">Las remesas incluyen:</p>
+	<div class="contentList">
+	<ul>
+	<li>Administración de intereses al cobro o descuento</li>
+	<li>Intereses de facturas devueltas</li>
+	<li>Interés al descuento</li>
+	</ul>
+	</div>
+	<p class="parrafo">Con el módulo Docs. cartera a cobrar, se pueden proporcionar créditos o factoring de remesas de facturas de ventas, incluido el cálculo de intereses de la entidad de factoring. Se puede solicitar el valor anticipado de las facturas proporcionadas o sólo la administración del cobro.</p>
+	<p class="parrafo">Se pueden utilizar remesas para:</p>
+	<div class="contentList">
+	<ul>
+	<li>Factoring sin recurso: la entidad de factoring asume los riesgos asociados con el no-pago.</li>
+	<li>Factoring con recurso: usted asume los riesgos asociados con el no-pago.</li>
+	</ul>
+	</div>
+	<h3>Videotutorial gestión de Remesas y Cobros</h3>
+	<iframe class="ifra" src="https://www.youtube.com/embed/5nVFMTo8lMw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<h3>Aplicar pagos</h3>
+	<p class="parrafo">Cuando reciba el cobro de un cliente o pague a un proveedor, debe decidir si desea que se aplique el pago para cerrar uno o más movimientos abiertos de débito o de crédito. Puede especificar el importe que desee aplicar.
+	Por ejemplo, puede aplicar pagos parciales a los movimientos de cliente. Cerrar los movimientos de cliente y de proveedor garantiza que la información, como estadísticas de cliente y proveedor, extractos de cuenta e intereses, es correcta.</p>
+	<p class="parrafo">Puede aplicar los movimientos de cliente y de proveedores de varias formas:</p>
+	<div class="contentList">
+	<ul>
+	<li>Introduciendo información en ventanas específicas, como Diario cobros, Diario de pagos y Diario de conciliación de pagos</li>
+	<li>Desde documentos de abono de venta</li>
+	<li>Desde movimientos de cliente y de proveedores, después de que los documentos de venta se hayan registrado pero no se hayan aplicado</li>
+	</ul>
+	</div>
+	<p class="parrafo">Entre las formas en las que puede aplicar los movimientos de cliente y de proveedores, se incluyen:</p>
+	<div class="contentList">
+	<ul>
+	<li>Aplicar un pago a un único movimiento de cliente o de proveedores</li>
+	<li>Aplicar un pago a varios movimientos de cliente o de proveedores</li>
+	<li>Aplicar movimientos registrados de cliente o de proveedores</li>
+	<li>Corregir una aplicación de los movimientos de cliente o de proveedores</li>
+	</ul>
+	</div>
+	<p class="parrafo">Los siguientes pasos usan como ejemplo clientes en el diario de cobros, pero se pueden aplicar las mismas funciones a los diarios de pagos de proveedores.</p>
+	<p class="parrafo">Para aplicar un pago a un único movimiento de cliente, siga estos pasos:</p>
+	<ul>
+	<li><b>1.</b> Seleccione el icono <b> Buscar página</b> en la esquina superior derecha de la página, introduzca <b>diarios de recibos de efectivo</b> y, a continuación, seleccione el vínculo correspondiente.</li>
+	<li><b>2.</b> Seleccione la acción Editar diario.</li>
+	<li><b>3.</b> En la primera línea del diario, especifique la información pertinente sobre el movimiento a aplicar.</li>
+	<li><b>4.</b> En el campo <b>Tipo de documento</b>, introduzca <b>Pago</b>.</li>
+	<li><b>5.</b> En el campo <b>Tipo de cuenta</b>, introduzca <b>Cliente</b>.</li>
+	<li><b>6.</b> En el campo <b>Tipo de cuenta de contrapartida</b>, introduzca <b>Banco</b>.</li>
+	<li><b>7.</b> En el campo <b>Se aplica al N.º documento</b>, seleccione el campo para abrir la página  <b>Aplicar movimientos de cliente</b>.</li>
+	<li><b>8.</b> En la página <b>Aplicar movimientos de cliente</b>, seleccione el movimiento para aplicar el pago. <br>
+	<div class="img-content2"><img src="img/cartera1.PNG" alt=""></div>
+
+	</li>
+	<li><b>9.</b> En el campo <b>Importe a aplicar</b>, introduzca el importe que desea aplicar al movimiento. Si no especifica un importe, se aplica el importe máximo. <br>
+	En la parte inferior de la página <b>Aplicar movimientos de cliente</b>, puede ver el importe específico en el campo <b>Importe aplicado</b> y si aplicación se compensa.
+	</li>
+	<li><b>10.</b> Haga clic en el botón <b>Aceptar</b>. La página <strong>Diario de cobros</strong>  ahora muestra el movimiento que ha seleccionado como se introdujo en los 
+	campos <b>Se aplica al tipo de documento</b> y <b>Se aplica al n.º documento</b>. <br>
+	<div class="img-content2"><img src="img/cartera2.PNG" alt=""></div>
+
+	</li>
+	<li><b>11.</b> Registrar el diario de cobros. <br>
+	<div class="img-content2"><img src="img/cartera3.PNG" alt=""></div>
+	</li>
+	</ul>
+	<h3>Desliquidar movimientos de clientes y proveedores</h3>
+	<p class="parrafo">Cuando corrige una liquidación, se crean y registran movimientos correctores idénticos a los originales pero con el signo opuesto en el campo de 
+	importe para todos los movimientos, incluido cualquier registro en la contabilidad que se derive de la liquidación, como descuento por pronto pago y pérdidas/ganancias 
+	por cambio de divisa. Los movimientos cerrados por la liquidación se abren de nuevo.</p>
+	<p class="parrafo">Para desliquidar movimientos de clientes, siga estos pasos:</p>
+	<ul>
+	<li><b>1.</b> Seleccione el icono Buscar página en la esquina superior derecha de la página, escriba <b>clientes</b> y luego elija el vínculo relacionado.</li>
+	<li><b>2.</b> Abra la ficha de cliente correspondiente.</li>
+	<li><b>3.</b> Seleccione la acción <b>Movimientos</b>.</li>
+	<li><b>4.</b> Seleccione el movimiento que corresponda y, a continuación, seleccione la acción <b>Desliquidar movs</b>.</li>
+	<li><b>5.</b> Como alternativa, seleccione la acción <b>Movimiento detallado</b>.</li>
+	<li><b>6.</b> Seleccione el movimiento de liquidación y, a continuación, seleccione la acción <b>Desliquidar movs</b>.</li>
+	<li><b>7.</b> Rellene los campos del encabezado y, a continuación, seleccione la acción <b>Desliquidar</b>.</li>
+	</ul>
+	<p class="parrafo">Como resultado, Business Central crea nuevos movimientos detallados de cliente que abrirán de nuevo el movimiento de cliente cerrado.</p>
+	<div class="img-content2"><img src="img/cartera4.PNG" alt=""></div>
+	<h3>Procesar registros de pago</h3>
+	<p class="parrafo">Cuando sus clientes hayan realizado pagos a su cuenta bancaria electrónica, debe aplicar cada importe pagado al documento de ventas relacionado y 
+	luego el pago para actualizar los movimientos de clientes, de contabilidad general y de banco. En función de sus necesidades de negocio, puede recibir pagos y registrar 
+	ese pago de diferentes maneras: de forma manual, automática y mediante servicios de pago.</p>
+
+	<p class="parrafo">La página <b>Registrar pagos de clientes</b> está diseñada para ayudarlo en las tareas relacionadas con el equilibrio de las cuentas internas mediante
+	el uso de cifras de efectivo reales para asegurarse de que los pagos se cobren de manera eficiente a los clientes. Esta herramienta de procesamiento de pagos le permite 
+	comprobar y registrar rápidamente pagos individuales o de suma global, procesar pagos con descuento y encontrar documentos impagados específicos para los cuales se realiza el 
+	pago.</p>
+	<p class="parrafo">Los pagos para diferentes clientes con distintas fechas de pago deben registrarse como pagos individuales. Los pagos para el mismo cliente que tienen la misma 
+	fecha de pago se pueden registrar como un pago de suma global. Esto es útil, por ejemplo, cuando un cliente ha realizado un solo pago que cubre varias facturas de venta.</p>
+	<h3>Registrar pagos de cliente</h3>
+	<p class="parrafo">Si desea registrar rápidamente un pago de un cliente, puede abrir la página <b>Registrar pagos de clientes</b> en las páginas <b>Clientes</b> y <b>Ficha cliente</b> donde se filtra automáticamente para el cliente especificado. Para obtener acceso a la página Registrar pagos de cliente en la lista de clientes, seleccione <b>Proceso</b> y, a continuación, <b>Registrar pagos de cliente</b> .</p>
+	<div class="img-content2"><img src="img/cartera5.png" alt=""></div>
+	<p class="parrafo">Si desea registrar pagos de varios clientes, también puede abrir la página Registrar pagos de cliente para mostrar todos los documentos registrados para los que se puede registrar un pago siguiendo estos pasos:</p>
+	<ul>
+	<li><b>1.</b> Seleccione el icono Buscar página en la esquina superior derecha de la página, escriba <b>registrar pagos de cliente</b> y luego elija el vínculo relacionado.</li>
+	<li><b>2.</b> Seleccione la opción <b>Pago realizado</b>  en la línea que representa el documento registrado para el que se ha realizado un pago. Si la opción Rellenar <b>fecha recepción automática</b> está seleccionada en la página <b>Configuración de registro de pago</b>, la fecha de trabajo se introduce en el campo <b>Fecha de recepción</b>.</li>
+	<li><b>3.</b> En el campo <b>Fecha de recepción</b>, introduzca la fecha en que se realizó el pago. Esta fecha puede ser diferente a la fecha de trabajo.</li>
+	<li><b>4.</b> En el campo <b>Importe recibido</b>, introduzca el importe que se ha pagado. Para pagos completos, este es el mismo que el importe del campo <b>Importe pendiente</b> de la línea. Para pagos parciales, este inferior que el importe del campo Importe pendiente de la línea.</li>
+	<li><b>5.</b> Repita los pasos del 2 al 4 para otras líneas que representan documentos registrados para los que se realizan pagos.</li>
+	<li><b>6.</b> Elija <b>Registrar pagos</b> para registrar los pagos.</li>
+	</ul>
+	<div class="img-content2"><img src="img/cartera6.PNG" alt=""></div>
+	<p class="parrafo">La información de pago se registra para documentos representados por líneas donde la opción Pago realizado está seleccionada. Los movimientos de pagos se registran en la contabilidad general, el banco y las cuentas de los clientes. Cada pago se aplica al documento de venta registrado.</p>
+	<p class="parrafo">Cuando desee registrar varios pagos para el mismo cliente que tienen la misma fecha de pago, puede registrarlos como un pago de suma total seleccionando la acción Registrar como pago total.</p>
+
+	`;
+
+	cuerpo.innerHTML= contenido;
+
+}
+
 	/*===========================
 	Planificación de Almacenes
 	===========================*/
@@ -1459,9 +3007,9 @@ let crearArticulo = () =>{
 	cuerpo.innerHTML= contenido;
 
 }
-	/*=====================
-		Compras
-		======================*/
+/*==========
+Compras
+===========*/
 let compras = () =>{
 	let cuerpo = document.querySelector(".bodyContent");
 	let contenido = `
@@ -1544,16 +3092,13 @@ let compras = () =>{
 	documento externo al navegar en las entradas del libro mayor de proveedores.</p>
 	<p class="parrafo">Una forma diferente de manejar números de documentos externos es usar el campo <b>Su referencia</b>. Si utiliza el campo Su referencia , el número se incluirá en los 
 	documentos publicados y podrá buscarlo de la misma manera que para los valores de los campos <b>Número de documento externo</b>. Pero el campo no está disponible en las líneas de diario.</p>
-
-
 	`;
 
 	cuerpo.innerHTML= contenido;
-
 }
-	/*==============================
-		Crear Oferta de Compra
-		==============================*/
+/*=====================
+Crear Oferta de Compra
+=======================*/
 let crearCompra = () =>{
 	let cuerpo = document.querySelector(".bodyContent");
 	let contenido = `
@@ -1573,7 +3118,6 @@ let crearCompra = () =>{
 	<li><b>4.</b> En la página Seleccionar una plantilla para un proveedor nuevo, seleccione una plantilla y, a continuación, seleccione el botón <b>Aceptar</b>. Se abre una nueva <b>Ficha proveedor</b>, previamente rellenada con la información de la plantilla de proveedor seleccionada. El campo <b>Nombre</b>  contiene el nombre del nuevo proveedor que introdujo en la oferta de compra. Puede seguir rellenando los campos restantes en la ficha de proveedor. Cuando haya rellenado la ficha del proveedor, seleccione el botón <b>Aceptar</b> para volver a la página <b>Oferta de compra</b>.</li>
 	<li><b>5.</b> Varios campos de la página <b>Oferta de compra</b> se rellenan ahora con la información de la nueva ficha del proveedor. Rellene los campos restantes en la ficha <b>General</b>, según sea necesario. Por ejemplo, puede modificar la fecha de pedido y agregar la fecha de recepción solicitada como una fecha en que desea que el proveedor entregue a la dirección de envío. <br><br>
 	<div class="img-content2"><img src="img/compra2.PNG" alt=""></div>
-
 	</li>
 	<li><b>6.</b> Ahora puede rellenar las líneas Oferta de compra con artículos de inventario o servicios que solicita de un proveedor.</li>
 	<li><b>7.</b> En la ficha desplegable Líneas, en el campo N.º, introduzca el número de un producto o servicio de inventario (si el valor del campo Tipo de esta línea es Producto). En el campo <b>Cantidad</b>, especifique el número de artículos que desea solicitar.</li>
@@ -1591,7 +3135,6 @@ let crearCompra = () =>{
 	`;
 
 	cuerpo.innerHTML= contenido;
-
 }
 /*===================
  Crear factura de compra		
@@ -1732,7 +3275,7 @@ let confPrecioCompra = () =>{
 	Los agentes de compras pueden explorar estos precios especiales y obtener una vista previa de cómo se debe cambiar la línea o el 
 	pedido de compra para poder optar al mejor precio.</p>
 	<p class="parrafo">El siguiente procedimiento muestra cómo configurar un precio de compra para una cantidad mínima de diez piezas
-	 del producto 1908-S del proveedor 30000:</p>
+	del producto 1908-S del proveedor 30000:</p>
 	<ul>
 	<li><b>1.</b> Seleccione el icono <b>Buscar</b> página en la esquina superior derecha de la página, introduzca Productos y, a 
 	continuación, elija el vínculo relacionado.</li>
@@ -1749,11 +3292,9 @@ let confPrecioCompra = () =>{
 	<p class="parrafo">Business Central ofrece ayuda sobre precios y descuentos para que los agentes de compras puedan alcanzar el 
 	objetivo de siempre obtener el mejor precio para los productos adquiridos. Esta ayuda a menudo tiene como consecuencia la 
 	reducción de los costes de los pedidos y de los costes de los bienes vendidos.</p>
-
 	`;
 
 	cuerpo.innerHTML= contenido;
-
 }
 
 /*========================
@@ -1814,10 +3355,10 @@ let crearProveedor = () =>{
 	<p class="parrafo"><b>Nota</b><br>Puede cambiar el Número de cuenta bancaria internacional (IBAN) en una cuenta bancaria de proveedor sin que el cambio afecte sus entradas
 	históricas de registro de transferencias de crédito. Las entradas del registro de transferencias de crédito almacenan el IBAN del destinatario y el número de cuenta bancaria del
 	destinatario especificados en los campos Cuenta bancaria del proveedor y Nombre del destinatario de la página Tarjeta del proveedor cuando se crearon las entradas.</p>
-	<p class="parrafo">Videotutorial como crear nuevo proveedor , <a href="https://www.microsoft.com/en-us/videoplayer/embed/RE3PZtd?rel=0&postJsllMsg=true">aquí</a>.</p>
+	<h3>Videotutorial como crear nuevo proveedor </h3>
+	<iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE3PZtd?rel=0&postJsllMsg=true" class="ifra"></iframe>	
 
 	`;
-
 	cuerpo.innerHTML= contenido;
 
 }
@@ -1888,9 +3429,9 @@ let recursosHumanos = () =>{
 
 }
 
-	/*==========================
-		Registrar Empleados
-		========================*/
+/*===================
+Registrar Empleados
+=====================*/
 
 let registroEmpleado = () =>{
 	let cuerpo = document.querySelector(".bodyContent");
@@ -2068,128 +3609,217 @@ let permisosUsuarios = () =>{
 	<br>
 	<p class="parrafo">Videotutorial de Perfiles roles y permisos en Business Central</p>
 	<iframe class="ifra" src="https://www.youtube.com/embed/DH4LBo99Ero" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<h3>Video de Gestión de usuarios, roles y permisos en Business Central</h3>
+	<iframe class="ifra" src="https://www.youtube.com/embed/wfW2V1EG1bI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	`;
+	cuerpo.innerHTML= contenido;
+}
+/*===========
+Intrastat
+=============*/
+let intrastatconfig = () =>{
+	let cuerpo = document.querySelector(".bodyContent");
+	let contenido = `
+	<h2 class="Subtitulos">Qué es Intrastat ?</h2>
+	<p class="parrafo">Intrastat es el sistema por el cual se recogen estadísticas de tráfico de mercancías entre los países de la Unión Europea. Comenzó a operar el 1 de enero de 1993, cuando reemplazó a las declaraciones de aduana como fuente de estadística comercial dentro de la Unión</p>
+	<h2 class="Subtitulos">Trabajar con informes de Intrastat</h2>
 
+	<p class="parrafo">Todas las empresas de la Unión Europea (UE) deben emitir informes sobre sus transacciones comerciales con otros países o regiones de la UE. Debe notificar el movimiento de mercancías al organismo de estadística de su país o región todos los meses, y el informe se debe remitir a las autoridades fiscales. Intrastat es el sistema para recopilar estadísticas comerciales de bienes dentro de estos países/regiones. Usa el Informe intrastat para completar informes periódicos de Intrastat (generalmente mensuales), recopilar, registrar e informar el comercio de bienes de acuerdo con la legislación del gobierno local.</p>
+	<p class="parrafo">Los informes de Intrastat se basan en las normas básicas de la UE que se aplican a todos los países; sin embargo, en la práctica, existen algunas diferencias dentro de los países individuales. Cada país tiene sus reglas sobre qué y cómo informar exactamente.</p>
+	<p class="parrafo"><b>Importante</b> <br>Este artículo describe la nueva experiencia Intrastat disponible en Business Central a partir del segundo lanzamiento de versiones de 2022, que incluye funciones ampliadas y debe estar activado para las empresas existentes. Póngase en contacto con su administrador para activar y configurar la nueva capacidad.
+	</p>
+	<h3>Video Introducción Intrastat</h3>
+	<iframe class="ifra" src="https://www.youtube.com/embed/_3bhowTTc0U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<h3>Habilitar la nueva experiencia de Intrastat</h3>
+
+	<p class="parrafo">En el segundo lanzamiento de versiones de 2022, Business Central incluye una experiencia de Intrastat rediseñada con funciones ampliadas. Si la nueva funcionalidad de Intrastat no está habilitada en su entorno, un administrador puede habilitarla manualmente en la página <b>Gestión de características</b>.</p>
+	<ul>
+	<li><b>1.</b> Elija el icono busqueda que abre la característica Dígame. , escriba <b>Administración de características</b> y luego elija el enlace relacionado.
+	</li>
+	<li><b>2.</b> En la página <b>Administración de características</b>, seleccione la línea <b>Actualización de características</b> : reemplazar la funcionalidad de Intrastat existente por la nueva extensión de Intrastat. Obtenga más información sobre la administración de características en <a href="https://learn.microsoft.com/es-es/dynamics365/business-central/dev-itpro/administration/feature-management">Habilitar las próximas funciones de antemano</a>, en el contenido de la administración.</li>
+	<li><b>3.</b> En la columna Habilitar para, elija Todos los usuarios.</li>
+	<li><b>4.</b> Lea la explicación de cómo se actualizará el sistema y elija <b>Sí</b> si está de acuerdo.</li>
+	<li><b>5.</b> Seleccione Siguiente y obtendrá una configuración básica para Intrastat. Obtenga más información sobre la configuración de Intrastat en la sección <a href="https://learn.microsoft.com/es-es/dynamics365/business-central/finance-how-setup-report-intrastat#intrastat-configuration">Configuración Intrastat</a>.</li>
+	<li><b>6.</b> Después de terminar la configuración, elija <b>Finalizar</b> para comenzar a utilizar la nueva experiencia de Intrastat. <br>
+	<div class="img-content2"><img src="img/intrastat1.PNG" alt=""></div>
+	</li>
+	</ul>
+	<p class="parrafo nota-importante" ><strong>Importante</strong> <br> 
+	Tenga en cuenta que no puede usar experiencias antiguas y nuevas en paralelo. Antes de activar la extensión en un entorno de producción, se recomienda que primero habilite y pruebe esta función con una copia de los datos de producción en un entorno de pruebas aislado antes de hacerlo en un entorno de producción. Una vez que active una nueva experiencia de usuario en el entorno de producción, no podrá volver a la antigua funcionalidad de Intrastat.
+	</p>
+	<p class="parrafo nota-solo"><b>Nota</b> <br>
+	Dependiendo de la ubicación de su empresa, habilitar la función descrita anteriormente será suficiente. Para los países con características específicas para los informes Intrastat, debe habilitar la aplicación Intrastat específica del país además de la extensión principal.
+	</p>
+	<h3>Configuración de informes de Intrastat</h3>
+	<p class="parrafo">La página <b>Configuración de informes de Intrastat</b>  se utiliza para habilitar los informes de Intrastat y establecer sus valores predeterminados. Puede especificar si necesita elaborar informes de Intrastat a partir de envíos (despachos), recibos (llegadas), o ambos, según los umbrales establecidos por sus regulaciones locales. También se pueden establecer naturalezas de transacción predeterminadas para documentos normales y de devolución, que se utilizan para la naturaleza de los informes de transacción</p>
+	<p class="parrafo">Para configurar los informes Intrastat:</p>
+	<ul>
+	<li><b>1.</b> Elija el icono busqueda que abre la característica Dígame. , escriba <b>Configuración de informes de Intrastat</b> y luego elija el enlace relacionado. <br> 
+	<div class="img-content2"><img src="img/intrastat2.PNG" alt=""></div>
+	</li>
+	<li><b>2.</b> Abra la ficha desplegable General y rellene los campos según sea necesario. Pase el cursor sobre un campo para leer una breve descripción. La siguiente tabla describe algunos de los campos clave: <br>
+	<table class="tabla1">
+	<tr>
+	<th>Campo</th>
+	<th>Descripción</th>
+	</tr>
+	<tr>
+	<td>Informar recepciones</td>
+	<td>Especifica que debe incluir las llegadas de artículos recibidos en los informes de intrastat.</td>
+	</tr>
+	<tr>
+	<td>Informar envíos</td>
+	<td>  Especifica que debe incluir los envíos de artículos distribuidos en los informes de intrastat.</td>
+	</tr>
+	<tr>
+	<td>Envíos basados en</td>
+	<td>Especifica en base a qué código de país se obtienen las líneas de informe Intrastat. Puede elegir una de las opciones: País de venta, País de facturación o País de destino.</td>
+	</tr>
+	<tr>
+	<td>N.º de IVA basado en</td>
+	<td>Especifica en base a qué código de cliente/proveedor se obtiene el número de impuesto sobre el valor agregado (IVA) para el informe Intrastat. Puedes elegir una de las opciones: IVA de venta o IVA facturado.</td>
+	</tr>
+	<tr>
+	<td>CIF de empresa en archivo</td>
+	<td>Especifica cómo se exporta el número de registro de IVA de la empresa al archivo Intrastat. Puede elegir una de las opciones: IVA Reg. No., agregando el código de país de la UE como prefijo y eliminando el código de país de la UE del registro de IVA. No.</td>
+	</tr>
+	<tr>
+	<td>CIF/NIF proveedor en archivo</td>
+	<td>Especifica cómo se exporta el número de registro de IVA del proveedor al archivo Intrastat. Puede elegir una de las opciones: IVA Reg. No., agregando el código de país de la UE como prefijo y eliminando el código de país de la UE del registro de IVA. No.</td>
+	</tr>
+	<tr>
+	<td>CIF/NIF de cliente en archivo</td>
+	<td>Especifica cómo se exporta el número de registro de IVA de un cliente al archivo Intrastat. Puede elegir una de las opciones: IVA Reg. No., agregando el código de país de la UE como prefijo y eliminando el código de país de la UE del registro de IVA. No.</td>
+	</tr>
+	<tr>
+	<td>Obtener IVA de socio</td>
+	<td>Especifica desde qué tipo de línea de Informe Intrastat se actualiza el CIF/NIF del socio. Según sus requisitos locales, puede elegir solo para recepción, solo para envío o para ambos tipos de líneas.
+	</td>
+	</tr>
+	</table>
+	</li>
+	<li><b>3.</b> Abra la ficha desplegable <b>Transacciones predeterminadas</b> y rellene los campos según sea necesario. Pase el cursor sobre un campo para leer una breve descripción. La siguiente tabla describe algunos de los campos clave: <br>
+	<table class="tabla1">
+	<tr>
+	<th>Campo</th>
+	<th>Descripción</th>
+	</tr>
+	<tr>
+	<td>Tipo trans. predeterminado</td>
+	<td>  Especifica el tipo de transacción predeterminado para envíos de venta normales, envíos de servicios y recibos de compra.</td>
+	</tr>
+	<tr>
+	<td>Tipo trans. predeterminado - devoluciones</td>
+	<td>Especifica el tipo de transacción predeterminado de devoluciones de ventas, devoluciones de servicios y devoluciones de compras.</td>
+	</tr>
+	<tr>
+	<td>N.º de IVA de persona privada predeterminada</td>
+	<td>Especifica el número de IVA de la persona privada predeterminado en caso de que la persona privada deba tener un número de IVA dedicado en el informe de Intrastat.</td>
+	</tr>
+	<tr>
+	<td>N.º IVA comercial predeterminado de terceros</td>
+	<td>Especifica el número de IVA comercial de terceros predeterminado en caso de que no tenga su número de IVA.</td>
+	</tr>
+	<tr>
+	<td>IVA predeterminado para estado desconocido</td>
+	<td>Especifica el número de IVA predeterminado para un estado desconocido.</td>
+	</tr>
+	<tr>
+	<td>Código país/región predet.</td>
+	<td>Especifica el código de país de recepción predeterminado.</td>
+	</tr>
+	</table>
+	</li>
+	<li><b>4.</b> Abra la ficha desplegable <b>Notificación</b> y rellene los campos según sea necesario. Pase el cursor sobre un campo para leer una breve descripción. La siguiente tabla describe algunos de los campos clave: <br>
+	<table class="tabla1">
+	<tr>
+	<th>Campo</th>
+	<th>Descripción</th>
+	</tr>
+	<tr>
+	<td>Código def. intercambio datos</td>
+	<td>Especifica el código definición de intercambio de datos para generar el archivo de Intrastat. Funciona solo si el campo Dividir archivos de recibos/envíos se establece en No.</td>
+	</tr>
+	<tr>
+	<td>Dividir archivos recepción/envíos</td>
+	<td>  Especifica si se comunicarán las recepciones y los envíos en dos archivos independientes.</td>
+	</tr>
+	<tr>
+	<td>Archivo zip (-s)</td>
+	<td>Especifica si se agregará el archivo de informe (-s) al archivo zip.</td>
+	</tr>
+	<tr>
+	<td>Código def. interc. datos - Recepción</td>
+	<td>Especifica el código de definición de intercambio de datos para generar el archivo de Intrastat para mercancías recibidas. Funciona solo si el campo Dividir archivos de recibos/envíos se establece en Sí.</td>
+	</tr>
+	<tr>
+	<td>Código def. interc. datos - Envío</td>
+	<td>Especifica el código de definición de intercambio de datos para generar el archivo de Intrastat para mercancías enviadas. Funciona solo si el campo Dividir archivos de recibos/envíos se establece en Sí.</td>
+	</tr>
+	</table>
+	</li>
+	<li><b>5.</b> Abra la ficha rápida <b>Numeración</b> para configurar <b>Números de Intrastat</b>.</li>
+	</ul>
+	<h3>Otras configuraciones de Intrastat</h3>
+	<p class="parrafo nota-importante"><b>Importante</b> Las fichas de cliente y proveedor incluyen un campo, <b>Tipo socio Intrastat</b>, que tiene los mismos valores de opción que el campo <b>Tipo socio</b>: "" (vacío), Compañía y Persona. El campo <b>Tipo socio Intrastat</b> ha reemplazado al campo Tipo socio en los informes de Intrastat. El campo <b>Tipo de socio</b> se utiliza en el Área Única de Pagos en Euros (SEPA) para definir el Esquema de Débito Directo SEPA (Core o B2B). El campo Tipo de socio Intrastat se utiliza solo para informes de Intrastat. De esta forma, puede especificar valores diferentes para los dos campos, si es necesario.
+	Si el <b>campo Tipo socio Intrastat</b> se deja en blanco, el <b>valor del Tipo socio</b> se utiliza para los informes de Intrastat.</p>
+	<p class="parrafo">Excepto por <b>Configuración del informe Intrastat, Definiciones de intercambio de datos</b> y <b>Lista de verificación del informe Intrastat</b>, también configurar otros ajustes: </p>
+	<table class="tabla1">
+	<tr>
+	<th>Página</th>
+	<th>Descripción</th>
+	</tr>
+	<tr>
+	<td>Países/regiones</td>
+	<td>Antes de comenzar a utilizar los informes de Intrastat, también debe configurar la página Países/regiones. En esta página, debe agregar el Código de país/región de la UE y el Código Intrastat para especificar un código para el país/región con el que está operando, ya que se utilizará en los informes de Intrastat.</td>
+	</tr>
+	<tr>
+	<td>Códigos arancelarios</td>
+	<td>En muchos paises, las autoridades aduaneras y fiscales han establecido códigos de 8 dígitos para los distintos productos. Para que los movimientos de productos contengan la información necesaria cuando el sistema los importe en la línea del diario de Intrastat, debe introducir el código de elemeno en la página Códigos arancelarios. Averigüe los códigos correspondientes a los productos que oferta su empresa e introdúzcalos en la página Códigos arancelarios.</td>
+	</tr>
+	<tr>
+	<td>Modos transporte</td>
+	<td>Existen siete códigos de un dígito para los modos de transporte de Intrastat. 1 para mar, 2 para ferrocarril, 3 para carretera, 4 para aire, 5 para correo, 7 para instalaciones fijas y 9 para autopropulsión (por ejemplo, transportar un coche conduciéndolo). Business Central no requiere estos códigos específicos; sin embargo, recomendamos que las descripciones proporcionen un significado similar.</td>
+	</tr>
+	<tr>
+	<td>Naturalezas transacciones</td>
+	<td>Los países y regiones tienen diferentes códigos para los tipos de transacciones de Intrastat, como la compra y venta ordinaria, el intercambio de mercancías devueltas y el intercambio de mercancías no devueltas. Configure todos los códigos que se aplican a su país o región. Luego estos códigos se usan en la ficha despegable Comercio exterior en los documentos de venta y compra, y cuando procese las devoluciones.</td>
+	</tr>
+	<tr>
+	<td>Especificación transacciones</td>
+	<td>Configure códigos para complementar las descripciones del tipo de transacción.</td>
+	</tr>
+	</table><br>
+	<p class="parrafo nota-solo"><b>Nota</b> <br>
+	A partir de enero de 2022, Intrastat requiere códigos de naturaleza de transacción diferente para envíos a particulares o empresas sin registro de IVA y empresas registradas con IVA. Para cumplir con este requisito, le recomendamos que revise y/o agregue nuevos códigos de naturaleza de transacción en la página <b>Tipos de transacciones</b> , de acuerdo con los requisitos de su país. También debe comprobar y actualizar el campo <b>Tipo socio Intrastat</b> a Persona para clientes particulares o empresas no registradas a efectos del IVA en la página <b>Cliente</b>. Si no está seguro del Itipo de socio Intrastat o del tipo de transacción que se usará, le recomendamos que consulte a un experto de su país o región.
+	</p>
+	<h3>Rellenar el informe de Intrastat</h3>
+	<ul>
+	<li><strong>1.</strong> Elija el icono busqueda que abre la característica Dígame. , escriba <b>Lista de Intrastat</b> y luego elija el enlace relacionado.</li>
+	<li><strong>2.</strong> Seleccione la acción <b>Nuevo</b> para crear un nuevo <b>Informe Intrastat</b>.</li>
+	<li><strong>3.</strong> Si necesita introducir alguna información interna sobre el <b>Informe Intrastat</b>, complete esta información en el campo <b>Descripción</b>.</li>
+	<li><strong>4.</strong> En el campo <b>Período de la estadística</b>, especifique el mes para el que informar datos. Ingrese el período como un número de cuatro dígitos sin espacios ni símbolos. Dependiendo de su país, ingrese primero el mes y luego el año, o viceversa. Por ejemplo, escriba 2206 o 0622 para junio de 2022.</li>
+	<li><strong>5.</strong> Elija la acción <b>Proponer líneas</b>. Los campos <b>Fecha inicial</b> y <b>Fecha final</b> aparecerán con las fechas especificadas como periodo estadístico en el encabezado del informe Intrastat.</li>
+	<li><strong>6.</strong> En el campo <b>% Coste territorio nacional</b>, puede introducir un porcentaje que cubra el transporte y el seguro. Si escribe un porcentaje, el contenido del campo <b>Valor estadístico</b> del diario es proporcionalmente superior. Pero si desea utilizar esta función, debe cambiar el campo <b>Importe incluido Cargos por artículo a Sí</b>.</li>
+	<li><strong>7.</strong> Eventualmente puede establecer configuraciones adicionales en la ficha rápida Adicional: <br>
+	<ul>
+	<li>a.<b> Omitir Recálculo para Cantidades Cero</b> para especificar que las líneas sin importes no se volverán a calcular durante el trabajo por lotes.</li>
+	<li>b.<b> Omitir importes cero</b>  para especificar que los movimientos de producto sin importes no se incluirán en el proceso.</li>
+	<li>c.<b> Mostrar movimientos de cargos de producto</b> para especificar si desea mostrar los costes directos que su empresa ha asignado y registrado como cargos de productos.</li>
+	<li>d.<b> Omitir movimientos no facturados</b> para especificar si los movimientos de producto que se envían o reciben, pero que aún no se han facturado, deben excluirse del proceso.</li>
+	</ul>
+	</li>
+	<li><strong>8.</strong> Elija <b>Aceptar</b> para iniciar el trabajo por lotes.</li>
+	</ul>
+	<p class="parrafo">El proceso recupera todos los movimientos de producto en el periodo estadístico y los inserta como líneas en el <b>Informe Intrastat</b>. Pase el cursor sobre un campo para leer una breve descripción.</p>
+	<p>Video Configuración de Intrastat - Microsoft Dynamics 365 Business Central <a href="https://www.youtube.com/watch?v=s2_lfyVzHmA">aquí</a>.</p>
 
 	`;
-
 	cuerpo.innerHTML= contenido;
-
 }
 
 
-
- /*Configuracion de finanzas*/
-let configfinanzas = () =>{
-	let cuerpo = document.querySelector(".bodyContent");
-	let contenido = `
-	<table class="tabla1">
-	<tr>
-	<th>A</th>
-	<th>Ver</th>
-	</tr>
-	<tr>
-	<td>Ver o editar cuentas del libro mayor en las que se contabilizan todas las entradas del libro mayor</td>
-	<td><a href="">Configurar o cambiar el plan de cuentas</a></td>
-	</tr>
-	<tr>
-	<td>Especifique cómo desea que le paguen los clientes y cómo desea pagar a sus proveedores.</td>
-	<td><a href="">Configurar métodos de pago</a></td>
-	</tr>
-	<tr>
-	<td>Especifique las condiciones de pago para administrar las fechas de vencimiento y calcular posibles descuentos por pago.</td>
-	<td><a href="">Configurar condiciones de pago</a></td>
-	</tr>
-	<tr>
-	<td>Especifique los grupos de contabilización que asignan entidades como clientes, proveedores, artículos, recursos y documentos de compra y venta a las cuentas del libro mayor.</td>
-	<td><a href="">Configurar grupos de contabilización</a></td>
-	</tr>
-	<tr>
-	<td>Cree informes financieros y defina categorías de cuentas que determinen el contenido de los gráficos e informes financieros, como los informes de hoja de balance y estado de resultados.</td>
-	<td><a href="">Preparar informes financieros con datos financieros y categorías de cuentas</a></td>
-	</tr>
-	<tr>
-	<td>Configure una tolerancia por la cual el sistema cierra una factura incluso si el pago, incluido cualquier descuento, no cubre completamente el monto de la factura.</td>
-	<td><a href="">Trabajar con tolerancias de pago y tolerancias de descuento de pago</a></td>
-	</tr>
-	<tr>
-	<td>Configurar periodos fiscales.</td>
-	<td><a href="">Trabajar con períodos contables y años fiscales</a></td>
-	</tr>
-	<tr>
-	<td>Configure los términos de la factura que les recuerden a sus clientes que deben realizar el pago.</td>
-	<td><a href="">Configurar términos y niveles de recordatorio</a></td>
-	</tr>
-	<tr>
-	<td>Defina cómo informa a las autoridades fiscales los importes del impuesto sobre el valor añadido (IVA) recaudados por las ventas.</td>
-	<td><a href="">Configurar el impuesto al valor agregado (IVA)</a></td>
-	</tr>
-	<tr>
-	<td>Prepárese para manejar el IVA no realizado en relación con los métodos de contabilidad basados ​​en efectivo.</td>
-	<td><a href="">Configurar el IVA no realizado para la contabilidad de caja</a></td>
-	</tr>
-	<tr>
-	<td>Defina las monedas extranjeras con las que comercia o reporta transacciones.</td>
-	<td><a href="">Configurar monedas</a></td>
-	</tr>
-	<tr>
-	<td>Configure sus funciones de Ventas y Compras para manejar pagos en moneda extranjera.</td>
-	<td><a href="">Habilitar la aplicación de asientos contables en diferentes monedas</a></td>
-	</tr>
-	<tr>
-	<td>Defina una o más monedas adicionales para que los montos se informen automáticamente tanto en la moneda local (LCY) como en una moneda de informe adicional en cada asiento del libro mayor (G/L) y en otros asientos.</td>
-	<td><a href="">Configurar una moneda de informe adicional</a></td>
-	</tr>
-	<tr>
-	<td>Ajuste periódicamente los equivalentes de divisas adicionales para compensar las fluctuaciones de los tipos de cambio.</td>
-	<td><a href="">Actualizar tipos de cambio de moneda</a></td>
-	</tr>
-	<tr>
-	<td>Defina múltiples tasas de interés para usar en diferentes períodos para pagos atrasados ​​en transacciones comerciales.</td>
-	<td><a href="">Configurar tasas de interés múltiples</a></td>
-	</tr>
-	<tr>
-	<td>Haga arreglos para que los montos se redondeen automáticamente a medida que se crean las facturas.</td>
-	<td><a href="">Configurar el redondeo de facturas</a></td>
-	</tr>
-	<tr>
-	<td>Agregue nuevas cuentas al plan de cuentas existente.</td>
-	<td><a href="">Configuración del plan de cuentas</a></td>
-	</tr>
-	<tr>
-	<td>Configure gráficos de inteligencia empresarial (BI) para analizar el flujo de caja.</td>
-	<td><a href="">Configuración del análisis de flujo de caja</a></td>
-	</tr>
-	<tr>
-	<td>Habilitar la facturación de un cliente no configurado en el sistema.</td>
-	<td><a href="">Configurar clientes en efectivo</a></td>
-	</tr>
-	<tr>
-	<td>Configure los informes de Intrastat y envíe el informe a una autoridad.</td>
-	<td><a href="">Configurar e informar Intrastat</a></td>
-	</tr>
-	<tr>
-	<td>Asegúrese de que un asiento de diario se asigne entre diferentes cuentas, como cantidad, porcentaje o monto, cuando lo publique en el diario.</td>
-	<td><a href="">Usar claves de asignación en diarios generales</a></td>
-	</tr>
-	<tr>
-	<td>Configure códigos fuente y códigos de motivo para ayudar a realizar un seguimiento de los registros de auditoría.</td>
-	<td><a href="">Configuración de códigos fuente y códigos de motivo para registros de auditoría</a></td>
-	</tr>
-	<tr>
-	<td>Especifique los informes predeterminados que se utilizarán para diferentes tipos de documentos.</td>
-	<td><a href="">Selección de informes en Business Central</a></td>
-	</tr>
-	</table>
-	<p class="parrafo"><b>Nota</b><br>Según su ubicación geográfica, algunas páginas de Business Central pueden contener 
-	campos que no se describen en los artículos enumerados anteriormente porque se aplican a personalizaciones o funciones locales. 
-	Pase el cursor sobre un campo para leer una breve descripción.</p>
-
-	`;
-
-	cuerpo.innerHTML= contenido;
-
-}	
-/*
+/*================
 let tableRelation = () =>{
 	let cuerpo = document.querySelector(".bodyContent");
 	let contenido = `
@@ -2200,4 +3830,4 @@ let tableRelation = () =>{
 	cuerpo.innerHTML= contenido;
 
 	}
-	*/
+=========================*/

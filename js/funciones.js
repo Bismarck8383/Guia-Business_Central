@@ -279,9 +279,8 @@ let crearNuevoProyecto = () =>{
 	</div><br>
 	<p class="parrafo">Ya tendremos listo nuestro proyecto para empezar a trabajar.</p>
 	<p><b>Nota : </b> En caso de tener errores al descargar los symbols lee el siguiente articulo para solucionar el problema.</p>
-	<p class="parrafo"><a href="https://yzhums.com/1441">Solución Error Symbols</a></p>
-
-
+	<h3>Solución Error Symbols</h3>
+	<iframe src="https://yzhums.com/1441/"  class="ifraWeb"></iframe>
 	`;
 
 	cuerpo.innerHTML= contenido;
@@ -1231,437 +1230,418 @@ Codeunit 90 compras
 let codeunit90 = () =>{
 	let cuerpo = document.querySelector(".bodyContent");
 	let contenido = `
-	<h2 class="Subtitulos">Codeunit 90 Compras</h2>
-	<p class="parrafo">La codeunit posee una gran cantidad de líneas de código que se utiliza para las compras en Business Central, en la siguiente tabla veremos algunas de las funciones que están declaradas, así podemos hacernos una idea del funcionamiento de la misma.</p>
-	<h3>Ver Código fuente Codeunit 90</h3>
-	<p class="parrafo">Para ver el código seguiremos los siguientes pasos: </p>
-	<ul>
-	<li><b>1.</b> Abrimos nuestro editor de código, en este caso es <b>Visual Studio Code</b> en el proyecto donde estemos trabajando.</li>
-	<li><b>2.</b> Elejiremos <b>.alpackages</b></li>
-	<li><b>3.</b> Elejimos la opción <b>Microsoft_Base_Application_20......</b></li>
-	<li><b>4.</b> Buscaremos en <b>Codeunits</b>, elejiremos la <b>90 Purch.-Post</b><br>
-	<div class="img-content2"><img src="img/code90-1.PNG" alt=""></div>
-	</li>
-	<li><b>5.</b> Dentro de la Codeunit <b>90 "Purch.-Post"</b> veremos las diferentes funciones y variables usadas para el proceso de compras. <br><br>
-	<div class="img-content2"><img src="img/code90-2.PNG" alt=""></div>
-	</li>
-	</ul>
-	<h3>Principales funciones de la codeunit 90 Compras</h3> 
-	<table class="tabla1">
-	<tr>
-	<th>Nº Linea</th>
-	<th>Función</th>
-	<th></th>
-	<th>Nº Linea</th>
-	<th>Función</th>
-	</tr>
-	<tr>
-	<td>394</td>
-	<td>Obtener ID Rec de línea de compra</td>
-	<td></td>
-	<td>404</td>
-	<td>Copiar a líneas temporales</td>
-	</tr>
-	<tr>
-	<td>422</td>
-	<td>Confirmar y actualizar la vista de análisis</td>
-	<td></td>
-	<td>440</td>
-	<td>Llenar líneas temporales</td>
-	</tr>
-	<tr>
-	<td>447</td>
-	<td>Modificar línea temporal</td>
-	<td></td>
-	<td>459</td>
-	<td>Actualizar líneas temporales</td>
-	</tr>
-	<tr>
-	<td>470</td>
-	<td>Resetear líneas temporales</td>
-	<td></td>
-	<td>478</td>
-	<td>Calcular Factura</td>
-	</tr>
-	<tr>
-	<td>516</td>
-	<td> Calcular descuento de inversión</td>
-	<td></td>
-	<td>542</td>
-	<td>Restaurar encabezado de compra</td>
-	</tr>
-	<tr>
-	<td>556</td>
-	<td>Comprobar y actualizar</td>
-	<td></td>
-	<td>613</td>
-	<td>Manejar archivar pedido no registrado</td>
-	</tr>
-	<tr>
-	<td>628</td>
-	<td>Consultar documento de compra</td>
-	<td></td>
-	<td>726</td>
-	<td>Consultar líneas de compra</td>
-	</tr>
-	<tr>
-	<td>738</td>
-	<td>Verificar Factura Corregida No.</td>
-	<td></td>
-	<td>763</td>
-	<td>Comprobar número de documento externo</td>
-	</tr>
-	<tr>
-	<td>792</td>
-	<td>Preparar documento de cheque</td>
-	<td></td>
-	<td>802</td>
-	<td>Establecer indicadores de publicación del modo de error de registro</td>
-	</tr>
-	<tr>
-	<td>1005</td>
-	<td>Verifique la línea de compra de crédito de trabajo</td>
-	<td></td>
-	<td>1013</td>
-	<td>Publicar factura</td>
-	</tr>
-	<tr>
-	<td>1129</td>
-	<td>Publicar línea de artículo</td>
-	<td></td>
-	<td>1198</td>
-	<td>Contabilizar línea de cargo de artículo</td>
-	</tr>
-	<tr>
-	<td>1258</td>
-	<td>Publicar línea de seguimiento de artículo</td>
-	<td></td>
-	<td>1282</td>
-	<td>Recuperar especificación de seguimiento de facturas si existe</td>
-	</tr>
-	<tr>
-	<td>1421</td>
-	<td>Calcular importes  a facturar de artículo en línea</td>
-	<td></td>
-	<td>1489</td>
-	<td>Registrar campos de documento de copia de línea de artículo</td>
-	</tr>
-	<tr>
-	<td>1523</td>
-	<td>Publicar pedido de copia de línea de artículo</td>
-	<td></td>
-	<td>1589</td>
-	<td>Seguimiento de línea de publicación de artículos</td>
-	</tr>
-	<tr>
-	<td>1663</td>
-	<td>Publicar cargo de artículo Prepedido</td>
-	<td></td>
-	<td>1756</td>
-	<td>Publicar cargo de artículo de seguimiento de artículo por pedido</td>
-	</tr>
-	<tr>
-	<td>1854</td>
-	<td>Publicar cargo de artículo por recibo</td>
-	<td></td>
-	<td>1895</td>
-	<td>Publicar cargo de artículo por envío</td>
-	</tr>
-	<tr>
-	<td>1940</td>
-	<td>Publicar cargo de artículo por transferencia</td>
-	<td></td>
-	<td>2035</td>
-	<td>Contabilizar cargo de artículo por transferencia de TI</td>
-	</tr>
-	<tr>
-	<td>2050</td>
-	<td>Registrar cargo de artículo por envío de ventas</td>
-	<td></td>
-	<td>2141</td>
-	<td>Publicar cargo de artículo distribuido</td>
-	</tr>
-	<tr>
-	<td>2228</td>
-	<td>Publicar línea de recursos</td>
-	<td></td>
-	<td>2284</td>
-	<td>Liberar documento de compra</td>
-	</tr>
-	<tr>
-	<td>2318</td>
-	<td>Publicación del estado de la prueba</td>
-	<td></td>
-	<td>2385</td>
-	<td>Comprobar grupos de publicación bloqueados</td>
-	</tr>
-	<tr>
-	<td>2447</td>
-	<td>Prueba de activos fijos de línea de compra</td>
-	<td></td>
-	<td>2491</td>
-	<td>Línea de compra de prueba Otros</td>
-	</tr>
-	<tr>
-	<td>2515</td>
-	<td>Actualizar orden de asociación</td>
-	<td></td>
-	<td>2522</td>
-	<td>Actualizar orden de venta asociada</td>
-	</tr>
-	<tr>
-	<td>2576</td>
-	<td>Actualizar números de publicación de pedidos de Assos</td>
-	<td></td>
-	<td>2612</td>
-	<td>Verificar y actualizar la fecha de publicación del pedido asociado</td>
-	</tr>
-	<tr>
-	<td>2631</td>
-	<td>Actualizar compras después de publicar</td>
-	<td></td>
-	<td>2774</td>
-	<td>Restablecer publicación sin serie desde la configuración</td>
-	</tr>
-	<tr>
-	<td>2774</td>
-	<td>Restablecer publicación sin serie desde la configuración</td>
-	<td></td>
-	<td>2840</td>
-	<td>Eliminar después de publicar</td>
-	</tr>
-	<tr>
-	<td>2970</td>
-	<td>Eliminar entradas de aprobación</td>
-	<td></td>
-	<td>3357</td>
-	<td>Calcular cantidad de línea y cantidad de descuento de línea</td>
-	</tr>
-	<tr>
-	<td>3376</td>
-	<td>Calcular Importes Incluyendo IVA</td>
-	<td></td>
-	<td>3703</td>
-	<td>Actualizar línea de pedido abierto</td>
-	</tr>
-	<tr>
-	<td>3839</td>
-	<td>Actualizar encabezado de compra</td>
-	<td></td>
-	<td>3868</td>
-	<td>Publicar entrada de proveedor</td>
-	</tr>
-	<tr>
-	<td>3921</td>
-	<td>Campos de cantidad de línea de generación inicial de la línea de compra total</td>
-	<td></td>
-	<td>3945</td>
-	<td>Entrada posterior al balance</td>
-	</tr>
-	<tr>
-	<td>4009</td>
-	<td>Buscar entrada de libro mayor de proveedores</td>
-	<td></td>
-	<td>4024</td>
-	<td>Consultar restricciones de publicación</td>
-	</tr>
-	<tr>
-	<td>4086</td>
-	<td>Eliminar asignación de cargo de artículo</td>
-	<td></td>
-	<td>4179</td>
-	<td>Actualizar líneas de asignación de cargo de compra</td>
-	</tr>
-	<tr>
-	<td>4233</td>
-	<td>Insertar cargo de pedido asociado</td>
-	<td></td>
-	<td>4259</td>
-	<td>Copiar y verificar el cargo por artículo</td>
-	</tr>
-	<tr>
-	<td>4302</td>
-	<td>Calcular Facturar Todo</td>
-	<td></td>
-	<td>4417</td>
-	<td>Copiar cargo de artículo para línea de compra</td>
-	</tr>
-	<tr>
-	<td>4521</td>
-	<td>Calcular cantidad a facturar</td>
-	<td></td>
-	<td>4546</td>
-	<td>Obtener configuración de contabilización de facturas</td>
-	</tr>
-	<tr>
-	<td>4581</td>
-	<td>Consultar Almacén</td>
-	<td></td>
-	<td>4741</td>
-	<td>Insertar relación de entidad de retorno</td>
-	</tr>
-	<tr>
-	<td>4767</td>
-	<td>Comprobar la especificación de seguimiento</td>
-	<td></td>
-	<td>4885</td>
-	<td>Insertar especificación de seguimiento</td>
-	</tr>
-	<tr>
-	<td>4901</td>
-	<td>Cantidad base de cálculo</td>
-	<td></td>
-	<td>5412</td>
-	<td>Prueba de preparación de cálculo para deducir</td>
-	</tr>
-	<tr>
-	<td>5472</td>
-	<td>Actualizar línea de compra anticipada con redondeo</td>
-	<td></td>
-	<td>5955</td>
-	<td>Actualizar aplicación de reserva de consumo de trabajo a entrada de artículo</td>
-	</tr>
-	<tr>
-	<td>5999</td>
-	<td>Obtener la entrada de libro mayor de elementos salientes aplicados n.º</td>
-	<td></td>
-	<td>6075</td>
-	<td>Revertir Entrada al Almacén</td>
-	</tr>
-	<tr>
-	<td>6098</td>
-	<td>Crear entrada positiva</td>
-	<td></td>
-	<td>6164</td>
-	<td>Actualizar documento entrante</td>
-	</tr>
-	<tr>
-	<td>6234</td>
-	<td>Actualizar la cantidad facturada en la línea de envío de devolución</td>
-	<td></td>
-	<td>6244</td>
-	<td>Actualizar cantidad por unidad de medida</td>
-	</tr>
-	<tr>
-	<td>6261</td>
-	<td>Actualizar cantidad a facturar para recepción</td>
-	<td></td>
-	<td>6286</td>
-	<td>Actualizar la cantidad a facturar para el envío de devolución</td>
-	</tr>
-	<tr>
-	<td>6310</td>
-	<td>Actualizar la cantidad restante a facturar</td>
-	<td></td>
-	<td>6441</td>
-	<td>Verifique el estado del certificado de suministro de ventas</td>
-	</tr>
-	<tr>
-	<td>6684</td>
-	<td>Insertar línea de envío de devolución</td>
-	<td></td>
-	<td>6711</td>
-	<td>Crear línea de destino desde la línea directa de devoluciones</td>
-	</tr>
-	<tr>
-	<td>6775</td>
-	<td>Insertar encabezado de factura</td>
-	<td></td>
-	<td>6909</td>
-	<td>Insertar encabezado de envío de ventas</td>
-	</tr>
-	<tr>
-	<td>6959</td>
-	<td>Verifique la publicación de duplicados de documentos </td>
-	<td></td>
-	<td>7118</td>
-	<td>Hacer ajuste de inventario</td>
-	</tr>
-	<tr>
-	<td>7128</td>
-	<td>Comprobar seguimiento y almacén para recibir</td>
-	<td></td>
-	<td>7153</td>
-	<td>Comprobar el seguimiento y el almacén para el envío</td>
-	</tr>
-	<tr>
-	<td>7182</td>
-	<td>Comprobar si existe ubicación de inventario</td>
-	<td></td>
-	<td>7237</td>
-	<td>Verifique el tipo de publicación de encabezado</td>
-	</tr>
-	<tr>
-	<td>7309</td>
-	<td>Agregar línea de orden asociada al búfer</td>
-	<td></td>
-	<td>7324</td>
-	<td>Verificar envío directo Recibir factura</td>
-	</tr>
-	<tr>
-	<td>7348</td>
-	<td>Publicar envío combinado de pedidos de venta</td>
-	<td></td>
-	<td>7582</td>
-	<td>Verifique los campos de encabezado obligatorios</td>
-	</tr>
-	<tr>
-	<td>7670</td>
-	<td>Calcular contabilización de descuento de pago</td>
-	<td></td>
-	<td>7699</td>
-	<td>Validar contabilización y fecha del documento</td>
-	</tr>
-	<tr>
-	<td>7736</td>
-	<td>Comprobar número de documento externo</td>
-	<td></td>
-	<td>7882</td>
-	<td>Publicar seguimiento de elementos</td>
-	</tr>
-	<tr>
-	<td>7925</td>
-	<td>Publicar seguimiento de artículos Verificar envío</td>
-	<td></td>
-	<td>8050</td>
-	<td>Ajustar redondeo de cantidad para recibo</td>
-	</tr>
-	<tr>
-	<td>8062</td>
-	<td>Ajustar redondeo de cantidad para recibo</td>
-	<td></td>
-	<td>8098</td>
-	<td>Publicar seguimiento de artículo para condición de recibo</td>
-	</tr>
-	<tr>
-	<td>8208</td>
-	<td>Comprobar campos en la línea de envío de devolución</td>
-	<td></td>
-	<td>8332</td>
-	<td>Actualizar cantidad a factura para pedido</td>
-	</tr>
-	<tr>
-	<td>8348</td>
-	<td>Publicar actualización de línea de factura</td>
-	<td></td>
-	<td>8482</td>
-	<td>Establecer Verificar aplicación a entrada de artículo</td>
-	</tr>
-	<tr>
-	<td>8611</td>
-	<td>Recopilar entradas de reserva de línea de compra</td>
-	<td></td>
-	<td>8628</td>
-	<td>Archivar pedidos de venta</td>
-	</tr>
-	<tr>
-	<td>8683</td>
-	<td>Aprobación de recibo de cheque</td>
-	<td></td>
-	<td>8721</td>
-	<td>Consultar línea de orden de venta asociada</td>
-	</tr>
-	</table>
+	     <h2 class="Subtitulos">Codeunit 90 Compras</h2>
+  <p class="parrafo">La codeunit posee una gran cantidad de líneas de código que se utiliza para las compras en Business Central, en la siguiente tabla veremos algunas de las funciones que están declaradas, así podemos hacernos una idea del funcionamiento de la misma.</p>
+  <h3>Ver Código fuente Codeunit 90</h3>
+  <p class="parrafo">Para ver el código seguiremos los siguientes pasos: </p>
+  <ul>
+  <li><b>1.</b> Abrimos nuestro editor de código, en este caso es <b>Visual Studio Code</b> en el proyecto donde estemos trabajando.</li>
+  <li><b>2.</b> Elejiremos <b>.alpackages</b></li>
+  <li><b>3.</b> Elejimos la opción <b>Microsoft_Base_Application_20......</b></li>
+  <li><b>4.</b> Buscaremos en <b>Codeunits</b>, elejiremos la <b>90 Purch.-Post</b><br>
+  <div class="img-content2"><img src="img/code90-1.PNG" alt=""></div>
+  </li>
+  <li><b>5.</b> Dentro de la Codeunit <b>90 "Purch.-Post"</b> veremos las diferentes funciones y variables usadas para el proceso de compras. <br><br>
+  <div class="img-content2"><img src="img/code90-2.PNG" alt=""></div>
+  </li>
+  </ul>
+  <h3>Principales funciones de la codeunit 90 Compras</h3> 
+  <table class="tabla1">
+  <tr>
+  <th>Procedure</th>
+  <th>Descripción</th>
+  <th></th>
+  <th>Procedure</th>
+  <th>Descripción</th>
+  </tr>
+  <tr>
+  <td>local procedure GetZeroPurchLineRecID(PurchHeader: Record "Purchase Header"; var PurchLineRecID: RecordId)</td>
+  <td>Obtener ID Rec de línea de compra</td>
+  <td></td>
+  <td>procedure CopyToTempLines(PurchHeader: Record "Purchase Header"; var TempPurchLine: Record "Purchase Line" temporary)</td>
+  <td>Copiar a líneas temporales</td>
+  </tr>
+  <tr>
+  <td>local procedure CommitAndUpdateAnalysisVeiw()</td>
+  <td>Confirmar y actualizar la vista de análisis</td>
+  <td></td>
+  <td>procedure FillTempLines(PurchHeader: Record "Purchase Header"; var TempPurchLine: Record "Purchase Line" temporary)</td>
+  <td>Llenar líneas temporales</td>
+  </tr>
+  <tr>
+  <td>local procedure ModifyTempLine(var TempPurchLineLocal: Record "Purchase Line" temporary)</td>
+  <td>Modificar línea temporal</td>
+  <td></td>
+  <td>procedure RefreshTempLines(PurchHeader: Record "Purchase Header"; var TempPurchLine: Record "Purchase Line" temporary)</td>
+  <td>Actualizar líneas temporales</td>
+  </tr>
+  <tr>
+  <td>procedure ResetTempLines(var TempPurchLineLocal: Record "Purchase Line" temporary)</td>
+  <td>Resetear líneas temporales</td>
+  <td></td>
+  <td>procedure CalcInvoice(var PurchHeader: Record "Purchase Header") NewInvoice: Boolean</td>
+  <td>Calcular Factura</td>
+  </tr>
+  <tr>
+  <td> local procedure CalcInvDiscount(var PurchHeader: Record "Purchase Header")</td>
+  <td> Calcular descuento de inversión</td>
+  <td></td>
+  <td>local procedure RestorePurchaseHeader(var PurchaseHeader: Record "Purchase Header"; PurchaseHeaderCopy: Record "Purchase Header")2</td>
+  <td>Restaurar encabezado de compra</td>
+  </tr>
+  <tr>
+  <td>local procedure CheckAndUpdate(var PurchHeader: Record "Purchase Header")</td>
+  <td>Comprobar y actualizar</td>
+  <td></td>
+  <td>local procedure HandleArchiveUnpostedOrder(var PurchHeader: Record "Purchase Header")</td>
+  <td>Manejar archivar pedido no registrado</td>
+  </tr>
+  <tr>
+  <td> procedure CheckPurchDocument(var PurchHeader: Record "Purchase Header")</td>
+  <td>Consultar documento de compra</td>
+  <td></td>
+  <td> local procedure CheckPurchLines(var PurchHeader: Record "Purchase Header")</td>
+  <td>Consultar líneas de compra</td>
+  </tr>
+  <tr>
+  <td>local procedure CheckCorrectedInvoiceNo(var PurchaseHeader: Record "Purchase Header")</td>
+  <td>Verificar Factura Corregida No.</td>
+  <td></td>
+  <td>   local procedure CheckExtDocNo(PurchaseHeader: Record "Purchase Header")3</td>
+  <td>Comprobar número de documento externo</td>
+  </tr>
+  <tr>
+  <td> procedure PrepareCheckDocument(var PurchaseHeader: Record "Purchase Header")</td>
+  <td>Preparar documento de cheque</td>
+  <td></td>
+  <td> local procedure SetLogErrorModePostingFlags(var PurchaseHeader: Record "Purchase Header")</td>
+  <td>Establecer indicadores de publicación del modo de error de registro</td>
+  </tr>
+  <tr>
+  <td>local procedure PostPurchLine(var PurchHeader: Record "Purchase Header"; var PurchLine: Record "Purchase Line"; var TempVATAmountLine: Record "VAT Amount Line" temporary; var TempVATAmountLineRemainder: Record "VAT Amount Line" temporary; var TempDropShptPostBuffer: Record "Drop Shpt. Post. Buffer" temporary; var EverythingInvoiced: Boolean; var ICGenJnlLineNo: Integer)</td>
+  <td>Verifique la línea de compra de crédito de trabajo</td>
+  <td></td>
+  <td>   local procedure PostInvoice(var PurchHeader: Record "Purchase Header")</td>
+  <td>Publicar factura</td>
+  </tr>
+  <tr>
+  <td> local procedure PostItemLine(PurchHeader: Record "Purchase Header"; var PurchLine: Record "Purchase Line"; var TempDropShptPostBuffer: Record "Drop Shpt. Post. Buffer" temporary)</td>
+  <td>Publicar línea de artículo</td>
+  <td></td>
+  <td>local procedure PostItemChargeLine(PurchHeader: Record "Purchase Header"; PurchLine: Record "Purchase Line")</td>
+  <td>Contabilizar línea de cargo de artículo</td>
+  </tr>
+  <tr>
+  <td> local procedure PostItemTrackingLine(PurchHeader: Record "Purchase Header"; PurchLine: Record "Purchase Line")</td>
+  <td>Publicar línea de seguimiento de artículo</td>
+  <td></td>
+  <td> local procedure RetrieveInvoiceTrackingSpecificationIfExists(PurchaseHeader: Record "Purchase Header"; var PurchaseLine: Record "Purchase Line"; var TempTrackingSpecification: Record "Tracking Specification" temporary; var TrackingSpecificationExists: Boolean)</td>
+  <td>Recuperar especificación de seguimiento de facturas si existe</td>
+  </tr>
+  <tr>
+  <td>local procedure CalcItemJnlLineToBeInvoicedAmounts(var ItemJnlLine: Record "Item Journal Line"; var PurchaseHeader: Record "Purchase Header"; var PurchaseLine: Record "Purchase Line"; QtyToBeInvoiced: Decimal; QtyToBeInvoicedBase: Decimal)</td>
+  <td>Calcular importes  a facturar de artículo en línea</td>
+  <td></td>
+  <td>local procedure PostItemJnlLineCopyDocumentFields(var ItemJnlLine: Record "Item Journal Line"; PurchHeader: Record "Purchase Header"; PurchLine: Record "Purchase Line"; QtyToBeInvoiced: Decimal; QtyToBeReceived: Decimal)</td>
+  <td>Registrar campos de documento de copia de línea de artículo</td>
+  </tr>
+  <tr>
+  <td>local procedure PostItemJnlLineCopyProdOrder(PurchLine: Record "Purchase Line"; var ItemJnlLine: Record "Item Journal Line"; QtyToBeReceived: Decimal; QtyToBeInvoiced: Decimal)</td>
+  <td>Publicar pedido de copia de línea de artículo</td>
+  <td></td>
+  <td>local procedure PostItemJnlLineTracking(PurchLine: Record "Purchase Line"; var TempWhseTrackingSpecification: Record "Tracking Specification" temporary; var TempTrackingSpecificationChargeAssmt: Record "Tracking Specification" temporary; PostWhseJnlLine: Boolean; QtyToBeInvoiced: Decimal)</td>
+  <td>Seguimiento de línea de publicación de artículos</td>
+  </tr>
+  <tr>
+  <td>local procedure PostItemChargePerOrder(PurchHeader: Record "Purchase Header"; PurchLine: Record "Purchase Line"; ItemJnlLine2: Record "Item Journal Line"; ItemChargePurchLine: Record "Purchase Line"; var TempTrackingSpecificationChargeAssmt: Record "Tracking Specification" temporary)</td>
+  <td>Publicar cargo de artículo Prepedido</td>
+  <td></td>
+  <td>local procedure PostItemTrackingItemChargePerOrder(PurchHeader: Record "Purchase Header"; var ItemJnlLine2: Record "Item Journal Line"; var TempTrackingSpecificationChargeAssmt: Record "Tracking Specification" temporary)</td>
+  <td>Publicar cargo de artículo de seguimiento de artículo por pedido</td>
+  </tr>
+  <tr>
+  <td>local procedure PostItemChargePerRcpt(PurchHeader: Record "Purchase Header"; var PurchLine: Record "Purchase Line")</td>
+  <td>Publicar cargo de artículo por recibo</td>
+  <td></td>
+  <td> local procedure PostItemChargePerRetShpt(PurchHeader: Record "Purchase Header"; var PurchLine: Record "Purchase Line")</td>
+  <td>Publicar cargo de artículo por envío</td>
+  </tr>
+  <tr>
+  <td>local procedure PostItemChargePerTransfer(PurchHeader: Record "Purchase Header"; var PurchLine: Record "Purchase Line")</td>
+  <td>Publicar cargo de artículo por transferencia</td>
+  <td></td>
+  <td> local procedure PostItemChargePerITTransfer(PurchHeader: Record "Purchase Header"; var PurchLine: Record "Purchase Line"; TransRcptLine: Record "Transfer Receipt Line")</td>
+  <td>Contabilizar cargo de artículo por transferencia de TI</td>
+  </tr>
+  <tr>
+  <td> local procedure PostItemChargePerSalesShpt(PurchHeader: Record "Purchase Header"; var PurchLine: Record "Purchase Line")</td>
+  <td>Registrar cargo de artículo por envío de ventas</td>
+  <td></td>
+  <td>procedure PostDistributeItemCharge(PurchHeader: Record "Purchase Header"; PurchLine: Record "Purchase Line"; var TempItemLedgEntry: Record "Item Ledger Entry" temporary; NonDistrQuantity: Decimal; NonDistrQtyToAssign: Decimal; NonDistrAmountToAssign: Decimal; Sign: Decimal; IndirectCostPct: Decimal)</td>
+  <td>Publicar cargo de artículo distribuido</td>
+  </tr>
+  <tr>
+  <td>local procedure PostResourceLine(PurchaseHeader: Record "Purchase Header"; var PurchaseLine: Record "Purchase Line")</td>
+  <td>Publicar línea de recursos</td>
+  <td></td>
+  <td>    local procedure ReleasePurchDocument(var PurchHeader: Record "Purchase Header")</td>
+  <td>Liberar documento de compra</td>
+  </tr>
+  <tr>
+  <td> local procedure TestStatusRelease(PurchHeader: Record "Purchase Header")</td>
+  <td>Publicación del estado de la prueba</td>
+  <td></td>
+  <td>local procedure CheckBlockedPostingGroups(PurchaseLine: Record "Purchase Line")</td>
+  <td>Comprobar grupos de publicación bloqueados</td>
+  </tr>
+  <tr>
+  <td>local procedure TestPurchLineFixedAsset(PurchaseLine: Record "Purchase Line")</td>
+  <td>Prueba de activos fijos de línea de compra</td>
+  <td></td>
+  <td>local procedure TestPurchLineOthers(PurchaseLine: Record "Purchase Line")</td>
+  <td>Línea de compra de prueba Otros</td>
+  </tr>
+  <tr>
+  <td>procedure UpdateAssocOrder(var TempDropShptPostBuffer: Record "Drop Shpt. Post. Buffer" temporary)</td>
+  <td>Actualizar orden de asociación</td>
+  <td></td>
+  <td>local procedure UpdateAssociatedSalesOrder(var TempDropShptPostBuffer: Record "Drop Shpt. Post. Buffer" temporary; PurchaseHeader: Record "Purchase Header")</td>
+  <td>Actualizar orden de venta asociada</td>
+  </tr>
+  <tr>
+  <td>local procedure UpdateAssosOrderPostingNos(PurchHeader: Record "Purchase Header") DropShipment: Boolean</td>
+  <td>Actualizar números de publicación de pedidos de Assos</td>
+  <td></td>
+  <td>procedure CheckAndUpdateAssocOrderPostingDate(var SalesHeader: Record "Sales Header"; PostingDate: Date)</td>
+  <td>Verificar y actualizar la fecha de publicación del pedido asociado</td>
+  </tr>
+  <tr>
+  <td> local procedure UpdateAfterPosting(PurchHeader: Record "Purchase Header")</td>
+  <td>Actualizar compras después de publicar</td>
+  <td></td>
+  <td>local procedure ResetPostingNoSeriesFromSetup(var PostingNoSeries: Code[20]; SetupNoSeries: Code[20])</td>
+  <td>Restablecer publicación sin serie desde la configuración</td>
+  </tr>
+  <tr>
+  <td> local procedure UpdatePurchLineBeforePost(PurchHeader: Record "Purchase Header"; var PurchLine: Record "Purchase Line")</td>
+  <td>Restablecer publicación sin serie desde la configuración</td>
+  <td></td>
+  <td>local procedure DeleteAfterPosting(var PurchHeader: Record "Purchase Header")</td>
+  <td>Eliminar después de publicar</td>
+  </tr>
+  <tr>
+  <td> local procedure DeleteApprovalEntries(var PurchHeader: Record "Purchase Header")</td>
+  <td>Eliminar entradas de aprobación</td>
+  <td></td>
+  <td>local procedure CalcLineAmountAndLineDiscountAmount(PurchHeader: Record "Purchase Header"; var PurchLine: Record "Purchase Line"; PurchLineQty: Decimal)</td>
+  <td>Calcular cantidad de línea y cantidad de descuento de línea</td>
+  </tr>
+  <tr>
+  <td>local procedure CalculateAmountsInclVAT(PurchHeader: Record "Purchase Header"; var PurchLine: Record "Purchase Line"; var TempVATAmountLine: Record "VAT Amount Line" temporary; var TempVATAmountLineRemainder: Record "VAT Amount Line" temporary)</td>
+  <td>Calcular Importes Incluyendo IVA</td>
+  <td></td>
+  <td> procedure UpdateBlanketOrderLine(PurchLine: Record "Purchase Line"; Receive: Boolean; Ship: Boolean; Invoice: Boolean)</td>
+  <td>Actualizar línea de pedido abierto</td>
+  </tr>
+  <tr>
+  <td>local procedure UpdatePurchaseHeader(var VendorLedgerEntry: Record "Vendor Ledger Entry")</td>
+  <td>Actualizar encabezado de compra</td>
+  <td></td>
+  <td> local procedure PostVendorEntry(var PurchHeader: Record "Purchase Header"; TotalPurchLine2: Record "Purchase Line"; TotalPurchLineLCY2: Record "Purchase Line"; DocType: Enum "Gen. Journal Document Type"; DocNo: Code[20]; ExtDocNo: Code[35]; SourceCode: Code[10])</td>
+  <td>Publicar entrada de proveedor</td>
+  </tr>
+  <tr>
+  <td> local procedure InitGenJnlLineAmountFieldsFromTotalPurchLine(var GenJnlLine: Record "Gen. Journal Line"; var PurchHeader: Record "Purchase Header"; var TotalPurchLine2: Record "Purchase Line"; var TotalPurchLineLCY2: Record "Purchase Line")</td>
+  <td>Campos de cantidad de línea de generación inicial de la línea de compra total</td>
+  <td></td>
+  <td>local procedure PostBalancingEntry(PurchHeader: Record "Purchase Header"; TotalPurchLine2: Record "Purchase Line"; TotalPurchLineLCY2: Record "Purchase Line"; DocType: Enum "Gen. Journal Document Type"; DocNo: Code[20]; ExtDocNo: Code[35]; SourceCode: Code[10])</td>
+  <td>Entrada posterior al balance</td>
+  </tr>
+  <tr>
+  <td>local procedure FindVendorLedgerEntry(DocType: Enum "Gen. Journal Document Type"; DocNo: Code[20]; var VendorLedgerEntry: Record "Vendor Ledger Entry")</td>
+  <td>Buscar entrada de libro mayor de proveedores</td>
+  <td></td>
+  <td> local procedure CheckPostRestrictions(PurchaseHeader: Record "Purchase Header")</td>
+  <td>Consultar restricciones de publicación</td>
+  </tr>
+  <tr>
+  <td> local procedure DeleteItemChargeAssgnt(PurchHeader: Record "Purchase Header")</td>
+  <td>Eliminar asignación de cargo de artículo</td>
+  <td></td>
+  <td> local procedure UpdateItemChargeAssgnt(var PurchHeader: Record "Purchase Header")</td>
+  <td>Actualizar líneas de asignación de cargo de compra</td>
+  </tr>
+  <tr>
+  <td> local procedure InsertAssocOrderCharge(PurchOrderLine: Record "Purchase Line"; ApplToDocType: Enum "Purchase Applies-to Document Type"; ApplToDocNo: Code[20]; ApplToDocLineNo: Integer; LastLineNo: Integer; ApplToDocLineAmt: Decimal)</td>
+  <td>Insertar cargo de pedido asociado</td>
+  <td></td>
+  <td>    local procedure CopyAndCheckItemCharge(PurchHeader: Record "Purchase Header")</td>
+  <td>Copiar y verificar el cargo por artículo</td>
+  </tr>
+  <tr>
+  <td>local procedure CalculateInvoiceEverything(var TempPurchaseLine: Record "Purchase Line" temporary; PurchaseHeader: Record "Purchase Header"; var InvoiceEverything: Boolean)</td>
+  <td>Calcular Facturar Todo</td>
+  <td></td>
+  <td>local procedure CopyItemChargeForPurchLine(var TempItemChargeAssignmentPurch: Record "Item Charge Assignment (Purch)" temporary; PurchaseLine: Record "Purchase Line")</td>
+  <td>Copiar cargo de artículo para línea de compra</td>
+  </tr>
+  <tr>
+  <td>local procedure CalcQtyToInvoice(QtyToHandle: Decimal; QtyToInvoice: Decimal): Decimal</td>
+  <td>Calcular cantidad a facturar</td>
+  <td></td>
+  <td>local procedure GetInvoicePostingSetup()</td>
+  <td>Obtener configuración de contabilización de facturas</td>
+  </tr>
+  <tr>
+  <td> local procedure CheckWarehouse(var TempItemPurchLine: Record "Purchase Line" temporary)</td>
+  <td>Consultar Almacén</td>
+  <td></td>
+  <td>local procedure InsertRcptEntryRelation(var PurchRcptLine: Record "Purch. Rcpt. Line") Result: Integer</td>
+  <td>Insertar relación de entidad de retorno</td>
+  </tr>
+  <tr>
+  <td>local procedure CheckTrackingSpecification(PurchHeader: Record "Purchase Header"; var TempItemPurchLine: Record "Purchase Line" temporary)</td>
+  <td>Comprobar la especificación de seguimiento</td>
+  <td></td>
+  <td>  local procedure InsertTrackingSpecification(PurchHeader: Record "Purchase Header")</td>
+  <td>Insertar especificación de seguimiento</td>
+  </tr>
+  <tr>
+  <td> local procedure CalcBaseQty(ItemNo: Code[20]; UOMCode: Code[10]; Qty: Decimal; QtyRoundingPrecision: Decimal): Decimal</td>
+  <td>Cantidad base de cálculo</td>
+  <td></td>
+  <td>local procedure CalcPrepmtAmtToDeduct(PurchLine: Record "Purchase Line"; Receive: Boolean): Decimal</td>
+  <td>Prueba de preparación de cálculo para deducir</td>
+  </tr>
+  <tr>
+  <td>local procedure CalcPrepmtRoundingAmounts(var PrepmtPurchLineBuf: Record "Purchase Line"; PurchLine: Record "Purchase Line"; DeductionFactor: Decimal; var TotalRoundingAmount: array[2] of Decimal)</td>
+  <td>Actualizar línea de compra anticipada con redondeo</td>
+  <td></td>
+  <td> local procedure UpdateJobConsumptionReservationApplToItemEntry(var TempReservEntryJobCons: Record "Reservation Entry" temporary; var ItemJournalLine: Record "Item Journal Line"; var TempTrackingSpecification: Record "Tracking Specification" temporary; NonInventoriableItem: Boolean)</td>
+  <td>Actualizar aplicación de reserva de consumo de trabajo a entrada de artículo</td>
+  </tr>
+  <tr>
+  <td>   local procedure GetAppliedItemLedgEntryNo(var ItemJournalLine: Record "Item Journal Line"; QtyReceived: Decimal)</td>
+  <td>Obtener la entrada de libro mayor de elementos salientes aplicados n.º</td>
+  <td></td>
+  <td> local procedure RevertWarehouseEntry(var TempWhseJnlLine: Record "Warehouse Journal Line" temporary; JobNo: Code[20]; PostJobConsumptionBeforePurch: Boolean): Boolean</td>
+  <td>Revertir Entrada al Almacén</td>
+  </tr>
+  <tr>
+  <td> local procedure CreatePositiveEntry(WhseJnlLine: Record "Warehouse Journal Line"; JobNo: Code[20]; PostJobConsumptionBeforePurch: Boolean) Result: Boolean</td>
+  <td>Crear entrada positiva</td>
+  <td></td>
+  <td>Amor linda te amooo</td>
+  <td>Actualizar documento entrante</td>
+  </tr>
+  <tr>
+  <td>local procedure UpdateInvoicedQtyOnReturnShptLine(var ReturnShptLine: Record "Return Shipment Line"; QtyToBeInvoiced: Decimal; QtyToBeInvoicedBase: Decimal)</td>
+  <td>Actualizar la cantidad facturada en la línea de envío de devolución</td>
+  <td></td>
+  <td>  local procedure UpdateQtyPerUnitOfMeasure(var PurchLine: Record "Purchase Line")</td>
+  <td>Actualizar cantidad por unidad de medida</td>
+  </tr>
+  <tr>
+  <td>local procedure UpdateQtyToBeInvoicedForReceipt(var QtyToBeInvoiced: Decimal; var QtyToBeInvoicedBase: Decimal; TrackingSpecificationExists: Boolean; PurchLine: Record "Purchase Line"; PurchRcptLine: Record "Purch. Rcpt. Line"; InvoicingTrackingSpecification: Record "Tracking Specification")</td>
+  <td>Actualizar cantidad a facturar para recepción</td>
+  <td></td>
+  <td>local procedure UpdateQtyToBeInvoicedForReturnShipment(var QtyToBeInvoiced: Decimal; var QtyToBeInvoicedBase: Decimal; TrackingSpecificationExists: Boolean; PurchLine: Record "Purchase Line"; ReturnShipmentLine: Record "Return Shipment Line"; InvoicingTrackingSpecification: Record "Tracking Specification")</td>
+  <td>Actualizar la cantidad a facturar para el envío de devolución</td>
+  </tr>
+  <tr>
+  <td>local procedure UpdateRemainingQtyToBeInvoiced(var RemQtyToInvoiceCurrLine: Decimal; var RemQtyToInvoiceCurrLineBase: Decimal; PurchRcptLine: Record "Purch. Rcpt. Line")</td>
+  <td>Actualizar la cantidad restante a facturar</td>
+  <td></td>
+  <td>local procedure CheckCertificateOfSupplyStatus(ReturnShptHeader: Record "Return Shipment Header"; ReturnShptLine: Record "Return Shipment Line")</td>
+  <td>Verifique el estado del certificado de suministro de ventas</td>
+  </tr>
+  <tr>
+  <td>local procedure InsertReturnShipmentLine(ReturnShptHeader: Record "Return Shipment Header"; PurchLine: Record "Purchase Line"; CostBaseAmount: Decimal)</td>
+  <td>Insertar línea de envío de devolución</td>
+  <td></td>
+  <td>local procedure CreateWhseLineFromReturnShptLine(var ReturnShptLine: Record "Return Shipment Line"; PurchLine: Record "Purchase Line"; CostBaseAmount: Decimal)</td>
+  <td>Crear línea de destino desde la línea directa de devoluciones</td>
+  </tr>
+  <tr>
+  <td>local procedure InsertInvoiceHeader(var PurchHeader: Record "Purchase Header"; var PurchInvHeader: Record "Purch. Inv. Header")</td>
+  <td>Insertar encabezado de factura</td>
+  <td></td>
+  <td> local procedure InsertSalesShptHeader(var SalesOrderHeader: Record "Sales Header"; var PurchHeader: Record "Purchase Header"; var SalesShptHeader: Record "Sales Shipment Header")</td>
+  <td>Insertar encabezado de envío de ventas</td>
+  </tr>
+  <tr>
+  <td> local procedure CheckICDocumentDuplicatePosting(PurchHeader: Record "Purchase Header")</td>
+  <td>Verifique la publicación de duplicados de documentos </td>
+  <td></td>
+  <td> local procedure MakeInventoryAdjustment()</td>
+  <td>Hacer ajuste de inventario</td>
+  </tr>
+  <tr>
+  <td>local procedure CheckTrackingAndWarehouseForReceive(PurchHeader: Record "Purchase Header") Receive: Boolean</td>
+  <td>Comprobar seguimiento y almacén para recibir</td>
+  <td></td>
+  <td>local procedure CheckTrackingAndWarehouseForShip(PurchHeader: Record "Purchase Header") Ship: Boolean</td>
+  <td>Comprobar el seguimiento y el almacén para el envío</td>
+  </tr>
+  <tr>
+  <td>local procedure CheckIfInvPutawayExists(PurchaseHeader: Record "Purchase Header"): Boolean</td>
+  <td>Comprobar si existe ubicación de inventario</td>
+  <td></td>
+  <td> local procedure CheckHeaderPostingType(var PurchHeader: Record "Purchase Header")</td>
+  <td>Verifique el tipo de publicación de encabezado</td>
+  </tr>
+  <tr>
+  <td>local procedure AddAssociatedOrderLineToBuffer(PurchHeader: Record "Purchase Header"; var PurchLine: Record "Purchase Line"; var SalesOrderLine: Record "Sales Line"; var TempSalesLine: Record "Sales Line" temporary)</td>
+  <td>Agregar línea de orden asociada al búfer</td>
+  <td></td>
+  <td>  local procedure CheckDropShipmentReceiveInvoice(PurchLine: Record "Purchase Line"; Receive: Boolean)</td>
+  <td>Verificar envío directo Recibir factura</td>
+  </tr>
+  <tr>
+  <td> local procedure PostCombineSalesOrderShipment(var PurchHeader: Record "Purchase Header"; var TempDropShptPostBuffer: Record "Drop Shpt. Post. Buffer" temporary)</td>
+  <td>Publicar envío combinado de pedidos de venta</td>
+  <td></td>
+  <td>local procedure CheckMandatoryHeaderFields(var PurchHeader: Record "Purchase Header")</td>
+  <td>Verifique los campos de encabezado obligatorios</td>
+  </tr>
+  <tr>
+  <td>local procedure CalcPaymentDiscountPosting(PurchHeader: Record "Purchase Header"; PurchLine: Record "Purchase Line"; PurchLineACY: Record "Purchase Line"; var InvoicePostBuffer: Record "Invoice Post. Buffer")</td>
+  <td>Calcular contabilización de descuento de pago</td>
+  <td></td>
+  <td> local procedure ValidatePostingAndDocumentDate(var PurchaseHeader: Record "Purchase Header")</td>
+  <td>Validar contabilización y fecha del documento</td>
+  </tr>
+  <tr>
+  <td> local procedure CheckExternalDocumentNumber(var VendLedgEntry: Record "Vendor Ledger Entry"; var PurchaseHeader: Record "Purchase Header")</td>
+  <td>Comprobar número de documento externo</td>
+  <td></td>
+  <td> local procedure PostItemTracking(PurchHeader: Record "Purchase Header"; PurchLine: Record "Purchase Line"; var TempTrackingSpecification: Record "Tracking Specification" temporary; TrackingSpecificationExists: Boolean)</td>
+  <td>Publicar seguimiento de elementos</td>
+  </tr>
+  <tr>
+  <td>local procedure PostItemTrackingCheckShipment(PurchaseLine: Record "Purchase Line"; RemQtyToBeInvoiced: Decimal)</td>
+  <td>Publicar seguimiento de artículos Verificar envío</td>
+  <td></td>
+  <td> local procedure AdjustQuantityRoundingForReceipt(PurchRcptLine: Record "Purch. Rcpt. Line"; RemQtyToInvoiceCurrLine: Decimal; var QtyToBeInvoiced: Decimal; RemQtyToInvoiceCurrLineBase: Decimal; QtyToBeInvoicedBase: Decimal)</td>
+  <td>Ajustar redondeo de cantidad para recibo</td>
+  </tr>
+  <tr>
+  <td> local procedure AdjustQuantityRoundingForReceipt(PurchRcptLine: Record "Purch. Rcpt. Line"; RemQtyToInvoiceCurrLine: Decimal; var QtyToBeInvoiced: Decimal; RemQtyToInvoiceCurrLineBase: Decimal; QtyToBeInvoicedBase: Decimal)</td>
+  <td>Ajustar redondeo de cantidad para recibo</td>
+  <td></td>
+  <td>local procedure PostItemTrackingForReceiptCondition(PurchLine: Record "Purchase Line"; PurchRcptLine: Record "Purch. Rcpt. Line"): Boolean</td>
+  <td>Publicar seguimiento de artículo para condición de recibo</td>
+  </tr>
+  <tr>
+  <td>local procedure CheckFieldsOnReturnShipmentLine(var ReturnShipmentLine: Record "Return Shipment Line"; PurchaseLine: Record "Purchase Line")</td>
+  <td>Comprobar campos en la línea de envío de devolución</td>
+  <td></td>
+  <td>local procedure UpdateQtyToInvoiceForReturnOrder(PurchHeader: Record "Purchase Header"; var TempPurchLine: Record "Purchase Line" temporary)</td>
+  <td>Actualizar cantidad a factura para pedido</td>
+  </tr>
+  
+
+  </table>
 
 
 	`;
@@ -2937,7 +2917,18 @@ let traduccionFiles = () =>{
 	<p class="parrafo">Estos archivos de traducción se empaquetan junto con sus objetos en un archivo .app que puede usar para instalar su extensión en un entorno de producción.</p>
 	<h3>Como Crear un ficheros de Traducción en AL </h3>
 	<iframe src="https://yzhums.com/2684/" class="ifraWeb"></iframe>
-
+	<br><br>
+	<h3>Xliff Translation Tool</h3>
+	<iframe src="http://fredborg.org/?p=481" class="ifraWeb"></iframe><br><br>
+	<h3>Videotutorial sobre Crear Ficheros XLIFF de traducción</h3>
+	<iframe class="ifra" src="https://www.youtube.com/embed/mAqXvzRIVMc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
+	<h3>Xliff Translation tool for Business Central videotutorial</h3>
+	<iframe class="ifra" src="https://www.youtube.com/embed/2qakoqbSeMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<h3>Translation Service Visual Studio Code</h3>
+	<iframe src="https://demiliani.com/2022/06/13/dynamics-365-business-central-introducing-the-dynamics-365-translation-service-visual-studio-code-extension-preview"  class="ifraWeb"></iframe>
+	<br>
+	<h3>Traducciones XLIFF y extensión para trabajar con ellas</h3>
+	<p class="parrafo">Enlace Para ver más sobre xliff <a href="https://blog.aitana.es/2021/06/15/traducciones-xliff-extension/#comment-1927"> Aquí</a></p>
 	`;
 
 	cuerpo.innerHTML= contenido;

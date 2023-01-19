@@ -8,7 +8,6 @@
 .contenedor{
   width: 100%;
 
-
   display: flex;
   flex-wrap: wrap;
 }
@@ -98,6 +97,14 @@
 .botonera .dropdown-menu li a:hover{
   background: green;
   cursor: pointer;
+}
+.submenu{
+  display: none;
+  
+}
+.desplegar:hover > .submenu{
+  display: block;
+
 }
 .bodyContent{
   width: 100%;
@@ -198,5 +205,13 @@
 }
 .rojo{
   color: red;
+}
+.nota-importante{
+background: rgba(5, 252, 229, 1.0);
+border-radius: 10px;
+}
+.nota-solo{
+border-radius: 10px;
+  background: #F56662;
 }
 

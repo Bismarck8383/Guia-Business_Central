@@ -11,7 +11,6 @@
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
-
 </head>
 <body>
   <div class="contenedor">
@@ -153,11 +152,11 @@
 </div>
 <div class="dropdown botonera">
   <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-   Idiomas
- </button>
- <ul class="dropdown-menu" >
-  <li><a class="dropdown-item" onclick="traduccionFiles()">Crear Archivos de traducción </a></li>
-</ul>
+    Traducciones XLIFF
+  </button>
+  <ul class="dropdown-menu" >
+    <li><a class="dropdown-item" onclick="traduccionFiles()">Crear Archivos de traducción </a></li>
+  </ul>
 </div>
 <!--Business Central Funcional-->
 <div class="temario">
@@ -170,18 +169,50 @@
   <ul class="dropdown-menu" >
     <li><a class="dropdown-item" onclick="introBc()"> Introducción</a></li>
     <li><a class="dropdown-item" onclick="suscripciones()"> Suscripciones</a></li>
+    <li><a class="dropdown-item" onclick="instalacionBussines()"> Instalación Business Central</a></li>
+    
   </ul>
 </div>
 <div class="dropdown botonera">
   <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Configuración
+    Configuración Básica
   </button>
   <ul class="dropdown-menu" >
 
     <li><a class="dropdown-item" onclick="configuracion()"> Configuración Básica</a></li>
-    <li><a class="dropdown-item" onclick="crearEmpresa()"> Crear Empresa</a></li>
+    <li><a class="dropdown-item" onclick="crearEmpresa()"> Crear Empresas</a></li>
     <li><a class="dropdown-item" onclick="rapidStart()">Paquetes Configuración</a></li>
     <li><a class="dropdown-item" onclick="serieNumerica()">Serie Númerica</a></li>
+  </ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+   Contabilidad
+ </button>
+ <ul class="dropdown-menu" >
+  <li><a class="dropdown-item" onclick="ConfigContabGeneral()"> Config Contabilidad General</a></li>
+  <li><a class="dropdown-item" onclick="configPlanCuenta()">  Plan de cuentas</a></li>
+  <li><a class="dropdown-item" onclick="diarioGenerales()"> Diario Generales </a></li>
+  <li class="desplegar"><a class="dropdown-item dropdown-toggle" >Gestión IVA</a>
+    <ul class="submenu">
+     <li><a class="dropdown-item" onclick="gestionIva()">Gestión de Iva</a></li>
+     <li><a class="dropdown-item" onclick="crearModelo340()"> Modelo 340</a></li>
+     <li><a class="dropdown-item" onclick="modeloSii()">Modelo S.I.I</a></li>
+   </ul>
+ </li>
+ <li><a class="dropdown-item" onclick="configEsqueCentas()"> Config Esquemas de Cuentas</a></li>
+ <li><a class="dropdown-item" onclick="configGrupoContables()"> Config Grupos Contables</a></li>
+ <li><a class="dropdown-item" onclick="presupuestos()"> Presupuestos</a></li>
+ <li><a class="dropdown-item" onclick="dimensiones()"> Dimensiones</a></li>
+</ul>
+</div>
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Activos Fijos
+  </button>
+  <ul class="dropdown-menu" >
+    <li><a class="dropdown-item" onclick="crearPeriodoContable()"> Crear Año Fiscal</a></li>
+    <li><a class="dropdown-item" onclick="cerrarPeriodoContable()"> Cerrar Año Fiscal</a></li>
   </ul>
 </div>
 <div class="dropdown botonera">
@@ -213,7 +244,6 @@
     <li><a class="dropdown-item" onclick="facturaVenta()"> Crear factura Ventas</a></li>
   </ul>
 </div>
-
 <div class="dropdown botonera">
   <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Pagos
@@ -223,6 +253,7 @@
     <li><a class="dropdown-item" onclick="pagoProveedores()"> Pago Proveedores</a></li>
     <li><a class="dropdown-item" onclick="pagoCliente()"> Pago Clientes</a></li>
     <li><a class="dropdown-item" onclick="pagoSepa()"> Pagos Directo Sepa</a></li>
+    <li><a class="dropdown-item" onclick="carterapagos()"> Cartera de Pagos y Cobros</a></li>
   </ul>
 </div>
 <div class="dropdown botonera">
@@ -272,7 +303,6 @@
     <li><a class="dropdown-item" onclick="recursosHumanos()">Recursos Humanos</a></li>
     <li><a class="dropdown-item" onclick="registroEmpleado()">Registro Empleados</a></li>
     <li><a class="dropdown-item" onclick="ausenciaEmpleado()">Ausencia Empleados</a></li>
-
   </ul>
 </div>
 <div class="dropdown botonera">
@@ -281,11 +311,16 @@
   </button>
   <ul class="dropdown-menu" >
     <li><a class="dropdown-item" onclick="permisosUsuarios()"> Permisos a Usuarios y Grupos</a></li>
-
-
   </ul>
 </div>
-
+<div class="dropdown botonera">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Intrastat
+  </button>
+  <ul class="dropdown-menu" >
+    <li><a class="dropdown-item" onclick="intrastatconfig()"> Configuración Intrastat</a></li>
+  </ul>
+</div>
 </div><!--Nav lef end-->
 <div class="contenedor-contenido">
   <h1 class="titulo">Guía Business Central</h1>
@@ -312,39 +347,41 @@
         <li>Optimice la gestion del inventario y la cadena de suministro.</li>
       </ul>
     </div>
+    <p class="parrafo">Business Central es una solución de administración empresarial para pequeñas y medianas empresas que automatiza y optimiza los procesos empresariales y le ayuda a administrar su empresa. Gracias a su gran adaptabilidad y variedad de funciones, Business Central permite a las empresas administrar su negocio, incluidas las áreas de finanzas, fabricación, ventas, envíos, administración de proyectos, servicios, etc. Las organizaciones también pueden agregar fácilmente funcionalidades relevantes para la región de operación que, al ser personalizadas, ofrecen asistencia incluso a las industrias más especializadas. Business Central es rápido de implementar, fácil de configurar y su simplicidad guía toda innovación en el diseño de productos, en su desarrollo, su implementación y su uso funcional.</p>
     <hr>
-    <!--Inicio de la Function-->
+<!--------------------------------
+  Inicio de la Function de prueba
+  -------------------------------->
+  
+
+  <p class="parrafo"></p>
+  <p class="parrafo"></p>
+  <p class="parrafo"></p>
 
 
 
-
-
-
-
-
-<p class="parrafo"></p>
-<p class="parrafo"></p>
-<p class="parrafo"></p>
-
-
-
-
-
-
-<!--Fin  la Function-->
+  <!--Fin  la Function-->
     <!--
+      
       &lt; y &gt;, 
-      <h2 class="Subtitulos"></h2>
-    <div class="img-content2"><img src="img/" alt=""></div>
+      <h2 class="Subtitulos"></h2>  
+      <div class="img-content2"><img src="img/" alt=""></div>
       <p class="parrafo"></p>
-      <div class="contentList"></div>
+      <div class="contentList"><ul></ul></div>
       class="ifra"
-        <pre class="content-code"> <code class="lang-al-language"></code></pre>
+      <pre class="content-code"> <code class="lang-al-language"></code></pre>
       <span class="rojo"></span>
+      <iframe src="" frameborder="0"></iframe>
 
-    -->
-  </div>
-</div>
+       <li class="desplegar"><a class="dropdown-item dropdown-toggle" >Pepes</a>
+        <ul class="submenu">
+          <li><a class="dropdown-item" onclick="">pepetoe</a></li>
+        </ul>
+       </li>
+
+     -->
+   </div>
+ </div>
 
 </div>
 <footer class="bg-light text-center text-lg-start">
